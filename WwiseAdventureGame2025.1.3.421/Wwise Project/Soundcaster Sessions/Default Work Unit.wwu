@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5150FD4F-E7AC-4F59-9BF0-E07D1F06E174}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{5150FD4F-E7AC-4F59-9BF0-E07D1F06E174}" PersistMode="Standalone">
+			<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+			<ChildrenList>
+				<SoundcasterSession Name="Music" ID="{573ECD01-3914-4BC4-A0E1-B0B4131CD40E}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music_Regions" ID="{1378381B-6304-43C8-A350-2C0C481351B1}" WorkUnitID="{7EEF7DFB-FB01-49A6-ADE2-D0FF894FF235}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Fire_Campfire" ID="{BC8AEB95-BCF4-4E93-BAC7-BF28B5BB8E29}" WorkUnitID="{321260F5-F24C-4A74-891E-22D7C91AE38B}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Character" ID="{AE6BB244-173F-458B-B306-5129BF070A18}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Player_Health" ID="{358E9A1B-6D95-4D15-9DE3-0CF4BDD482DD}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Footstep" ID="{C9FD3C73-255A-47E5-BFA2-C3D1514AE81F}" WorkUnitID="{03199D9F-964E-402C-91C5-0E200B19AD96}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_WeaponSwing" ID="{D6576080-A42D-4FBF-8B25-56C419BC2D7E}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_WeaponImpact" ID="{1749950B-D5B0-40C6-9430-6F0D4F7A516E}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Death" ID="{FB2B576F-E7ED-48B1-BA22-47110315BD88}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Ambiences" ID="{0E01CBD4-2706-4297-B042-2324CD845F85}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Ambient_River" ID="{B30B52AB-46CF-4A54-9DC8-A90CDD5398E2}" WorkUnitID="{3AE0B262-D812-41EC-9F52-A61D7B80BDC5}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_WaterDrop" ID="{321E9D2C-FD0D-4EA6-A4AF-34B52637C7DE}" WorkUnitID="{3AE0B262-D812-41EC-9F52-A61D7B80BDC5}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Campfire_Play" ID="{4B7C14D3-4763-4B2C-9EAB-142865C3261F}" WorkUnitID="{3AE0B262-D812-41EC-9F52-A61D7B80BDC5}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Enemies_Layers" ID="{A0369445-7680-40E2-8659-5D9E24CBDA71}" WorkUnitID="{7EEF7DFB-FB01-49A6-ADE2-D0FF894FF235}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Lava" ID="{1FD14D4E-ADA6-45D5-80BC-0EECF0F71DD9}" WorkUnitID="{3AE0B262-D812-41EC-9F52-A61D7B80BDC5}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Waterfall" ID="{B0747836-9578-49F6-ADCB-20DAADE76160}" WorkUnitID="{3AE0B262-D812-41EC-9F52-A61D7B80BDC5}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Creature" ID="{4780EBE6-AE02-49E6-882B-A57ECFE6E8BA}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Player_WeaponImpact" ID="{1749950B-D5B0-40C6-9430-6F0D4F7A516E}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_WeaponSwing" ID="{D6576080-A42D-4FBF-8B25-56C419BC2D7E}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Lesson 4 - Bypassing Effects" ID="{A7ADD04F-EFDA-4004-8D08-D03E6A967D8F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Ambient_Region_Desert" ID="{6D832CD2-20B5-4E9E-B021-CC019E9CDCD3}" WorkUnitID="{560ECF91-5921-46AB-8E60-4A2FD3652076}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{31BD1FEC-7649-4194-AF9F-0721090A6CF9}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

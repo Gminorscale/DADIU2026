@@ -1,0 +1,60 @@
+{
+    "bundle": {
+        "id": "wag.v2025.1.421",
+        "type": "wwise",
+        "name": "",
+        "tag": "",
+        "description": "",
+        "vendor": "",
+        "version": {
+            "year": 2025,
+            "major": 1,
+            "minor": "421",
+            "build": 0
+        },
+        "labels": [],
+        "links": [],
+        "productDependentData": {},
+        "documentation": [],
+        "displayName": " 2025.1.421.0",
+        "image": "",
+        "redistributables": [],
+        "eulas": [],
+        "groups": [],
+        "files": []
+    },
+    "targetDir": "C:\\Program Files (x86)\\WwiseAdventureGame2025.1.3.421",
+    "installType": "normal",
+    "parentId": null,
+    "installed": {
+        "groups": [
+            {
+                "id": "OS",
+                "valueId": "Windows"
+            },
+            {
+                "id": "Packages",
+                "valueId": "WwiseProject"
+            },
+            {
+                "id": "Packages",
+                "valueId": "Binary"
+            },
+            {
+                "id": "Packages",
+                "valueId": "Source"
+            }
+        ],
+        "files": [
+            "WwiseAdventureGame.Source.tar.xz",
+            "WwiseAdventureGame.WwiseProject.tar.xz",
+            "WwiseAdventureGame.Windows.tar.xz",
+            "WwiseAdventureGame.OfflineDocumentation.tar.xz"
+        ],
+        "date": 1787165982266
+    },
+    "children": [],
+    "unpackedFiles": [
+        "images\\wag.v2025.1.421.png"
+    ]
+}

@@ -1,0 +1,338 @@
+{
+    "groups": [
+        {
+            "displayName": "Packages",
+            "id": "Packages",
+            "values": [
+                {
+                    "$checked": true,
+                    "$disabled": true,
+                    "$visible": true,
+                    "description": "The Wwise Authoring Project for the Wwise Adventure Game.",
+                    "displayName": "Wwise Project",
+                    "eulaIds": [
+                        "WAG"
+                    ],
+                    "id": "WwiseProject"
+                },
+                {
+                    "$checked": true,
+                    "$disabled": false,
+                    "$visible": true,
+                    "description": "The Wwise Adventure Game, including new Spatial Audio features! Ready to run on Windows and Mac. Note, this version should not be used for the Wwise-251 or Wwise-301 certifications.",
+                    "displayName": "Wwise Adventure Game",
+                    "eulaIds": [
+                        "WAG"
+                    ],
+                    "id": "Binary"
+                },
+                {
+                    "$checked": false,
+                    "$disabled": false,
+                    "$visible": true,
+                    "description": "The full Wwise Adventure Game source project developed with Unity 6000.2.12f1 running with Wwise 2025.1.3.",
+                    "displayName": "Unity source project",
+                    "eulaIds": [
+                        "WAG"
+                    ],
+                    "id": "Source"
+                }
+            ]
+        },
+        {
+            "$visible": false,
+            "displayName": "OS",
+            "id": "OS",
+            "values": [
+                {
+                    "$checked": true,
+                    "applicable": true,
+                    "displayName": "Windows",
+                    "eulaIds": [],
+                    "id": "Windows"
+                },
+                {
+                    "$checked": true,
+                    "applicable": false,
+                    "displayName": "macOS",
+                    "eulaIds": [],
+                    "id": "macOS"
+                }
+            ]
+        }
+    ],
+    "description": "The <b>Wwise Adventure Game (WAG)</b> is a third-person action-adventure game developed with Unity and running on Windows, Mac, iOS, and Android. This is a full game with quests, items to retrieve, enemies to overcome, and a final combat to defeat the plague scourging Allegro Kingdom. WAG is open-source and comes with its complete Wwise and Unity projects. As such, it’s a great playground to learn and experiment with the Wwise integration for Unity.",
+    "eulas": [
+        {
+            "displayContent": "WWISE ADVENTURE GAME™ END USER LICENSE AGREEMENT\n\nREAD CAREFULLY: AUDIOKINETIC INC. (“AUDIOKINETIC”) LICENSES THE WWISE ADVENTURE GAME™ (the “WWISE ADVENTURE GAME”) ONLY ON THE CONDITION THAT LICENSEE ACCEPTS ALL OF THE TERMS AND CONDITIONS BELOW.  THESE ADDITIONAL TERMS AND CONDITIONS GOVERN YOUR USE OF THE WWISE ADVENTURE GAME. THEY ARE IN ADDITION TO THE LICENSE TERMS AND CONDITIONS WHICH LICENSEE MAY ENTERED INTO FOR THE USE OF THE AUDIOKINETIC WWISE TECHNOLOGY (EITHER THROUGH A MASTER LICENSE AGREEMENT OR A LICENSE AGREEMENT)(AS APPLICABLE, THE “LICENSE AGREEMENT”), AS APPLICABLE. IN THE EVENT OF ANY CONFLICT BETWEEN THE TERMS OF THE LICENSE AGREEMENT AND THESE ADDITIONAL TERMS AND CONDITIONS, THESE ADDITIONAL TERMS AND CONDITIONS SHALL PREVAIL.\n\nBy selecting the “I accept” button or other button or mechanism designed to acknowledge agreement to these additional terms and conditions, or by installing, downloading, accessing, or otherwise using all or any portion of the Wwise Adventure Game, (i) you accept these terms and conditions on behalf of the entity for which you are authorized to act (e.g., an employer) and acknowledge that such entity is legally bound by these terms and conditions (and you agree to act in a manner consistent with these terms and conditions) or, if there is no such entity for which you are authorized to act, you accept these terms and conditions on behalf of yourself as an individual and acknowledge that you are legally bound by these terms and conditions, and (ii) you represent and warrant that you have the right, power and authority to act on behalf of and bind such entity (if any) or yourself. You may not accept these terms and conditions on behalf of another entity unless you are an employee or other agent of such other entity with the right, power and authority to act on behalf of such other entity.\nIf Licensee is unwilling to accept these terms and conditions, or you do not have the right, power and authority to act on behalf of and bind such entity or yourself as an individual (if there is no such entity), DO NOT SELECT THE “I ACCEPT” BUTTON OR OTHERWISE CLICK ON ANY BUTTON OR OTHER MECHANISM DESIGNED TO ACKNOWLEDGE AGREEMENT, AND DO NOT INSTALL, DOWNLOAD, ACCESS, OR OTHERWISE USE ALL OR ANY PORTION OF THE WWISE ADVENTURE GAME.\n\n1.\tDEFINITIONS.\n All capitalized terms used herein which are not defined shall have the meaning given to them in the relevant License Agreement, as applicable.\n“Use” or “Using” means to access and modify the Wwise Adventure Game as permitted hereunder.\n“Wwise Adventure Game” means the sample game developed by AUDIOKINETIC and underlying code provided to Licensee to allow Licensee to familiarize itself with and learn to use the AUDIOKINETIC Wwise Technology.\n\n2.\tGRANT OF LICENSE.\n\n2.1\tPursuant to these terms and conditions, AUDIOKINETIC grants Licensee a non-exclusive, non-sublicensable and non-transferable license to Use the Wwise Adventure Game.  Subject to the restrictions contained herein, Licensee may re-write the source code for the Wwise Adventure Game, and modify and recompile same in its sole discretion, either to modify the Wwise Adventure Game or create a new game (all derivative works created by Licensee from the Wwise Adventure Game are referred to as “Derivative Works”). Derivative Works may not be displayed, communicated to the public, resold or redistributed otherwise than as provided hereunder. You may make your Derivative Work available online for non-commercial and demonstration purposes only but cannot otherwise publish same nor make it available for download.\n\n2.2\tLicensee may not:\n(a)\tuse or copy the assets forming part of the Wwise Adventure Game otherwise than as provided in Section 2.1;\n(b)\tcopy or transfer copies of the assets forming part of the Wwise Adventure Game;\n(c)\tmake any public demonstration of any of your Derivative Works otherwise than as provided in Section 2.1;\n(d)\tremove any proprietary notices or third party credits from the Wwise Adventure Game;\n(e)\tredistribute, sell, duplicate, rent, lease, sublicense or assign the Wwise Adventure Game, any Derivative Work or any element or copy thereof;\nor\n(f)\tclaim any trademark rights in the Wwise Adventure Game.\n\n2.3\tThe rights granted hereunder will terminate upon written notice from AUDIOKINETIC if Licensee fails to comply with these terms and conditions. In the event the license hereunder is terminated for any reason, you must immediately stop using the Wwise Adventure Game and any Derivative Works. AUDIOKINETIC may decide in its sole discretion to cease making the Wwise Adventure Game available at any time without recourse from Licensee.\n\n3.\tOWNERSHIP.  The Wwise Adventure Game is protected by copyright laws and international copyright treaties, as well as other intellectual property rights laws and treaties. The Wwise Adventure Game is licensed under these terms and conditions, not sold. AUDIOKINETIC owns all intellectual property in the Wwise Adventure Game.\n\n4.\tWARRANTY; AS IS, WHERE IS.  THE WWISE ADVENTURE GAME IS PROVIDED “AS IS” AND “WHERE IS” BY AUDIOKINETIC AND IS ACCEPTED AS SUCH BY LICENSEE, (B) AUDIOKINETIC AND ITS LICENSORS DISCLAIM ALL EXPRESS AND IMPLIED WARRANTIES RELATING TO THE WWISE ADVENTURE GAME AND DOCUMENTATION, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE AND NON-INFRINGEMENT.  AUDIOKINETIC DOES NOT WARRANT THAT THE WWISE ADVENTURE GAME WILL MEET LICENSEE’S REQUIREMENTS, OR THAT THE ASSOCIATED DOCUMENTATION WILL BE ERROR FREE.  LICENSEE AGREES THAT AUDIOKINETIC WILL NOT BE LIABLE FOR ANY DAMAGES THAT LICENSEE MAY INCUR ARISING OUT OF THE USE OR INABILITY TO USE THE WWISE ADVENTURE GAME.\n\n5.\tLIMITATION OF LIABILITY. EXCEPT IN RELATION TO BREACHES OF AUDIOKINETIC’S INTELLECTUAL PROPERTY RIGHTS, IN NO EVENT SHALL AUDIOKINETIC BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, PUNITIVE, RELIANCE OR CONSEQUENTIAL DAMAGES, WHETHER FORESEEABLE OR NOT, INCLUDING, BUT NOT LIMITED TO, DAMAGE OR LOSS OF PROPERTY, EQUIPMENT, INFORMATION OR DATA, LOSS OF PROFITS, REVENUE OR GOODWILL OR COST OF REPLACEMENT SERVICES OCCASIONED BY ANY DEFECT IN THE WWISE  ADVENTURE GAME, OR ANY OTHER CAUSE WHATSOEVER WITH RESPECT TO THE WWISE ADVENTURE GAME OR THESE TERMS AND CONDITIONS, REGARDLESS OF THEORY OF LIABILITY.  THIS LIMITATION WILL APPLY EVEN IF AUDIOKINETIC HAS BEEN ADVISED OR IS AWARE OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO EVENT SHALL AUDIOKINETIC’S LIABILITY FOR ANY CLAIM ARISING OUT OF THESE TERMS AND CONDITIONS EXCEED THE AMOUNT OF $100.\n\n6.\tGOVERNING LAW.  This Agreement shall not be modified or amended except in writing signed by both parties.  This Agreement will be governed by and construed under the laws of the province of Quebec and the laws of Canada applicable therein and the parties hereto submit to the exclusive jurisdiction of the courts of Province of Quebec, District of Montreal.",
+            "displayName": "Wwise Adventure Game",
+            "id": "WAG"
+        }
+    ],
+    "files": [
+        {
+            "groups": [
+                {
+                    "groupId": "Packages",
+                    "groupValueId": "Source"
+                }
+            ],
+            "documentationFiles": [],
+            "id": "WwiseAdventureGame.Source.tar.xz",
+            "licenses": [],
+            "name": "WwiseAdventureGame.Source.tar.xz",
+            "sha1": "40b3b21b6acb4f9eab7a9994abd549e8b0b359fb",
+            "size": 2446872676,
+            "sourceName": "WwiseAdventureGame.Source.tar.xz",
+            "uncompressedSize": 7951325184
+        },
+        {
+            "groups": [
+                {
+                    "groupId": "Packages",
+                    "groupValueId": "WwiseProject"
+                }
+            ],
+            "documentationFiles": [],
+            "id": "WwiseAdventureGame.WwiseProject.tar.xz",
+            "licenses": [],
+            "name": "WwiseAdventureGame.WwiseProject.tar.xz",
+            "sha1": "9cd7b755c22b34bcc00f9806fb0836ee1cf2d44a",
+            "size": 545353092,
+            "sourceName": "WwiseAdventureGame.WwiseProject.tar.xz",
+            "uncompressedSize": 841021952
+        },
+        {
+            "groups": [
+                {
+                    "groupId": "Packages",
+                    "groupValueId": "Binary"
+                },
+                {
+                    "groupId": "OS",
+                    "groupValueId": "Windows"
+                }
+            ],
+            "documentationFiles": [],
+            "id": "WwiseAdventureGame.Windows.tar.xz",
+            "licenses": [],
+            "name": "WwiseAdventureGame.Windows.tar.xz",
+            "sha1": "84a7e048ab6b3a61c7ef73ad67ce1db55c182092",
+            "size": 72565924,
+            "sourceName": "WwiseAdventureGame.Windows.tar.xz",
+            "uncompressedSize": 287107072
+        },
+        {
+            "groups": [
+                {
+                    "groupId": "Packages",
+                    "groupValueId": "Binary"
+                },
+                {
+                    "groupId": "OS",
+                    "groupValueId": "macOS"
+                }
+            ],
+            "documentationFiles": [],
+            "id": "WwiseAdventureGame.macOS.tar.xz",
+            "licenses": [],
+            "name": "WwiseAdventureGame.macOS.tar.xz",
+            "sha1": "2de5f39b1765ef72d67009979812544a85e30ba9",
+            "size": 89115736,
+            "sourceName": "WwiseAdventureGame.macOS.tar.xz",
+            "uncompressedSize": 319095296
+        },
+        {
+            "groups": [
+                {
+                    "groupId": "Packages",
+                    "groupValueId": "WwiseProject"
+                }
+            ],
+            "documentationFiles": [
+                {
+                    "displayName": "",
+                    "path": "\\Help\\WwiseAdventureGame_en.chm"
+                },
+                {
+                    "displayName": "",
+                    "path": "\\Help\\WwiseAdventureGame_ja.chm"
+                },
+                {
+                    "displayName": "",
+                    "path": "\\Help\\WwiseAdventureGame_ko.chm"
+                },
+                {
+                    "displayName": "",
+                    "path": "\\Help\\WwiseAdventureGame_zh.chm"
+                }
+            ],
+            "id": "WwiseAdventureGame.OfflineDocumentation.tar.xz",
+            "licenses": [],
+            "name": "WwiseAdventureGame.OfflineDocumentation.tar.xz",
+            "sha1": "ecfa9f50aa0bd0e46c8b981b249a29de69939abd",
+            "size": 1148664,
+            "sourceName": "WwiseAdventureGame.OfflineDocumentation.tar.xz",
+            "uncompressedSize": 1422336
+        }
+    ],
+    "id": "wag.v2025.1.421",
+    "image": "https://media.gowwise.com/images/samples/wag.png",
+    "labels": [
+        {
+            "class": "info",
+            "displayName": "Unity 6000.2.12f1"
+        },
+        {
+            "class": "danger",
+            "displayName": "NOT FOR CERTIFICATION"
+        }
+    ],
+    "name": "Wwise Adventure Game",
+    "productDependentData": {
+        "targetWwiseVersion": {
+            "major": 1,
+            "year": 2025
+        },
+        "wwiseSdkBuild": 9039,
+        "projectPaths": {
+            "wwise": "Wwise Project/Wwise Adventure Game.wproj",
+            "unity": "WwiseAdventureGameSource"
+        }
+    },
+    "requirements": [
+        {
+            "applicable": true,
+            "data": {
+                "bundleId": "wwise.2025_1_3_9039",
+                "children": [
+                    "audiokinetic.convolutionreverb.2025_1_3_9039",
+                    "audiokinetic.reflect.2025_1_3_9039",
+                    "audiokinetic.motion.2025_1_3_9039",
+                    "audiokinetic.soundseed.2025_1_3_9039",
+                    "sie.masteringsuite.2025_1_3_9039"
+                ],
+                "groups": [
+                    {
+                        "groupId": "Packages",
+                        "groupValueId": "Authoring_Windows_x64_Release"
+                    }
+                ],
+                "productType": "wwise",
+                "version": "2025.1.3.9039"
+            },
+            "description": "Wwise will let you open the Wwise project distributed as part of this package.",
+            "execution": "preInstall",
+            "id": "wwise.2025_1_3_9039",
+            "mandatory": true,
+            "name": "Wwise",
+            "type": "akProduct",
+            "version": "2025.1.3.9039"
+        },
+        {
+            "actions": [
+                {
+                    "data": {
+                        "displayName": "Get Unity",
+                        "url": "https://unity.com/releases/editor/archive",
+                        "version": "6000.2.12f1"
+                    },
+                    "type": "manualInstall"
+                }
+            ],
+            "applicable": true,
+            "conditions": [
+                {
+                    "data": {
+                        "version": "6000.2.12f1"
+                    },
+                    "type": "unityInstalled"
+                }
+            ],
+            "data": {
+                "manual": true
+            },
+            "description": "The Unity editor will let you modify and build the Unity source project, distributed as part of this package.",
+            "execution": "preInstall",
+            "id": "unity",
+            "mandatory": true,
+            "name": "Unity",
+            "type": "extSoft",
+            "version": "1"
+        }
+    ],
+    "tag": "wag",
+    "type": "sample",
+    "vendor": "Audiokinetic",
+    "version": {
+        "nickname": "",
+        "build": 421,
+        "major": 1,
+        "minor": 3,
+        "year": 2025
+    },
+    "$checked": null,
+    "$unlocked": null,
+    "$visible": null,
+    "$disabled": null,
+    "applicable": null,
+    "$message": null,
+    "initialPublishDate": 1747753560000,
+    "$sortGroupIndex": 2,
+    "links": [],
+    "displayName": "Wwise Adventure Game 2025.1.3.421",
+    "redistributables": [
+        {
+            "platform": "windows",
+            "displayName": "Microsoft Visual C++ 2013 Redistributable (x64)",
+            "fileName": "vc2013redist_x64.exe",
+            "command": "vc2013redist_x64.exe",
+            "requirements": [
+                {
+                    "type": "regKeyPresent",
+                    "key": {
+                        "hKey": "HKLM",
+                        "keyPath": "SOFTWARE\\Classes\\Installer\\Dependencies\\{050d4fc8-5d48-4b8f-8972-47c82c46020f}",
+                        "wow64": false
+                    }
+                }
+            ],
+            "url": "https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe"
+        },
+        {
+            "platform": "windows",
+            "displayName": "Microsoft Visual C++ 2013 Redistributable (x86)",
+            "fileName": "vc2013redist_x86.exe",
+            "command": "vc2013redist_x86.exe",
+            "requirements": [
+                {
+                    "type": "regKeyPresent",
+                    "key": {
+                        "hKey": "HKLM",
+                        "keyPath": "SOFTWARE\\Classes\\Installer\\Dependencies\\{f65db027-aff3-4070-886a-0d87064aabb1}",
+                        "wow64": false
+                    }
+                }
+            ],
+            "url": "https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe"
+        },
+        {
+            "platform": "windows",
+            "displayName": "Microsoft .NET 4.0",
+            "fileName": "dotNetFx40_Full_x86_x64.exe",
+            "command": "dotNetFx40_Full_x86_x64.exe",
+            "requirements": [
+                {
+                    "type": "regKeyPresent",
+                    "key": {
+                        "hKey": "HKLM",
+                        "keyPath": "SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4.0",
+                        "wow64": false
+                    }
+                }
+            ],
+            "url": "https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe"
+        }
+    ],
+    "children": []
+}
