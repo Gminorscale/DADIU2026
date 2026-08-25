@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{475069B5-897E-48E8-810B-34EADED4D449}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Exercises" ID="{475069B5-897E-48E8-810B-34EADED4D449}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Exercise_01_Flintstones" ID="{D4E2B58D-40FD-4E06-8CD8-74BE56D7A450}" ShortID="35291397">
+					<ChildrenList>
+						<BlendContainer Name="EXC_Flintstones_Blnd_Answer" ID="{E3F3AFC1-426C-4962-9D38-A1454AFED725}" ShortID="711998680">
+							<PropertyList>
+								<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E3282860-833A-4DD1-946F-987876970E38}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="False"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Flintstones_FactoryWhistle" ID="{E39E7DE9-33EA-4703-847A-3B9A966867CB}" ShortID="854693471">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EFC1C661-3955-434B-A393-3A18E893C07E}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Flintstones_FactoryWhistle" ID="{76736A66-5A3C-49BB-825A-AF92C8C248D9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.82575615778398"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.21328843625747"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_FactoryWhistle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="358866032"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Flintstones_FactoryWhistle" ID="{76736A66-5A3C-49BB-825A-AF92C8C248D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Flintstones_Running" ID="{77286871-1C5B-471D-AC07-D4CCEB81366C}" ShortID="512067367">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+										<Property Name="LoopCount" Type="int32" Value="3"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{49280DF9-07AF-4512-9BF1-0BD0CCDBD547}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="False"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Flintstones_Running" ID="{76E03C59-6DA6-4C4E-9533-D1BCA80488AC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.011164260342599"/>
+												<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+												<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0558213017129952"/>
+												<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_Running.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="191119183"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<RTPC Name="" ID="{C2C07C06-5D55-44CB-80E1-236F7C08D160}" ShortID="810485729">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<Custom>
+															<ModulatorTime Name="Modulator Time (Custom)" ID="{FBB27C00-FF5E-4409-804E-7EFB817E77AC}" ShortID="778904259">
+																<PropertyList>
+																	<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+																	<Property Name="TimeModDuration" Type="Real64" Value="3"/>
+																</PropertyList>
+															</ModulatorTime>
+														</Custom>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{63F91CE2-DAAA-4030-9B56-ADB8EC9BC2B1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>3</XPos>
+																		<YPos>0.21448</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="Flintstones_Running" ID="{76E03C59-6DA6-4C4E-9533-D1BCA80488AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="Flintstones_Drumroll_Blnd" ID="{2740C57E-FEF1-40EE-860F-912132906210}" ShortID="73776903">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EF64C8F0-F275-4B9F-9CFB-11F2546B9DAC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="False"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Flintstones_Drumroll_Sequence" ID="{A4DE1F03-3E17-4231-A33A-8EA9182E44CB}" ShortID="967209777">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{15D19B7F-724E-4723-81E7-71ADADC2EB36}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Flintstones_DrumRoll_01" ID="{FA1FC030-11B8-44F1-AADA-8F9AD843E6C2}" ShortID="987262150">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_01" ID="{AB6CC0F8-E88C-47F8-B60F-269AB9BE0690}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.861354166666667"/>
+																<Property Name="FadeInShape" Type="int16" Value="7"/>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="550292264"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_01" ID="{AB6CC0F8-E88C-47F8-B60F-269AB9BE0690}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_02" ID="{C8F79446-F3B9-4CAF-B4EE-80C28FDCC256}" ShortID="961870938">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F99A674E-A908-4AC3-89D8-35C0455E629C}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{605BA4D3-8B52-4D23-AA72-72FF8C275724}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_02" ID="{F73146A1-F926-44FE-8504-C4D8F7E0F4E1}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.108789733382386"/>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="941246062"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_02" ID="{F73146A1-F926-44FE-8504-C4D8F7E0F4E1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_03" ID="{653F1096-CA3C-47ED-B2CF-AE4CD0F7B3FD}" ShortID="410693188">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{5FA6A796-BDCE-41A1-A196-129773B6277C}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{8598D7D3-B372-47EE-9C8B-53DED9F1A6C5}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_03" ID="{2376158F-1EAD-4340-ACC3-8321667A08FE}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="270420876"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_03" ID="{2376158F-1EAD-4340-ACC3-8321667A08FE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_04" ID="{6D024D14-B92F-48C5-BB49-78C20BC12AB5}" ShortID="61804911">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{2834BA48-1BFF-453B-94E1-81ACF58201DD}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{4B5D3BC8-F0C4-437E-B1E4-EC19EFEF2844}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_04" ID="{CF55E5A6-51FF-4D63-9D25-9823935C967E}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1050396682"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_04" ID="{CF55E5A6-51FF-4D63-9D25-9823935C967E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_05" ID="{0EAAB1B1-205C-4897-A39B-8248C2035B21}" ShortID="672906258">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{B9BE511D-30B8-4D3E-B195-26F786BC12E5}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{20252DC4-AB7A-4D4E-913F-4ECBDB978ADB}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_05" ID="{FA571B35-4C47-474A-AF8D-845895F6C0A2}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="879925357"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_05" ID="{FA571B35-4C47-474A-AF8D-845895F6C0A2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_06" ID="{A03B068C-42F8-4F82-AFD1-47578F8A7021}" ShortID="662603740">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F7312994-8609-4055-A11B-87343875325E}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-200"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F2842E69-BB32-4239-8D4C-04DC6225FCE5}">
+																		<PropertyList>
+																			<Property Name="Min" Type="Real64" Value="-2"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_06" ID="{7EA59A1D-E9A1-4B66-A280-C2AF7C7C5044}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="888635533"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_06" ID="{7EA59A1D-E9A1-4B66-A280-C2AF7C7C5044}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_07" ID="{E552D258-E0C5-4783-A474-9934D29D7711}" ShortID="787798328">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{8AE6E0BA-F42D-46BA-AE5B-6D1F5AD20CFE}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="300"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_07" ID="{E9897742-FA53-4727-B274-24D5DAE1CEE4}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="59185140"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_07" ID="{E9897742-FA53-4727-B274-24D5DAE1CEE4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Flintstones_DrumRoll_08" ID="{3334583D-6D1C-43F8-9A9D-3BEC0EAE5613}" ShortID="869375916">
+													<PropertyList>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{630F4C16-94B4-4534-BC5C-695FB2BE87B4}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="600"/>
+																			<Property Name="Min" Type="Real64" Value="-250"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Flintstones_DrumRoll_08" ID="{379D3D39-86AC-482B-AEBC-D0335F17D1B4}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll_08.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1032954895"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Flintstones_DrumRoll_08" ID="{379D3D39-86AC-482B-AEBC-D0335F17D1B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<PluginInnerObject Name="" ID="{69E7795F-C811-4349-A8C8-BC5C3664417E}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_01" ID="{FA1FC030-11B8-44F1-AADA-8F9AD843E6C2}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{69333681-018F-4159-856C-96DACE5C266D}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_02" ID="{C8F79446-F3B9-4CAF-B4EE-80C28FDCC256}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{45622455-B0D9-4422-B4AF-CA1BF3784581}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_03" ID="{653F1096-CA3C-47ED-B2CF-AE4CD0F7B3FD}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{5C020053-4442-4A12-84B3-19E5982B2CB0}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_04" ID="{6D024D14-B92F-48C5-BB49-78C20BC12AB5}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{18B09EB6-26BC-41B0-8B93-914D6BD029B9}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_05" ID="{0EAAB1B1-205C-4897-A39B-8248C2035B21}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{B57360D1-851D-4A1A-B6BE-502779C48B69}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_06" ID="{A03B068C-42F8-4F82-AFD1-47578F8A7021}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{CDF4B411-8967-4A0A-BC2F-B12A8CB90106}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_07" ID="{E552D258-E0C5-4783-A474-9934D29D7711}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{D1FF3E6A-F679-40FC-8AAF-BD83EE7CD34F}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+														<ReferenceList>
+															<Reference Name="PlaylistObject">
+																<ObjectRef Name="Flintstones_DrumRoll_08" ID="{3334583D-6D1C-43F8-9A9D-3BEC0EAE5613}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+															</Reference>
+														</ReferenceList>
+													</PluginInnerObject>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<Sound Name="Flintstones_DrumRoll" ID="{B1101E63-584E-41B0-A25C-6C7E26CAD2A7}" ShortID="1059081141">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Flintstones_DrumRoll" ID="{55ED07AC-23A5-4ABD-B95A-7F2914FA1DB7}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Exercises\Flintstones\Exercise_01_Flintstones\Flintstones_DrumRoll.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="555644824"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Flintstones_DrumRoll" ID="{55ED07AC-23A5-4ABD-B95A-7F2914FA1DB7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+								<RandomSequenceContainer Name="Flintstones_YabbaDabba_Rnd" ID="{E12F51C0-5AA9-434A-9C44-953060F68494}" ShortID="827693384">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2203798D-8714-460F-B90B-1888C425A9C3}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="YabbaDabbaDoo_02" ID="{429BA66F-291F-4752-A6D8-A6D71148A89F}" ShortID="1038211962">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{10F782EF-4125-4ADE-AC09-679A3EEBC84B}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YabbaDabbaDoo_02" ID="{1C1BAF54-E266-414F-A506-64767554F5E6}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Exercises\Flintstones\YabbaDabbaDoo_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="87510488"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YabbaDabbaDoo_02" ID="{1C1BAF54-E266-414F-A506-64767554F5E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="YabbaDabbaDoo_03" ID="{FD28B95E-A96C-4A23-8961-5BF9097FD814}" ShortID="589751503">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EC339E34-A273-42B9-9C01-2329396B782C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YabbaDabbaDoo_03" ID="{D970483C-8D75-4E77-AB4D-5E65C3BFE81D}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Exercises\Flintstones\YabbaDabbaDoo_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="557966748"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YabbaDabbaDoo_03" ID="{D970483C-8D75-4E77-AB4D-5E65C3BFE81D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="YabbaDabbaDoo_01" ID="{9BBC8386-8E95-47BB-8990-93CAD1E2B0AB}" ShortID="115617475">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A4130B02-C65D-43BB-B708-14BDCE59BC46}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YabbaDabbaDoo_01" ID="{EC04B40C-5324-4B30-AF75-B0C1DE558CED}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Exercises\Flintstones\YabbaDabbaDoo_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="331578237"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YabbaDabbaDoo_01" ID="{EC04B40C-5324-4B30-AF75-B0C1DE558CED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="YabbaDabbaDoo_04" ID="{38823381-B54F-4548-A3E2-DBB2293F7A5E}" ShortID="484478510">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2B0DFC35-5103-429B-B5A5-3E47B4904C11}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{FFCB5E13-D9D6-4610-AC15-8EE7E84352F9}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YabbaDabbaDoo_04" ID="{85C88D45-0ABF-4134-BE2C-EC0A9B1F4CD4}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+														<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Exercises\Flintstones\YabbaDabbaDoo_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="583121132"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YabbaDabbaDoo_04" ID="{85C88D45-0ABF-4134-BE2C-EC0A9B1F4CD4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{E351DAFB-0DA3-4BCC-AA54-CA757BDA0DD8}" ShortID="310855520">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+												<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</BlendContainer>
+						<BlendContainer Name="EXC_Flintstones_Blnd_BuildYourOwn" ID="{EB3CD6EF-E1DD-4D37-B2E2-4AB1078C5A95}" ShortID="1059591505">
+							<PropertyList>
+								<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
