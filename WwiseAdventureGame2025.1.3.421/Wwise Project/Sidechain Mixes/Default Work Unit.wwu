@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}" SchemaVersion="133">
+	<SidechainMixes>
+		<WorkUnit Name="Default Work Unit" ID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}" PersistMode="Standalone"/>
+	</SidechainMixes>
+</WwiseDocument>

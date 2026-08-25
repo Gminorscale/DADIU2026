@@ -83,67 +83,89 @@
 	<ValidationCacheItem File="C:\Program Files (x86)\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Program Files (x86)\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1787165884" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Program Files (x86)\WwiseAdventureGame2025.1.3.421\Wwise Project\Wwise Adventure Game.wproj" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\AppData\Roaming\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1787643707" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Attenuations\Ambient.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Attenuations\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Control Surface Sessions\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Ambient.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Enemies.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Music.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\NPC.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Objects.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Player.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\UI.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Factory Effects.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Factory Reflect.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Ambient.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Destruction.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Enemies.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Magic.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Music.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\NPCs.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Objects.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Player.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Quest.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\UI.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Ambient.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Enemies.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Gameplay.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Generic.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Magic.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Objects.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Player.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\SideChain.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Metadata\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Mixing Sessions\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\Default Work Unit.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\Magic_Modulators.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\MIDI_Envelopes.wwu" DateLow="1787165861" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Factory Reflect.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Factory Spatial Audio.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Queries\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Queries\Factory Queries.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Context.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\DLC.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\General.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Region.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\MusicStates.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\Player.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\General.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\Player.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Triggers\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1787165884" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Wwise Adventure Game.danne.wsettings" DateLow="1787166457" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Wwise Adventure Game.wproj" DateLow="1787166455" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\AppData\Roaming\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1787646919" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Attenuations\Ambient.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Attenuations\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Busses\Default Work Unit.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Ambiences_Background.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Ambiences_Emitters.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Ambient.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Default Work Unit.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Enemies.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Enemies_EvilCrawler.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Enemies_EvilHead.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Enemies_EvilSpitPlant.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Instruments.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Music.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\NPCs.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Object_Destruction.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Object_Props.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Objects.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Other.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\Player.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Containers\UI.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Control Surface Sessions\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Ambient.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Enemies.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Music.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\NPC.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Objects.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\Player.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Conversion Settings\UI.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Devices\Default Work Unit.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Factory Effects.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Factory Mastering Suite.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Effects\Factory Reflect.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Ambient.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Destruction.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Enemies.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Footsteps.wwu" DateLow="1787646371" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Magic.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Music.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\NPCs.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Objects.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Player.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\Quest.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Events\UI.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Ambient.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Enemies.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Gameplay.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Generic.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Magic.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Objects.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\Player.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Game Parameters\SideChain.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Metadata\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Mixing Sessions\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\Default Work Unit.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\Magic_Modulators.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Modulators\MIDI_Envelopes.wwu" DateLow="1787646052" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Factory Reflect.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Presets\Factory Spatial Audio.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Queries\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Queries\Factory Queries.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Sidechain Mixes\Default Work Unit.wwu" DateLow="1787646395" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Context.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\DLC.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\General.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\SoundBanks\Region.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\MusicStates.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\States\Player.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\General.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Switches\Player.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Triggers\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1787646056" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Wwise Adventure Game.danne.wsettings" DateLow="1787646906" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\danne\Documents\git\DADIU2026\WwiseAdventureGame2025.1.3.421\Wwise Project\Wwise Adventure Game.wproj" DateLow="1787646056" DateHigh="0"/>
 </ValidationCache>

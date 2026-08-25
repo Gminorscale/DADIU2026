@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{03199D9F-964E-402C-91C5-0E200B19AD96}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Footsteps" ID="{03199D9F-964E-402C-91C5-0E200B19AD96}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Player_Footstep" ID="{C9FD3C73-255A-47E5-BFA2-C3D1514AE81F}">
+					<ChildrenList>
+						<Action Name="" ID="{6EA960E6-01C6-4EE7-BB9F-1680A4729726}" ShortID="274238770">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{80A94060-52B5-4B3B-A85A-7E3152FC65F8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="False"/>
+													<Property Name="Max" Type="Real64" Value="0.3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Footstep_Surface" ID="{98D92B66-05D7-44EF-BA0E-4D3EEFF3902D}" WorkUnitID="{84C05677-5F03-43C0-81C3-BA52CE7089EA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
