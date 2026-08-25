@@ -1702,7 +1702,7 @@
 										<BlendTrackAssoc>
 											<ItemRef Name="Waterfall_Far" ID="{DBAE994D-D5CC-4619-87C3-5F61F3526A8E}"/>
 											<CrossfadingInfo>
-												<LeftEdgePos>34.6694785242291</LeftEdgePos>
+												<LeftEdgePos>34.2793614891186</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
 												<RightEdgePos>100</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>

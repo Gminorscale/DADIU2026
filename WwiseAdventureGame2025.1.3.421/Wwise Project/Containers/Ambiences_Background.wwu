@@ -2772,7 +2772,7 @@ or modified for a commercial purpose nor for public demonstration.</Comment>
 													<ValueList>
 														<Value Platform="Android_Low">False</Value>
 														<Value Platform="iOS">False</Value>
-														<Value Platform="Android_High">False</Value>
+														<Value Platform="Android_High">True</Value>
 													</ValueList>
 												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -3273,7 +3273,7 @@ or modified for a commercial purpose nor for public demonstration.</Comment>
 													<ValueList>
 														<Value Platform="Android_Low">False</Value>
 														<Value Platform="iOS">False</Value>
-														<Value Platform="Android_High">False</Value>
+														<Value Platform="Android_High">True</Value>
 													</ValueList>
 												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>

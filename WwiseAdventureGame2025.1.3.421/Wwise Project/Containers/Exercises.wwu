@@ -1940,6 +1940,1794 @@
 						</PropertyContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Exercise_DayAndNight" ID="{F370F7C7-EBCD-4C9F-A77D-32D8407498A2}" ShortID="228189391">
+					<ChildrenList>
+						<BlendContainer Name="Ambience_DayNight_Answer" ID="{925EDD54-C8A2-498B-A50F-8ABA09733398}" ShortID="186707093">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{671A3274-4844-4DDA-979A-FAFB0ED4CCFB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="False"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AA129B24-B647-4FAD-B380-D16B87648D42}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="False"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+								</Reference>
+								<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+								</Reference>
+								<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="AMB_Day" ID="{86F50DE4-F550-438F-B149-64CFA97796FE}" ShortID="22764086">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Day" ID="{2EE37720-88C3-4795-814C-ED19AD3A4B3E}" ShortID="775575964">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{36ACC838-D784-49F3-8664-113B4EFF49BF}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+												</Reference>
+												<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+												</Reference>
+												<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Ambient_Woodlands_Day_Long" ID="{03CE41CF-8181-4BFB-A887-9A4B27F3A008}" ShortID="91607228">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value Platform="Android_Low">False</Value>
+																<Value Platform="iOS">False</Value>
+																<Value Platform="Android_High">True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsNonCachable" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{88BD3081-14EA-4649-8466-5F3E77497D8C}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BAS_amb_forest_day_background_loop_01" ID="{C64B2A3F-F931-479E-8C74-A9E2349606DF}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="1.74047780721064"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2.03055744174574"/>
+																<Property Name="LoopBegin" Type="Real64" Value="4.64127415256169"/>
+																<Property Name="LoopEnd" Type="Real64" Value="153.742206303606"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.4656768935484"/>
+																<Property Name="TrimEnd" Type="Real64" Value="156.352923014422"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\BAS_amb_forest_day_background_loop_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="161347460"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{B0D4AF96-CB90-49D8-B20C-FB3794613E9A}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="BAS_amb_forest_day_background_loop_01" ID="{C64B2A3F-F931-479E-8C74-A9E2349606DF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ambient_Woodlands_Day_Short" ID="{76FB0F73-9A30-4923-8FC9-A2ED07808133}" ShortID="282302666">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value Platform="Mac">False</Value>
+																<Value Platform="Windows">False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsNonCachable" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BAS_amb_forest_day_background_loop_01" ID="{D9EB67E1-90AA-4088-B8D3-3F2475D1A5F1}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="1.30535835540798"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2.32063707628085"/>
+																<Property Name="LoopBegin" Type="Real64" Value="5.94663250796967"/>
+																<Property Name="LoopEnd" Type="Real64" Value="47.7180998810249"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.20615470075904"/>
+																<Property Name="TrimEnd" Type="Real64" Value="50.9089758609111"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\BAS_amb_forest_day_background_loop_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="656419309"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{B4BEBBFE-CEBF-4487-917A-FE1930FA74E0}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="BAS_amb_forest_day_background_loop_01" ID="{D9EB67E1-90AA-4088-B8D3-3F2475D1A5F1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{5476F014-2679-411A-AAAF-3326C8408AD1}"/>
+											</PositioningInfo>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{6AF559C9-161F-46FE-9ECB-909AFBC2D3FD}" ShortID="614901959">
+														<PropertyList>
+															<Property Name="Render" Type="bool" Value="True"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<ObjectRef Name="High_Freq_Cut_5" ID="{604A4C00-7E8F-4859-BF24-F49D8C82555F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Ambient_Day_Element_birds" ID="{92EB802E-4037-433D-8711-71FFA3E80CFA}" ShortID="305620979">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{832AFD1D-7FC6-4D99-9E7E-FFF52342001E}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="30"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9BAF400F-0DF1-4549-A623-92C5099914AA}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="6">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0D1C408D-5133-4B6C-8EC7-FF783FCFE97D}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																	<Property Name="Min" Type="Real64" Value="-2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B3ADF62E-F801-49BE-AEDC-93772EBA0867}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-5"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80BE8EEB-3F19-43CD-9BCB-5157D976053A}"/>
+												</Reference>
+												<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Ambient_Day_Element_02_02" ID="{6FAF4066-2721-4A2A-BE95-DCE5FD8365A7}" ShortID="777983866">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80BE8EEB-3F19-43CD-9BCB-5157D976053A}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="forestBirds_001" ID="{CD4CA935-3F2F-486B-9A68-7DEE6C2FD080}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0741034973004114"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="5.66974969954327"/>
+																<Property Name="FadeOutShape" Type="int16" Value="1"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.369893369455733"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.92915742675023"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Emitters\forestBirds_001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1010084104"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="forestBirds_001" ID="{CD4CA935-3F2F-486B-9A68-7DEE6C2FD080}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ambient_Day_Element_02_03" ID="{6AA981BD-16C8-4F48-B514-C253F7FF3BFE}" ShortID="375676402">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{561176A4-939C-4243-908C-9E4D24192A9E}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80BE8EEB-3F19-43CD-9BCB-5157D976053A}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="amb_day_element_02_03" ID="{0AAE18BA-2E6F-43B6-A737-FD6A2D1B336E}">
+															<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0125499536065338"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0455761473079386"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.00462366711819666"/>
+																<Property Name="LoopEnd" Type="Real64" Value="0.555500578057627"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\amb_day_element_02_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="522786776"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="amb_day_element_02_03" ID="{0AAE18BA-2E6F-43B6-A737-FD6A2D1B336E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ambient_Day_Element_02_04" ID="{2B66CD3B-F286-452A-B72B-66E5FA11C74C}" ShortID="600466578">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{A36803C7-611F-4E38-8C28-34E6DB56E9CE}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80BE8EEB-3F19-43CD-9BCB-5157D976053A}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="amb_day_element_02_04" ID="{0EE76B84-75DD-49D3-9D3F-56717A910065}">
+															<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0478625761026511"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.356464701055851"/>
+																<Property Name="LoopEnd" Type="Real64" Value="1.29827237678441"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.39998035100255"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\amb_day_element_02_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="773979480"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="amb_day_element_02_04" ID="{0EE76B84-75DD-49D3-9D3F-56717A910065}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{D38E9220-D0DD-4396-BC63-074BDBABF194}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Gulls_Path" ID="{6F45FF6A-7137-4DEC-AE34-A06A4FCEB80D}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="88"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Gulls_Path_01" ID="{F0A34F55-F4CF-452C-9B79-C3569B066492}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="98"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Gulls_Path_02" ID="{D48A947B-9E32-497E-BC42-230B22172B96}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="100"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Gulls_Path_03" ID="{3FB2E8CD-2E99-467B-BB1A-C85621869EFB}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="93"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Gulls_Path_04" ID="{163AE8F8-0A53-4185-A606-996F2B0AFAF7}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="90"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Gulls_Path_05" ID="{8D5A1E49-A924-4616-8AFA-E01307D7DCDD}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="71"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="AMB_Day_Rooster_Rnd" ID="{6F52F59E-6E4E-4D7E-A340-B27BE0E877B3}" ShortID="3270545">
+											<PropertyList>
+												<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4F3A9ACA-D9D5-485B-85D6-23E7DC7A1FB3}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="AMB_Day_Rooster" ID="{95C94434-5AA6-4C3C-8253-6B7D3F4B5BDE}" ShortID="322596438">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{7C8B8516-0558-43FB-B342-F093311DB7DF}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.88680860097364"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1039534860"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{8AF49FA2-2183-41DF-80FF-CDA56C7BBB20}"/>
+																	<Marker Name="" ID="{97E8CB9A-E0E5-46D8-9C5C-BFB5A06CAA20}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{4E38D8C7-54F4-42DA-93C5-DEF5A05A4EB6}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{061488B5-E2D4-47E9-A5C1-78AEC4E86F66}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{8E38D2F6-2AB1-4831-9554-5727AD07DE8A}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{91C1DC27-AA84-46AD-AC5A-8D9AC6B74F47}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E734857F-1F39-412A-A2C2-7039FFC1EB27}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{0008B44B-816E-497B-A7C0-9D7541981AAC}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{06A1C721-821A-4B4D-A497-3729FF970D65}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{E860ABAD-40EB-4D67-B378-62B24F29E743}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{7C8B8516-0558-43FB-B342-F093311DB7DF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_01" ID="{A08C2DF9-BD28-4427-80FF-5D53C2832A92}" ShortID="620656381">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{4010E56F-D346-4D23-9946-321D83EB91E1}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.88680734466668"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.3225053549979"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="679597675"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{35BA4F73-BCC3-4C47-BE25-DB88376EFD18}"/>
+																	<Marker Name="" ID="{7EBEF39F-4D52-44A5-8EDB-D86A7373ACA9}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{29488F53-F0CD-4000-AB3B-B359ACD39638}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{F9D94CAE-A973-4D50-9524-54B0C8312CB4}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E70E347B-64CB-4407-B6C9-8908FB9E6C93}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{51C08F44-AF3F-4A41-BDEB-41E5BF4959F0}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{5818ABCB-8478-4D05-88AF-9948D188FA5C}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{22DE0870-A808-4278-8333-33E63B7D189D}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{FA34780E-2CCE-4CE0-A366-019D5199EEB6}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{AC4762C7-1063-4F8D-9CF9-5B8E686D5A99}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{4010E56F-D346-4D23-9946-321D83EB91E1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_02" ID="{EB76BEDB-4C77-4B40-BFC8-7A1C9C110430}" ShortID="910077123">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{44D8D0CC-E3D0-45D5-8C03-813EEC39263B}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.35680968677578"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.14070152349488"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="502368257"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{C28B7518-C993-4841-804B-742D8941480E}"/>
+																	<Marker Name="" ID="{F1FB314B-211E-4ECE-B6E6-B27C080B08A3}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{F242C2D2-0B86-4F3E-8853-8655EB69B8C5}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{1FE79E6F-32A7-444D-B6D2-AA6F45D6456A}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{5A304186-97E8-420A-A8C6-8C15320B63BC}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{F6388AB1-0580-4580-8AF4-7C27C71DC4CF}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{88F08D52-FA2F-446B-81BF-4D5CA432D5AB}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{356DF160-3084-46EF-9683-695309095738}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{15832510-23AD-4870-9DDB-8F07290C7A0A}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{5AA7774F-6B63-4D36-9AC7-495BFAC03F06}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{44D8D0CC-E3D0-45D5-8C03-813EEC39263B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_03" ID="{452F4FA6-E9C8-4B8E-9055-D33398D0E9DA}" ShortID="714346543">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{B17D8E4A-9CCF-4B3D-B35D-289A5504CD07}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="6.20931144335761"/>
+																<Property Name="TrimEnd" Type="Real64" Value="8.49635190532116"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="16520495"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{D0857634-0F4D-4A47-A31A-C637F6783BE5}"/>
+																	<Marker Name="" ID="{A5A6E9F8-A0EB-467B-864B-16CF8DCCB9AD}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E2831297-BE27-4E09-8F3E-72B9861298AC}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{5A482525-F1AB-4629-9B9C-FF6A71C96912}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{46C17275-7297-4417-902A-F99C9239A9E4}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{717DA9C1-4AC0-4EED-A2BF-6B4D814E1F7C}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{74CCD3AF-78EA-4AC2-B5E9-A511749C8730}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{ED5F3027-E85A-4338-94C1-14F11DA3208F}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{0AA4B73C-E811-433E-A56D-26E1804BDE46}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{929D39DD-2DBD-4565-941D-EA8EE02EE3B1}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{B17D8E4A-9CCF-4B3D-B35D-289A5504CD07}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_04" ID="{5A256DD4-1BBD-4AA8-A05C-1B5E9CBE30B9}" ShortID="122219302">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{DE4362AE-15DA-400D-9017-8A44EA8A1BDD}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.69074898149501"/>
+																<Property Name="TrimEnd" Type="Real64" Value="10.8863078752323"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="984089069"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{5ACC7823-011F-46EB-AE42-15E21F482C96}"/>
+																	<Marker Name="" ID="{70F499FA-2C8C-44CD-B95A-85E86BAF8BDD}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{08C1B0DA-AC5E-42E8-84E1-81AC4DB41D6A}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6AB2CDF4-3A0D-4876-BFDE-7C06D97A1C62}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{EED184A7-F442-42C4-9201-1E27F3FF5448}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{7B1FA1FE-4BD4-4F74-88E1-276992CCF1E1}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{4ED93EE2-0E51-4960-8DAD-F72E070C7A99}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{674FF8EE-D56E-4A26-AE22-0109D90ECEE0}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{9C588C7F-0B48-4B3E-A8BD-D504DE82F025}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{1F23BB44-065D-4003-92F1-6E6BBE5C2359}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{DE4362AE-15DA-400D-9017-8A44EA8A1BDD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_05" ID="{E2A38F37-E42D-4D6A-9DB5-B118755D0015}" ShortID="941217394">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{3B152E27-F576-4828-8F5C-864914B137E8}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="10.7719546586425"/>
+																<Property Name="TrimEnd" Type="Real64" Value="12.6358928675596"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="316155999"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{05A9521F-C1F0-4DDD-AF73-C21179805A71}"/>
+																	<Marker Name="" ID="{5427D386-AD9B-4135-BEF5-F81F4A850C45}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{66558A49-A2CE-468A-84D0-AAC30AF88650}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6E36C232-5B3A-47B5-85D8-9956F63A79FC}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{BA684AE6-42F4-42F8-ABC6-664CBDE985EF}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6C0BBB3B-EFED-4A57-9C21-7F3CD05281CD}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{0FC1605A-EB25-406F-AA69-AC3990B072F0}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{13B118A3-8FF5-486B-8A1D-D9D7BB5438A8}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{3FEF59C9-7466-4887-B2C9-C107AC26E602}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{98306441-49EF-451A-B664-ED2C8C10D3D8}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{3B152E27-F576-4828-8F5C-864914B137E8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_06" ID="{4CBA8B69-13EA-4B49-A86E-F79D802A7362}" ShortID="888619656">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{34D65715-0B32-44AC-BA59-52843B0ABD1A}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.5558452390546"/>
+																<Property Name="TrimEnd" Type="Real64" Value="14.1567739393212"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="137095081"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{87811782-5C5B-4306-8606-C589F2DBC342}"/>
+																	<Marker Name="" ID="{C848BB3C-0CF4-46BE-B48C-CC1C5B157D62}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{296818C9-D9B4-4A0E-B7F4-9EEDB57BF2E3}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{9B102266-72C4-4FE2-AB6B-C88110DD2ECB}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B2CE3AE2-2C97-4513-923D-6C3F50D0DA40}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B64F8357-7C25-42D8-BDB6-CD44A13AC3C9}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6161F8C9-44CE-4842-8A40-D89EEC0E7785}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{17629076-792F-4BD4-AFE3-64BBA77E4DB0}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{934786DF-B0D1-49AD-B756-23676A7ADAEA}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{59D000D1-122B-498C-8981-F36AFA501D18}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{34D65715-0B32-44AC-BA59-52843B0ABD1A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_07" ID="{0D908C0C-C0DF-41FA-90C3-F004F7306649}" ShortID="720919685">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{5B17EBFC-8232-4E01-80B7-5D1C2894C6AF}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="14.3283006234385"/>
+																<Property Name="TrimEnd" Type="Real64" Value="16.1350628522141"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="218657885"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{1E3B19C1-D08E-4A4A-8790-DD47C209FB86}"/>
+																	<Marker Name="" ID="{7CF02E62-100A-47DD-A030-20FDEBB9B8D2}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{068D3429-E1D5-4D9B-BA2F-6DF84B9B07B4}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{71969C85-40A1-4E68-85CD-FE4883F3FD88}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{C182E635-2B6F-4E22-BBA6-D932BB3DC1BF}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{1F8317E5-F359-483C-8E2A-CC7F2D31AE08}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{AE54AB42-741C-4C07-9AE5-7D6CA15230A7}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{A5926298-169C-4275-83F3-8AD3128562EB}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{363876CD-E404-41E3-BBCB-3FF34C4BCFAC}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{5B9488A8-7165-4BF9-B74D-CA2C354F610E}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{5B17EBFC-8232-4E01-80B7-5D1C2894C6AF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Day_Rooster_08" ID="{72ABE86B-479A-4F28-A2C4-0E8E224CD2DA}" ShortID="497417767">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{C29B6C0F-76AC-4191-B845-B41C696E3919}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
+																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="16.1808023800203"/>
+																<Property Name="TrimEnd" Type="Real64" Value="-0.001"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Exercises\DayNightCycle\Birds, Fowl, Rooster, Calls, Clean SND50734 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="934885012"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{10C0FE76-70F6-4C95-BCBA-720C5D7523FC}"/>
+																	<Marker Name="" ID="{37DD00AD-83E0-448B-B31E-CADBFC9A93D4}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="1.77184245163232"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E32F94E5-BBD5-4E4B-AD6D-302B60AF93AF}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="4.38365625"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{BB85553D-9615-4B6D-BF2A-B82E081A93FF}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="6.2033125"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B67CB928-555D-4771-A851-DBF2725C8EC2}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="8.67752083333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{18B46095-A936-44E4-8C6B-30718B1E9326}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="10.8718333333333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{567EEA65-82D8-4982-804C-0DDBEBC66A3B}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="12.5917604166667"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{D02A6388-F3FE-4BA2-AF25-D63056A93866}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="14.3409270833333"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{FC875F61-F90D-4108-86A9-1494F17A4A6F}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="16.1576875"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{7A70F433-01F1-4693-AA4D-48ED35D1DAF4}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Birds, Fowl, Rooster, Calls, Clean SND50734 1" ID="{C29B6C0F-76AC-4191-B845-B41C696E3919}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="AMB_Night" ID="{B4655C4D-480B-418F-B138-0A1BFB07D123}" ShortID="770171154">
+									<PropertyList>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Night" ID="{CA5AE5C4-C08A-4E86-83AA-B22909DCC1F9}" ShortID="565722275">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-16</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{917D0DB1-E1B8-4252-B0B8-4DA7E93AC74E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="False"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+												</Reference>
+												<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+												</Reference>
+												<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Ambient_Woodlands_Night_Short" ID="{1280F8AD-FAF8-45AE-A506-9010477F267A}" ShortID="515296070">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value Platform="Mac">False</Value>
+																<Value Platform="Windows">False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsNonCachable" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="amb_forest_night_background_loop_02" ID="{A03CF76C-1672-4383-97E4-8E6C0CDFFA37}">
+															<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="500"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.65439699501848"/>
+																<Property Name="LoopEnd" Type="Real64" Value="22.9766056028711"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\amb_forest_night_background_loop_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="277436620"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{6D8C2D1A-809D-4D2E-8D9E-9999E76BA224}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="amb_forest_night_background_loop_02" ID="{A03CF76C-1672-4383-97E4-8E6C0CDFFA37}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ambient_Woodlands_Night_Long" ID="{E7E0C866-E567-4E78-9722-A00E3C773E0C}" ShortID="448928040">
+													<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value Platform="Android_Low">False</Value>
+																<Value Platform="iOS">False</Value>
+																<Value Platform="Android_High">False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsNonCachable" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{3C5FAB58-0978-480F-A973-2F5B75AA84D4}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambience_Emitters_Medium_5_30" ID="{FB84EEA1-6931-415E-97D5-76AFF5A075B8}" WorkUnitID="{E0237DA4-C386-4BC4-A1FC-687BC09FB5DC}"/>
+														</Reference>
+														<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
+														</Reference>
+														<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
+															<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="amb_forest_night_background_loop_04" ID="{F7B8709F-1EA3-4EE6-B720-5C6BC88290FA}">
+															<Comment>Audiokinetic Inc. All rights reserved.
+Audio content provided by Bay Area Sound, Inc.
+With the help of Damian Kastbauer for Lost Chocolate Lab.
+(c) 2012 Bay Area Sound, Inc.
+www.basound.com
+
+The Audio Content contained in this file is the property of Bay Area Sound, Inc.
+Your sole right with regard to this Audio Content is to listen to the Audio 
+Content as part of this Sample Project.  This Audio Content cannot be used
+or modified for a commercial purpose nor for public demonstration.</Comment>
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="500"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.262455943007124"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.306198600174977"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.634268528933883"/>
+																<Property Name="LoopEnd" Type="Real64" Value="21.1277034120735"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambient\Ambient_Background\amb_forest_night_background_loop_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="942018179"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{563FD0F5-E8D9-4A5F-B93D-52D835BE94E4}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="amb_forest_night_background_loop_04" ID="{F7B8709F-1EA3-4EE6-B720-5C6BC88290FA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{1921CE2B-3861-46CE-81B2-AE9A6780BE71}"/>
+											</PositioningInfo>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{C37425D0-ED30-43B5-B546-2A9B3EA05B63}"/>
+							</PositioningInfo>
+							<BlendTrackList>
+								<BlendTrack Name="DayNightCycle" ID="{BDA769EF-4994-4B04-8A66-64996F8363F7}" ShortID="477101700">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="Time_of_Day" ID="{A2DD7A69-3307-4418-9A97-F2621CFDBF8F}" WorkUnitID="{17F3C39E-9203-41A0-AC8E-36E35E869702}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="AMB_Night" ID="{B4655C4D-480B-418F-B138-0A1BFB07D123}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>6</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="AMB_Day" ID="{86F50DE4-F550-438F-B149-64CFA97796FE}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>4.34607560296846</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>21.278543135436</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="AMB_Night" ID="{B4655C4D-480B-418F-B138-0A1BFB07D123}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>15.2718641001855</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>24</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="Ambience_DayNight_BuildYourOwn" ID="{2EA41110-D6F2-4B91-B19E-BB6EA77619CA}" ShortID="741450769">
+							<PropertyList>
+								<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="20"/>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Objects_General" ID="{8A0F318D-CCEE-41F0-86BC-9492B09099BC}" WorkUnitID="{9EB947C2-28EF-4A8A-8D30-521CC61B45DA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								</Reference>
+							</ReferenceList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
