@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}" SchemaVersion="133">
 	<SidechainMixes>
-		<WorkUnit Name="Default Work Unit" ID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}" PersistMode="Standalone">
+			<ChildrenList>
+				<SidechainMix Name="Amb_Combat" ID="{22990BEC-5E77-49F6-ADD9-98D554F86C80}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</SidechainMixes>
 </WwiseDocument>

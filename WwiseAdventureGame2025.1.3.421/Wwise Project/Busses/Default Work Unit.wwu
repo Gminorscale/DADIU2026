@@ -370,6 +370,45 @@
 												<Property Name="MaxDuckVolume" Type="Real64" Value="-96"/>
 											</PropertyList>
 										</Bus>
+										<Bus Name="AMB_SideChained" ID="{6BBE90A0-C749-4D5D-B562-823916F18C86}">
+											<PropertyList>
+												<Property Name="BusChannelConfig" Type="int32">
+													<ValueList>
+														<Value>3584</Value>
+													</ValueList>
+												</Property>
+												<Property Name="CenterPercentage" Type="int32">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxDuckVolume" Type="Real64" Value="-96"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{720697BD-F6B4-4C9F-9C85-2999C2BF7805}" ShortID="150755784">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Compressor (Custom)" ID="{493A04DA-F031-4DA6-864F-77D84FE1643C}" ShortID="759680287" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<PropertyList>
+																			<Property Name="Ratio" Type="Real32" Value="35.2"/>
+																			<Property Name="ReleaseTime" Type="Real32" Value="0.2"/>
+																			<Property Name="Threshold" Type="Real32" Value="-40"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="SidechainRef">
+																				<ObjectRef Name="Amb_Combat" ID="{22990BEC-5E77-49F6-ADD9-98D554F86C80}" WorkUnitID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}"/>
+																			</Reference>
+																		</ReferenceList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="Voice" ID="{90A0AD2C-4946-4E6A-9E14-12A19FD496FE}">
@@ -473,6 +512,17 @@
 										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="MaxDuckVolume" Type="Real64" Value="-96"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{85B81A7A-28B6-4D48-8EA2-6FE8BA2D9EF6}" ShortID="829988411">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Ak Sidechain Send" CompanyID="0" PluginID="193" PluginType="3">
+														<ObjectRef Name="New_Sidechain_Send" ID="{8EA1F201-AB79-4084-B434-39D6992C0FE9}" WorkUnitID="{53E55471-4509-4D61-9647-D682276CB10A}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
 								</Bus>
 								<Bus Name="AUX" ID="{623E0777-988B-45F5-B3B5-228AE0A7656E}">
 									<PropertyList>

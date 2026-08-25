@@ -1990,8 +1990,8 @@
 								<Reference Name="Conversion" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Ambient_Detailed" ID="{152FF780-C536-4E80-93AD-1D41778924FD}" WorkUnitID="{FA9BF710-08A9-49D1-B809-553C31C179E2}"/>
 								</Reference>
-								<Reference Name="OutputBus" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Ambient" ID="{E70EE446-5A9F-4382-8B46-9AF3C72F9FC3}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="AMB_SideChained" ID="{6BBE90A0-C749-4D5D-B562-823916F18C86}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>
 								</Reference>
 								<Reference Name="UserAuxSend0" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Woodlands_AuxBus" ID="{A421D5BD-DED2-4887-BA5A-37B575338EA5}" WorkUnitID="{56F639F1-1C67-49F4-8B8F-872989E35A0B}"/>

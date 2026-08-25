@@ -98,6 +98,18 @@ or modified for a commercial purpose nor for public demonstration.</Comment>
 					</ModuleList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{31BD1FEC-7649-4194-AF9F-0721090A6CF9}"/>
+				<SoundcasterSession Name="Exercise04_Mixing" ID="{AA208E53-728D-46EC-87C6-F18FACA26548}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Ambience_DayNight_Answer" ID="{925EDD54-C8A2-498B-A50F-8ABA09733398}" WorkUnitID="{475069B5-897E-48E8-810B-34EADED4D449}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_WeaponSwing" ID="{D6576080-A42D-4FBF-8B25-56C419BC2D7E}" WorkUnitID="{D6D4F52F-79B5-434A-AD13-672EE62AB7CC}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

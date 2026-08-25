@@ -895,6 +895,30 @@ IR Pre-delay: 10ms </Comment>
 	</ReflectData>
 </PluginData>
 				</Effect>
+				<Effect Name="New_Sidechain_Receive" ID="{06BFF2E7-32F0-4ADF-B10C-9072A22BDA24}" PluginName="Ak Sidechain Receive" CompanyID="0" PluginID="194" PluginType="3">
+					<ReferenceList>
+						<Reference Name="SidechainRef">
+							<ObjectRef Name="Amb_Combat" ID="{22990BEC-5E77-49F6-ADD9-98D554F86C80}" WorkUnitID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<RTPC Name="" ID="{2C99A32E-DC23-4733-B0D5-42FBE70F167A}" ShortID="69182418">
+								<PropertyList>
+									<Property Name="PropertyName" Type="string" Value="Volume"/>
+								</PropertyList>
+								<ReferenceList/>
+							</RTPC>
+						</ObjectList>
+					</ObjectLists>
+				</Effect>
+				<Effect Name="New_Sidechain_Send" ID="{8EA1F201-AB79-4084-B434-39D6992C0FE9}" PluginName="Ak Sidechain Send" CompanyID="0" PluginID="193" PluginType="3">
+					<ReferenceList>
+						<Reference Name="SidechainRef">
+							<ObjectRef Name="Amb_Combat" ID="{22990BEC-5E77-49F6-ADD9-98D554F86C80}" WorkUnitID="{EA84B0B3-E7D1-4DCB-9748-9E8B3E3E7955}"/>
+						</Reference>
+					</ReferenceList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
