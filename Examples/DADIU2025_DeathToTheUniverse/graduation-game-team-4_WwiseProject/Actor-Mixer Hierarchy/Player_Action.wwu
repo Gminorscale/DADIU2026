@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Player_Action" ID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="12"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="PlayerActionAttack" ID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}" PersistMode="Reference"/>
+				<RandomSequenceContainer Name="PlayerActionTakeDamage" ID="{33FD9299-3FB5-4ADC-A514-2B60CD4035BF}" ShortID="949246128">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>14</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{06EB09C9-B0DF-4E45-ABDA-06A62C027566}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Player_Action_Damage_02" ID="{D8447F74-77FE-4707-B379-4D371DFBED11}" ShortID="764012052">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Damage_02" ID="{51A53C97-3B28-47EF-9466-17A0D0FE942C}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Damage\SFX_Player_Action_Damage_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="471242963"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Damage_02" ID="{51A53C97-3B28-47EF-9466-17A0D0FE942C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Action_Damage_01" ID="{18E1D03F-B261-4ECE-952B-4770980B18C3}" ShortID="861460660">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Damage_01" ID="{46A0D7C1-2DA2-4724-9BA5-55065F07B06F}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Damage\SFX_Player_Action_Damage_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="958810950"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Damage_01" ID="{46A0D7C1-2DA2-4724-9BA5-55065F07B06F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<WorkUnit Name="PlayerActionGrapple" ID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}" PersistMode="Reference"/>
+				<WorkUnit Name="PlayerActionLevitation" ID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}" PersistMode="Reference"/>
+				<WorkUnit Name="PlayerActionDash" ID="{94B7DA0B-B6E8-4726-8F11-201045C4976F}" PersistMode="Reference"/>
+				<WorkUnit Name="PlayerActionParry" ID="{AA556F69-C54D-411D-92F0-2FA69489668A}" PersistMode="Reference"/>
+				<Sound Name="SFX_Player_Action_Respawn_OS" ID="{811A6FBD-DD56-4960-8DC3-5381BDEE83EC}" ShortID="376280661">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Player_Action_Respawn" ID="{FBA8EADB-09B8-4AB2-8B37-8826A2C4BAE1}">
+							<Language>SFX</Language>
+							<AudioFile>Player\Player Actions\Player Action Respawn\SFX_Player_Action_Respawn.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="444157783"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Player_Action_Respawn" ID="{FBA8EADB-09B8-4AB2-8B37-8826A2C4BAE1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<WorkUnit Name="PlayerActionDeath" ID="{9AAB1ECA-5C93-475D-8981-98D0FCAFA11A}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

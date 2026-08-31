@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{409F7817-492E-491C-9239-945387236CBA}" SchemaVersion="123">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{409F7817-492E-491C-9239-945387236CBA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{04264FBA-05B5-4E27-8E85-C5D992251377}" WorkUnitID="{50361785-1BD4-468A-9B49-A40CC3A89D04}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="Reverbs" ID="{F66331A1-7E57-4344-B130-83759858EA68}">
+							<ChildrenList>
+								<AuxBus Name="TinyRoom" ID="{FEF4AB06-AD0C-471E-8117-466E5581E63A}">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+								</AuxBus>
+								<AuxBus Name="SmallRoom" ID="{E410629D-2A73-4A1D-AB56-42A3224CD4F8}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{ED963EE8-D07B-4D01-A21F-A5C059A10147}" ShortID="148890630">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Wwise_RoomVerb_(Custom)" ID="{DBF591E5-9D59-49AE-B056-1B19C130AC62}" ShortID="688745218" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<PropertyList>
+																			<Property Name="ERLevel" Type="Real32" Value="-96"/>
+																			<Property Name="ReverbLevel" Type="Real32" Value="-96"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="MediumRoom" ID="{6DF8869A-75E8-49F9-8E32-8D5721963AB4}">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{758A84FD-4BCB-4D83-817C-76791822E57F}" ShortID="842758851">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="LargeRoom" ID="{72772FDA-BD47-4986-922D-6284C4F31B60}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{93094769-0A5F-4631-8010-0548582FE691}" ShortID="105534394">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="MassiveRoom" ID="{D924A2E5-487F-40F2-9229-7D1A26B7632F}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{2BF24B63-E915-4664-8E54-41AF432FBB03}" ShortID="856441646">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Wwise_RoomVerb_(Custom)" ID="{F4060BF4-D4CC-47DB-A059-AFBF3B9C3D9F}" ShortID="638162338" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<PropertyList>
+																			<Property Name="ReverbLevel" Type="Real32" Value="-18"/>
+																			<Property Name="RoomSize" Type="Real32" Value="73"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="RealLargeRoom" ID="{A48072CD-F72C-4101-80C9-1BD7624DB84B}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{B2655D51-C4A3-44F9-9122-12D4C75ABAFC}" ShortID="637177259">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Wwise_RoomVerb_(Custom)" ID="{8D666312-763E-4949-BBFB-175CE824DDD6}" ShortID="178795862" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<PropertyList>
+																			<Property Name="ReverbLevel" Type="Real32" Value="-12"/>
+																			<Property Name="RoomSize" Type="Real32" Value="20"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="UniverseReverb" ID="{BD1BA6E2-835A-45FC-9FEA-8D129E983495}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{342DA535-E636-4C82-ABD8-A133B648349C}" ShortID="199322437">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+							</ChildrenList>
+						</AuxBus>
+						<Bus Name="WorldMaster" ID="{4CF28A74-CF73-440E-9773-9D5EA9773039}">
+							<ChildrenList>
+								<Bus Name="NPCMaster" ID="{583730EF-84DF-4938-8D41-64E0DADD255C}">
+									<ChildrenList>
+										<Bus Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}">
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="GameState" ID="{DFE8BF36-A139-4972-A8F7-E0E856A94DA3}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="None" ID="{88972298-BFE6-405E-A22F-49645D292E9D}"/>
+														<CustomState Name="" ID="{ECB2FF6C-EDEB-41FD-82AC-3542A94994F5}" ShortID="82895524"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="InGame" ID="{ECEBE20B-1B3A-4654-9226-A39DB6A7C543}"/>
+														<CustomState Name="" ID="{2DE57F81-688F-4A7B-B0A9-81212BCC52FE}" ShortID="946593322"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Menu" ID="{E2FEAC19-A420-4694-BE34-EAB4586BF6FA}"/>
+														<CustomState Name="" ID="{4D773F92-BA9D-4E8A-AADC-936B18B2F4C5}" ShortID="824323313">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="GameOver" ID="{D3C6B5E2-C2F3-4F90-9E73-0BF38CFB4B96}"/>
+														<CustomState Name="" ID="{9ABA0A72-267E-4F48-BDFC-EF7752C5100C}" ShortID="1060630101"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{E0CA3D39-3346-4A52-BB1D-6E9036B85820}" ShortID="752164562">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuSFXFader" ID="{56E036CE-8A27-4842-A3F2-53F31CB57712}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{8912191E-E694-41AF-BBE8-600610098CD4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="PlayerMaster" ID="{960EC2EE-1C0D-4DE0-97AC-ACCB477F8201}">
+									<ChildrenList>
+										<Bus Name="PlayerLocomotion" ID="{5AF4256E-140C-465A-9E37-D2CE9898FDEC}">
+											<ChildrenList>
+												<Bus Name="PlayerCloth" ID="{AF653A4E-4354-44D8-82E8-1306ED0633EC}"/>
+												<Bus Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+												</Bus>
+											</ChildrenList>
+										</Bus>
+										<Bus Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}"/>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="ToolTipState" ID="{26A93DFF-1DCD-4877-A54D-90FD37977AB5}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="GameState" ID="{DFE8BF36-A139-4972-A8F7-E0E856A94DA3}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="None" ID="{88972298-BFE6-405E-A22F-49645D292E9D}"/>
+												<CustomState Name="" ID="{87C6D7A0-B411-46F9-B8D8-CDA4DA58FBBC}" ShortID="257470739"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="None" ID="{0D414D3B-306C-434A-91CD-BAEFA7C3DAD0}"/>
+												<CustomState Name="" ID="{E985D04B-C33A-4111-B3F3-0011C6C1E6AE}" ShortID="278605751"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}"/>
+												<CustomState Name="" ID="{79EC1E24-AAF9-4D4A-BFC3-249EC3410507}" ShortID="831360462"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InGame" ID="{ECEBE20B-1B3A-4654-9226-A39DB6A7C543}"/>
+												<CustomState Name="" ID="{4ADC5A81-FE45-4554-BECD-30B0C5CEA415}" ShortID="429111696"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}"/>
+												<CustomState Name="" ID="{5FE4C361-AE03-4AE2-93A7-855C142CA487}" ShortID="645280621">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Menu" ID="{E2FEAC19-A420-4694-BE34-EAB4586BF6FA}"/>
+												<CustomState Name="" ID="{7260D7E7-B2DA-46B6-83E7-A71CA1E4AC81}" ShortID="56965635">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GameOver" ID="{D3C6B5E2-C2F3-4F90-9E73-0BF38CFB4B96}"/>
+												<CustomState Name="" ID="{42C3E993-BEC1-46C2-8AB0-08E3816243C5}" ShortID="299990838"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{5CEC3602-1DC4-480D-A50B-F8AE52B0B996}" ShortID="490355297">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuSFXFader" ID="{56E036CE-8A27-4842-A3F2-53F31CB57712}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{EC7D506B-C8CE-4319-B340-B482BE068508}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="AmbientMaster" ID="{392DCA1E-6210-4EF9-8462-BF17308E5E43}">
+									<ChildrenList>
+										<Bus Name="AmbientBeds" ID="{898DB529-AF16-4639-8538-9326CCDBA355}">
+											<ChildrenList>
+												<Bus Name="2DAmbientBeds" ID="{16F8F35E-B7DD-4CDF-9439-B82EFCC7C44B}"/>
+											</ChildrenList>
+										</Bus>
+										<Bus Name="3DAmbience" ID="{0C37C7DA-2415-4791-A1D2-50C562E0B174}">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}"/>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{38389B0E-A548-4E1C-8894-4AFC59AE537C}" ShortID="589168361">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuAmbienceFader" ID="{60B18163-92F4-46C7-810F-C5BA03E7B7CA}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A07694D4-73E4-4612-905A-86E7A7C8CB12}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{4C367BD4-71F0-4E3B-98FD-985B6C36C71C}" ShortID="882319433">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuSFXFader" ID="{56E036CE-8A27-4842-A3F2-53F31CB57712}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A4E04F79-2F57-4ACD-9E16-EFA12F12639D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ToolTipState" ID="{26A93DFF-1DCD-4877-A54D-90FD37977AB5}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="None" ID="{0D414D3B-306C-434A-91CD-BAEFA7C3DAD0}"/>
+										<CustomState Name="" ID="{664A4465-E64C-4535-B411-466283B3FB5F}" ShortID="39740426"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}"/>
+										<CustomState Name="" ID="{2AA70B60-0EDE-45C6-B49C-08161EB96EF7}" ShortID="1064389987"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}"/>
+										<CustomState Name="" ID="{3921810A-00F2-405B-9670-E1796F077F09}" ShortID="795629728">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="55"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+						</Bus>
+						<Bus Name="Non-WorldMaster" ID="{4672014E-BC29-4B09-A68A-6B59F15D079D}">
+							<ChildrenList>
+								<Bus Name="MusicMaster" ID="{36365409-4145-4AAB-B103-E16103FF971B}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="ToolTipState" ID="{26A93DFF-1DCD-4877-A54D-90FD37977AB5}"/>
+											</StateGroupInfo>
+											<StateGroupInfo>
+												<StateGroupRef Name="GameState" ID="{DFE8BF36-A139-4972-A8F7-E0E856A94DA3}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="None" ID="{88972298-BFE6-405E-A22F-49645D292E9D}"/>
+												<CustomState Name="" ID="{6FE2DCF9-4130-41F7-9358-3523FEDBBEC4}" ShortID="935480735"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="None" ID="{0D414D3B-306C-434A-91CD-BAEFA7C3DAD0}"/>
+												<CustomState Name="" ID="{84370721-E68F-46C9-B9FF-A5D371772E40}" ShortID="789393033"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}"/>
+												<CustomState Name="" ID="{3A2D62CD-6187-439D-91D2-7ED965F951BD}" ShortID="775500118"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InGame" ID="{ECEBE20B-1B3A-4654-9226-A39DB6A7C543}"/>
+												<CustomState Name="" ID="{8F31AD4E-2687-4ABF-A239-F6857F206F8A}" ShortID="903707897"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}"/>
+												<CustomState Name="" ID="{D0A86124-44C5-4388-9BE0-AC76248851E9}" ShortID="349504230">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16" Value="55"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Menu" ID="{E2FEAC19-A420-4694-BE34-EAB4586BF6FA}"/>
+												<CustomState Name="" ID="{20F95AC4-D36C-46F2-A698-713D510F7050}" ShortID="645552113">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16" Value="28"/>
+														<Property Name="Lowpass" Type="int16" Value="58"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GameOver" ID="{D3C6B5E2-C2F3-4F90-9E73-0BF38CFB4B96}"/>
+												<CustomState Name="" ID="{21F03E56-8AEB-4364-9540-0075955449D6}" ShortID="286131244"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{BCDFB617-17D2-4065-9C07-5E93CF05B23A}" ShortID="587053995">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+																<ObjectRef Name="MusicMeter" ID="{3F7F8D5C-BC8D-40DB-A302-772D4B4F30E9}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+														<StateInfo>
+															<CustomStateList>
+																<CustomState>
+																	<StateRef Name="None" ID="{88972298-BFE6-405E-A22F-49645D292E9D}"/>
+																	<CustomState Name="" ID="{F655F465-B5A3-471C-B763-98F945969640}" ShortID="4931867"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="None" ID="{0D414D3B-306C-434A-91CD-BAEFA7C3DAD0}"/>
+																	<CustomState Name="" ID="{54A730A2-B9D5-4A4C-BCF2-D03477B5921C}" ShortID="557062421"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}"/>
+																	<CustomState Name="" ID="{613F95F5-F159-4DD9-95AC-F5F8AD769956}" ShortID="1037517788"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="InGame" ID="{ECEBE20B-1B3A-4654-9226-A39DB6A7C543}"/>
+																	<CustomState Name="" ID="{E627E129-9584-44DD-8023-E3BFD5E4DCB4}" ShortID="214684031"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}"/>
+																	<CustomState Name="" ID="{EC87C815-5126-4C2E-9466-0B3B5CC0E132}" ShortID="215044154"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="Menu" ID="{E2FEAC19-A420-4694-BE34-EAB4586BF6FA}"/>
+																	<CustomState Name="" ID="{5ECC1585-E2A4-4CF1-B434-8BD030D8E3FD}" ShortID="635879919"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="GameOver" ID="{D3C6B5E2-C2F3-4F90-9E73-0BF38CFB4B96}"/>
+																	<CustomState Name="" ID="{8F1860F3-9B9C-42FE-A725-CC3232616665}" ShortID="110329684"/>
+																</CustomState>
+															</CustomStateList>
+														</StateInfo>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{64D2424D-B920-4671-8D40-7B1E2D2E22BC}" ShortID="725112101">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuMusicFader" ID="{63F6D344-7DEC-45F4-816A-2A123EFD62BA}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A19365F1-8A91-4773-84E0-58B6792058BD}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}"/>
+											<DuckingParam>
+												<Volume>-10</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeExp1</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+										<DuckItem>
+											<BusRef Name="AmbientBeds" ID="{898DB529-AF16-4639-8538-9326CCDBA355}"/>
+											<DuckingParam>
+												<Volume>-2</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeExp1</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="UIMaster" ID="{EAB90A04-9175-409C-BC3B-F9D9EF0429FB}">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{C4B47770-17B2-42BF-B234-FD7577A827CA}" ShortID="893860526">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MenuSFXFader" ID="{56E036CE-8A27-4842-A3F2-53F31CB57712}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{9AA45F56-E150-4BC7-84DF-1A080F6583B7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="DebugMaster" ID="{28EA75AF-BFB5-4E65-ACA0-F855960BCCAD}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="VOMaster" ID="{60648512-FEC8-443E-82A5-5F5D362D1F57}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Universe" ID="{7F11EAF9-621B-4F86-A908-94184E72998D}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{BCF065B4-448C-4308-9F5D-ECDA1C4B1C2A}" ShortID="217053498">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="MusicMaster" ID="{36365409-4145-4AAB-B103-E16103FF971B}"/>
+											<DuckingParam>
+												<Volume>-2</Volume>
+												<FadeInTime>3</FadeInTime>
+												<FadeOutTime>3</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+										<DuckItem>
+											<BusRef Name="WorldMaster" ID="{4CF28A74-CF73-440E-9773-9D5EA9773039}"/>
+											<DuckingParam>
+												<Volume>-2</Volume>
+												<FadeInTime>3</FadeInTime>
+												<FadeOutTime>3</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+										<DuckItem>
+											<BusRef Name="DeathExtra" ID="{BAC1F598-2440-4CDE-949D-EEAA7C23C1C6}"/>
+											<DuckingParam>
+												<Volume>-96</Volume>
+												<FadeInTime>0.100000001490116</FadeInTime>
+												<FadeOutTime>0.100000001490116</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+										<DuckItem>
+											<BusRef Name="DeathRespawn" ID="{DCA032DA-FA11-45BF-AD4B-A503868E5703}"/>
+											<DuckingParam>
+												<Volume>-96</Volume>
+												<FadeInTime>0.100000001490116</FadeInTime>
+												<FadeOutTime>0.100000001490116</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="DeathMaster" ID="{C491970F-B77A-41AB-A13E-AD9A986D20EB}">
+									<ChildrenList>
+										<Bus Name="DeathVO" ID="{F345ABC7-3DA4-4A39-B2C6-313CCAFA4F2C}">
+											<DuckingList>
+												<DuckItem>
+													<BusRef Name="WorldMaster" ID="{4CF28A74-CF73-440E-9773-9D5EA9773039}"/>
+													<DuckingParam>
+														<Volume>-2</Volume>
+														<FadeInTime>3</FadeInTime>
+														<FadeOutTime>3</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+												<DuckItem>
+													<BusRef Name="MusicMaster" ID="{36365409-4145-4AAB-B103-E16103FF971B}"/>
+													<DuckingParam>
+														<Volume>-2</Volume>
+														<FadeInTime>3</FadeInTime>
+														<FadeOutTime>3</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+												<DuckItem>
+													<BusRef Name="DeathExtra" ID="{BAC1F598-2440-4CDE-949D-EEAA7C23C1C6}"/>
+													<DuckingParam>
+														<Volume>-96</Volume>
+														<FadeInTime>0.100000001490116</FadeInTime>
+														<FadeOutTime>0.100000001490116</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+												<DuckItem>
+													<BusRef Name="DeathRespawn" ID="{DCA032DA-FA11-45BF-AD4B-A503868E5703}"/>
+													<DuckingParam>
+														<Volume>-96</Volume>
+														<FadeInTime>0.100000001490116</FadeInTime>
+														<FadeOutTime>0.100000001490116</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+											</DuckingList>
+										</Bus>
+										<Bus Name="DeathExtra" ID="{BAC1F598-2440-4CDE-949D-EEAA7C23C1C6}"/>
+										<Bus Name="DeathRespawn" ID="{DCA032DA-FA11-45BF-AD4B-A503868E5703}">
+											<DuckingList>
+												<DuckItem>
+													<BusRef Name="MusicMaster" ID="{36365409-4145-4AAB-B103-E16103FF971B}"/>
+													<DuckingParam>
+														<Volume>-6</Volume>
+														<FadeInTime>4</FadeInTime>
+														<FadeOutTime>0</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+											</DuckingList>
+										</Bus>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{2246F7FF-E33F-4994-921A-E1F3E3379500}" ShortID="874685007">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_MenuVOFader" ID="{1AD045C0-52F7-4A7B-8C7A-94DC90E2BCC7}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{9E7C4210-B9C4-4F11-AA98-923751D3962C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="CutsceneMaster" ID="{9BA61671-336F-43E8-A30B-CDC8487EA8C3}">
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="VOMaster" ID="{60648512-FEC8-443E-82A5-5F5D362D1F57}"/>
+									<DuckingParam>
+										<Volume>-96</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+								<DuckItem>
+									<BusRef Name="Non-WorldMaster" ID="{4672014E-BC29-4B09-A68A-6B59F15D079D}"/>
+									<DuckingParam>
+										<Volume>-96</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+								<DuckItem>
+									<BusRef Name="WorldMaster" ID="{4CF28A74-CF73-440E-9773-9D5EA9773039}"/>
+									<DuckingParam>
+										<Volume>-96</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{5F69773A-349B-43D5-95BF-D5ACCCB419A7}" ShortID="715125568">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Gain (Custom)" ID="{57D23E25-742B-4B2C-8224-60C2752EAB14}" ShortID="457932685" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+														<PropertyList>
+															<Property Name="FullBandGain" Type="Real32" Value="12"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{ADB0B846-3B22-4F4D-AB4C-F6A1A5A34C06}" ShortID="818939016">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_MenuMasterFader" ID="{429841CF-971B-417C-8174-C89416220575}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{0A52051B-8D7E-4E8E-80D0-D5B48E9A020C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

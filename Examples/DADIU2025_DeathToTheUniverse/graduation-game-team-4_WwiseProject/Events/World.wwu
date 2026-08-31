@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6D169070-1E7F-485B-A0D4-38795503D8EF}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="World" ID="{6D169070-1E7F-485B-A0D4-38795503D8EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="StoneDoor" ID="{9E3D5694-1FFF-46A1-A8E9-AE2B209474B2}" ShortID="124391412">
+					<ChildrenList>
+						<Event Name="Play_World_StoneDoor_Open_OS" ID="{8337FF55-411A-4B59-9B5D-AA615D5DE38E}">
+							<ChildrenList>
+								<Action Name="" ID="{34C1A03E-459B-4B71-8992-FD06E84414DC}" ShortID="608535016">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldStoneDoorStop" ID="{DD27C94C-30DB-4482-B086-8020F6D029CE}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_World_StoneDoor_Move_LP" ID="{D0753233-6099-4070-A824-1E70E8C1A9C8}">
+							<ChildrenList>
+								<Action Name="" ID="{C2E1A2BF-5ADF-4E56-B333-A4BD655574B6}" ShortID="232162593">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldStoneDoorMove" ID="{78C9B53B-257D-41E5-BAC0-496627873A78}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B51EA8BD-8A74-484B-9044-A25064FEF42E}" ShortID="673545001">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldStoneDoorStart" ID="{047C25DA-F2E9-4915-BE0F-A15FEE6D4B92}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_World_StoneDoor_Move_LP" ID="{E3F77532-6DB5-45CC-A6CD-976D54F93154}">
+							<ChildrenList>
+								<Action Name="" ID="{DD34A2DD-4242-4A94-9571-57C4AE74E699}" ShortID="445866009">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldStoneDoorMove" ID="{78C9B53B-257D-41E5-BAC0-496627873A78}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Puzzle" ID="{65DF1367-98C8-4F97-9E70-40ACC4AAF804}" ShortID="829629057">
+					<ChildrenList>
+						<Event Name="Play_World_Puzzle_Correct_OS" ID="{58C6F1F3-FF35-48B0-8497-7963713FC200}">
+							<ChildrenList>
+								<Action Name="" ID="{4E36CB67-2260-4659-9795-9A8B49A51320}" ShortID="317874960">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPuzzleCorrect" ID="{38F2DF1A-246C-4213-B6FB-6B0A46C257E7}" WorkUnitID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_World_Puzzle_Move_LP" ID="{DAD0BD0C-6D87-4796-8D86-2DDA622ACA68}">
+							<ChildrenList>
+								<Action Name="" ID="{3389B897-1D31-4480-8884-756968EBC874}" ShortID="844348050">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPuzzleMove" ID="{5135898E-E65E-41D5-BE8E-894DFD243791}" WorkUnitID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_World_Puzzle_Move_LP" ID="{347108C0-7D0D-4E23-884C-3B037B6AE449}">
+							<ChildrenList>
+								<Action Name="" ID="{DB5588BE-E6D0-42D6-BE21-7E153E1E3427}" ShortID="568827430">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPuzzleMove" ID="{5135898E-E65E-41D5-BE8E-894DFD243791}" WorkUnitID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Throwables" ID="{D7FA2AB7-D0C0-4749-9C15-6BE52839B996}" ShortID="266816745">
+					<ChildrenList>
+						<Event Name="Play_World_Object_Impact_OS" ID="{017067D0-D1FF-4417-B906-654CB2894504}">
+							<ChildrenList>
+								<Action Name="" ID="{5B6A4783-A86B-4BAF-AD3E-E4252D386BAF}" ShortID="1055580594">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldObjectImpact" ID="{083E546D-6C06-4C8D-84EC-E69C3602F24B}" WorkUnitID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_World_Object_LP" ID="{4C2F46DC-5C0A-4656-A022-B0F19285D970}">
+							<ChildrenList>
+								<Action Name="" ID="{D81F81B3-7723-4004-A55A-424BCF3A80C9}" ShortID="754754888">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldObjectLoop" ID="{94574EF6-033B-4340-8E63-0F24455B53E1}" WorkUnitID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1C188772-5891-453C-94C5-6494147B0243}" ShortID="715579151">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="50">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D6E18502-8636-47F5-9D56-97D08C375C82}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldObjectLoop" ID="{94574EF6-033B-4340-8E63-0F24455B53E1}" WorkUnitID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_World_Object_LP" ID="{C631666D-6DFF-43AA-851E-420B65235A01}">
+							<ChildrenList>
+								<Action Name="" ID="{14D9820F-260E-4EBC-B53E-1E43E15B68C0}" ShortID="584858090">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldObjectLoop" ID="{94574EF6-033B-4340-8E63-0F24455B53E1}" WorkUnitID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_World_BlackHole_LP" ID="{38A5F611-F44E-4FD3-A64A-004D107344D6}">
+					<ChildrenList>
+						<Action Name="" ID="{BF35CF31-8ADD-411F-9C2B-0EADB9BCB61A}" ShortID="709312730">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="World_BlackHole_LP" ID="{67EDB29E-2BA0-49FE-9896-55C2BF5097FD}" WorkUnitID="{FAFAC333-5C49-402F-AB4A-66DC48236239}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="PressurePlate" ID="{E4C4ED34-58A6-4B9E-93AF-0511A2FF5D2C}" ShortID="26284447">
+					<ChildrenList>
+						<Event Name="Play_PressurePlate_Move_LP" ID="{14E22F88-F37C-4051-916D-655D3A743B98}">
+							<ChildrenList>
+								<Action Name="" ID="{96C0AF3D-23E5-485E-AD5E-B3B67C8D1435}" ShortID="774401854">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_World_PressurePlate_Move_LP" ID="{E3C95FCA-61E5-4C0C-BF62-7487EF951D9C}" WorkUnitID="{E25C1220-7975-473D-9FC7-F35A774E8107}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PressurePlate_Stop_OS" ID="{49150F6C-269D-4E50-B27A-A4ED1A1C1BC0}">
+							<ChildrenList>
+								<Action Name="" ID="{724D12C4-9CDD-4DD4-9CA0-175AE9C8C87C}" ShortID="1027556406">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPressurePlateStop" ID="{BF0F79B1-D261-4A4D-9DE5-D9CB4A668C5D}" WorkUnitID="{E25C1220-7975-473D-9FC7-F35A774E8107}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_PressurePlate_Move_LP" ID="{0BA0CE6E-DC26-4744-9854-1977E47C6523}">
+							<ChildrenList>
+								<Action Name="" ID="{DCF5FCDE-C3C6-474C-B4A9-7ED07EDEAAF5}" ShortID="593767243">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_World_PressurePlate_Move_LP" ID="{E3C95FCA-61E5-4C0C-BF62-7487EF951D9C}" WorkUnitID="{E25C1220-7975-473D-9FC7-F35A774E8107}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="WorldPlatform" ID="{60273E5E-52FE-415B-8E7C-E7D1981C0183}" ShortID="657020884">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_World_Platform_Move" ID="{2C0C2F1B-CB22-493A-97C1-DE4E9FC08223}">
+							<ChildrenList>
+								<Action Name="" ID="{450EA34E-8DF7-4F5D-A928-6F96865AFD17}" ShortID="774398829">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationRelease" ID="{2F566BD6-F169-4DDF-9B12-3BE0B2B3DDAF}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_World_Platform_Stop" ID="{3D44E28F-9E4D-417B-860C-AF18D9767523}">
+							<ChildrenList>
+								<Action Name="" ID="{80D00246-8B41-4597-A939-D847C77591EF}" ShortID="292463313">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPlatformStop" ID="{CDE9E8A5-622C-408B-BCCF-0506392BB898}" WorkUnitID="{536C8731-5D0B-4CF6-9D73-0325BA7C73CD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_World_Platform_Move" ID="{A68DFD19-5927-4A36-ADD5-46769BF66F75}">
+							<ChildrenList>
+								<Action Name="" ID="{C9EDA9FF-99DC-466F-924A-6A3405CE807A}" ShortID="42220092">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldPlatformMove" ID="{44813B11-DD50-481C-B790-B28243EAB7FE}" WorkUnitID="{536C8731-5D0B-4CF6-9D73-0325BA7C73CD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_World_Platform_Rotate" ID="{A587490B-64BA-4761-9EAE-E1A9265C3CAD}">
+					<ChildrenList>
+						<Action Name="" ID="{3B19A365-B81D-4007-9FC2-484E4DE1494E}" ShortID="1015514729">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerActionLevitationHoldStart" ID="{BB30DE06-923C-42D4-B45B-12077C24DD00}" WorkUnitID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{070ABCAB-EDA9-4EA8-8935-5DADAF18CEE4}" ShortID="41674550">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{477D837D-67E0-43C6-AF8B-5A4D87C320B1}" WorkUnitID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{22A71699-A565-4D86-8E08-F8A91BB70C45}" ShortID="86083540">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{0CDFFB03-6BB6-46FB-975F-7384645D7698}" WorkUnitID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3224E2AE-D1CD-4247-BAF2-C90A9602D3C1}" ShortID="818032732">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="Delay" Type="Real64" Value="25">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{668628CD-1BC3-4F5F-A53D-281CC3130D16}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="59"/>
+													<Property Name="Min" Type="Real64" Value="-59"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{0CDFFB03-6BB6-46FB-975F-7384645D7698}" WorkUnitID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2B4F3ED6-C60F-43DB-8F32-CAA0360E8153}" ShortID="126163471">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{0CDFFB03-6BB6-46FB-975F-7384645D7698}" WorkUnitID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_World_Universe_Clapping" ID="{1B7DD6B0-5B6A-47CB-8725-CD60A36D460F}">
+					<ChildrenList>
+						<Action Name="" ID="{106FCD8D-67CB-4E9A-9122-33206FF6D0A0}" ShortID="754162139">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WorldUniverseClap" ID="{58D88EB4-3735-4C53-B872-725927FFC503}" WorkUnitID="{657DCCCA-C8C2-4218-A54F-EBCCFC2B8B63}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

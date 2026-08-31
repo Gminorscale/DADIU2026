@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}" SchemaVersion="123" RootDocumentID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" ParentDocumentID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}">
+	<AudioObjects>
+		<WorkUnit Name="PlayerCloth" ID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}" OwnerID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<RandomSequenceContainer Name="PlayerClothSoft" ID="{95AC5A21-FC4C-48F8-B257-10D0BF69527C}" ShortID="734731667">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerCloth" ID="{AF653A4E-4354-44D8-82E8-1306ED0633EC}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_01" ID="{FAEA755E-62CF-49AE-80D9-020247CD469C}" ShortID="622482867">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_01" ID="{E126F9D9-8B50-4787-860E-3C765792C75C}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="340575505"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_01" ID="{E126F9D9-8B50-4787-860E-3C765792C75C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_09" ID="{22B7799F-A71A-4F60-B06E-85B1C0CA93C2}" ShortID="94729241">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_09" ID="{8B009641-9FE6-4C73-A97C-CC2669FD1E04}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="919545452"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_09" ID="{8B009641-9FE6-4C73-A97C-CC2669FD1E04}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_08" ID="{CB148C54-9DB3-42A6-93A4-65642B84BACE}" ShortID="969077723">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_08" ID="{337A7E26-8273-441B-BBA5-8659287ECA4E}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="334543789"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_08" ID="{337A7E26-8273-441B-BBA5-8659287ECA4E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_07" ID="{6C7C90FC-450C-4881-805C-A7A915B74A06}" ShortID="322219976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_07" ID="{EF931232-7A67-48F8-81FD-19A63A7E9D91}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="990888430"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_07" ID="{EF931232-7A67-48F8-81FD-19A63A7E9D91}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_06" ID="{DCBDA3E6-7472-4250-8430-A644BBB566E8}" ShortID="643497306">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_06" ID="{0C69557E-BA16-40F4-865C-E3F2D54DAAE6}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="884107258"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_06" ID="{0C69557E-BA16-40F4-865C-E3F2D54DAAE6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_05" ID="{29FABEF0-E39D-413F-B774-6112154B51C8}" ShortID="792868561">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_05" ID="{82864671-C800-4CF2-B5C3-70700CD646B3}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="746752607"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_05" ID="{82864671-C800-4CF2-B5C3-70700CD646B3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_04" ID="{B5E63F89-1FB9-40D8-A0A5-055A5AB2D9F7}" ShortID="101411417">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_04" ID="{7694C582-9182-493D-BAC2-F427EC1C37E6}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="101357439"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_04" ID="{7694C582-9182-493D-BAC2-F427EC1C37E6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_03" ID="{7A78FAA9-8F07-4D50-91B9-98D2C2C10E1D}" ShortID="921632392">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_03" ID="{41F3752E-68BC-4E94-963B-80ED85FCB62E}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="540275512"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_03" ID="{41F3752E-68BC-4E94-963B-80ED85FCB62E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Soft_02" ID="{803CA55C-45A7-450D-9CE9-1BAB1C63A9AB}" ShortID="209964187">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Soft_02" ID="{3F9B9C40-B0A1-4505-8B18-7E929B38DD97}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Soft_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1024072151"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Soft_02" ID="{3F9B9C40-B0A1-4505-8B18-7E929B38DD97}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{390EEE16-C008-4865-89B3-88A958E68F74}" ShortID="409552372">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_PlayerSpeed" ID="{F2AB0080-A4E9-4748-BD40-F49DDE76D8E1}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{9682B6FB-B107-4185-8A7B-3EE662661734}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>16</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{2730E055-40B8-4383-9BAB-4265656DD70A}" ShortID="881882346">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_PlayerSpeed" ID="{F2AB0080-A4E9-4748-BD40-F49DDE76D8E1}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{71791EA8-DE51-41D2-81AE-6CBACD8D4E21}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>16</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" ShortID="59434453">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerCloth" ID="{AF653A4E-4354-44D8-82E8-1306ED0633EC}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_10" ID="{86D0F887-B850-4406-90D1-BC0DEDCD13B9}" ShortID="578698109">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_10" ID="{210749B3-50D6-4CC9-8278-AF120D66AB80}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="39577945"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_10" ID="{210749B3-50D6-4CC9-8278-AF120D66AB80}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_09" ID="{35C5B398-3952-4F77-8AF5-43783239635E}" ShortID="181955246">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_09" ID="{89ED03F2-F5B3-486F-AF6F-8BA5211F1867}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="468218942"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_09" ID="{89ED03F2-F5B3-486F-AF6F-8BA5211F1867}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_08" ID="{627C3752-D25B-4D85-B4C3-2DBBE9A1B6EF}" ShortID="424259219">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_08" ID="{D92D271D-9C51-4B08-BCFD-82D8732DD29D}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="298345548"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_08" ID="{D92D271D-9C51-4B08-BCFD-82D8732DD29D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_07" ID="{C9960770-F5F6-4FF7-9B20-146798AFF06A}" ShortID="258046081">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_07" ID="{EABB5E80-BC41-467E-81D9-10FD2DBF5589}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="693574569"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_07" ID="{EABB5E80-BC41-467E-81D9-10FD2DBF5589}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_06" ID="{D78745AD-AA9C-43B5-8A4D-FC3E64BE4FCF}" ShortID="418047336">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_06" ID="{0DC6AE36-50EB-448A-A54D-4BF00211BE7D}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="24555513"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_06" ID="{0DC6AE36-50EB-448A-A54D-4BF00211BE7D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_05" ID="{9DB75070-4E47-4484-B7CB-4F10442DC10B}" ShortID="771103360">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_05" ID="{261ECD71-F900-4222-9A93-729645D198B8}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="570341679"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_05" ID="{261ECD71-F900-4222-9A93-729645D198B8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_04" ID="{258A7740-585B-4FC5-B06D-FFD037D38C7E}" ShortID="812741476">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_04" ID="{60F10B66-613A-4B6D-A5BB-CB586DA845F9}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="745622874"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_04" ID="{60F10B66-613A-4B6D-A5BB-CB586DA845F9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_03" ID="{2640C5B4-7EB0-4B51-9CA5-3ED90B6F9CE1}" ShortID="74712231">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_03" ID="{DD00485E-CFE9-4EA6-9914-E3111C5612D4}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1017963447"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_03" ID="{DD00485E-CFE9-4EA6-9914-E3111C5612D4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_02" ID="{4D058CA1-B3BA-4BD2-86B9-A96C66BB71F4}" ShortID="226001912">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_02" ID="{A0A38C46-8D86-40E8-9C29-43382DE72F2C}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="861942029"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_02" ID="{A0A38C46-8D86-40E8-9C29-43382DE72F2C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Locomotion_Cloth_Hard_01" ID="{84118BD6-4658-49AF-AD2C-79DD3CF13812}" ShortID="778701558">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Locomotion_Cloth_Hard_01" ID="{AE7BCACB-D230-493B-B64A-C31ED8B7F051}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Locomotion\Player Locomotion Cloth\SFX_Player_Locomotion_Cloth_Hard_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="592129792"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Locomotion_Cloth_Hard_01" ID="{AE7BCACB-D230-493B-B64A-C31ED8B7F051}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

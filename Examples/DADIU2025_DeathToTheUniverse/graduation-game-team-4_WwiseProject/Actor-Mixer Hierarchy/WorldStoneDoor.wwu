@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}" SchemaVersion="123" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<AudioObjects>
+		<WorkUnit Name="WorldStoneDoor" ID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<BlendContainer Name="WorldStoneDoorMove" ID="{78C9B53B-257D-41E5-BAC0-496627873A78}" ShortID="541312535">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>29</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-24</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="WorldStoneDoorMoveTexture" ID="{3359463A-D9CA-484F-87E9-1B38889CD399}" ShortID="418136569">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_StoneDoor_Move_Texture_01" ID="{7C30974C-4A3C-4207-8A4D-0333DC5B585B}" ShortID="87793747">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Move_Texture_01" ID="{BEC71895-ACDC-4205-B1AE-671C65353720}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Move\SFX_World_StoneDoor_Move_Texture_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="606443741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Move_Texture_01" ID="{BEC71895-ACDC-4205-B1AE-671C65353720}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Move_Texture_02" ID="{F41D3AA2-7667-4CF8-8868-B2913DBB7D35}" ShortID="804805589">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Move_Texture_02" ID="{76BEA59C-73AA-42C5-8109-FDDBFFD21595}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Move\SFX_World_StoneDoor_Move_Texture_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="416485114"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Move_Texture_02" ID="{76BEA59C-73AA-42C5-8109-FDDBFFD21595}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="WorldStoneDoorMoveRumble" ID="{F9573862-4A5B-4E10-9D63-2FD9F586DD63}" ShortID="699476981">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_StoneDoor_Move_Rumble_02" ID="{DEFA9DF5-45BF-4E0A-80E9-B8A7375E83D1}" ShortID="720536846">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Move_Rumble_02" ID="{7C8CDD95-9D78-4CFC-AE22-8B8721453EDC}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.86148801210428"/>
+												<Property Name="LoopEnd" Type="Real64" Value="4.77874534450652"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Move\SFX_World_StoneDoor_Move_Rumble_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="676591431"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Move_Rumble_02" ID="{7C8CDD95-9D78-4CFC-AE22-8B8721453EDC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Move_Rumble_01" ID="{2E836DD5-BAA7-4595-A8F7-2F0EF2545469}" ShortID="331149814">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Move_Rumble_01" ID="{5391C2F5-50C6-44DB-8231-50B2F5B8F9AC}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Move\SFX_World_StoneDoor_Move_Rumble_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="547820558"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Move_Rumble_01" ID="{5391C2F5-50C6-44DB-8231-50B2F5B8F9AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<Sound Name="SFX_World_StoneDoor_Move_Sub" ID="{C5A080C7-F2A4-4363-808E-91638D5AA326}" ShortID="135922237">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_StoneDoor_Move_Sub" ID="{43CF3C34-4E6F-4DEC-A48C-1724F227492E}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+										<Property Name="LoopBegin" Type="Real64" Value="3.42644320297952"/>
+										<Property Name="LoopEnd" Type="Real64" Value="14.3482309124767"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.1415270018622"/>
+										<Property Name="TrimEnd" Type="Real64" Value="15.633147113594"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>World\World StoneDoor\World Stone Door Move\SFX_World_StoneDoor_Move_Sub.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="932288079"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_StoneDoor_Move_Sub" ID="{43CF3C34-4E6F-4DEC-A48C-1724F227492E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="WorldStoneDoorStop" ID="{DD27C94C-30DB-4482-B086-8020F6D029CE}" ShortID="943862904">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-250</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-23</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="WorldStoneDoorStopRandom" ID="{25B8ABAB-5754-4942-BB89-0974706D28DE}" ShortID="155868517">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_StoneDoor_Stop_03" ID="{78326615-E855-4017-B6E0-967890C35877}" ShortID="674851519">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_03" ID="{C34618C8-F20A-4602-AD47-74F43A317F8D}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="402870665"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_03" ID="{C34618C8-F20A-4602-AD47-74F43A317F8D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Stop_02" ID="{7CDEF263-BBF8-4149-BFFA-8796C4354BCB}" ShortID="459997360">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_02" ID="{B4540CA3-53D0-4B31-859D-55A83F2AA4D5}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="589020832"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_02" ID="{B4540CA3-53D0-4B31-859D-55A83F2AA4D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Stop_01" ID="{180E6425-9886-4AE3-BF01-24C073EEC73A}" ShortID="888336066">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_01" ID="{BBD504E1-D616-4A0B-88A3-64786096E601}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="615651933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_01" ID="{BBD504E1-D616-4A0B-88A3-64786096E601}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFX_World_StoneDoor_Stop_Sub_OS" ID="{CB3BD441-94C2-4347-9574-E0F19540D7D5}" ShortID="862925515">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_StoneDoor_Stop_Sub_OS" ID="{BCD7B8FB-EDEF-4F6D-A940-231FDD80C734}">
+									<Language>SFX</Language>
+									<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_Sub_OS.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="47875076"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_StoneDoor_Stop_Sub_OS" ID="{BCD7B8FB-EDEF-4F6D-A940-231FDD80C734}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="WorldStoneDoorStart" ID="{047C25DA-F2E9-4915-BE0F-A15FEE6D4B92}" ShortID="664525933">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-250</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="WorldStoneDoorStopRandom" ID="{0B99D446-DD04-4E4B-924D-E6EB83EA19D8}" ShortID="341054863">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1030</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_StoneDoor_Stop_03" ID="{E889463F-C051-4EC7-8F95-30D78D959E6A}" ShortID="920389466">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_03" ID="{4E2AE39E-78C2-4BFE-A8E9-BE6A8B4B6D0C}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="402870665"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_03" ID="{4E2AE39E-78C2-4BFE-A8E9-BE6A8B4B6D0C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Stop_02" ID="{CF60E173-A0A9-4AB6-837B-173BE25D1EBD}" ShortID="235363520">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_02" ID="{9B5D3AF4-B30F-47ED-8D03-380A06485834}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="589020832"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_02" ID="{9B5D3AF4-B30F-47ED-8D03-380A06485834}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_StoneDoor_Stop_01" ID="{66C59812-EAA7-4F1D-BB9B-BAB06BD74E22}" ShortID="762605504">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_StoneDoor_Stop_01" ID="{3BA8F496-6F47-42F8-908A-E18EF02EB00F}">
+											<Language>SFX</Language>
+											<AudioFile>World\World StoneDoor\World Stone Door Stop\SFX_World_StoneDoor_Stop_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="615651933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_StoneDoor_Stop_01" ID="{3BA8F496-6F47-42F8-908A-E18EF02EB00F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

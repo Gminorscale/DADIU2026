@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{93374DA1-7B00-4AFC-A889-BD4EE5BFB7DD}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="UI" ID="{93374DA1-7B00-4AFC-A889-BD4EE5BFB7DD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Menu" ID="{478DC7AA-E155-450F-9658-9AB091C32772}" ShortID="198649048">
+					<ChildrenList>
+						<Event Name="Play_UI_Menu_Hover_OS" ID="{05FF9103-2AA6-4657-A365-F0CFC3862BC7}">
+							<ChildrenList>
+								<Action Name="" ID="{6D493CD3-CB18-4DD1-AD3D-56ABF3CFBA31}" ShortID="505248947">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UIMenuHover" ID="{BD8F24AB-5A95-4792-B057-AD31559AA89E}" WorkUnitID="{CB2F178A-92E2-4530-9911-214A48082973}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Menu_Press_OS" ID="{4532FAD8-945F-4F98-9AAA-661023E6054D}">
+							<ChildrenList>
+								<Action Name="" ID="{B763A98C-33AE-46FB-AA2C-B130402EA315}" ShortID="731143141">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_UI_InMenu_Press" ID="{B394A2EB-4734-48A1-9C5E-6B4C4D1791A7}" WorkUnitID="{CB2F178A-92E2-4530-9911-214A48082973}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Menu_Slider_LP" ID="{BDEB7632-34D0-4C58-8077-FDDC5003D927}">
+							<ChildrenList>
+								<Action Name="" ID="{3EA249BB-C847-42E8-92D7-330A46EEEC24}" ShortID="996822582">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Menu_Slider_LP" ID="{9F6CED02-E007-4BF8-9581-CE0BA04EFBA7}" WorkUnitID="{CB2F178A-92E2-4530-9911-214A48082973}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_UI_Menu_Slider_LP" ID="{75BDBE84-5C24-462A-A79B-206EB055B293}">
+							<ChildrenList>
+								<Action Name="" ID="{ED22671B-C71E-4115-9336-C427A5C2B60F}" ShortID="1058384449">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Menu_Slider_LP" ID="{9F6CED02-E007-4BF8-9581-CE0BA04EFBA7}" WorkUnitID="{CB2F178A-92E2-4530-9911-214A48082973}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Pause_Dialogue" ID="{ACEFB74C-8EDE-4709-8543-5656B1D2A92E}">
+							<ChildrenList>
+								<Action Name="" ID="{4FEEE2E3-9A73-4D10-A971-20B55715E186}" ShortID="27167997">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOConversationController" ID="{B4A416B5-BFCF-48F1-88A3-35D40C662B6F}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D25B4264-F03E-4200-84A1-BDD3C69CB31C}" ShortID="1003862128">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOCollectables" ID="{727503BF-A291-4E5E-81C1-289A861D0EE5}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9FDE30BF-2A5C-4022-8E75-195054DCFDEE}" ShortID="919780425">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{857166F6-542D-4DFA-B7BB-476D6B3338FF}" ShortID="799041611">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortAttack" ID="{9266FC97-7100-4A57-AFDD-170C444A8D97}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3B3D3315-A24B-44F0-8665-2BC7BA273BF5}" ShortID="94063590">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortDoubleJump" ID="{5BF437CF-6AD4-4E40-A051-9BA2CBB31008}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1EFA9F53-1E4C-4C34-A905-0EE9E53269AC}" ShortID="42995324">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortJump" ID="{D2DF7836-D10D-474F-833C-3128EC7D9550}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3039C42F-0319-4B77-A173-648D741D9FBF}" ShortID="666622618">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOPassive" ID="{9322287B-5AEE-48EF-8E9A-6FD6FACD3CBA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D22D793C-072B-4191-8909-C7ECBAB103B1}" ShortID="1034141134">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VORespawn" ID="{3A982D8E-B456-4272-A5EB-B5E9139313BA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DB8F68CB-6FD6-489C-86D8-97048A8E2DAE}" ShortID="471585125">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOReward" ID="{15CCEF3A-EDD2-4931-90E8-766DB144A3CD}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Resume_Dialogue" ID="{4AD9C6CD-5203-43A6-BBEA-915274831321}">
+							<ChildrenList>
+								<Action Name="" ID="{151F582F-09B6-4BFE-92DF-9FA241E443CB}" ShortID="217759845">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOConversationController" ID="{B4A416B5-BFCF-48F1-88A3-35D40C662B6F}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{18BC22B4-DB07-4C82-9627-1D2040D3F444}" ShortID="303834962">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOCollectables" ID="{727503BF-A291-4E5E-81C1-289A861D0EE5}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{27D3D7A1-A75E-486D-BEF0-0D516BFADF4D}" ShortID="717593052">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{779D7197-6364-48DD-B4F7-DD353A5BFBBC}" ShortID="198369540">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortAttack" ID="{9266FC97-7100-4A57-AFDD-170C444A8D97}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E9A332A3-B7D2-4BC6-88DB-722AFD4CFFD7}" ShortID="869539245">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortDoubleJump" ID="{5BF437CF-6AD4-4E40-A051-9BA2CBB31008}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65ABE6D0-EB76-4D2A-BFBE-7EC8AA3B7A3B}" ShortID="689905009">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortJump" ID="{D2DF7836-D10D-474F-833C-3128EC7D9550}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{25A39B3C-C341-45D9-B80E-02F815D49284}" ShortID="775404992">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOPassive" ID="{9322287B-5AEE-48EF-8E9A-6FD6FACD3CBA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{201696BF-F29E-4583-873F-E85DDA2D84BC}" ShortID="370827368">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VORespawn" ID="{3A982D8E-B456-4272-A5EB-B5E9139313BA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{64C50586-BC90-4879-A472-24DF30C53100}" ShortID="336220223">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOReward" ID="{15CCEF3A-EDD2-4931-90E8-766DB144A3CD}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Menu_Play_OS" ID="{0C906121-544A-4204-BBE5-33A4B00AAF40}">
+							<ChildrenList>
+								<Action Name="" ID="{7E09787E-B3F6-4A34-8713-C8B4C166DFE0}" ShortID="446187509">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_UI_InMenu_Play" ID="{4F95F741-B02C-4522-940C-F8D45275705F}" WorkUnitID="{CB2F178A-92E2-4530-9911-214A48082973}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="InGame" ID="{35A44442-603D-4679-9161-D90603E6FFA6}" ShortID="598175649">
+					<ChildrenList>
+						<Event Name="Play_UI_InGame_Checkpoint_OS" ID="{4D44341C-4A0A-4829-9DF3-82131C51CB83}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{0A61DEDB-97F5-4252-A8F4-396C2909729E}" ShortID="939075757">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_UI_InGame_Checkpoint" ID="{B1420A17-8652-4F34-9356-BEABF84E68FB}" WorkUnitID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Rewards" ID="{F2E747EC-3832-4F85-A992-388D1C5BEF64}" ShortID="433871039">
+					<ChildrenList>
+						<Event Name="Play_UI_InGame_Reward_Puzzle_Complete_OS" ID="{C9BFEDD3-5EB4-4CBC-85AB-563BD3CD3DB1}">
+							<ChildrenList>
+								<Action Name="" ID="{CF1A5E2D-B746-42C5-A550-F0FA0E185260}" ShortID="261741216">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UIInGameReward" ID="{4CA0A650-3935-4B43-884F-C9F4832DAEA5}" WorkUnitID="{38AD637C-383E-4E3E-8959-E2621B4E79E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Cutscene" ID="{6846A572-E43F-4FED-A5B9-9FCC62BA2F78}">
+					<ChildrenList>
+						<Action Name="" ID="{582F3B5C-B5D0-4AF2-A780-030882BCF7FC}" ShortID="1005939559">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CutsceneController" ID="{6DEDF8AC-3FB3-4F32-9ACB-99A55A45AF8B}" WorkUnitID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Cutscene" ID="{0D24464F-5027-4C1C-90B9-E5ABB5059E1C}">
+					<ChildrenList>
+						<Action Name="" ID="{5DB7B54D-8805-4D13-A458-409224991400}" ShortID="343355760">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CutsceneController" ID="{6DEDF8AC-3FB3-4F32-9ACB-99A55A45AF8B}" WorkUnitID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ToolTipStart" ID="{0A965F87-3B3B-4F21-8B78-6099D25DEBBB}">
+					<ChildrenList>
+						<Action Name="" ID="{9E2EE63A-F9B5-4158-8812-5B6AA763A803}" ShortID="240432609">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_InGame_Tooltip_Start" ID="{20129249-3AB0-4F27-9459-35D8DA719600}" WorkUnitID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{08826273-33BA-4685-B359-E067C36E877C}" ShortID="48422396">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ToolTipStop" ID="{2263C560-305C-4D90-BABA-5071B8F52F37}">
+					<ChildrenList>
+						<Action Name="" ID="{10C102BC-A847-4228-8B30-EF31F2AF184B}" ShortID="438594897">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_InGame_Tooltip_Stop" ID="{C899FCB1-A5A8-45F4-A765-8D838CC3B69F}" WorkUnitID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EFE5D310-3766-433D-B209-F495E4046747}" ShortID="640050112">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Collectables" ID="{D7AA9A64-754B-45AE-8DCA-77C48DB359D2}" ShortID="1013587983">
+					<ChildrenList>
+						<Event Name="Play_Collectable_Loop" ID="{A842A484-B8F2-4E8D-8EDF-0CD7BC5D6FE3}">
+							<ChildrenList>
+								<Action Name="" ID="{4193BFCF-78F1-422B-99F8-68F57DCAE32B}" ShortID="984266551">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldCollectableLoop" ID="{B900A3BB-665F-41BB-AA51-7A77E9C5795B}" WorkUnitID="{5F98495F-18BD-45BB-85B5-87FE1D77CCB5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Collectable_Pickup" ID="{BE5CC7BA-F135-40AA-BE9D-0304B34C5918}">
+							<ChildrenList>
+								<Action Name="" ID="{6896F59D-A170-433D-9886-CE79A33E3AFA}" ShortID="640915500">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Probability" Type="Real64" Value="60"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOCollectables" ID="{727503BF-A291-4E5E-81C1-289A861D0EE5}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3BD9F375-6F80-4D42-9CAE-989DBAD5B16A}" ShortID="630140317">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldCollectablePickup" ID="{02080021-F367-49FF-B6EC-F6A1C723DD37}" WorkUnitID="{5F98495F-18BD-45BB-85B5-87FE1D77CCB5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{38E6C008-C289-45D5-A03E-C778CBA66041}" ShortID="605433880">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldCollectableLoop" ID="{B900A3BB-665F-41BB-AA51-7A77E9C5795B}" WorkUnitID="{5F98495F-18BD-45BB-85B5-87FE1D77CCB5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Collectable_Loop" ID="{084594A3-53B5-4204-9128-67DD38562670}">
+							<ChildrenList>
+								<Action Name="" ID="{DCC24D66-920C-43B6-8E35-C835CAA689DE}" ShortID="819968363">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldCollectableLoop" ID="{B900A3BB-665F-41BB-AA51-7A77E9C5795B}" WorkUnitID="{5F98495F-18BD-45BB-85B5-87FE1D77CCB5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Ambient" ID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambience_LP" ID="{8412517F-ECB3-4603-B325-9DFBE63C9574}">
+					<ChildrenList>
+						<Action Name="" ID="{5800BCD9-799E-4885-AE1C-9D523F7659A2}" ShortID="946078179">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientRegion" ID="{8A729C01-EEF3-478F-9B1C-47D954C4B9C9}" WorkUnitID="{FB3988F1-1B09-43FE-99D0-FA8ADD8749A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience_OS" ID="{D8972DAD-44F3-4866-A662-7C65E4FD29C7}">
+					<ChildrenList>
+						<Action Name="" ID="{CCA19FD8-3CA8-4BCD-A7B7-E4D556160D7F}" ShortID="512818239">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientRegion" ID="{8A729C01-EEF3-478F-9B1C-47D954C4B9C9}" WorkUnitID="{FB3988F1-1B09-43FE-99D0-FA8ADD8749A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Objects_Void_OS" ID="{F8BFD591-13D2-47C8-80AC-BEFCC3EEBDBF}">
+					<ChildrenList>
+						<Action Name="" ID="{836F0424-82DC-4129-8A9D-122B83462C8E}" ShortID="1042563084">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientObjectsVoid" ID="{5F206E4F-30DB-48DC-B57A-0622C9D52B8B}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Object_Branch_OS" ID="{95F82265-F254-4655-A42B-A8403E6A42E4}">
+					<ChildrenList>
+						<Action Name="" ID="{D31ACE55-5372-4C3C-9134-321DC167D714}" ShortID="910690251">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientObjectBranch" ID="{8D6B043E-64BF-43D7-940B-D3C09976A19D}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Object_Stone_OS" ID="{A7964E49-3C1F-4BA3-9C46-A44B30D9828E}">
+					<ChildrenList>
+						<Action Name="" ID="{290FFF71-3A69-483F-A751-46D80D3735E6}" ShortID="50628424">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientObjectStone" ID="{41EDD5F0-2283-4F05-A696-BD8DB44FECDE}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Object_Fire_LP" ID="{E5CF4FFC-E911-4AEA-9A4D-285BE7F48F50}">
+					<ChildrenList>
+						<Action Name="" ID="{8E443F03-AFC0-4657-A603-95BB632F6D38}" ShortID="184277093">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientObjectFire" ID="{30547696-68CA-438D-9FCE-0A41A95EE146}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{64A5B616-C9EB-44E0-A37E-C3CC8504F36F}" ShortID="762140581">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="50">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{08B7DE8F-59A4-43CD-91F2-27FB9B3613B5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbientObjectFire" ID="{30547696-68CA-438D-9FCE-0A41A95EE146}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Other" ID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Logo" ID="{DCC2BEFA-679C-4C2C-B3CD-5DFD1048FAFE}" ShortID="596860963">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Logo" ID="{0EE12036-95AC-4779-A1BD-C0256AA950D6}">
+							<Language>English(US)</Language>
+							<AudioFile>SFX_Logo.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="997358432"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Logo" ID="{0EE12036-95AC-4779-A1BD-C0256AA950D6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

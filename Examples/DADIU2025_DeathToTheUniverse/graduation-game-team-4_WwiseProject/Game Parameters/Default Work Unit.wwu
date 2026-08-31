@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AB58C735-3B39-4395-A73A-446AB404C34E}" SchemaVersion="123">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{AB58C735-3B39-4395-A73A-446AB404C34E}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_PlayerSpeed" ID="{F2AB0080-A4E9-4748-BD40-F49DDE76D8E1}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="85"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="85"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_EnemySpeed" ID="{00AF63DD-52D0-41F7-9239-FCB49BC3F5BC}"/>
+				<GameParameter Name="RTPC_LevitationTargetSpeed" ID="{D8F99043-1E2B-4071-A9F9-44862619870A}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="95"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="95"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}"/>
+				<GameParameter Name="RTPC_ObjectSpeed" ID="{5AAAE8EF-8945-4AEC-9453-27B5DB8DA999}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_GroundMaterial" ID="{7607A3A8-11E6-4E31-9677-CD431027D73C}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="8"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ObjectMaterial" ID="{23B1979B-E94A-43CF-BECF-81341952FCAC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="8"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_MusicVolume" ID="{DE422745-3396-42F5-B7C5-63827623F1FD}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="5"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_Distance" ID="{16794D72-1790-4424-AF4A-43F277EC897E}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<Folder Name="MenuRTPC" ID="{B0F89C01-A163-4153-AEA7-CD813466A0F5}" ShortID="968745201">
+					<ChildrenList>
+						<GameParameter Name="RTPC_MenuMusicFader" ID="{63F6D344-7DEC-45F4-816A-2A123EFD62BA}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MenuAmbienceFader" ID="{60B18163-92F4-46C7-810F-C5BA03E7B7CA}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MenuVOFader" ID="{1AD045C0-52F7-4A7B-8C7A-94DC90E2BCC7}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MenuSFXFader" ID="{56E036CE-8A27-4842-A3F2-53F31CB57712}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MenuMasterFader" ID="{429841CF-971B-417C-8174-C89416220575}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

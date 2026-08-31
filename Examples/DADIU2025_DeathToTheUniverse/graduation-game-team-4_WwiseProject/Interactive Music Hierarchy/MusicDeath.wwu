@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A598578A-7B5E-4A5D-BA84-4EB592245549}" SchemaVersion="123" RootDocumentID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}" ParentDocumentID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}">
+	<InteractiveMusic>
+		<WorkUnit Name="MusicDeath" ID="{A598578A-7B5E-4A5D-BA84-4EB592245549}" OwnerID="{829EC930-1700-4FE8-BFF1-541B63E3FB77}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<MusicSegment Name="MusicDeathStinger" ID="{14F92C50-A3B6-4998-81B7-ECAEC4224E2F}" ShortID="81025538">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{DA6089E6-01FC-477A-B0D2-CD0CE799D9B8}"/>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{F0E89304-169D-440E-80E2-F8ADBB86C095}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="1000"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

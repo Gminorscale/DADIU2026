@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}" SchemaVersion="123" RootDocumentID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" ParentDocumentID="{4ACDD30D-2139-4C94-934D-755FD559AC54}">
+	<AudioObjects>
+		<WorkUnit Name="NPCEnemyLocomotion" ID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}" OwnerID="{4ACDD30D-2139-4C94-934D-755FD559AC54}" PersistMode="Nested">
+			<ChildrenList>
+				<BlendContainer Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" ShortID="129564440">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D9B39181-7328-4E96-82A9-60B50F9AE54D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-21</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_65m_Enemies" ID="{555E5165-F302-4306-B87C-322A2DBB759B}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Enemy_Locomotion_Float_Wobble_LP" ID="{E4418CC6-964E-49AD-B186-77FC4204F993}" ShortID="687708103">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Locomotion_Float_Wobble_LP" ID="{CB20FCBF-D968-422E-9379-1967F7C6DFAB}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Locomotion\SFX_Enemy_Locomotion_Float_Wobble_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="407744387"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Locomotion_Float_Wobble_LP" ID="{CB20FCBF-D968-422E-9379-1967F7C6DFAB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Enemy_Locomotion_Float_Static_LP" ID="{44BB009C-B17B-4EBA-953C-B03B59EA3B1B}" ShortID="722646348">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Att_Generic_20m" ID="{21C9B158-7810-4943-A09A-7356032F5E8A}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Locomotion_Float_Static_LP" ID="{74F81D42-50FF-48EE-B32B-209E204E1A1F}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Locomotion\SFX_Enemy_Locomotion_Float_Static_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="453047365"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Locomotion_Float_Static_LP" ID="{74F81D42-50FF-48EE-B32B-209E204E1A1F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Enemy_Locomotion_Float_Noise_LP" ID="{C6BB2F21-0D46-4DFE-8394-84EE3F52E9B4}" ShortID="44164475">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Locomotion_Float_Noise_LP" ID="{0B8003E1-3092-45B8-93DD-B59ABD450850}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Locomotion\SFX_Enemy_Locomotion_Float_Noise_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="535217485"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Locomotion_Float_Noise_LP" ID="{0B8003E1-3092-45B8-93DD-B59ABD450850}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{59B06EE9-BF20-44A0-B448-14B569C51014}" ShortID="884357027">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_EnemySpeed" ID="{00AF63DD-52D0-41F7-9239-FCB49BC3F5BC}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{CA8F09E0-B4A9-4451-A9BE-545C1A47AB50}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-5.75604</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{5C2DCAA7-48F0-4288-84CD-2C5F390D1A49}" ShortID="703489229">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_EnemySpeed" ID="{00AF63DD-52D0-41F7-9239-FCB49BC3F5BC}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{8E5CB5D2-2D54-42EE-BC6B-C022153077ED}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>98</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

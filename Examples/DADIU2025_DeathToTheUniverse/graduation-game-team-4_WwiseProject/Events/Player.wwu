@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Player" ID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="PlayerGrapple" ID="{93637A8B-7127-4F29-953B-17C333758BEF}" ShortID="833966674">
+					<ChildrenList>
+						<Event Name="Play_Player_Action_Grapple_Catch_OS" ID="{E405D6D1-849C-4841-932C-7CF92EE5B856}">
+							<ChildrenList>
+								<Action Name="" ID="{DFCC6365-A403-4038-A44A-017EABD28A37}" ShortID="681645558">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleCatch" ID="{2567180E-C645-4F31-8537-53E74904ECD5}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F1C85789-4726-42B9-B19A-05A574105316}" ShortID="353382566">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Grapple_Disable_OS" ID="{9F725474-3FB4-4915-BD2F-610309B1D5FF}">
+							<ChildrenList>
+								<Action Name="" ID="{8EBA8055-E48F-42FF-83F3-EDBC7049B92F}" ShortID="761851529">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleDisable" ID="{E9D190DC-4A5F-4C14-B60E-60F45736BC46}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Grapple_Impact_Object_OS" ID="{EF6B6653-0289-45DF-AE4C-09CD73E9286E}">
+							<ChildrenList>
+								<Action Name="" ID="{3FC40E1B-19F0-4092-83DC-0C713423ED02}" ShortID="376455021">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WorldObjectImpact" ID="{083E546D-6C06-4C8D-84EC-E69C3602F24B}" WorkUnitID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_GrappleOut_Loop_LP" ID="{A2CD665F-844B-47A7-952C-F1E30AC374D8}">
+							<ChildrenList>
+								<Action Name="" ID="{78A8A309-B7B9-402C-A4F6-BE32885141E3}" ShortID="921504492">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleLoop" ID="{CF29C51F-A108-43CB-BA4B-3EFFCDF9FCBD}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F3152B23-8C22-4D05-A4BC-5119945476F5}" ShortID="777634387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="50">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5FCE2C97-B1E9-4D59-914F-B39CD6A96F20}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleLoop" ID="{CF29C51F-A108-43CB-BA4B-3EFFCDF9FCBD}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Grapple_Send_OS" ID="{C7C303D8-9293-4739-8125-2BC443A0441D}">
+							<ChildrenList>
+								<Action Name="" ID="{7994B25D-2A4F-4D61-9AE9-70B19151B671}" ShortID="674850406">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleSend" ID="{FCC9107B-9CDF-4BDC-92C6-32534E30187C}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AA78AFD3-DADB-4179-97BE-93F78C959ADA}" ShortID="40020881">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Grapple_Swing_LP" ID="{1CB1D1E8-38F6-4480-A27E-81FF2D5D73AA}">
+							<ChildrenList>
+								<Action Name="" ID="{85800CE6-73D1-46AC-87F5-15EA9960F7DB}" ShortID="85619215">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleSwing" ID="{395F5544-AAF7-40C1-A601-62D29AEF9C85}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Action_Grapple_Swing_LP" ID="{9A8BB436-7D5E-4975-8820-25D892144E14}">
+							<ChildrenList>
+								<Action Name="" ID="{ACAEFAF4-4CCF-4A8A-98B8-541D7D52DB70}" ShortID="794204700">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleSwing" ID="{395F5544-AAF7-40C1-A601-62D29AEF9C85}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Action_GrappleOut_Loop_LP" ID="{915D6093-FF4C-475E-AD3A-4CB41113720B}">
+							<ChildrenList>
+								<Action Name="" ID="{74282B12-3F9B-400A-BF14-6CE10CAE5F93}" ShortID="506905789">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleLoop" ID="{CF29C51F-A108-43CB-BA4B-3EFFCDF9FCBD}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Grapple_Impact_Player_OS" ID="{E714ED36-2E2F-4B07-8387-72C0491CDD78}">
+							<ChildrenList>
+								<Action Name="" ID="{ECA43C50-E17C-4516-A380-4CE350FF177A}" ShortID="5621229">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleImpact" ID="{CF84318D-1ECB-43B8-97B3-E340DA79360E}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Action_GrappleIn_Loop_LP" ID="{C5582FEF-95DD-45FC-912F-660AC5BB012E}">
+							<ChildrenList>
+								<Action Name="" ID="{859880E7-15C1-4B41-88ED-57F5B797B251}" ShortID="301042255">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionGrappleLoop" ID="{CF29C51F-A108-43CB-BA4B-3EFFCDF9FCBD}" WorkUnitID="{EDAFFD2C-155E-43EF-8B12-C7A191F55DD9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PlayerEfforts" ID="{30A71973-E0B0-4897-94B9-F76E2FABF1D2}" ShortID="71770469">
+					<ChildrenList>
+						<Event Name="Play_Player_Action_Efforts_Attack_OS" ID="{F529767D-651D-4412-A7C9-F605A86287A5}">
+							<ChildrenList>
+								<Action Name="" ID="{88BACACA-C0FE-47EB-B294-6FF430D2923C}" ShortID="599814040">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortAttack" ID="{9266FC97-7100-4A57-AFDD-170C444A8D97}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Efforts_Death_OS" ID="{1223DE56-0C54-4466-A46B-2A9EF4E1773D}">
+							<ChildrenList>
+								<Action Name="" ID="{C2ABDC79-F817-4E52-984A-1EBB2EA3E33D}" ShortID="827899369">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionEffortsDeath" ID="{C7D094C6-917C-497C-9BEE-7A6E8C524177}" WorkUnitID="{DA8D692A-7060-47B7-AA84-CA406E329B59}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Efforts_Jump_OS" ID="{BCDD5304-4ADD-4B9E-8FF8-C33357E5FB2C}">
+							<ChildrenList>
+								<Action Name="" ID="{10090173-2360-4D67-BE81-8D0335EEC7B0}" ShortID="642597451">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortJump" ID="{D2DF7836-D10D-474F-833C-3128EC7D9550}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Efforts_TakeDamage_OS" ID="{9067817C-8E45-4CCC-B6BC-B392FFC0F825}">
+							<ChildrenList>
+								<Action Name="" ID="{1019386E-BFB2-467D-BD0D-90CB0D18690C}" ShortID="255233727">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PlayerLevitation" ID="{1AC8B62D-AFF0-4993-A5C2-B2166B92CCDB}" ShortID="888556690">
+					<ChildrenList>
+						<Event Name="Play_Player_Action_Levitation_Hold_LP" ID="{AF016D34-7FC7-4088-9FBC-6FEA07B12BC4}">
+							<ChildrenList>
+								<Action Name="" ID="{B01B57AE-2832-4101-A81B-6827AD345DD9}" ShortID="785266940">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationHold" ID="{DD38837E-F798-4FFE-A7F7-12D1BC436A1E}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FF3038D8-5987-4AF5-903A-F0D60423D258}" ShortID="793881639">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationHoldStart" ID="{2942F30E-5CA8-4042-AD98-7C6D3DD46FA1}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{964316E3-8688-4443-887C-04E159E24BDA}" ShortID="1002540953">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{46B4DE2E-802F-46E8-8DA4-0FE0D78DC9D7}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B9971444-5A80-44F5-A954-F560CD2CD6CB}" ShortID="474618359">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Static_LP" ID="{D1AC2C52-21C5-4B40-8D9E-ABDA43EE5BAE}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D24983E1-5BE2-406E-A4A0-EFB84663A848}" ShortID="840628738">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{FE44BE2A-E3CB-4B3A-99F5-EC8D5FA7270F}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{67D069F1-0061-4564-A82F-C8D22420589C}" ShortID="428745219">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="50">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BC5C4825-F7AB-4F9B-9DF0-F071E57EDB19}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{FE44BE2A-E3CB-4B3A-99F5-EC8D5FA7270F}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{987D3310-869E-4BC2-9C8D-4CFFB8343298}" ShortID="473282631">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="50">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{80728089-4F5B-4DC8-AAAB-3222F068DE43}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{46B4DE2E-802F-46E8-8DA4-0FE0D78DC9D7}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Levitation_Release_OS" ID="{ACB2511B-874C-4B0C-BF8B-B4380564C031}">
+							<ChildrenList>
+								<Action Name="" ID="{0B9B2C04-D46F-4E1A-BE80-DC2FD08455CA}" ShortID="525031752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationReleaseStart" ID="{0F1675EF-8761-40D2-A6F7-4449AFD63F20}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BBC2D005-FC15-4EE9-8048-C2B0A1158FA2}" ShortID="904217109">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationHold" ID="{DD38837E-F798-4FFE-A7F7-12D1BC436A1E}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Levitation_Start_OS" ID="{5AB22063-C09F-4FE0-9623-3F5B2C75BEB7}">
+							<ChildrenList>
+								<Action Name="" ID="{2C6DAC2C-2F19-488E-A1EF-DD8C1641402F}" ShortID="69237742">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerAcitonLevitationStart" ID="{32287263-7732-4D14-AF17-24AA3E8C365A}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Action_Levitation_Hold_LP" ID="{3BD20783-4A4F-4F55-80C2-F1FD64406B52}">
+							<ChildrenList>
+								<Action Name="" ID="{CB1F416A-32C3-4D29-A46D-6A79761261C0}" ShortID="760388905">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationHold" ID="{DD38837E-F798-4FFE-A7F7-12D1BC436A1E}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C46DE9B7-5EFD-4099-8520-A96813F211EA}" ShortID="69276902">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationHoldStart" ID="{2942F30E-5CA8-4042-AD98-7C6D3DD46FA1}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A98ADC3A-4628-41DB-A26B-6421E02A3FA8}" ShortID="291619580">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{46B4DE2E-802F-46E8-8DA4-0FE0D78DC9D7}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{62B87436-E957-4FE4-9618-CDD580793F18}" ShortID="24896489">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Static_LP" ID="{D1AC2C52-21C5-4B40-8D9E-ABDA43EE5BAE}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3D9FB8A8-35A4-4092-A1EB-93EF191F754F}" ShortID="377760283">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{FE44BE2A-E3CB-4B3A-99F5-EC8D5FA7270F}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Levitation_Stop_OS" ID="{8B428451-0E9B-4873-AAF8-BBF47886969C}">
+							<ChildrenList>
+								<Action Name="" ID="{809BF54E-F6A1-4386-9A54-E2059F0015C7}" ShortID="797192118">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionLevitationReleaseWobble" ID="{8910B04F-9F17-4E1E-8CD0-70C81919C5E1}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Action_Levitation_Start_OS" ID="{D5A43450-8771-410D-9590-03E8025937C4}">
+							<ChildrenList>
+								<Action Name="" ID="{00901947-CEE5-4993-8E4E-DCDFD7B233FC}" ShortID="838336364">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerAcitonLevitationStart" ID="{32287263-7732-4D14-AF17-24AA3E8C365A}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Player_Action_Puzzle_Rotate_OS" ID="{ADAD6441-C14C-4B25-A2A2-D870B934799C}">
+					<ChildrenList>
+						<Action Name="" ID="{9A8770FC-56FE-4DF4-AA12-0EA10762E5BE}" ShortID="584424288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerActionPuzzleRotate" ID="{E1902A6C-4D3C-46DE-B50F-771C6DA1C13E}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="PlayerCombat" ID="{A4E234FC-D830-4C30-A88C-29E24E266412}" ShortID="724587371">
+					<ChildrenList>
+						<Event Name="Play_Player_Action_Attack_Melee_OS" ID="{8DEA25A9-4743-4E8C-AB2D-49C9E0C1D0F2}">
+							<ChildrenList>
+								<Action Name="" ID="{E3196F11-068C-4EA1-9C3C-9F2BE38BC083}" ShortID="505549556">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionAttackMelee" ID="{4E2B1DFE-074C-4AD3-916B-5D1F9DAE4258}" WorkUnitID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EB468C82-A04D-4423-AB84-67B85D5B2B0B}" ShortID="561579044">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Melee_Whisper_LP" ID="{7EC2EE42-068B-4F69-B8E8-56DDAE58F9DC}" WorkUnitID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F4988C07-7660-456C-BA7C-0524F2C6FCF4}" ShortID="259663629">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="50">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3946FC05-41C4-46D7-AD51-2289C2FFF8D1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Melee_Whisper_LP" ID="{7EC2EE42-068B-4F69-B8E8-56DDAE58F9DC}" WorkUnitID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EC9C5123-F73C-4FE2-BD6E-A2A015AFEB07}" ShortID="512687366">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Action_Melee_Whisper_LP" ID="{7EC2EE42-068B-4F69-B8E8-56DDAE58F9DC}" WorkUnitID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{38111F71-206A-409C-9057-2CA92FB482CA}" ShortID="575059143">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="70"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortAttack" ID="{9266FC97-7100-4A57-AFDD-170C444A8D97}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_Push_OS" ID="{E866D9C7-1019-4B81-80BB-E3E05C2D9EAB}">
+							<ChildrenList>
+								<Action Name="" ID="{3EFAEA29-A85D-443D-8153-447158E42697}" ShortID="496836972">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionPush" ID="{85CD91D0-09C7-4189-A672-D961B89FA92C}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Action_TakeDamage_OS" ID="{FB56B670-A589-4E61-9993-83F08914C4B5}">
+							<ChildrenList>
+								<Action Name="" ID="{32CEC7A5-ABDD-4047-A2F1-E4707A20D870}" ShortID="528709105">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionTakeDamage" ID="{33FD9299-3FB5-4ADC-A514-2B60CD4035BF}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C399B2A1-809E-4409-AC1C-1F5B615624AF}" ShortID="1051301273">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Player_Respawn_OS" ID="{2E23A068-BEEF-4DD4-8479-6587D00D0242}">
+					<ChildrenList>
+						<Action Name="" ID="{2AB2AE6A-831D-42FC-B918-2D7622C1D9E6}" ShortID="769198535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Player_Action_Respawn_OS" ID="{811A6FBD-DD56-4960-8DC3-5381BDEE83EC}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1ABDEFAB-CEB1-4E4E-B701-F191A4717F53}" ShortID="293082095">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VORespawn" ID="{3A982D8E-B456-4272-A5EB-B5E9139313BA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Passive_OS" ID="{C60585FA-5C65-47A4-A4BD-C146DD696515}">
+					<ChildrenList>
+						<Action Name="" ID="{9EE6020A-DE97-440E-9876-DC93EB1B4BDA}" ShortID="400498502">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOPassive" ID="{9322287B-5AEE-48EF-8E9A-6FD6FACD3CBA}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Take_Damage" ID="{03700255-D540-49AC-B117-FF30E913D084}">
+					<ChildrenList>
+						<Action Name="" ID="{3A980E58-D0E5-419C-BADF-865DDE4F9DE1}" ShortID="470604554">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerActionTakeDamage" ID="{33FD9299-3FB5-4ADC-A514-2B60CD4035BF}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{91B8CE32-42B9-4AD1-81DD-7F43E00F82E5}" ShortID="678403232">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="89"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Death" ID="{7090E6C4-34A1-4F31-ABE9-958112ED09A9}">
+					<ChildrenList>
+						<Action Name="" ID="{4E7AB619-3004-48EE-BB42-D07A4FA98B01}" ShortID="904795624">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerActionDeath" ID="{5E0A1FBE-F9C4-44D4-B8AC-3E33DF80DA2A}" WorkUnitID="{9AAB1ECA-5C93-475D-8981-98D0FCAFA11A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2225D8B0-B4AC-4BAD-BB7C-7E78CF5E1B5A}" ShortID="903941413">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VODamage" ID="{5D9F2CEF-EADE-4358-BDB7-2A14BB16FEB2}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

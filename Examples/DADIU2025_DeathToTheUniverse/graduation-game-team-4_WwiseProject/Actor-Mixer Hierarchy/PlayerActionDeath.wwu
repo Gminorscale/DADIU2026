@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9AAB1ECA-5C93-475D-8981-98D0FCAFA11A}" SchemaVersion="123" RootDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" ParentDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}">
+	<AudioObjects>
+		<WorkUnit Name="PlayerActionDeath" ID="{9AAB1ECA-5C93-475D-8981-98D0FCAFA11A}" OwnerID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="PlayerActionDeath" ID="{5E0A1FBE-F9C4-44D4-B8AC-3E33DF80DA2A}" ShortID="444111653">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2AB08AD2-5215-486F-BC19-CE71ED800280}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Player_Action_Death" ID="{F4A0B38C-0EA1-4229-9CAF-E2373B78D5B1}" ShortID="457994499">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Death" ID="{F628B749-AB41-4F76-B6C0-0A462C7D196B}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Death\SFX_Player_Action_Death.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="229117782"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Death" ID="{F628B749-AB41-4F76-B6C0-0A462C7D196B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

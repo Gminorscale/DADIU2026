@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{21223861-C856-4AF6-BA58-F486C161C360}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{21223861-C856-4AF6-BA58-F486C161C360}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="UIInGame" ID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}" PersistMode="Reference"/>
+				<WorkUnit Name="UIMenu" ID="{CB2F178A-92E2-4530-9911-214A48082973}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

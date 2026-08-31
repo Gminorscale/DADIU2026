@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}" SchemaVersion="123" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<AudioObjects>
+		<WorkUnit Name="WorldObjects" ID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="WorldObjectImpact" ID="{083E546D-6C06-4C8D-84EC-E69C3602F24B}" ShortID="601661270">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Stone" ID="{2C1B32E0-3756-43B8-9F9D-48A30E9769C4}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="ObjectMaterialSwitch" ID="{802FFA17-C1DD-412B-BF1E-4731A76171AE}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="WorldObjectImpactEnemy" ID="{08130B3B-B844-4CE4-88E4-B5C11F791644}" ShortID="129423474">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<BlendContainer Name="WorldObjectImpactMetal" ID="{07637172-847E-4CBE-95FB-710058D037D9}" ShortID="397990912">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="WorldObjectImpactMetalHard" ID="{4F72A285-30C1-425A-993C-5BF28CFF1D76}" ShortID="98095904">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CA054A92-A49F-45E0-9754-5A325F29F374}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Metal_Impact_Hard_03" ID="{11B07EED-217A-45A6-98BB-EC99C1C68459}" ShortID="550179802">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Hard_03" ID="{96274133-EABB-4629-898D-29B37F22A7EB}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Hard_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="958936925"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Hard_03" ID="{96274133-EABB-4629-898D-29B37F22A7EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_Hard_02" ID="{46F457B5-E9C5-4068-AC37-9D142463A0CD}" ShortID="212994489">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Hard_02" ID="{19DF1DA2-0D63-4D93-9C8B-641F860BCA07}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Hard_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="918886297"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Hard_02" ID="{19DF1DA2-0D63-4D93-9C8B-641F860BCA07}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_Hard_01" ID="{79A7C6BB-4399-4FC0-A18A-C1F7709D810A}" ShortID="508692240">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Hard_01" ID="{C5FC26C0-07C9-4F7C-A0BA-8DD00F7BB45A}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Hard_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="360322668"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Hard_01" ID="{C5FC26C0-07C9-4F7C-A0BA-8DD00F7BB45A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{34B4F585-F7ED-4AB6-B190-E61593A3F772}" ShortID="491599635">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{6516AD74-8792-4157-B7EA-6AA7F40E0632}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="WorldObjectImpactMetalHigh" ID="{84CDC52A-DCA6-4F3E-B1BB-6ABEA0357968}" ShortID="415479284">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FE7443F6-B65A-4A73-B025-766EED7D1A06}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_07" ID="{12468FB5-4BA6-499B-820E-42BC39C6B579}" ShortID="453000468">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_07" ID="{162A9325-6F3A-47BB-8A88-F377131976DB}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="61341334"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_07" ID="{162A9325-6F3A-47BB-8A88-F377131976DB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_06" ID="{AFA3D2EB-BD1C-43C1-85EA-04E9B914DF77}" ShortID="191515225">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_06" ID="{F7F711EF-2E9F-470C-9F37-067A510316BD}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="864540784"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_06" ID="{F7F711EF-2E9F-470C-9F37-067A510316BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_05" ID="{C0E550B1-CB35-4062-BD91-EE3DE0D5C60F}" ShortID="55179706">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_05" ID="{A5FFEBEF-71FF-49AC-AFD7-6376DE558CF7}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="34984992"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_05" ID="{A5FFEBEF-71FF-49AC-AFD7-6376DE558CF7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_04" ID="{2CE842F3-B8B6-4833-9CE5-3A1CF605A6DD}" ShortID="378413893">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_04" ID="{790149EC-D474-41B9-A092-F8D7B2EA5629}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="792082676"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_04" ID="{790149EC-D474-41B9-A092-F8D7B2EA5629}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_03" ID="{6FA51BF4-72F3-47D8-AAFF-60452161F0BF}" ShortID="23753851">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_03" ID="{F41CD952-D42C-4C3A-B9EC-DFBFB64D5A85}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="678086671"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_03" ID="{F41CD952-D42C-4C3A-B9EC-DFBFB64D5A85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_02" ID="{AFDA4A2C-B773-4F0F-B664-96DCBB77A2E2}" ShortID="58406354">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_02" ID="{3FB41E10-1464-4B64-8D88-BC46F0FC357C}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="214766656"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_02" ID="{3FB41E10-1464-4B64-8D88-BC46F0FC357C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_High_01" ID="{591A33C6-49A1-480E-9279-893A50B029D1}" ShortID="529982862">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_High_01" ID="{04E95269-D5C5-4A19-A382-5F1CDB6DA5C3}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_High_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="833749396"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_High_01" ID="{04E95269-D5C5-4A19-A382-5F1CDB6DA5C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="WorldObjectImpactMetalResonance" ID="{4C7B0C92-FC30-42CF-AAEC-D0101E260904}" ShortID="436157653">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{04A6664E-CD0E-4058-9B1A-F996A5932C55}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Metal_Impact_Resonance_03" ID="{38D47606-987E-40BE-ADE2-D446F675134B}" ShortID="186460789">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Resonance_03" ID="{1E9953E8-BEA6-458A-B889-3D6379BBA2C1}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Resonance_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="842185964"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Resonance_03" ID="{1E9953E8-BEA6-458A-B889-3D6379BBA2C1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_Resonance_02" ID="{E18F2C05-0847-4717-A1B8-51B3FC063006}" ShortID="538256435">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Resonance_02" ID="{35F86E48-F223-4E89-9C0F-C1C26CE6690A}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Resonance_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="629402209"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Resonance_02" ID="{35F86E48-F223-4E89-9C0F-C1C26CE6690A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Metal_Impact_Resonance_01" ID="{F41D4284-7B65-43DF-A2E8-EE0D0A10BC9C}" ShortID="172189584">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Metal_Impact_Resonance_01" ID="{A5FB49F6-5BEA-45B8-AAA9-D86EBD88A29D}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Impact_Resonance_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="479794876"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Metal_Impact_Resonance_01" ID="{A5FB49F6-5BEA-45B8-AAA9-D86EBD88A29D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}" ShortID="522177388">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="WorldObjectImpactStoneDeep" ID="{193B9A3B-19FD-4E5F-9680-0E7D5BE4C7A5}" ShortID="112360227">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_07" ID="{E8C8F943-EF4E-4000-88B8-02AF05592EFF}" ShortID="696275412">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_07" ID="{CB1AC72A-8FDE-472D-AA38-39B47FD67116}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="300678291"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_07" ID="{CB1AC72A-8FDE-472D-AA38-39B47FD67116}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_06" ID="{C81A5438-82AE-446A-94DD-4390B6AC86F6}" ShortID="1041063968">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_06" ID="{07509C9F-F39A-4532-BCB6-0E04A5C9ECA3}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="790588295"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_06" ID="{07509C9F-F39A-4532-BCB6-0E04A5C9ECA3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_05" ID="{B3C89D78-FDED-4C8A-BBC8-B22653E8FDA7}" ShortID="550558166">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_05" ID="{61238BDB-D558-4256-AFE5-9D8ED571E53C}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="327422222"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_05" ID="{61238BDB-D558-4256-AFE5-9D8ED571E53C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_04" ID="{DEB54E81-1B90-417B-9BA3-F1E3B453A10E}" ShortID="944675911">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_04" ID="{19939CF1-E8BD-4E55-BEDE-CBBFFA2813CE}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="446927279"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_04" ID="{19939CF1-E8BD-4E55-BEDE-CBBFFA2813CE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_03" ID="{3C19E39F-BB99-477A-BEE3-2FB8A78666A4}" ShortID="920817978">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_03" ID="{4104A76F-06E4-45EF-B8E4-8BCCC41CB1E2}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1014935094"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_03" ID="{4104A76F-06E4-45EF-B8E4-8BCCC41CB1E2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_02" ID="{6A701E90-EE24-4F26-A542-B45A02BCB2E9}" ShortID="601846921">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_02" ID="{E53BA030-E04D-449E-830A-884F76FA4FC6}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="474589129"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_02" ID="{E53BA030-E04D-449E-830A-884F76FA4FC6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Deep_01" ID="{877CDF34-FC20-4003-A737-57E6D69B8A16}" ShortID="501474409">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Deep_01" ID="{3B682835-4009-4EA9-9FA1-01D0C4FFF00C}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Deep_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="425070317"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Deep_01" ID="{3B682835-4009-4EA9-9FA1-01D0C4FFF00C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="WorldObjectImpactStoneHard" ID="{0D616974-AAAD-4DB5-B0E6-4B779FB0AE0B}" ShortID="565336045">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6500408D-C636-4332-BC82-18852AE607AA}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Stone_Impact_Hard_03" ID="{D883A851-0089-4976-BF97-7B2A99C3084A}" ShortID="775320452">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Hard_03" ID="{56E042FB-0B80-4939-B99F-90886E711667}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Hard_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="576838163"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Hard_03" ID="{56E042FB-0B80-4939-B99F-90886E711667}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Hard_02" ID="{AAF79BF4-09BD-4CBD-8A59-2946F1ED7F92}" ShortID="894372900">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Hard_02" ID="{5A937D77-C361-4CC8-8360-7D15992A0C0E}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Hard_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="497905460"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Hard_02" ID="{5A937D77-C361-4CC8-8360-7D15992A0C0E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Hard_01" ID="{857FC7F5-9BCB-48E6-ADB6-C738640A3C48}" ShortID="1002902012">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Hard_01" ID="{05392D49-08E2-4A02-8541-44C5616D94E6}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Hard_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="664051859"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Hard_01" ID="{05392D49-08E2-4A02-8541-44C5616D94E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A26D0F2A-502C-4592-839A-FC63A38CCD1C}" ShortID="762238004">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2C12F2F4-9199-4964-9166-2768C48B6BB0}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="WorldObjectImpactStoneNormal" ID="{5EB59FDA-A7DE-46CF-B82C-FF0F76FB967B}" ShortID="689941541">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3E664EB8-F1E3-46CA-B00D-481518DBD6BA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_07" ID="{79864C50-A98D-4074-8CFC-EE2A480F53BE}" ShortID="166369260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_07" ID="{29A8304A-3D0C-453C-A001-86FE8B03094B}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="993276263"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_07" ID="{29A8304A-3D0C-453C-A001-86FE8B03094B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_06" ID="{A86DB40D-DD19-4104-B855-DF3A77C7EBBD}" ShortID="774200689">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_06" ID="{F5547BF0-56B9-4DCA-8226-6DBD8ED30843}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="5646879"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_06" ID="{F5547BF0-56B9-4DCA-8226-6DBD8ED30843}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_05" ID="{7B33E4EE-B4DC-4924-B974-B6585043455C}" ShortID="648220130">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_05" ID="{AE67BC65-4B4F-4AD9-9348-D75B33459D69}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785318001"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_05" ID="{AE67BC65-4B4F-4AD9-9348-D75B33459D69}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_04" ID="{DF1A7909-2F6F-42E4-BC47-FC865EB7E736}" ShortID="211397906">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_04" ID="{CCF497D4-0755-4E7D-88AA-53E076AAF886}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="418856882"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_04" ID="{CCF497D4-0755-4E7D-88AA-53E076AAF886}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_03" ID="{8EB6AA82-66C0-4CC6-98A1-177B4568DFEE}" ShortID="598628397">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_03" ID="{A7A06F54-E01E-41BE-945A-268D65109BD1}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1028297692"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_03" ID="{A7A06F54-E01E-41BE-945A-268D65109BD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_02" ID="{57773308-12FB-4879-912C-8E894765D25A}" ShortID="192642557">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_02" ID="{BE28BB10-D6BB-45F8-A773-178284F19284}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="989870504"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_02" ID="{BE28BB10-D6BB-45F8-A773-178284F19284}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Stone_Impact_Normal_01" ID="{BD6B196C-6672-4D5B-921A-F928C6A30CBF}" ShortID="833462651">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Stone_Impact_Normal_01" ID="{76653CF7-AD47-4FFF-970C-F5B9D53AD128}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Impact_Normal_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="242426555"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Stone_Impact_Normal_01" ID="{76653CF7-AD47-4FFF-970C-F5B9D53AD128}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="WorldObjectImpactWood" ID="{33ADB328-09C2-4CB7-88A4-63CDB9B25075}" ShortID="689738301">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1E7CB90F-0708-4B7A-AB38-3C6237FD93EB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="WorldObjectImpactWood" ID="{D7DA0138-2244-44B6-A06C-DB00D43546B9}" ShortID="455343610">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Wood_Impact_07" ID="{6F7D8123-CC58-4049-A60B-B4B4294263F6}" ShortID="567813824">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_07" ID="{F2E3A8EE-9F70-4795-9E07-2BD69F732D7D}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="150620718"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_07" ID="{F2E3A8EE-9F70-4795-9E07-2BD69F732D7D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_06" ID="{705EECAE-35F0-4E7F-87C1-09E1ACE9463C}" ShortID="355975486">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_06" ID="{18ABCF9E-D7B4-44F3-BB60-05418F21C98E}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="602091096"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_06" ID="{18ABCF9E-D7B4-44F3-BB60-05418F21C98E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_05" ID="{6E1EBAB3-A668-4327-9555-E824155458D3}" ShortID="1045272723">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_05" ID="{3E3A0145-ABAF-40F4-8406-F588F38994D5}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="979190865"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_05" ID="{3E3A0145-ABAF-40F4-8406-F588F38994D5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_04" ID="{3DBB6A99-FCA1-414F-BC25-649A0E41C05F}" ShortID="221398409">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_04" ID="{D706C16A-C58C-4278-A41E-2CE63361D4A0}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1023366479"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_04" ID="{D706C16A-C58C-4278-A41E-2CE63361D4A0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_03" ID="{11E38823-3711-45C0-B011-0FD485639F08}" ShortID="942253538">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_03" ID="{D301AC6E-069B-487A-B241-053522A28E79}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="136135806"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_03" ID="{D301AC6E-069B-487A-B241-053522A28E79}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_02" ID="{BBA8D991-05DD-4BD6-896B-CA4A67981935}" ShortID="635651314">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_02" ID="{617011E2-86E3-4ADC-994D-CE811F61C283}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="939004864"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_02" ID="{617011E2-86E3-4ADC-994D-CE811F61C283}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_01" ID="{7442F780-5FD1-499D-9593-B3031C6FDA88}" ShortID="401325324">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_01" ID="{6076DCB3-8C1B-438F-8D89-DCC8CBA2064B}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="373366866"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_01" ID="{6076DCB3-8C1B-438F-8D89-DCC8CBA2064B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="WorldObjectImpactWoodHard" ID="{D348158C-CE77-4E9D-971B-EE5117537B2C}" ShortID="272854357">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-230</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D7310032-23C0-4838-BE18-A7153FAFFF07}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_World_Object_Wood_Impact_Hard_03" ID="{33E5FD56-C23F-44D4-88F4-5785001594CE}" ShortID="234402807">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_Hard_03" ID="{4F4B7909-565B-4357-8F85-4AA62B33AEC4}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_Hard_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="907135080"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_Hard_03" ID="{4F4B7909-565B-4357-8F85-4AA62B33AEC4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_Hard_02" ID="{9329ADD1-6148-40EA-BF62-5159A26454B6}" ShortID="343621473">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_Hard_02" ID="{8ACECD2B-325A-49ED-93F4-FF25A46842F9}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_Hard_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="875441497"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_Hard_02" ID="{8ACECD2B-325A-49ED-93F4-FF25A46842F9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_World_Object_Wood_Impact_Hard_01" ID="{992E2936-B1B3-403D-9E9B-8F2A68A49E1C}" ShortID="650787024">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_World_Object_Wood_Impact_Hard_01" ID="{5A6495BF-8792-4A19-A0F3-0406EE93FC6E}">
+													<Language>SFX</Language>
+													<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Impact_Hard_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="613436410"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_World_Object_Wood_Impact_Hard_01" ID="{5A6495BF-8792-4A19-A0F3-0406EE93FC6E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{FE5DC83C-A159-4601-99E8-B2625A877314}" ShortID="463812605">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{394C0E63-B2EE-4434-B67D-258D214EA32E}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>62.23404</XPos>
+																				<YPos>-12.63</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{AF76A491-E477-4CA2-9232-9C6C78E5B22F}" ShortID="370865033">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2F2E7DE8-EAF9-4128-AD4A-BADD1822053B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>16.2234</XPos>
+																<YPos>-5.94271</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>86.96809</XPos>
+																<YPos>-1.79917</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{B47AA865-DA77-401B-8522-B3764D86EE79}" ShortID="470202393">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Highpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{A3532C18-BE58-4C23-AD41-B0C9C4FF4256}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>56</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{F3921571-D73F-4CAD-9547-5C0731CF5597}" ShortID="552255487">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{30068BAE-DA61-4C62-B7E4-FF285E50620F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>71</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>30.3896103896104</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Exp3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{6DC81EAC-B1E1-4774-9AB0-900DAB315B45}" ShortID="949368094">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Pitch"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectImpactVelocity" ID="{7D6C8006-9C49-48AD-84F9-840301E2857E}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{A5DAD0CE-7D67-46B6-90AE-EAFCEF9635C0}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-333</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>179</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectImpactWood" ID="{33ADB328-09C2-4CB7-88A4-63CDB9B25075}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectImpactEnemy" ID="{08130B3B-B844-4CE4-88E4-B5C11F791644}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectImpactMetal" ID="{07637172-847E-4CBE-95FB-710058D037D9}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{F0DF865B-B9F7-491E-83A5-EEA940B38C98}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactMetal" ID="{07637172-847E-4CBE-95FB-710058D037D9}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Wood" ID="{E0EBD36A-5913-4F3E-9A9F-75DEF70807B0}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactWood" ID="{33ADB328-09C2-4CB7-88A4-63CDB9B25075}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Dirt" ID="{99FD3A8F-4E59-42F2-AC60-942383241078}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sand" ID="{853E71CB-252D-41CA-A69F-D73F2BA04FA0}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Stone" ID="{2C1B32E0-3756-43B8-9F9D-48A30E9769C4}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Grass" ID="{170EB0F3-0A3E-4A4B-B62A-CC67F806016E}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectImpactStone" ID="{63507013-EBEB-4CF0-90E8-6132F816EA37}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<SwitchContainer Name="WorldObjectLoop" ID="{94574EF6-033B-4340-8E63-0F24455B53E1}" ShortID="649337771">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Stone" ID="{2C1B32E0-3756-43B8-9F9D-48A30E9769C4}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="ObjectMaterialSwitch" ID="{802FFA17-C1DD-412B-BF1E-4731A76171AE}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="WorldObjectLoopEnemy" ID="{EE8B26CB-002B-4EDC-B57D-3BAE7C3D9BA2}" ShortID="727606255">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<BlendContainer Name="WorldObjectLoopMetal" ID="{83BB845B-F123-4F3B-891F-2F653B283386}" ShortID="286392549">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Object_Metal_Loop_High" ID="{652F39D0-ABB3-4870-9197-64003C7E9111}" ShortID="500240554">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Metal_Loop_High" ID="{2F6C2309-9EAC-4565-9216-462654C082BC}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.238886522346369"/>
+												<Property Name="LoopEnd" Type="Real64" Value="4.11136277932961"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Loop_High.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="412086801"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Metal_Loop_High" ID="{2F6C2309-9EAC-4565-9216-462654C082BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Object_Metal_Loop_Drag" ID="{B633B20C-9144-4B43-9DD7-15A837A14CA6}" ShortID="757652311">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Metal_Loop_Drag" ID="{E3AA3737-CABF-4EF0-9FB1-04BE3FC0FB84}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="300"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.7501645716946"/>
+												<Property Name="LoopEnd" Type="Real64" Value="7.03830877560521"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Metal\SFX_World_Object_Metal_Loop_Drag.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="800174102"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Metal_Loop_Drag" ID="{E3AA3737-CABF-4EF0-9FB1-04BE3FC0FB84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}" ShortID="440709180">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Object_Stone_Loop" ID="{557CE69F-D271-47CB-A84F-B532344960CF}" ShortID="244606213">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Stone_Loop" ID="{CFFBEC71-C815-4D1D-BC02-254A780A1805}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.13135998603352"/>
+												<Property Name="LoopEnd" Type="Real64" Value="3.05630900837989"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="670645692"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Stone_Loop" ID="{CFFBEC71-C815-4D1D-BC02-254A780A1805}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Object_Stone_Loop_Texture" ID="{9A57F31E-BA9A-4AE6-9C4E-291B6228F94B}" ShortID="874532239">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Stone_Loop_Texture" ID="{535FA94A-2976-4524-B90A-9FC9BFCD876E}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.150931797020484"/>
+												<Property Name="LoopEnd" Type="Real64" Value="3.75173324022346"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Stone\SFX_World_Object_Stone_Loop_Texture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="294275730"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Stone_Loop_Texture" ID="{535FA94A-2976-4524-B90A-9FC9BFCD876E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="WorldObjectLoopWood" ID="{4E91ED45-1411-4A40-893E-21CB2AB1F219}" ShortID="144312697">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Object_Wood_Loop" ID="{BA7A1947-8A1A-47CE-B3BD-C32F20C1BADF}" ShortID="635242038">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Wood_Loop" ID="{78605119-5E42-48E9-8F06-1A336208BF39}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.163154504189944"/>
+												<Property Name="LoopEnd" Type="Real64" Value="7.97126291899441"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="506383407"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Wood_Loop" ID="{78605119-5E42-48E9-8F06-1A336208BF39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Object_Wood_Loop_Creak" ID="{D76D8EBE-24EE-466E-93EE-BC258468B2A6}" ShortID="257204946">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Object_Wood_Loop_Creak" ID="{A5959FC1-D48B-4D28-8482-5F8B7571829E}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.122977420856611"/>
+												<Property Name="LoopEnd" Type="Real64" Value="5.28802909683426"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Object\World Object Wood\SFX_World_Object_Wood_Loop_Creak.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="943936285"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Object_Wood_Loop_Creak" ID="{A5959FC1-D48B-4D28-8482-5F8B7571829E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{68287430-1C3D-41B4-A2A8-1DC6CB22167F}" ShortID="844223526">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectSpeed" ID="{5AAAE8EF-8945-4AEC-9453-27B5DB8DA999}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{AC6D074E-BFC2-4186-A824-4A2DB96BB0D3}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>41</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{E767E1E1-25F2-47DA-A76A-A8DDDD31EEAE}" ShortID="993647791">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Highpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectSpeed" ID="{5AAAE8EF-8945-4AEC-9453-27B5DB8DA999}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{4350EC7F-7EEC-459F-8383-F9B25E81DD4B}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>8</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{EA45AFD8-557B-40DF-BBA1-3361E20354B8}" ShortID="162468490">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_ObjectSpeed" ID="{5AAAE8EF-8945-4AEC-9453-27B5DB8DA999}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{60881F4C-2DCE-4CE3-B024-47A454A6DBFD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Exp2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>19.58779</XPos>
+																<YPos>-5.52828</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectLoopWood" ID="{4E91ED45-1411-4A40-893E-21CB2AB1F219}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectLoopMetal" ID="{83BB845B-F123-4F3B-891F-2F653B283386}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WorldObjectLoopEnemy" ID="{EE8B26CB-002B-4EDC-B57D-3BAE7C3D9BA2}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{F0DF865B-B9F7-491E-83A5-EEA940B38C98}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopMetal" ID="{83BB845B-F123-4F3B-891F-2F653B283386}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Wood" ID="{E0EBD36A-5913-4F3E-9A9F-75DEF70807B0}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopWood" ID="{4E91ED45-1411-4A40-893E-21CB2AB1F219}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Dirt" ID="{99FD3A8F-4E59-42F2-AC60-942383241078}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sand" ID="{853E71CB-252D-41CA-A69F-D73F2BA04FA0}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Stone" ID="{2C1B32E0-3756-43B8-9F9D-48A30E9769C4}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Grass" ID="{170EB0F3-0A3E-4A4B-B62A-CC67F806016E}"/>
+								<ItemList>
+									<ItemRef Name="WorldObjectLoopStone" ID="{C6E2AC78-5DE2-4DF5-A46D-65B93C3440EB}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

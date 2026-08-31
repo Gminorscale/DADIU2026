@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Locomotion" ID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="PlayerLocomotion" ID="{B8E25F3C-B056-4E64-A5B3-A20709A2EFA9}" ShortID="667302710">
+					<ChildrenList>
+						<Event Name="Play_PLYR_Footsteps_OS" ID="{75945630-5754-4D8E-9C06-481E1B2F5BF9}">
+							<ChildrenList>
+								<Action Name="" ID="{874B47AB-78DF-484F-A659-96B1684A19E9}" ShortID="805394557">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PLYR_Footsteps_MaterialSwitch" ID="{0B938D68-BBAF-4390-80D7-2ADF1809F3B1}" WorkUnitID="{00E9E24D-EC6B-48B5-A6BC-92847482142A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4F10F6AF-1AE1-4CDB-8C74-C3D65A2AB79A}" ShortID="287210154">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothSoft" ID="{95AC5A21-FC4C-48F8-B257-10D0BF69527C}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_Cloth_OS" ID="{1DD77900-58B7-445F-8D3E-CFAA3ABC9636}">
+							<ChildrenList>
+								<Action Name="" ID="{236D6843-6924-4725-AF2F-7BDC4258F721}" ShortID="30631345">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothSoft" ID="{95AC5A21-FC4C-48F8-B257-10D0BF69527C}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_Locomotion_Wind_LP" ID="{196E08CE-AF5B-4758-B393-E537260ACF41}">
+							<ChildrenList>
+								<Action Name="" ID="{61E986F0-7909-4B37-9F49-B7D81753CC5A}" ShortID="789682607">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Locomotion_Wind_LP" ID="{2F5618ED-CFD6-4E16-B741-CA3B33B65535}" WorkUnitID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_PLYR_Locomotion_Wind_LP" ID="{068DA24C-8FCF-4146-BFAE-BCC3AE7DB505}">
+							<ChildrenList>
+								<Action Name="" ID="{C6452C15-5E0B-485F-A596-1B64FC85524E}" ShortID="529823465">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Locomotion_Wind_LP" ID="{2F5618ED-CFD6-4E16-B741-CA3B33B65535}" WorkUnitID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_Dash_OS" ID="{B0A53417-2522-4558-99B0-777D958B73EF}">
+							<ChildrenList>
+								<Action Name="" ID="{8E66DA07-0D58-4070-B389-7CE20A263A14}" ShortID="129202058">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerActionDash" ID="{658743FA-5525-4260-9617-D0DA935CF0B2}" WorkUnitID="{94B7DA0B-B6E8-4726-8F11-201045C4976F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_Jump_OS" ID="{A69CD7C8-EE23-48E3-BC5A-14D55698295E}">
+							<ChildrenList>
+								<Action Name="" ID="{4F24AFC8-76AD-468E-ACF7-7A616B2B9962}" ShortID="766121989">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="60"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortJump" ID="{D2DF7836-D10D-474F-833C-3128EC7D9550}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9C7E835A-5E48-4BBD-B712-A96F6DBD7DCA}" ShortID="782352352">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_DoubleJump_OS" ID="{4FC577D1-2188-4711-AD3E-961E536DED63}">
+							<ChildrenList>
+								<Action Name="" ID="{A66E1A81-0408-4E63-9573-16EFE88FD4CB}" ShortID="297327736">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOEffortDoubleJump" ID="{5BF437CF-6AD4-4E40-A051-9BA2CBB31008}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B9D4BDE1-BC76-49FD-B6E2-CDBED16F2021}" ShortID="993537883">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PLYR_Land_OS" ID="{72B38C93-0BBC-46BC-A49B-B71D2A0910A5}">
+							<ChildrenList>
+								<Action Name="" ID="{5EF32047-7510-4F8D-B60D-0747EA1627E5}" ShortID="921108056">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerLocomotionLand" ID="{C7C4AC0A-6EF9-4E31-AFC6-F7E45221C022}" WorkUnitID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E93ACAD6-3EAE-4571-A011-0D7CA2822C3E}" ShortID="238644668">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlayerClothHard" ID="{CC5491FD-4806-4DAA-BF23-005B8DE5694F}" WorkUnitID="{5C632BD7-0658-4746-90D3-2DDDBB527E40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
