@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
 		Animator m_Animator = GetComponent<Animator> ();
 		Rigidbody2D m_Rigidbody2D = GetComponent<Rigidbody2D> ();
 		m_Animator.SetTrigger ("flipped");
-		m_Rigidbody2D.velocity += flippedVelocity;
+		m_Rigidbody2D.linearVelocity += flippedVelocity;
 		gameObject.layer = LayerMask.NameToLayer ("Falling to Kill Plane");
 		gameObject.GetComponent<SpriteRenderer> ().sortingLayerName = "Foreground Effect";
 	}

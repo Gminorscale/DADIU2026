@@ -48,7 +48,7 @@ public class MoveAndFlip : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (canMove) {
-			m_Rigidbody2D.velocity = new Vector2(Speed.x * directionX, m_Rigidbody2D.velocity.y);
+			m_Rigidbody2D.linearVelocity = new Vector2(Speed.x * directionX, m_Rigidbody2D.linearVelocity.y);
 		}
 	}
 
@@ -67,7 +67,7 @@ public class MoveAndFlip : MonoBehaviour {
 		}
 
 		else if (other.gameObject.tag.Contains("Platform") && bottomHit && canMove) {
-			m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, Speed.y);
+			m_Rigidbody2D.linearVelocity = new Vector2(m_Rigidbody2D.linearVelocity.x, Speed.y);
 		}
 	}
 

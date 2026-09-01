@@ -368,7 +368,13 @@ public static class AkCallbackManager
 #if UNITY_EDITOR
 				if (gId != AkUnitySoundEngine.AK_INVALID_GAME_OBJECT)
 				{
-#if UNITY_6000_3_OR_NEWER
+					// LOCAL PATCH (DADIU course): upstream 2025.1.10 is missing the UNITY_6000_4_OR_NEWER
+					// branch that AkWwiseSetupWizard.cs already has. See WWISE-INTEGRATION.md.
+#if UNITY_6000_4_OR_NEWER
+					var obj =
+						UnityEditor.EditorUtility.EntityIdToObject(EntityId.FromULong(AkMonitoringCallbackInfo.gameObjID)) as
+							UnityEngine.GameObject;
+#elif UNITY_6000_3_OR_NEWER
 					var obj =
 						UnityEditor.EditorUtility.EntityIdToObject((int)AkMonitoringCallbackInfo.gameObjID) as
 							UnityEngine.GameObject;

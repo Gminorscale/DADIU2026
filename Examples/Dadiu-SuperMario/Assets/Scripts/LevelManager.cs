@@ -400,7 +400,7 @@ public class LevelManager : MonoBehaviour {
 
 	/****************** Kill enemy */
 	public void MarioStompEnemy(Enemy enemy) {
-		mario_Rigidbody2D.velocity = new Vector2 (mario_Rigidbody2D.velocity.x + stompBounceVelocity.x, stompBounceVelocity.y);
+		mario_Rigidbody2D.linearVelocity = new Vector2 (mario_Rigidbody2D.linearVelocity.x + stompBounceVelocity.x, stompBounceVelocity.y);
 		enemy.StompedByMario ();
 		stompSound.Post(gameObject);
 		AddScore (enemy.stompBonus, enemy.gameObject.transform.position);

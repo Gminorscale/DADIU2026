@@ -12,7 +12,7 @@ public class OneupMushroom : MonoBehaviour {
 	void Start () {
 		t_LevelManager = FindObjectOfType<LevelManager> ();
 		m_Rigidbody2D = GetComponent<Rigidbody2D> ();
-		m_Rigidbody2D.velocity = initialVelocity;
+		m_Rigidbody2D.linearVelocity = initialVelocity;
 		t_LevelManager.powerupAppearSound.Post (t_LevelManager.gameObject);
 	}
 	

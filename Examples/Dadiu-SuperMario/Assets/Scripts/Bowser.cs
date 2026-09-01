@@ -56,7 +56,7 @@ public class Bowser : Enemy {
 			}
 
 			if (canMove) {
-				m_Rigidbody2D.velocity = new Vector2 (directionX * absSpeedX, m_Rigidbody2D.velocity.y);
+				m_Rigidbody2D.linearVelocity = new Vector2 (directionX * absSpeedX, m_Rigidbody2D.linearVelocity.y);
 				timer -= Time.deltaTime;
 
 				if (timer <= 0) {
@@ -72,7 +72,7 @@ public class Bowser : Enemy {
 
 					// Jump a random height
 					jumpSpeedY = Random.Range (minJumpSpeedY, maxJumpSpeedY);
-					m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, jumpSpeedY);
+					m_Rigidbody2D.linearVelocity = new Vector2 (m_Rigidbody2D.linearVelocity.x, jumpSpeedY);
 
 					// Shoot fireball after some delay
 					StartCoroutine (ShootFireCo (shootFireDelay));
@@ -81,7 +81,7 @@ public class Bowser : Enemy {
 				}
 
 			}
-		} else if (m_Rigidbody2D.velocity.y < 0 && !isFalling) { // fall as bridge collapses
+		} else if (m_Rigidbody2D.linearVelocity.y < 0 && !isFalling) { // fall as bridge collapses
 			isFalling = true;
 			t_LevelManager.bowserFallSound.Post (t_LevelManager.gameObject);
 		}
@@ -107,7 +107,7 @@ public class Bowser : Enemy {
 		fireResistance--;
 		if (fireResistance <= 0) {
 			GameObject impostor = Instantiate (BowserImpostor, transform.position, Quaternion.identity);
-			impostor.GetComponent<Rigidbody2D> ().velocity = 
+			impostor.GetComponent<Rigidbody2D> ().linearVelocity = 
 				new Vector2 (impostorInitialVelocity.x * directionX, impostorInitialVelocity.y);
 			t_LevelManager.bowserFallSound.Post (t_LevelManager.gameObject);
 

@@ -210,7 +210,7 @@ public class Mario : MonoBehaviour {
 		if (!isJumping) {
 			if (isGrounded && jumpButtonHeld && jumpButtonReleased) {
 				SetJumpParams ();
-				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, jumpSpeedY);
+				m_Rigidbody2D.linearVelocity = new Vector2 (m_Rigidbody2D.linearVelocity.x, jumpSpeedY);
 				isJumping = true;
 				jumpButtonReleased = false;
 				speedXBeforeJump = currentSpeedX;
@@ -222,7 +222,7 @@ public class Mario : MonoBehaviour {
 				}
 			}
 		} else {  // lower gravity if Jump button held; increased gravity if released
-			if (m_Rigidbody2D.velocity.y > 0 && jumpButtonHeld) {
+			if (m_Rigidbody2D.linearVelocity.y > 0 && jumpButtonHeld) {
 				m_Rigidbody2D.gravityScale = normalGravity * jumpUpGravity;
 			} else {
 				m_Rigidbody2D.gravityScale = normalGravity * jumpDownGravity;
@@ -270,7 +270,7 @@ public class Mario : MonoBehaviour {
 		}
 
 		/******** Set params */
-		m_Rigidbody2D.velocity = new Vector2 (moveDirectionX*currentSpeedX, m_Rigidbody2D.velocity.y);
+		m_Rigidbody2D.linearVelocity = new Vector2 (moveDirectionX*currentSpeedX, m_Rigidbody2D.linearVelocity.y);
 
 		m_Animator.SetBool ("isJumping", isJumping);
 		m_Animator.SetBool ("isFallingNotFromJump", isFalling && !isJumping);
@@ -297,7 +297,7 @@ public class Mario : MonoBehaviour {
 			}
 		}
 
-		isFalling = m_Rigidbody2D.velocity.y < 0 && !isGrounded;
+		isFalling = m_Rigidbody2D.linearVelocity.y < 0 && !isGrounded;
 		isGrounded = Physics2D.OverlapPoint (m_GroundCheck1.position, GroundLayers) || Physics2D.OverlapPoint (m_GroundCheck2.position, GroundLayers); 
 		isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
 
@@ -378,7 +378,7 @@ public class Mario : MonoBehaviour {
 		isChangingDirection = false;
 		isShooting = false;
 
-		gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero; // stop all momentum
+		gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero; // stop all momentum
 		Debug.Log (this.name + " FreezeUserInput called");
 	}
 

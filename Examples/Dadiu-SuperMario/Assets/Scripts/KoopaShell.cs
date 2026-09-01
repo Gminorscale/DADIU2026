@@ -47,7 +47,7 @@ public class KoopaShell : Enemy {
 				Destroy (gameObject);
 			}
 		} else if (isRolling) {
-			m_Rigidbody2D.velocity = new Vector2 (currentRollVelocityX, m_Rigidbody2D.velocity.y);
+			m_Rigidbody2D.linearVelocity = new Vector2 (currentRollVelocityX, m_Rigidbody2D.linearVelocity.y);
 		}
 
 		if (hasBeenStomped) {

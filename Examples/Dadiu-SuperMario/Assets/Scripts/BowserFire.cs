@@ -23,7 +23,7 @@ public class BowserFire : Enemy {
 	}
 
 	void Update() {
-		m_Rigidbody2D.velocity = new Vector2 (absSpeedX * directionX, m_Rigidbody2D.velocity.y);
+		m_Rigidbody2D.linearVelocity = new Vector2 (absSpeedX * directionX, m_Rigidbody2D.linearVelocity.y);
 	}
 
 	public override void TouchedByStarmanMario() {

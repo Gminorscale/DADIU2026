@@ -18,12 +18,12 @@ public class MarioFireball : MonoBehaviour {
 		m_Animator = GetComponent<Animator> ();
 
 		// initial velocity
-		m_Rigidbody2D.velocity = new Vector2(directionX * absVelocity.x, -absVelocity.y);
+		m_Rigidbody2D.linearVelocity = new Vector2(directionX * absVelocity.x, -absVelocity.y);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		m_Rigidbody2D.velocity = new Vector2 (directionX * absVelocity.x, m_Rigidbody2D.velocity.y);
+		m_Rigidbody2D.linearVelocity = new Vector2 (directionX * absVelocity.x, m_Rigidbody2D.linearVelocity.y);
 	}
 
 	void Explode() {
@@ -47,9 +47,9 @@ public class MarioFireball : MonoBehaviour {
 			if (normal == leftSide || normal == rightSide) { // explode if side hit
 				Explode ();
 			} else if (normal == bottomSide) { // bounce off
-				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, absVelocity.y);
+				m_Rigidbody2D.linearVelocity = new Vector2 (m_Rigidbody2D.linearVelocity.x, absVelocity.y);
 			} else {
-				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, -absVelocity.y);
+				m_Rigidbody2D.linearVelocity = new Vector2 (m_Rigidbody2D.linearVelocity.x, -absVelocity.y);
 			}
 		}
 	}

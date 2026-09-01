@@ -7,33 +7,61 @@ students and instructors working on this project as a Wwise exercise.
 
 ## Versions — read this first
 
-The Wwise side of this project has been migrated to 2025.1; Unity has not been
-upgraded, and does not need to be — the 2025.1 integration declares
-`"unity": "2021.3.32f1"` as its minimum, and this project is on `2021.3.40f1`.
+| | Version |
+|---|---|
+| Unity | `6000.6.0f1` |
+| Wwise | `2025.1.10` build `9233` |
+| Wwise Unity Integration | bundle `2025.1.10.4304`, version 21 |
 
-| | Dadiu-SuperMario | Main course (WAG) |
-|---|---|---|
-| Unity | `2021.3.40f1` | `6000.2.12f1` |
-| Wwise | `2025.1.10` build `9233` | `2025.1.3` build `9039` |
-| Wwise Unity Integration | bundle `2025.1.10.4304`, version 21 | bundle `2025.1.3.3970`, version 21 |
+This project was migrated from Unity `2021.3.40f1` + Wwise `2023.1.6`. It is no
+longer paired with the Wwise Adventure Game, so it does not need to track WAG's
+`6000.2.12f1` / Wwise `2025.1.3`.
 
-So students need Unity **2021.3.40f1** and Wwise **2025.1.10** Authoring for
-this project, and a separate Unity 6 install for WAG. The Wwise Authoring
-versions are now close enough to share one install; the Unity versions are not.
+### Local patch to the Wwise integration — do not lose this
 
-**Do not install the Wwise Addressables package here.** The Wwise setup offers
-it (`Wwise → Install Addressables`, or automatically when
-`InstallationWasRequested` is set in `Assets/WwiseSettings.xml`), and on Unity
-2021.3 it resolves `com.unity.addressables` **2.4.6**, which is a Unity 6 package
-and fails to compile with `AssetBundleUnloadOperation could not be found`. This
-project does not use Addressables at all — banks are loaded from StreamingAssets
-by `AkBankManager`. If it gets installed, remove
-`com.audiokinetic.wwise.addressables` from `Packages/manifest.json` and drop the
-`com.audiokinetic.wwise.addressables` and `com.unity.addressables` entries from
-`Packages/packages-lock.json`.
+`Assets/Wwise/API/Runtime/Handwritten/Common/AkCallbackManager.cs` carries a
+**local modification**. Integration 2025.1.10 guards the instance-ID lookup like
+this in `AkWwiseSetupWizard.cs`:
 
-One consequence to know about: the backwards-compatible `AkSoundEngineInitialization`
-alias for `AkUnitySoundEngineInitialization` only exists behind
+```csharp
+#if UNITY_6000_4_OR_NEWER
+    EntityIdToObject(EntityId.FromULong(id))
+#elif UNITY_6000_3_OR_NEWER
+    EntityIdToObject((int)id)
+#else
+    InstanceIDToObject((int)id)
+#endif
+```
+
+…but `AkCallbackManager.cs` only ships the last two branches. On Unity `6000.4`
+and newer — which includes `6000.6.0f1` — it therefore takes the `(int)` path,
+and Unity 6000.4 promoted the implicit `EntityId(int)` conversion from a warning
+to an **error**:
+
+```
+error CS0619: 'EntityId.implicit operator EntityId(int)' is obsolete
+```
+
+The missing `UNITY_6000_4_OR_NEWER` branch has been added by hand, marked with a
+`LOCAL PATCH (DADIU course)` comment. **Reinstalling or updating the Wwise Unity
+Integration will overwrite it and the project will stop compiling.** If that
+happens, copy the guard from `AkWwiseSetupWizard.cs` back into
+`AkCallbackManager.cs`. Worth reporting upstream to Audiokinetic so it comes back
+in a future release.
+
+### Do not install the Wwise Addressables package
+
+The Wwise setup offers it (`Wwise → Install Addressables`, or automatically when
+`InstallationWasRequested` is set in `Assets/WwiseSettings.xml`). This project
+does not use Addressables at all — banks are loaded from StreamingAssets by
+`AkBankManager` — and on Unity 2021.3 it pulled in `com.unity.addressables`
+**2.4.6**, a Unity 6 package that failed to compile. If it gets installed and you
+do not want it, remove `com.audiokinetic.wwise.addressables` from
+`Packages/manifest.json` and drop the `com.audiokinetic.wwise.addressables` and
+`com.unity.addressables` entries from `Packages/packages-lock.json`.
+
+One consequence: the backwards-compatible `AkSoundEngineInitialization` alias for
+`AkUnitySoundEngineInitialization` only exists behind
 `#if WWISE_ADDRESSABLES_23_1_OR_LATER`, so it disappears with the Addressables
 package. Project code uses the new `AkUnitySoundEngine*` names directly.
 
