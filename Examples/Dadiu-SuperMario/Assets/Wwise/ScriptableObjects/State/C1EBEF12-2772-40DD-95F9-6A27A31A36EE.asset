@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbfd54f71e67cd40b1b1b337ba4f5ee, type: 3}
+  m_Name: C1EBEF12-2772-40DD-95F9-6A27A31A36EE
+  m_EditorClassIdentifier: 
+  objectName: ST_MarioSmall
+  id: 3407194134
+  guid: C1EBEF12-2772-40DD-95F9-6A27A31A36EE
+  WwiseStateGroupReference: {fileID: 11400000, guid: 70a560c9be3e9a849b22ce45d2b7ca02,
+    type: 2}

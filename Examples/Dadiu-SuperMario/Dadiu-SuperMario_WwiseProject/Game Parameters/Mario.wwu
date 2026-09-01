@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="Mario" ID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="5"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

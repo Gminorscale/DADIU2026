@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5BFE89BA-852C-4B44-8206-423618247DE9}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Music" ID="{5BFE89BA-852C-4B44-8206-423618247DE9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="MUS_PlayMainPlaylist" ID="{32D85C48-9951-4764-9044-F9D0506F0C8B}">
+					<ChildrenList>
+						<Action Name="" ID="{975A41EE-1B03-422C-AC96-85CC91A30E1B}" ShortID="898960288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_MainSwitch" ID="{DCFDDEB1-6A15-46DD-A3AB-EEFAE2A3A159}" WorkUnitID="{A7692E89-6CA9-4120-A730-DAA994081A7A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MUS_Level101" ID="{52CDB955-A5C5-4EED-88A5-FEC7A04BD239}">
+					<ChildrenList>
+						<Action Name="" ID="{3B36041E-1B28-4CB0-A2B0-A9C38281F6BF}" ShortID="56656928">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_Level_101" ID="{EA104441-24A9-4C55-9CAE-F0CF6F7E05D5}" WorkUnitID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MUS_Level102" ID="{7CBE17B3-16A8-468F-93B0-46CDE551EDBA}">
+					<ChildrenList>
+						<Action Name="" ID="{98E48F69-56A9-4BFA-9ADB-745DC3F8FC74}" ShortID="445532806">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_Level_102" ID="{AB2309A4-FEA6-4A3A-A499-BC87BC9EFF20}" WorkUnitID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

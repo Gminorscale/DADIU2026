@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17ea7bf8ed5a6247ba55b1c9c209f64, type: 3}
+  m_Name: 4FBB0A77-9B42-4320-BFC9-CA6642C05ABA
+  m_EditorClassIdentifier: 
+  objectName: BNK_Main
+  id: 1020463552
+  guid: 4FBB0A77-9B42-4320-BFC9-CA6642C05ABA

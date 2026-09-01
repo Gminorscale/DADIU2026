@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e4af79c53ee84e8685c4c98652023, type: 3}
+  m_Name: 57B9CDEE-4D5C-4710-8232-89307A21C23D
+  m_EditorClassIdentifier: 
+  objectName: Play_DB_Synth_200Hz_2D_Lp
+  id: 318505690
+  guid: 57B9CDEE-4D5C-4710-8232-89307A21C23D

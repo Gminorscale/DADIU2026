@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{188C242B-1207-4D6D-A58B-F81DD9E1E1E0}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Soundbanks" ID="{188C242B-1207-4D6D-A58B-F81DD9E1E1E0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="BNK_Main" ID="{4FBB0A77-9B42-4320-BFC9-CA6642C05ABA}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Music" ID="{5BFE89BA-852C-4B44-8206-423618247DE9}" WorkUnitID="{5BFE89BA-852C-4B44-8206-423618247DE9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MarioStates" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" WorkUnitID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="DebugEvents" ID="{2CF1F148-1C11-4FD1-8862-9D5AA9A50B3E}" WorkUnitID="{D416BCFC-BEBD-4216-901D-DB504AF6C02B}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

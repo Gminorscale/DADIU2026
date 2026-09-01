@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F7E0D204-C683-46B8-B53B-A02E91F91438}" SchemaVersion="119">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{F7E0D204-C683-46B8-B53B-A02E91F91438}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="MusicCaster" ID="{42E57D5A-D234-4180-BE15-706894DF5C0D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Overworld_1-1" ID="{C7406E71-750B-4677-9BD0-069B1FF715D9}" WorkUnitID="{A7692E89-6CA9-4120-A730-DAA994081A7A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="MUS_PlayMainPlaylist" ID="{32D85C48-9951-4764-9044-F9D0506F0C8B}" WorkUnitID="{5BFE89BA-852C-4B44-8206-423618247DE9}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="ST_MarioSmall" ID="{C1EBEF12-2772-40DD-95F9-6A27A31A36EE}"/>
+						<CurrentStateRef Name="ST_MarioLive_03" ID="{95883DBB-D04F-49BD-BA82-1E2C6F353C0A}"/>
+						<CurrentStateRef Name="ST_Level_101" ID="{EA104441-24A9-4C55-9CAE-F0CF6F7E05D5}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

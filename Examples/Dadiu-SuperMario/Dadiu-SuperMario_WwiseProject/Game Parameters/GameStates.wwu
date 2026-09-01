@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F6A625A6-E43F-4F1F-9C5A-F3C48C713750}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="GameStates" ID="{F6A625A6-E43F-4F1F-9C5A-F3C48C713750}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_TimeLeft" ID="{9FB91AB7-EE54-4A0B-89CE-A1811FA10643}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="400"/>
+						<Property Name="Max" Type="Real64" Value="400"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

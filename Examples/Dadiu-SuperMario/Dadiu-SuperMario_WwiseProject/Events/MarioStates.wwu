@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="MarioStates" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="EVT_MarioAlive" ID="{B1FB8FAE-8C53-4E95-9BA9-5501A8CCCA30}">
+					<ChildrenList>
+						<Action Name="" ID="{5949FED5-48FB-40ED-B3D3-89005C883D8D}" ShortID="373595988">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_MarioSmall" ID="{C1EBEF12-2772-40DD-95F9-6A27A31A36EE}" WorkUnitID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EVT_MarioDead" ID="{1BB3792C-EEE4-4BB8-84D2-5596A5A49AB2}">
+					<ChildrenList>
+						<Action Name="" ID="{385BE5D3-1C8C-4CAD-BA42-111055597599}" ShortID="842013308">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ST_MarioDead" ID="{B8856D92-7800-449E-8763-F6D2F43E1D6B}" WorkUnitID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

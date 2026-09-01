@@ -1,0 +1,981 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947c78a7c21ada841b75140f84388f8c, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 052dccbae81d3343a2f17ded9462f37d
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 052dccbae81d3343a2f17ded9462f37d
+    GuidInternal: 
+    m_lastTime: -8584755273294415292
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3ebcbf1e8cc6d64480e621b11fc75df9
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: 3ebcbf1e8cc6d64480e621b11fc75df9
+    GuidInternal: 
+    m_lastTime: -8584755271596746296
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3ebcbf1e8cc6d64480e621b11fc75df9
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  - PhysicalPath: Master-Mixer Hierarchy\MixWorkUnit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3ebcbf1e8cc6d64480e621b11fc75df9
+    - ElementName: MixWorkUnit
+      ObjectType: 12
+      guid: b14bec2423af18439d78c89cf59f6817
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit\MixWorkUnit
+    guid: b14bec2423af18439d78c89cf59f6817
+    GuidInternal: 
+    m_lastTime: -8584755271605018239
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 02f7410ab97ef146ab512498035c6ce4
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 02f7410ab97ef146ab512498035c6ce4
+    GuidInternal: 
+    m_lastTime: -8584755273294445583
+    List: []
+  - PhysicalPath: SoundBanks\Soundbanks.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Soundbanks
+      ObjectType: 12
+      guid: 2b248c1807126d4da58bf81dd9e1e1e0
+    ParentPath: SoundBanks\Soundbanks
+    guid: 2b248c1807126d4da58bf81dd9e1e1e0
+    GuidInternal: 
+    m_lastTime: -8584755273294445583
+    List:
+    - name: BNK_Main
+      guid: 770abb4f429b2043bfc9ca6642c05aba
+      id: 1020463552
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Soundbanks
+        ObjectType: 12
+        guid: 2b248c1807126d4da58bf81dd9e1e1e0
+      - ElementName: BNK_Main
+        ObjectType: 7
+        guid: 770abb4f429b2043bfc9ca6642c05aba
+      Path: SoundBanks\Soundbanks\BNK_Main
+  EventWwu:
+  - PhysicalPath: Events\Debug.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Debug
+      ObjectType: 12
+      guid: fcbc16d4bdbe1642901ddb504af6c02b
+    ParentPath: Events\Debug
+    guid: fcbc16d4bdbe1642901ddb504af6c02b
+    GuidInternal: 
+    m_lastTime: -8584755273305463596
+    List:
+    - name: DebugEvents
+      guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      id: 4124916281
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      Path: Events\Debug\DebugEvents
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_200Hz_2D_Lp
+      guid: eecdb9575c4d1047823289307a21c23d
+      id: 318505690
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_200Hz_2D_Lp
+        ObjectType: 3
+        guid: eecdb9575c4d1047823289307a21c23d
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_200Hz_2D_Lp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Lp
+      guid: 47f8bca50f6f464f967ddee0f26a6e58
+      id: 2517391619
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Lp
+        ObjectType: 3
+        guid: 47f8bca50f6f464f967ddee0f26a6e58
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Lp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Os
+      guid: 9fa105fdc448be459b0871a060a0d59d
+      id: 2534169461
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Os
+        ObjectType: 3
+        guid: 9fa105fdc448be459b0871a060a0d59d
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Os
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Os_p100
+      guid: a484dd2cd28be040826291146a7828c8
+      id: 2834276857
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Os_p100
+        ObjectType: 3
+        guid: a484dd2cd28be040826291146a7828c8
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Os_p100
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Os_p200
+      guid: bcea540655659c4eaa2c83839c7cbe32
+      id: 2935089634
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Os_p200
+        ObjectType: 3
+        guid: bcea540655659c4eaa2c83839c7cbe32
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Os_p200
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Os_p300
+      guid: a2d6bae058238f44b508cd71d87b1b28
+      id: 3035902443
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Os_p300
+        ObjectType: 3
+        guid: a2d6bae058238f44b508cd71d87b1b28
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Os_p300
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_2D_Os_p400
+      guid: c153fa6dc5538d479e4f0aac4fdcf956
+      id: 3136715220
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_2D_Os_p400
+        ObjectType: 3
+        guid: c153fa6dc5538d479e4f0aac4fdcf956
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_2D_Os_p400
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DB_Synth_400Hz_3D_Lp
+      guid: 51acc7b9d1c7cb4ca45a987dec15e217
+      id: 3266186833
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Debug
+        ObjectType: 12
+        guid: fcbc16d4bdbe1642901ddb504af6c02b
+      - ElementName: DebugEvents
+        ObjectType: 4
+        guid: 48f1f12c111cd14f88629d5aa9a50b3e
+      - ElementName: Play_DB_Synth_400Hz_3D_Lp
+        ObjectType: 3
+        guid: 51acc7b9d1c7cb4ca45a987dec15e217
+      Path: Events\Debug\DebugEvents\Play_DB_Synth_400Hz_3D_Lp
+      maxAttenuation: 20
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 49d2996c306e7742af87c05271be0944
+    ParentPath: Events\Default Work Unit
+    guid: 49d2996c306e7742af87c05271be0944
+    GuidInternal: 
+    m_lastTime: -8584755273305463596
+    List: []
+  - PhysicalPath: Events\MarioStates.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MarioStates
+      ObjectType: 12
+      guid: bc020ac3b3d7594f950f9f64cbbdbf13
+    ParentPath: Events\MarioStates
+    guid: bc020ac3b3d7594f950f9f64cbbdbf13
+    GuidInternal: 
+    m_lastTime: -8584755273305463596
+    List:
+    - name: EVT_MarioAlive
+      guid: ae8ffbb1538c954e9ba95501a8ccca30
+      id: 1048818656
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MarioStates
+        ObjectType: 12
+        guid: bc020ac3b3d7594f950f9f64cbbdbf13
+      - ElementName: EVT_MarioAlive
+        ObjectType: 3
+        guid: ae8ffbb1538c954e9ba95501a8ccca30
+      Path: Events\MarioStates\EVT_MarioAlive
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: EVT_MarioDead
+      guid: 2c79b31be4eeb84b84d25596a5a49ab2
+      id: 2306134771
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MarioStates
+        ObjectType: 12
+        guid: bc020ac3b3d7594f950f9f64cbbdbf13
+      - ElementName: EVT_MarioDead
+        ObjectType: 3
+        guid: 2c79b31be4eeb84b84d25596a5a49ab2
+      Path: Events\MarioStates\EVT_MarioDead
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Music.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: ba89fe5b2c85444b8206423618247de9
+    ParentPath: Events\Music
+    guid: ba89fe5b2c85444b8206423618247de9
+    GuidInternal: 
+    m_lastTime: -8584755273305443533
+    List:
+    - name: MUS_Level101
+      guid: 55b9cd52c5a5ed4e88a5fec7a04bd239
+      id: 2723243971
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: ba89fe5b2c85444b8206423618247de9
+      - ElementName: MUS_Level101
+        ObjectType: 3
+        guid: 55b9cd52c5a5ed4e88a5fec7a04bd239
+      Path: Events\Music\MUS_Level101
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MUS_Level102
+      guid: b317be7ca8168f4693b046cde551edba
+      id: 2723243968
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: ba89fe5b2c85444b8206423618247de9
+      - ElementName: MUS_Level102
+        ObjectType: 3
+        guid: b317be7ca8168f4693b046cde551edba
+      Path: Events\Music\MUS_Level102
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MUS_PlayMainPlaylist
+      guid: 485cd832519964479044f9d0506f0c8b
+      id: 2115743526
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: ba89fe5b2c85444b8206423618247de9
+      - ElementName: MUS_PlayMainPlaylist
+        ObjectType: 3
+        guid: 485cd832519964479044f9d0506f0c8b
+      Path: Events\Music\MUS_PlayMainPlaylist
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 62c2f836d84ae242b1d8dbe80cbe507e
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 62c2f836d84ae242b1d8dbe80cbe507e
+    GuidInternal: 
+    m_lastTime: -8584755273305443533
+    List:
+    - name: TimeOfDay
+      guid: 0420d4074aa8784fa8ad8a572424b611
+      id: 3729505769
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 62c2f836d84ae242b1d8dbe80cbe507e
+      - ElementName: TimeOfDay
+        ObjectType: 13
+        guid: 0420d4074aa8784fa8ad8a572424b611
+      Path: Game Parameters\Default Work Unit\TimeOfDay
+  - PhysicalPath: Game Parameters\GameStates.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: GameStates
+      ObjectType: 12
+      guid: a625a6f63fe41f4f9c5af3c48c713750
+    ParentPath: Game Parameters\GameStates
+    guid: a625a6f63fe41f4f9c5af3c48c713750
+    GuidInternal: 
+    m_lastTime: -8584755273305443533
+    List:
+    - name: RTPC_TimeLeft
+      guid: b71ab99f54ee0b4a89cea1811fa10643
+      id: 3058023719
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameStates
+        ObjectType: 12
+        guid: a625a6f63fe41f4f9c5af3c48c713750
+      - ElementName: RTPC_TimeLeft
+        ObjectType: 13
+        guid: b71ab99f54ee0b4a89cea1811fa10643
+      Path: Game Parameters\GameStates\RTPC_TimeLeft
+  - PhysicalPath: Game Parameters\Mario.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Mario
+      ObjectType: 12
+      guid: 3ef66c4c05810c47a820ec50e4fe9245
+    ParentPath: Game Parameters\Mario
+    guid: 3ef66c4c05810c47a820ec50e4fe9245
+    GuidInternal: 
+    m_lastTime: -8584755273305443533
+    List:
+    - name: RTPC_MarioSpeed
+      guid: c4a16c96e199d147875d46278331cca5
+      id: 2826881650
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Mario
+        ObjectType: 12
+        guid: 3ef66c4c05810c47a820ec50e4fe9245
+      - ElementName: RTPC_MarioSpeed
+        ObjectType: 13
+        guid: c4a16c96e199d147875d46278331cca5
+      Path: Game Parameters\Mario\RTPC_MarioSpeed
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 0ffdf406761fc24da56d7c1e7c297c93
+    ParentPath: States\Default Work Unit
+    guid: 0ffdf406761fc24da56d7c1e7c297c93
+    GuidInternal: 
+    m_lastTime: -8584755273294415292
+    List: []
+  - PhysicalPath: States\GameStates.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: GameStates
+      ObjectType: 12
+      guid: b9aff0bdf6d9884791eabf4aaf44b00c
+    ParentPath: States\GameStates
+    guid: b9aff0bdf6d9884791eabf4aaf44b00c
+    GuidInternal: 
+    m_lastTime: -8584755273294415292
+    List:
+    - name: DayNight
+      guid: d83d3c97ba15df4491aafca495c43a88
+      id: 1705516017
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameStates
+        ObjectType: 12
+        guid: b9aff0bdf6d9884791eabf4aaf44b00c
+      - ElementName: DayNight
+        ObjectType: 9
+        guid: d83d3c97ba15df4491aafca495c43a88
+      Path: States\GameStates\DayNight
+      values:
+      - name: Day
+        guid: 464982f63fcab44ebd82f931449ad7a6
+        id: 311764537
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: d83d3c97ba15df4491aafca495c43a88
+        - ElementName: Day
+          ObjectType: 8
+          guid: 464982f63fcab44ebd82f931449ad7a6
+      - name: Night
+        guid: f773a9ffd0cd1d42b3afb06f2df40f93
+        id: 1011622525
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: d83d3c97ba15df4491aafca495c43a88
+        - ElementName: Night
+          ObjectType: 8
+          guid: f773a9ffd0cd1d42b3afb06f2df40f93
+      - name: None
+        guid: 4127e76a39dd5d4aaa89cf7cb1689428
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: DayNight
+          ObjectType: 9
+          guid: d83d3c97ba15df4491aafca495c43a88
+        - ElementName: None
+          ObjectType: 8
+          guid: 4127e76a39dd5d4aaa89cf7cb1689428
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Levels
+      guid: 716a955072681e4abd8890c21e3ba32d
+      id: 2678230316
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameStates
+        ObjectType: 12
+        guid: b9aff0bdf6d9884791eabf4aaf44b00c
+      - ElementName: Levels
+        ObjectType: 9
+        guid: 716a955072681e4abd8890c21e3ba32d
+      Path: States\GameStates\Levels
+      values:
+      - name: None
+        guid: d268bec2867f7640866c749ff4f7e84e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: Levels
+          ObjectType: 9
+          guid: 716a955072681e4abd8890c21e3ba32d
+        - ElementName: None
+          ObjectType: 8
+          guid: d268bec2867f7640866c749ff4f7e84e
+      - name: ST_Level_101
+        guid: 414410eaa924554c9caef0cf6f7e05d5
+        id: 2673545494
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: Levels
+          ObjectType: 9
+          guid: 716a955072681e4abd8890c21e3ba32d
+        - ElementName: ST_Level_101
+          ObjectType: 8
+          guid: 414410eaa924554c9caef0cf6f7e05d5
+      - name: ST_Level_102
+        guid: a40923aba6fe3a4aa499bc87bc9eff20
+        id: 2673545493
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: Levels
+          ObjectType: 9
+          guid: 716a955072681e4abd8890c21e3ba32d
+        - ElementName: ST_Level_102
+          ObjectType: 8
+          guid: a40923aba6fe3a4aa499bc87bc9eff20
+      - name: ST_Level_103
+        guid: 7f07e31fc13d6548b4fb963a98757294
+        id: 2673545492
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: Levels
+          ObjectType: 9
+          guid: 716a955072681e4abd8890c21e3ba32d
+        - ElementName: ST_Level_103
+          ObjectType: 8
+          guid: 7f07e31fc13d6548b4fb963a98757294
+      - name: ST_Level_104
+        guid: ab3f41d0975ec543b3c88dd2a16a9cc7
+        id: 2673545491
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: Levels
+          ObjectType: 9
+          guid: 716a955072681e4abd8890c21e3ba32d
+        - ElementName: ST_Level_104
+          ObjectType: 8
+          guid: ab3f41d0975ec543b3c88dd2a16a9cc7
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MarioLives
+      guid: 643e3a7fd3936645b395b0c49db9ea3d
+      id: 2055629040
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameStates
+        ObjectType: 12
+        guid: b9aff0bdf6d9884791eabf4aaf44b00c
+      - ElementName: MarioLives
+        ObjectType: 9
+        guid: 643e3a7fd3936645b395b0c49db9ea3d
+      Path: States\GameStates\MarioLives
+      values:
+      - name: None
+        guid: 00dcb037b7190a47b20f561ddc4372c5
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioLives
+          ObjectType: 9
+          guid: 643e3a7fd3936645b395b0c49db9ea3d
+        - ElementName: None
+          ObjectType: 8
+          guid: 00dcb037b7190a47b20f561ddc4372c5
+      - name: ST_MarioLive_00
+        guid: 2561a7fc30265541a2045ab8b3e1178c
+        id: 826997358
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioLives
+          ObjectType: 9
+          guid: 643e3a7fd3936645b395b0c49db9ea3d
+        - ElementName: ST_MarioLive_00
+          ObjectType: 8
+          guid: 2561a7fc30265541a2045ab8b3e1178c
+      - name: ST_MarioLive_01
+        guid: a21815a07c9c6d4b81b1a9dbeeb09c4f
+        id: 826997359
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioLives
+          ObjectType: 9
+          guid: 643e3a7fd3936645b395b0c49db9ea3d
+        - ElementName: ST_MarioLive_01
+          ObjectType: 8
+          guid: a21815a07c9c6d4b81b1a9dbeeb09c4f
+      - name: ST_MarioLive_02
+        guid: 8c9bdb7877d70b4c9989bc130da4966d
+        id: 826997356
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioLives
+          ObjectType: 9
+          guid: 643e3a7fd3936645b395b0c49db9ea3d
+        - ElementName: ST_MarioLive_02
+          ObjectType: 8
+          guid: 8c9bdb7877d70b4c9989bc130da4966d
+      - name: ST_MarioLive_03
+        guid: bb3d88954fd0bd49ba821e2c6f353c0a
+        id: 826997357
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioLives
+          ObjectType: 9
+          guid: 643e3a7fd3936645b395b0c49db9ea3d
+        - ElementName: ST_MarioLive_03
+          ObjectType: 8
+          guid: bb3d88954fd0bd49ba821e2c6f353c0a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MarioState
+      guid: 4f765cbe5ae55144bf46383d03a67e2c
+      id: 3891672790
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameStates
+        ObjectType: 12
+        guid: b9aff0bdf6d9884791eabf4aaf44b00c
+      - ElementName: MarioState
+        ObjectType: 9
+        guid: 4f765cbe5ae55144bf46383d03a67e2c
+      Path: States\GameStates\MarioState
+      values:
+      - name: None
+        guid: 17c8173e0bc6394d987a9e75aabf8251
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioState
+          ObjectType: 9
+          guid: 4f765cbe5ae55144bf46383d03a67e2c
+        - ElementName: None
+          ObjectType: 8
+          guid: 17c8173e0bc6394d987a9e75aabf8251
+      - name: ST_MarioDead
+        guid: 926d85b800789e448763f6d2f43e1d6b
+        id: 3280622839
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioState
+          ObjectType: 9
+          guid: 4f765cbe5ae55144bf46383d03a67e2c
+        - ElementName: ST_MarioDead
+          ObjectType: 8
+          guid: 926d85b800789e448763f6d2f43e1d6b
+      - name: ST_MarioLarge
+        guid: 7fdbc754fe44df4c885a6c1cfa11bd6b
+        id: 1268394730
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioState
+          ObjectType: 9
+          guid: 4f765cbe5ae55144bf46383d03a67e2c
+        - ElementName: ST_MarioLarge
+          ObjectType: 8
+          guid: 7fdbc754fe44df4c885a6c1cfa11bd6b
+      - name: ST_MarioSmall
+        guid: 12efebc17227dd4095f96a27a31a36ee
+        id: 3407194134
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioState
+          ObjectType: 9
+          guid: 4f765cbe5ae55144bf46383d03a67e2c
+        - ElementName: ST_MarioSmall
+          ObjectType: 8
+          guid: 12efebc17227dd4095f96a27a31a36ee
+      - name: ST_MarioStar
+        guid: b20dc41a792f084cbf8a7dfb7cd269bc
+        id: 2935428005
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: GameStates
+          ObjectType: 12
+          guid: b9aff0bdf6d9884791eabf4aaf44b00c
+        - ElementName: MarioState
+          ObjectType: 9
+          guid: 4f765cbe5ae55144bf46383d03a67e2c
+        - ElementName: ST_MarioStar
+          ObjectType: 8
+          guid: b20dc41a792f084cbf8a7dfb7cd269bc
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 7094c8337df30a46a03432e80f44db67
+    ParentPath: Switches\Default Work Unit
+    guid: 7094c8337df30a46a03432e80f44db67
+    GuidInternal: 
+    m_lastTime: -8584755273294415292
+    List:
+    - name: SwitchGroup
+      guid: 2ac66a6dcead0240821eaa467115b747
+      id: 206060290
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7094c8337df30a46a03432e80f44db67
+      - ElementName: SwitchGroup
+        ObjectType: 11
+        guid: 2ac66a6dcead0240821eaa467115b747
+      Path: Switches\Default Work Unit\SwitchGroup
+      values:
+      - name: DB_Switch_One
+        guid: 46539966b90544499f937e717e803547
+        id: 1220551583
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7094c8337df30a46a03432e80f44db67
+        - ElementName: SwitchGroup
+          ObjectType: 11
+          guid: 2ac66a6dcead0240821eaa467115b747
+        - ElementName: DB_Switch_One
+          ObjectType: 10
+          guid: 46539966b90544499f937e717e803547
+      - name: DB_Switch_Two
+        guid: 6db27125e560dc478f1780dec28d94bb
+        id: 833827773
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7094c8337df30a46a03432e80f44db67
+        - ElementName: SwitchGroup
+          ObjectType: 11
+          guid: 2ac66a6dcead0240821eaa467115b747
+        - ElementName: DB_Switch_Two
+          ObjectType: 10
+          guid: 6db27125e560dc478f1780dec28d94bb
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 6cf02459ff2f5a4d95f851ec589f9712
+    ParentPath: Triggers\Default Work Unit
+    guid: 6cf02459ff2f5a4d95f851ec589f9712
+    GuidInternal: 
+    m_lastTime: -8584755273294415292
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000b0000000c0000000d0000000f000000170000001a0000001d000000b5000000b9000000d9000000da000000db000000dd0000002c0100002d0100002e010000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

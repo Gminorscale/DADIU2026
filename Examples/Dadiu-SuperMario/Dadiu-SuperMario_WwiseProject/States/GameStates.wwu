@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="GameStates" ID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="DayNight" ID="{973C3DD8-15BA-44DF-91AA-FCA495C43A88}">
+					<ChildrenList>
+						<State Name="None" ID="{6AE72741-DD39-4A5D-AA89-CF7CB1689428}"/>
+						<State Name="Day" ID="{F6824946-CA3F-4EB4-BD82-F931449AD7A6}"/>
+						<State Name="Night" ID="{FFA973F7-CDD0-421D-B3AF-B06F2DF40F93}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Levels" ID="{50956A71-6872-4A1E-BD88-90C21E3BA32D}">
+					<ChildrenList>
+						<State Name="None" ID="{C2BE68D2-7F86-4076-866C-749FF4F7E84E}"/>
+						<State Name="ST_Level_101" ID="{EA104441-24A9-4C55-9CAE-F0CF6F7E05D5}"/>
+						<State Name="ST_Level_102" ID="{AB2309A4-FEA6-4A3A-A499-BC87BC9EFF20}"/>
+						<State Name="ST_Level_103" ID="{1FE3077F-3DC1-4865-B4FB-963A98757294}"/>
+						<State Name="ST_Level_104" ID="{D0413FAB-5E97-43C5-B3C8-8DD2A16A9CC7}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MarioState" ID="{BE5C764F-E55A-4451-BF46-383D03A67E2C}">
+					<ChildrenList>
+						<State Name="None" ID="{3E17C817-C60B-4D39-987A-9E75AABF8251}"/>
+						<State Name="ST_MarioSmall" ID="{C1EBEF12-2772-40DD-95F9-6A27A31A36EE}"/>
+						<State Name="ST_MarioLarge" ID="{54C7DB7F-44FE-4CDF-885A-6C1CFA11BD6B}"/>
+						<State Name="ST_MarioStar" ID="{1AC40DB2-2F79-4C08-BF8A-7DFB7CD269BC}"/>
+						<State Name="ST_MarioDead" ID="{B8856D92-7800-449E-8763-F6D2F43E1D6B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MarioLives" ID="{7F3A3E64-93D3-4566-B395-B0C49DB9EA3D}">
+					<ChildrenList>
+						<State Name="None" ID="{37B0DC00-19B7-470A-B20F-561DDC4372C5}"/>
+						<State Name="ST_MarioLive_00" ID="{FCA76125-2630-4155-A204-5AB8B3E1178C}"/>
+						<State Name="ST_MarioLive_01" ID="{A01518A2-9C7C-4B6D-81B1-A9DBEEB09C4F}"/>
+						<State Name="ST_MarioLive_02" ID="{78DB9B8C-D777-4C0B-9989-BC130DA4966D}"/>
+						<State Name="ST_MarioLive_03" ID="{95883DBB-D04F-49BD-BA82-1E2C6F353C0A}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

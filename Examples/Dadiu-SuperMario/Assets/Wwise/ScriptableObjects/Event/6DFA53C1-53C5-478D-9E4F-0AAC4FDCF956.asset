@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e4af79c53ee84e8685c4c98652023, type: 3}
+  m_Name: 6DFA53C1-53C5-478D-9E4F-0AAC4FDCF956
+  m_EditorClassIdentifier: 
+  objectName: Play_DB_Synth_2D_Os_p400
+  id: 3136715220
+  guid: 6DFA53C1-53C5-478D-9E4F-0AAC4FDCF956

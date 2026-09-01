@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D416BCFC-BEBD-4216-901D-DB504AF6C02B}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Debug" ID="{D416BCFC-BEBD-4216-901D-DB504AF6C02B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="DebugEvents" ID="{2CF1F148-1C11-4FD1-8862-9D5AA9A50B3E}" ShortID="141899666">
+					<ChildrenList>
+						<Event Name="Play_DB_Synth_2D_Lp" ID="{A5BCF847-6F0F-4F46-967D-DEE0F26A6E58}">
+							<ChildrenList>
+								<Action Name="" ID="{27117995-E2CA-45A8-98EC-22BF4F67A4A6}" ShortID="739267031">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_400Hz_2D_Lp" ID="{4E36F58F-EC19-4122-9F2A-304AD0B91C06}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_2D_Os" ID="{FD05A19F-48C4-45BE-9B08-71A060A0D59D}">
+							<ChildrenList>
+								<Action Name="" ID="{E971C9DA-01D2-49DF-91F8-FF8A1F6A77C2}" ShortID="498738237">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_2D_Os_p100" ID="{2CDD84A4-8BD2-40E0-8262-91146A7828C8}">
+							<ChildrenList>
+								<Action Name="" ID="{29E7F582-2E60-4C05-9BCF-93321AD9EC42}" ShortID="404784156">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CE0B8067-22DE-4824-9AB3-2919C441A20C}" ShortID="136181306">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_2D_Os_p200" ID="{0654EABC-6555-4E9C-AA2C-83839C7CBE32}">
+							<ChildrenList>
+								<Action Name="" ID="{08F415C1-0C8F-4A95-8912-692BC0D0DCB7}" ShortID="122232064">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="200"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2F6CE590-78BA-4DF2-B456-C19C109D3724}" ShortID="465075161">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_2D_Os_p300" ID="{E0BAD6A2-2358-448F-B508-CD71D87B1B28}">
+							<ChildrenList>
+								<Action Name="" ID="{7D216601-C5CD-4239-99FA-5425EF688B6C}" ShortID="45260009">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="300"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4499CC4C-7E42-434F-AD45-EA20348C9197}" ShortID="1029289959">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_2D_Os_p400" ID="{6DFA53C1-53C5-478D-9E4F-0AAC4FDCF956}">
+							<ChildrenList>
+								<Action Name="" ID="{9B1BEFCE-2748-4609-8CFC-026928850779}" ShortID="124902298">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="400"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E4902037-0896-4859-B359-AFD40F61A81A}" ShortID="709967061">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_2D_Os" ID="{19F25945-500C-44E5-ABEA-7AD7F18D9723}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_200Hz_2D_Lp" ID="{57B9CDEE-4D5C-4710-8232-89307A21C23D}">
+							<ChildrenList>
+								<Action Name="" ID="{62A0F32A-8F83-441D-9E55-5CBED99FC65F}" ShortID="343772752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_200Hz_2D_Lp" ID="{07E37773-70D0-4DF2-968D-ED452A992775}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DB_Synth_400Hz_3D_Lp" ID="{B9C7AC51-C7D1-4CCB-A45A-987DEC15E217}">
+							<ChildrenList>
+								<Action Name="" ID="{9EF32566-40B4-4D32-B0D9-FE2CCFC6DF6D}" ShortID="471854080">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DB_Synth_400Hz_3D_Lp" ID="{C7972DCE-732D-46BA-9A8D-E1428A3D1339}" WorkUnitID="{A2D3A40E-C757-48BE-BE4F-C2A7443D6802}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
