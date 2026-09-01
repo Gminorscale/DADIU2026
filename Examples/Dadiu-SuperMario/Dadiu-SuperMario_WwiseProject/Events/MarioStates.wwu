@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" SchemaVersion="133">
 	<Events>
 		<WorkUnit Name="MarioStates" ID="{C30A02BC-D7B3-4F59-950F-9F64CBBDBF13}" PersistMode="Standalone">
 			<ChildrenList>

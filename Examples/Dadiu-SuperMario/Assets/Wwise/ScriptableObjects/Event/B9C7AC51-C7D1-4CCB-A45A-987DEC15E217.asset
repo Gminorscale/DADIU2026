@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: Play_DB_Synth_400Hz_3D_Lp
   id: 3266186833
   guid: B9C7AC51-C7D1-4CCB-A45A-987DEC15E217
+  IsInUserDefinedSoundBank: 1

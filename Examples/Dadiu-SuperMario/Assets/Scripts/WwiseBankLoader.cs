@@ -15,7 +15,7 @@ using UnityEngine;
  * The bank has to be loaded very early. Components post Events from Awake as well as from
  * Start - the AkAmbient on the Firebar prefab in World 1-4 is one - so loading after the
  * scene has finished loading is already too late for those. Wwise's own hook is used
- * instead: AkSoundEngineInitialization fires initializationDelegate at the end of
+ * instead: AkUnitySoundEngineInitialization fires initializationDelegate at the end of
  * InitializeSoundEngine(), which happens in AkInitializer's OnEnable (script execution
  * order -100), before any AkBank (-75), AkEvent or AkAmbient (0) has run.
  *
@@ -37,11 +37,11 @@ public static class WwiseBankLoader {
 
 		/* -= first: the delegate lives on a static singleton, so it can survive from a
 		 * previous play session when Enter Play Mode reload is turned off. */
-		AkSoundEngineInitialization.Instance.initializationDelegate -= LoadBanks;
-		AkSoundEngineInitialization.Instance.initializationDelegate += LoadBanks;
+		AkUnitySoundEngineInitialization.Instance.initializationDelegate -= LoadBanks;
+		AkUnitySoundEngineInitialization.Instance.initializationDelegate += LoadBanks;
 
 		// If the sound engine was already up before this ran, the delegate won't fire.
-		if (AkSoundEngine.IsInitialized ()) {
+		if (AkUnitySoundEngine.IsInitialized ()) {
 			LoadBanks ();
 		}
 	}
@@ -52,7 +52,7 @@ public static class WwiseBankLoader {
 			return;
 		}
 
-		if (AkSoundEngine.IsInitialized ()) {
+		if (AkUnitySoundEngine.IsInitialized ()) {
 			LoadBanks (); // last resort - Events posted from Awake have already failed by now
 		} else {
 			/* No sound engine means no WwiseGlobal object in the scene. Say so rather than

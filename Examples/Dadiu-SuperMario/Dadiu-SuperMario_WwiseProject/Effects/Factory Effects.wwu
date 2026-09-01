@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" SchemaVersion="133">
 	<Effects>
 		<WorkUnit Name="Factory Effects" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" PersistMode="Standalone">
 			<ChildrenList>
@@ -1689,6 +1689,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="MarioState" ID="{BE5C764F-E55A-4451-BF46-383D03A67E2C}"/>
+										<StateGroupInfo Name="" ID="{31E109DD-6D55-49B8-B807-7049FBD1A5DC}" ShortID="227875445"/>
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
@@ -1719,6 +1720,10 @@
 									<CustomState>
 										<StateRef Name="ST_MarioLarge" ID="{54C7DB7F-44FE-4CDF-885A-6C1CFA11BD6B}"/>
 										<CustomState Name="" ID="{9206EC0F-BC81-4AA9-B21B-864CB8B0C121}" ShortID="461557595"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{3E17C817-C60B-4D39-987A-9E75AABF8251}"/>
+										<CustomState Name="" ID="{082E6FE2-7B6E-4C78-8C76-5A2DF8AE5D23}" ShortID="799657162"/>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -1968,6 +1973,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="MarioLives" ID="{7F3A3E64-93D3-4566-B395-B0C49DB9EA3D}"/>
+										<StateGroupInfo Name="" ID="{AED14C8A-7145-4379-9DFC-61A98A7F9237}" ShortID="267072770"/>
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
@@ -1976,6 +1982,14 @@
 										<CustomState Name="" ID="{9868A362-BEC0-4460-971D-AAF47BD00961}" ShortID="587151173">
 											<PropertyList>
 												<Property Name="ModDepth" Type="Real32" Value="-2.1"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{37B0DC00-19B7-470A-B20F-561DDC4372C5}"/>
+										<CustomState Name="" ID="{8B69EE63-C7EB-451E-9CE6-63872B8F5444}" ShortID="868024926">
+											<PropertyList>
+												<Property Name="ModDepth" Type="Real32" Value="0"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>

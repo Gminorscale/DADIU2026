@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: Play_DB_Synth_2D_Os
   id: 2534169461
   guid: FD05A19F-48C4-45BE-9B08-71A060A0D59D
+  IsInUserDefinedSoundBank: 1

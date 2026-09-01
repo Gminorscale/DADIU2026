@@ -1,6 +1,6 @@
 {
     "name": "com.audiokinetic.wwise.monobehaviour",
-    "version": "2023.1.6",
+    "version": "2024.1.0",
     "displayName": "Wwise Unity MonoBehaviour",
     "description": "Wwise Integration in Unity using MonoBehaviour",
     "unity": "2021.3",

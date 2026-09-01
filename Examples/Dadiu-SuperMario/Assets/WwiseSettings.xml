@@ -2,7 +2,8 @@
 <WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
-  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+  <WwiseStreamingAssetsPath>Audio\GeneratedSoundBanks</WwiseStreamingAssetsPath>
+  <RootOutputPath>StreamingAssets/Audio/GeneratedSoundBanks</RootOutputPath>
   <CreatedPicker>true</CreatedPicker>
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
@@ -11,11 +12,23 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>C:\Apps\Wwise2023.1.6.8555</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>C:\Audiokinetic\Wwise_2025.1.10.9233</WwiseInstallationPathWindows>
   <WwiseProjectPath>../Dadiu-SuperMario_WwiseProject/Dadiu-SuperMario_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
+  <AutoSyncWaapi>true</AutoSyncWaapi>
+  <WaapiChangePending>false</WaapiChangePending>
+  <InstallationWasRequested>false</InstallationWasRequested>
+  <UseGitRepository>true</UseGitRepository>
+  <PackageSource />
+  <AddressableBankFolder>WwiseData/Bank</AddressableBankFolder>
+  <UseCustomBuildScript>false</UseCustomBuildScript>
+  <AddressableAssetBuilderPath>Assets/AddressableAssetsData/DataBuilders/BuildScriptWwisePacked.asset</AddressableAssetBuilderPath>
+  <AutomaticallyUpdateExternalSourcesPath>false</AutomaticallyUpdateExternalSourcesPath>
+  <ExternalSourcesPath>WwiseData/Bank</ExternalSourcesPath>
+  <EnableUninstallationPrompt>true</EnableUninstallationPrompt>
+  <DisableAsynchronousBankLoading>true</DisableAsynchronousBankLoading>
   <XMLTranslatorTimeout>10</XMLTranslatorTimeout>
   <WaapiTranslatorTimeout>0</WaapiTranslatorTimeout>
 </WwiseSettings>

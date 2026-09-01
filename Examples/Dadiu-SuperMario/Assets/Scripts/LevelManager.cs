@@ -525,7 +525,7 @@ public class LevelManager : MonoBehaviour {
 
 	/****************** Music control
 	 * Music actions go through the Wwise-Types API (Event.ExecuteAction) rather than
-	 * raw AkSoundEngine calls. Both the music-system Event and the cue currently
+	 * raw AkUnitySoundEngine calls. Both the music-system Event and the cue currently
 	 * playing are acted on, so this works whether cue changes are driven by separate
 	 * Events or by States inside one playlist. */
 	void MusicAction(AkActionOnEventType action) {

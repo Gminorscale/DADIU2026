@@ -5,23 +5,37 @@ Course-specific documentation for this example project. The original upstream
 covers the Unity/Wwise structure and the state of the audio integration, for
 students and instructors working on this project as a Wwise exercise.
 
-## Version mismatch — read this first
+## Versions — read this first
 
-This project is **not** on the same versions as the main WAG course project:
+The Wwise side of this project has been migrated to 2025.1; Unity has not been
+upgraded, and does not need to be — the 2025.1 integration declares
+`"unity": "2021.3.32f1"` as its minimum, and this project is on `2021.3.40f1`.
 
 | | Dadiu-SuperMario | Main course (WAG) |
 |---|---|---|
 | Unity | `2021.3.40f1` | `6000.2.12f1` |
-| Wwise | `2023.1.6` build `8555` | `2025.1.3` build `9039` |
-| Wwise Unity Integration | bundle `2023.1.6.3160`, version 19 | bundle `2025.1.3.3970`, version 21 |
+| Wwise | `2025.1.10` build `9233` | `2025.1.3` build `9039` |
+| Wwise Unity Integration | bundle `2025.1.10.4304`, version 21 | bundle `2025.1.3.3970`, version 21 |
 
-You need a matching Unity **2021.3.40f1** install and a matching Wwise
-**2023.1.6** Authoring install to open this project as-is. Opening the
-`.wproj` in a newer Wwise will trigger a project upgrade — don't do that
-casually if you intend to keep working across both this project and the WAG
-project, since it's a one-way conversion. Treat this as its own sandbox
-project, not something to open side-by-side with the same Wwise Authoring
-window as WAG.
+So students need Unity **2021.3.40f1** and Wwise **2025.1.10** Authoring for
+this project, and a separate Unity 6 install for WAG. The Wwise Authoring
+versions are now close enough to share one install; the Unity versions are not.
+
+**Do not install the Wwise Addressables package here.** The Wwise setup offers
+it (`Wwise → Install Addressables`, or automatically when
+`InstallationWasRequested` is set in `Assets/WwiseSettings.xml`), and on Unity
+2021.3 it resolves `com.unity.addressables` **2.4.6**, which is a Unity 6 package
+and fails to compile with `AssetBundleUnloadOperation could not be found`. This
+project does not use Addressables at all — banks are loaded from StreamingAssets
+by `AkBankManager`. If it gets installed, remove
+`com.audiokinetic.wwise.addressables` from `Packages/manifest.json` and drop the
+`com.audiokinetic.wwise.addressables` and `com.unity.addressables` entries from
+`Packages/packages-lock.json`.
+
+One consequence to know about: the backwards-compatible `AkSoundEngineInitialization`
+alias for `AkUnitySoundEngineInitialization` only exists behind
+`#if WWISE_ADDRESSABLES_23_1_OR_LATER`, so it disappears with the Addressables
+package. Project code uses the new `AkUnitySoundEngine*` names directly.
 
 ## Unity structure
 
@@ -112,7 +126,7 @@ are handled now:
   It has to happen very early: components post from `Awake` as well as `Start`
   (the `AkAmbient` on the `Firebar` prefab in `World 1-4` is one), so anything
   that waits for the scene to finish loading is already too late. It subscribes
-  to `AkSoundEngineInitialization.Instance.initializationDelegate`, which fires
+  to `AkUnitySoundEngineInitialization.Instance.initializationDelegate`, which fires
   at the end of `InitializeSoundEngine()` inside `AkInitializer.OnEnable`
   (script execution order `-100`) — before any `AkBank` (`-75`), `AkEvent` or
   `AkAmbient` (`0`) runs. Bank loads are reference-counted by `AkBankManager`,

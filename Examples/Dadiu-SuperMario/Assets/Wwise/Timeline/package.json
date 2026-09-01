@@ -1,6 +1,6 @@
 {
     "name": "com.audiokinetic.wwise.timeline",
-    "version": "2023.1.6",
+    "version": "2024.1.0",
     "displayName": "Wwise Unity Timeline",
     "description": "Wwise support for Unity timeline",
     "unity": "2021.3",

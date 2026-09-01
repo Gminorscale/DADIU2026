@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: MUS_PlayMainPlaylist
   id: 2115743526
   guid: 32D85C48-9951-4764-9044-F9D0506F0C8B
+  IsInUserDefinedSoundBank: 1

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}" SchemaVersion="133">
 	<States>
 		<WorkUnit Name="GameStates" ID="{BDF0AFB9-D9F6-4788-91EA-BF4AAF44B00C}" PersistMode="Standalone">
 			<ChildrenList>

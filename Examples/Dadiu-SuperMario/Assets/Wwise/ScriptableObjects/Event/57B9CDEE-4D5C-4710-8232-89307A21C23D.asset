@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: Play_DB_Synth_200Hz_2D_Lp
   id: 318505690
   guid: 57B9CDEE-4D5C-4710-8232-89307A21C23D
+  IsInUserDefinedSoundBank: 1

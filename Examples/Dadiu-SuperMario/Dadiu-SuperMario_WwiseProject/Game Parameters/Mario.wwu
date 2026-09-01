@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}" SchemaVersion="133">
 	<GameParameters>
 		<WorkUnit Name="Mario" ID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}" PersistMode="Standalone">
 			<ChildrenList>
