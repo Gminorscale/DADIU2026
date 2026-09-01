@@ -34,16 +34,22 @@ window as WAG.
   Menu`). Carries lives/coins/score/timer/spawn-point across scene loads.
   **This is why level scenes used to fail when played directly**: pressing
   Play on `World 1-1` without going through `Main Menu` left no
-  `GameStateManager` instance, and `LevelManager.Start()` called
+  `GameStateManager` instance, and every script that read game state called
   `FindObjectOfType<GameStateManager>()` with no null check — instant
-  `NullReferenceException`. `LevelManager` now creates one with new-game
-  defaults (3 lives, 400 time, spawn point 0) and logs a warning if none is
-  found, so any level scene can be opened and tested on its own. Entering
-  through `Main Menu` is still the normal path — that's what carries score
-  and lives between levels.
+  `NullReferenceException`. `GameStateManager.GetOrCreate()` now creates one
+  with new-game defaults (3 lives, 400 time, spawn point 0) and logs a warning
+  if none was found; `LevelManager`, `LevelStartScreen`, `TimeUpScreen` and
+  `GameOverScreen` all go through it, so any scene can be opened and tested on
+  its own. The screens also stop assuming a `World x-y` scene name
+  (`GameStateManager.WorldLabel()`), which is what used to throw an
+  `IndexOutOfRangeException` on `Test Scene`. Entering through `Main Menu` is
+  still the normal path — that's what carries score and lives between levels.
 - `Assets/Scripts/LevelManager.cs` — per-level god object: HUD, timer,
   scoring, pause/unpause, respawn, powerup/powerdown state, **and both the
   legacy Unity audio system and the Wwise integration side by side**.
+- `Assets/Scripts/WwiseBankLoader.cs` — loads `BNK_Main` at the start of every
+  play session, so audio works no matter which scene you press Play on. Not
+  upstream WAG or upstream Mario; added for this course.
 - `Assets/Sounds/` — legacy audio source of truth: 18 music `.mp3`s
   (`01-main-theme-overworld.mp3` etc.) and 17 SFX `.wav`s (`smb_*.wav`),
   played via `AudioSource`/`AudioClip`.
@@ -79,6 +85,34 @@ unbound (None) Event is a safe no-op rather than a crash. That means the game
 runs *silently* until the Events below are authored in Wwise and picked in
 the Inspector — "no sound" here almost always means an unpicked Event or an
 ungenerated SoundBank, not a bug in the code.
+
+### Playing a scene on its own
+
+Any scene can be opened and played directly — `Test Scene`, `World 1-3`,
+whatever a student is working on. Two things used to make that fail, and both
+are handled now:
+
+- **The SoundBank was never loaded.** `BNK_Main` is loaded by an `AkBank`
+  component that only exists in the `Main Menu` scene, so pressing Play on a
+  level scene loaded no bank and *every* `Post()` failed with
+  `Could not post event (name: MUS_PlayMainPlaylist, ...). Please make sure to
+  load or rebuild the appropriate SoundBank.`
+  `Assets/Scripts/WwiseBankLoader.cs` now loads the bank once per play session.
+  It has to happen very early: components post from `Awake` as well as `Start`
+  (the `AkAmbient` on the `Firebar` prefab in `World 1-4` is one), so anything
+  that waits for the scene to finish loading is already too late. It subscribes
+  to `AkSoundEngineInitialization.Instance.initializationDelegate`, which fires
+  at the end of `InitializeSoundEngine()` inside `AkInitializer.OnEnable`
+  (script execution order `-100`) — before any `AkBank` (`-75`), `AkEvent` or
+  `AkAmbient` (`0`) runs. Bank loads are reference-counted by `AkBankManager`,
+  so the Main Menu's `AkBank` component is unaffected. Add any new bank names to
+  `WwiseBankLoader.BankNames`.
+- **No `GameStateManager`.** See the `GameStateManager.cs` note above:
+  `GameStateManager.GetOrCreate()` spawns one with new-game defaults.
+
+`Test Scene` is also enabled in Build Settings, so the die → `Level Start
+Screen` → reload cycle can actually load it back. A scene that isn't in Build
+Settings can be played in the Editor but cannot be reloaded by name at runtime.
 
 ### Timing constants replace `AudioClip.length`
 
@@ -123,15 +157,55 @@ loading.
 
 ### Already wired, previously orphaned
 
-`EVT_MarioAlive` / `EVT_MarioDead` are now posted from `LevelManager`
-(level start and Mario's death). The `Levels` state group is now set through
-`ST_CurrentLevel` on `LevelManager` — pick the matching `ST_Level_1xx` per
-level scene in the Inspector. This supersedes `MusicManagerWwise.cs`, which
-is left in place but is no longer needed.
+`EVT_MarioAlive` / `EVT_MarioDead` are now posted from `LevelManager` (level
+start and Mario's death). This supersedes `MusicManagerWwise.cs`, which is left
+in place but is no longer needed.
 
 `ST_MarioStar` is now set when the starman powerup is active, and Mario's
 size state is kept in sync via `UpdateMarioSizeState()` rather than being
 forced to `ST_MarioSmall` on every level load.
+
+### Per-level music
+
+`MUS_PlayMainPlaylist` plays `MUS_MainSwitch`, which switches on `MarioState`
+into `MUS_Levels_Sw`, which switches on the **`Levels`** State group:
+
+| `Levels` State | plays |
+|---|---|
+| `ST_Level_101` | `MUS_Level101_Sw` — the 1-1 playlist (intro/A/B1/C/B2) plus the Mario alive/dead pair |
+| `ST_Level_102` | `MUS_Level102_Sw_01` |
+| `ST_Level_103` | `MUS_Lvl103` |
+| `ST_Level_104` | `MUS_Lvl104` |
+
+So a level picks its music by **setting a State**, not by posting a different
+Event. `LevelManager.ST_CurrentLevel` is set in the Inspector per level scene,
+and `Start()` calls `SetValue()` on it before the music starts:
+
+| Scene | `ST_CurrentLevel` |
+|---|---|
+| `World 1-1`, `World 1-1 - Underground`, `Test Scene` | `ST_Level_101` |
+| `World 1-2`, `World 1-2 - Underground`, `World 1-2 - Castle Cut` | `ST_Level_102` |
+| `World 1-3` | `ST_Level_103` |
+| `World 1-4` | `ST_Level_104` |
+
+`Template.unity` is deliberately left on `None` — pick a State when you copy it
+into a new level.
+
+**Why `WwLevelMusic` is empty.** `MUS_Level101` and `MUS_Level102` are *SetState*
+Events, not play Events — the only two that exist, which is why 1-3 and 1-4 had
+nothing to point at and every level ended up playing the 1-1 music. They were
+wired into `LevelManager.WwLevelMusic`, which posts a frame later than
+`ST_CurrentLevel.SetValue()` and so would overwrite the State. `WwLevelMusic` is
+now empty everywhere and `ST_CurrentLevel` is the single source of truth. The
+slot is still there: pick an Event if a level should post its own cue on top,
+and `ChangeLevelMusicEvent()` will use it. An empty slot is a normal setup here,
+so it doesn't warn.
+
+The music itself is started once per session by the `AkEvent` on the
+`MusicManager` child of the `Game State Manager` prefab, which is
+`DontDestroyOnLoad`. It keeps playing across scene loads and Wwise transitions
+between levels when the State changes — which is the point of an interactive
+music setup, and why the Main Menu already has music.
 
 ### Things Wwise should own, not code
 

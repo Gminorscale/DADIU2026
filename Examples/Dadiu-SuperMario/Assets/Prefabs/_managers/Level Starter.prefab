@@ -109,8 +109,7 @@ MonoBehaviour:
   WwLevelMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8312ebbcbfb6410468d9b88cd7c4d09c,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   WwLevelMusicHurry:
     idInternal: 0
     valueGuidInternal: 
@@ -231,6 +230,12 @@ MonoBehaviour:
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f68fb83036d8ba84185424368409c2bb,
       type: 2}
+  ST_CurrentLevel:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   musicSource: {fileID: 82793086007151078}
   soundSource: {fileID: 82989831986403836}
   pauseSoundSource: {fileID: 82006143512131390}

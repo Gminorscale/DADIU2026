@@ -20,10 +20,10 @@ public class TimeUpScreen : MonoBehaviour {
 	void Start () {
 		Time.timeScale = 1;
 
-		t_GameStateManager = FindObjectOfType<GameStateManager> ();
+		t_GameStateManager = GameStateManager.GetOrCreate (this);
 		string worldName = t_GameStateManager.sceneToLoad;
 
-		WorldTextHUD.text = Regex.Split (worldName, "World ")[1];
+		WorldTextHUD.text = GameStateManager.WorldLabel (worldName);
 		ScoreTextHUD.text = t_GameStateManager.scores.ToString ("D6");
 		CoinTextHUD.text = "x" + t_GameStateManager.coins.ToString ("D2");
 

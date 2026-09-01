@@ -1307,6 +1307,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114750208195470174, guid: 2edb2b8e476654f0ea2807c7a8261a76, type: 2}
+      propertyPath: ST_CurrentLevel.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e299ae2b2cce132ec7a87d48e60d7ebd, type: 2}
     - target: {fileID: 4083944694453744, guid: 2edb2b8e476654f0ea2807c7a8261a76, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0

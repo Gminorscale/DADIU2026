@@ -127,17 +127,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		t_GameStateManager = FindObjectOfType<GameStateManager>();
-		if (t_GameStateManager == null) {
-			/* Level scenes are normally entered through the Main Menu, which is where the
-			 * DontDestroyOnLoad GameStateManager gets created. Pressing Play directly on a
-			 * level scene used to NullReference right here. Spawn one with new-game defaults
-			 * instead, so any level scene can be opened and tested on its own. */
-			t_GameStateManager = new GameObject ("GameStateManager (auto-created)")
-				.AddComponent<GameStateManager> ();
-			Debug.LogWarning (this.name + " Start: no GameStateManager in the scene - created one with "
-				+ "new-game defaults. Enter through the Main Menu scene for normal play.");
-		}
+		t_GameStateManager = GameStateManager.GetOrCreate (this);
 		RetrieveGameState ();
 
 		mario = FindObjectOfType<Mario> ();
@@ -159,11 +149,7 @@ public class LevelManager : MonoBehaviour {
 		SetHudCoin ();
 		SetHudScore ();
 		SetHudTime ();
-		if (hurryUp) {
-			ChangeMusicEvent (WwLevelMusicHurry);
-		} else {
-			ChangeMusicEvent (WwLevelMusic);
-		}
+		ChangeLevelMusicEvent ();
 
 		Debug.Log (this.name + " Start: current scene is " + SceneManager.GetActiveScene ().name);
 	}
@@ -200,7 +186,7 @@ public class LevelManager : MonoBehaviour {
 			if (isInvincibleStarman) {
 				ChangeMusicEvent (WwStarmanMusicHurry, warningSoundDuration);
 			} else {
-				ChangeMusicEvent (WwLevelMusicHurry, warningSoundDuration);
+				ChangeLevelMusicEvent (warningSoundDuration);
 			}
 		}
 
@@ -291,11 +277,7 @@ public class LevelManager : MonoBehaviour {
 		mario_Animator.SetBool ("isInvincibleStarman", false);
 		mario.gameObject.layer = LayerMask.NameToLayer ("Mario");
 		UpdateMarioSizeState ();
-		if (hurryUp) {
-			ChangeMusicEvent (WwLevelMusicHurry);
-		} else {
-			ChangeMusicEvent (WwLevelMusic);
-		}
+		ChangeLevelMusicEvent ();
 	}
 
 	void MarioInvinciblePowerdown() {
@@ -557,6 +539,20 @@ public class LevelManager : MonoBehaviour {
 		MusicAction (AkActionOnEventType.AkActionOnEventType_Stop);
 	}
 
+	/* Switch to this level's music cue, respecting the hurry-up variant.
+	 *
+	 * Which music a level plays is decided by the Levels State (ST_CurrentLevel, set in
+	 * Start) and played by the main playlist - MUS_Levels_Sw picks MUS_Lvl101..104 from it.
+	 * A per-level cue Event is therefore optional, and an empty WwLevelMusic slot is a
+	 * normal setup rather than a mistake, so don't warn about it here. Pick an Event in the
+	 * Inspector if you want a level to post its own cue on top. */
+	public void ChangeLevelMusicEvent(float delay = 0) {
+		AK.Wwise.Event levelCue = hurryUp ? WwLevelMusicHurry : WwLevelMusic;
+		if (levelCue != null && levelCue.IsValid ()) {
+			ChangeMusicEvent (levelCue, delay);
+		}
+	}
+
 	public void ChangeMusicEvent(AK.Wwise.Event newEvent, float delay = 0) {
 		StartCoroutine (ChangeMusicEventCo (newEvent, delay));
 	}
@@ -667,7 +663,7 @@ public class LevelManager : MonoBehaviour {
 	/****************** Misc */
 	public Vector3 FindSpawnPosition() {
 		Vector3 spawnPosition;
-		GameStateManager t_GameStateManager = FindObjectOfType<GameStateManager>();
+		GameStateManager t_GameStateManager = GameStateManager.GetOrCreate (this);
 		Debug.Log (this.name + " FindSpawnPosition: GSM spawnFromPoint=" + t_GameStateManager.spawnFromPoint.ToString()
 			+ " spawnPipeIdx= " + t_GameStateManager.spawnPipeIdx.ToString()
 			+ " spawnPointIdx=" + t_GameStateManager.spawnPointIdx.ToString());

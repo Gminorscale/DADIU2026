@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 
 public class GameStateManager : MonoBehaviour {
@@ -69,6 +70,34 @@ public class GameStateManager : MonoBehaviour {
 		scores = t_LevelManager.scores;
 		timeLeft = t_LevelManager.timeLeft;
 		hurryUp = t_LevelManager.hurryUp;
+	}
+
+	/* Level scenes are normally entered through the Main Menu, which is where the
+	 * DontDestroyOnLoad GameStateManager is created. Pressing Play directly on a level
+	 * scene (Test Scene, World 1-1, ...) skips that, so every screen that reads game
+	 * state used to NullReference. Spawn one with new-game defaults instead, so any
+	 * scene can be opened and tested on its own. */
+	public static GameStateManager GetOrCreate(UnityEngine.Object context = null) {
+		GameStateManager t_GameStateManager = FindObjectOfType<GameStateManager> ();
+		if (t_GameStateManager == null) {
+			t_GameStateManager = new GameObject ("GameStateManager (auto-created)")
+				.AddComponent<GameStateManager> ();
+			Debug.LogWarning ((context != null ? context.name + ": " : "")
+				+ "no GameStateManager in the scene - created one with new-game defaults. "
+				+ "Enter through the Main Menu scene for normal play.", context);
+		}
+		return t_GameStateManager;
+	}
+
+	/* "World 1-1" -> "1-1", for the small world label in the corner of the level screens.
+	 * Scenes that aren't named "World x-y" (Test Scene, anything a student adds) are passed
+	 * through unchanged instead of throwing an IndexOutOfRange on the split. */
+	public static string WorldLabel(string sceneName) {
+		if (string.IsNullOrEmpty (sceneName)) {
+			return "";
+		}
+		string[] parts = Regex.Split (sceneName, "World ");
+		return parts.Length > 1 ? parts[parts.Length - 1] : sceneName;
 	}
 
 }

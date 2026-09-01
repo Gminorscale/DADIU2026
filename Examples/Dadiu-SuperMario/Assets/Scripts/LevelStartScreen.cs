@@ -20,10 +20,16 @@ public class LevelStartScreen : MonoBehaviour {
 	void Start () {
 		Time.timeScale = 1;
 
-		t_GameStateManager = FindObjectOfType<GameStateManager> ();
+		t_GameStateManager = GameStateManager.GetOrCreate (this);
 		string worldName = t_GameStateManager.sceneToLoad;
+		if (string.IsNullOrEmpty (worldName)) {
+			/* No level queued - this screen was opened on its own, so there is nothing to
+			 * count down to. Send the player to the Main Menu instead of loading null. */
+			worldName = "Main Menu";
+			t_GameStateManager.sceneToLoad = worldName;
+		}
 
-		WorldTextHUD.text = Regex.Split (worldName, "World ")[1];
+		WorldTextHUD.text = GameStateManager.WorldLabel (worldName);
 		ScoreTextHUD.text = t_GameStateManager.scores.ToString ("D6");
 		CoinTextHUD.text = "x" + t_GameStateManager.coins.ToString ("D2");
 		WorldTextMain.text = worldName.ToUpper ();
