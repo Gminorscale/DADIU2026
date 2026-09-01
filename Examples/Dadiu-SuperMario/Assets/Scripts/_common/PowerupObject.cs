@@ -17,7 +17,7 @@ public class PowerupObject : MonoBehaviour {
 		t_LevelManager = FindObjectOfType<LevelManager> ();
 		m_Rigidbody2D = GetComponent<Rigidbody2D> ();
 		m_Rigidbody2D.velocity = initialVelocity;
-		t_LevelManager.WwpowerupAppearSound.Post (t_LevelManager.gameObject);
+		t_LevelManager.powerupAppearSound.Post (t_LevelManager.gameObject);
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {

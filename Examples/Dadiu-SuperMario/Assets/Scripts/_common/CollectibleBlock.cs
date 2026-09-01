@@ -35,7 +35,7 @@ public class CollectibleBlock : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		time2 = Time.time;
 		if (other.tag == "Player" && time2 - time1 >= WaitBetweenBounce) {
-			t_LevelManager.WwbumpSound.Post (t_LevelManager.gameObject);
+			t_LevelManager.bumpSound.Post (t_LevelManager.gameObject);
 
 			if (isActive) {
 				m_Animator.SetTrigger ("bounce");
