@@ -14,7 +14,11 @@ public class GameOverScreen : MonoBehaviour {
 	public Text CoinTextHUD;
 	public Text MessageText;
 
-	public AudioSource gameOverMusicSource;
+	[Header ("Wwise")]
+	public AK.Wwise.Event WwGameOverMusic;
+	public AK.Wwise.RTPC RTPC_MusicVolume;
+	// Wwise Events don't expose their length to C#; measured from 09-game-over.mp3.
+	public float gameOverMusicDuration = 6.38f;
 
 
 	// Use this for initialization
@@ -35,9 +39,9 @@ public class GameOverScreen : MonoBehaviour {
 			StartCoroutine (ChangeMessageCo ());
 		}
 
-		gameOverMusicSource.volume = PlayerPrefs.GetFloat ("musicVolume");
-		gameOverMusicSource.Play ();
-		LoadMainMenu (gameOverMusicSource.clip.length);
+		RTPC_MusicVolume.SetGlobalValue (PlayerPrefs.GetFloat ("musicVolume", 1) * 100f);
+		WwGameOverMusic.Post (gameObject);
+		LoadMainMenu (gameOverMusicDuration);
 
 		Debug.Log (this.name + " Start: current scene is " + SceneManager.GetActiveScene ().name);
 	}

@@ -32,12 +32,15 @@ window as WAG.
 - `Assets/Scripts/GameStateManager.cs` — a `DontDestroyOnLoad` singleton
   created the first time a scene containing one runs (in practice, `Main
   Menu`). Carries lives/coins/score/timer/spawn-point across scene loads.
-  **This is why level scenes don't work when played directly**: if you press
-  Play on `World 1-1` without having gone through `Main Menu` first, there is
-  no `GameStateManager` instance yet, and `LevelManager`/`Mario` both call
-  `FindObjectOfType<GameStateManager>()` on `Start()` with no null check —
-  instant `NullReferenceException`. Always enter play mode from `Main Menu`,
-  or add a bootstrap `GameStateManager` to each level scene as a fallback.
+  **This is why level scenes used to fail when played directly**: pressing
+  Play on `World 1-1` without going through `Main Menu` left no
+  `GameStateManager` instance, and `LevelManager.Start()` called
+  `FindObjectOfType<GameStateManager>()` with no null check — instant
+  `NullReferenceException`. `LevelManager` now creates one with new-game
+  defaults (3 lives, 400 time, spawn point 0) and logs a warning if none is
+  found, so any level scene can be opened and tested on its own. Entering
+  through `Main Menu` is still the normal path — that's what carries score
+  and lives between levels.
 - `Assets/Scripts/LevelManager.cs` — per-level god object: HUD, timer,
   scoring, pause/unpause, respawn, powerup/powerdown state, **and both the
   legacy Unity audio system and the Wwise integration side by side**.
@@ -60,38 +63,84 @@ window as WAG.
 | `Game Parameters/` | `RTPC_TimeLeft`, `RTPC_MarioSpeed` (both driven from code), `TimeOfDay` (unused). |
 | `SoundBanks/` | Single bank, `BNK_Main`. |
 
-## C# ↔ Wwise wiring, as it stands today
+## C# ↔ Wwise wiring
 
-Only `LevelManager.cs` (30 Wwise-type fields) and `Mario.cs` (`MarioSpeed`
-RTPC, `InAirSound` event) touch Wwise at all.
+The legacy Unity audio system has been removed from the game code. There are
+no `AudioSource`s or `AudioClip`s left in `Assets/Scripts/` — every sound is
+an `AK.Wwise.Event` posted from code and bound in the Inspector with the
+Wwise Picker.
 
-**Actually posted / driving something real:**
-`WwMusicSource` (starts music state machine), `WwLevelMusic` /
-`WwLevelMusicHurry`, `WwdeadSound`, `WwpowerupSound`, `WwpipePowerdownSound`,
-`WwstompSound`, `WwkickSound`, `WwcoinSound`, `WwoneUpSound`,
-`ST_MarioSmall`/`ST_MarioLarge`, `RTPC_TimeLeft`, `Mario.MarioSpeed`,
-`Mario.InAirSound`, `WwjumpSmallSound`.
+`LevelManager.cs` owns the audio surface (34 Wwise-type fields, all of them
+actually used); `Mario.cs` adds `RTPC_MarioSpeed` and `InAirSound`;
+`GameOverScreen.cs` posts `WwGameOverMusic`.
 
-**Declared on `LevelManager` but never posted** (dead fields — and most have
-no matching Wwise Event yet either): `WwflagpoleSound`, `WwwarningSound`,
-`WwbowserFallSound`, `WwbowserFireSound`, `WwbreakBlockSound`, `WwbumpSound`,
-`WwfireballSound`, `WwjumpSuperSound`, `WwcastleCompleteMusic`,
-`WwlevelCompleteMusic`, `WwStarmanMusic`, `WwStarmanMusicHurry`.
+**A note on silence.** `AK.Wwise.Event.Post()` checks `IsValid()` first, so an
+unbound (None) Event is a safe no-op rather than a crash. That means the game
+runs *silently* until the Events below are authored in Wwise and picked in
+the Inspector — "no sound" here almost always means an unpicked Event or an
+ungenerated SoundBank, not a bug in the code.
 
-**Still entirely on the legacy `AudioSource`/`AudioClip` path** — these call
-`t_LevelManager.soundSource.PlayOneShot(t_LevelManager.xSound)` and have no
-Wwise equivalent posted anywhere: `Bowser.cs`, `Starman.cs`,
-`RegularBrickBlock.cs`, `BridgeAxe.cs`, `MarioFireball.cs`, `StaticBlock.cs`,
-`OneupMushroom.cs`, `PipeWarpDown.cs`, `PipeWarpSide.cs`,
-`_common/PowerupObject.cs`, `_common/CollectibleBlock.cs`. `GameOverScreen.cs`
-is 100% legacy (`AudioSource gameOverMusicSource`).
+### Timing constants replace `AudioClip.length`
 
-**Orphaned on the Wwise side** (authored, never called from any script):
-`EVT_MarioAlive`, `EVT_MarioDead`, and `MusicManagerWwise.cs`
-(`SetLevel101State`/`SetLevel102State`, driving the `Levels` state group) —
-this component exists as a script but nothing instantiates or calls it.
+Wwise Events don't expose their length to C# the way an `AudioClip` does, so
+the handful of places that timed a coroutine off `clip.length` now use
+serialized floats on `LevelManager` (`deadSoundDuration`,
+`warningSoundDuration`, `pauseSoundDuration`, `flagpoleSoundDuration`,
+`levelCompleteMusicDuration`, `castleCompleteMusicDuration`) and
+`GameOverScreen` (`gameOverMusicDuration`). Defaults are measured from the
+original files in `Assets/Sounds/`; retune them in the Inspector if the
+authored Events come out a different length. The alternative — an
+`AK_EndOfEvent` callback — is the more precise option if you'd rather not
+maintain numbers by hand.
 
-See the accompanying plans in the project conversation for: (1) rewriting
-`LevelManager` to drop the legacy audio system entirely, (2) fixing the
-issues above, and (3) the full sound/music structure for finishing the Wwise
-integration.
+## Still to author in Wwise
+
+The code side is complete; the Wwise project is not. These Events are posted
+by code but **do not exist yet** in `Dadiu-SuperMario_WwiseProject`. Import
+the matching `.wav`s from `Assets/Sounds/` into `Originals/SFX/`, build them
+into Actor-Mixer objects, and create one Event each:
+
+| Suggested work unit | Events to create |
+|---|---|
+| `Events/Player.wwu` | jump small, jump super, stomp, kick, fireball, powerup, powerup appears, pipe/powerdown, dead, 1-up |
+| `Events/Enemies.wwu` | bowser falls, bowser fire |
+| `Events/Objects.wwu` | coin, break block, bump, flagpole |
+| `Events/UI.wwu` | pause (posted on both pause and unpause), hurry-up warning |
+| `Events/Music.wwu` (extend) | starman, starman hurry, level complete, castle complete, game over |
+
+Also needed: two volume Game Parameters (`RTPC_MusicVolume`,
+`RTPC_SoundVolume`, authored 0–100) — the Main Menu volume sliders still
+write the `musicVolume`/`soundVolume` PlayerPrefs, and `LevelManager` and
+`GameOverScreen` now push those into these RTPCs instead of into
+`AudioSource.volume`. Without them the sliders do nothing.
+
+Suggested Actor-Mixer layout: one mixer per domain (`MX_Player`,
+`MX_Enemies`, `MX_Objects`, `MX_UI`), leaving the existing `MX_Debug` synth
+tones isolated as test content. The single `BNK_Main` SoundBank is fine at
+this project's scale — there's no need for the Context/Region/DLC bank split
+the main WAG project uses, since that split exists to teach runtime bank
+loading.
+
+### Already wired, previously orphaned
+
+`EVT_MarioAlive` / `EVT_MarioDead` are now posted from `LevelManager`
+(level start and Mario's death). The `Levels` state group is now set through
+`ST_CurrentLevel` on `LevelManager` — pick the matching `ST_Level_1xx` per
+level scene in the Inspector. This supersedes `MusicManagerWwise.cs`, which
+is left in place but is no longer needed.
+
+`ST_MarioStar` is now set when the starman powerup is active, and Mario's
+size state is kept in sync via `UpdateMarioSizeState()` rather than being
+forced to `ST_MarioSmall` on every level load.
+
+### Things Wwise should own, not code
+
+Two behaviours are still done in C# because that's what the original game
+did, but both are more idiomatic in Wwise:
+
+- **Pausing music for a stinger** (hurry-up warning, flagpole) is a
+  `PauseMusicPlaySoundEvent()` coroutine. A ducking bus or a State would be
+  the Wwise-native way.
+- **SFX no longer pause with the game.** The old code called
+  `soundSource.Pause()`; the equivalent belongs in Wwise as a pause State on
+  the SFX bus, not in the pause coroutine.

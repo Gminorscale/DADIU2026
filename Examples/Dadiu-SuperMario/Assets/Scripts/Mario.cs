@@ -218,7 +218,7 @@ public class Mario : MonoBehaviour {
 				if (t_LevelManager.marioSize == 0) {
 					t_LevelManager.WwjumpSmallSound.Post(t_LevelManager.gameObject);
 				} else {
-					t_LevelManager.WwjumpSmallSound.Post(t_LevelManager.gameObject);
+					t_LevelManager.WwjumpSuperSound.Post(t_LevelManager.gameObject);
 				}
 			}
 		} else {  // lower gravity if Jump button held; increased gravity if released
@@ -264,7 +264,7 @@ public class Mario : MonoBehaviour {
 				m_Animator.SetTrigger ("isFiring");
 				GameObject fireball = Instantiate (Fireball, FirePos.position, Quaternion.identity);
 				fireball.GetComponent<MarioFireball> ().directionX = transform.localScale.x;
-				t_LevelManager.soundSource.PlayOneShot (t_LevelManager.fireballSound);
+				t_LevelManager.WwfireballSound.Post (t_LevelManager.gameObject);
 				fireTime1 = Time.time;
 			}
 		}

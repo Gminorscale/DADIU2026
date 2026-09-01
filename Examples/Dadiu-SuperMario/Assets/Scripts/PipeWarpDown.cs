@@ -42,8 +42,8 @@ public class PipeWarpDown : MonoBehaviour {
 			mario.AutomaticCrouch ();
 			isMoving = true;
 			marioEntered = true;
-			t_LevelManager.musicSource.Stop ();
-			t_LevelManager.soundSource.PlayOneShot (t_LevelManager.pipePowerdownSound);
+			t_LevelManager.StopMusic ();
+			t_LevelManager.WwpipePowerdownSound.Post (t_LevelManager.gameObject);
 		}
 	}
 }

@@ -36,7 +36,7 @@ public class PipeWarpSide : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Player" && reachedPortal) {
-			t_LevelManager.soundSource.PlayOneShot (t_LevelManager.pipePowerdownSound);
+			t_LevelManager.WwpipePowerdownSound.Post (t_LevelManager.gameObject);
 
 			if (leadToSameLevel) {
 				Debug.Log (this.name + " OnCollisionEnter2D: " + transform.parent.gameObject.name 
