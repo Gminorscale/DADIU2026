@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		t_GameStateManager = FindObjectOfType<GameStateManager> ();
+		t_GameStateManager = GameStateManager.GetOrCreate (this);
 		t_GameStateManager.ConfigNewGame ();
 
 		int currentHighScore = PlayerPrefs.GetInt ("highScore", 0);

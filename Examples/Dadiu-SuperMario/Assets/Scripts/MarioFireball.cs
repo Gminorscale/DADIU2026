@@ -29,7 +29,7 @@ public class MarioFireball : MonoBehaviour {
 	void Explode() {
 		m_Rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
 		m_Animator.SetTrigger ("exploded");
-		t_LevelManager.WwbumpSound.Post (t_LevelManager.gameObject);
+		t_LevelManager.bumpSound.Post (t_LevelManager.gameObject);
 		Destroy (gameObject, explosionDuration);
 	}
 

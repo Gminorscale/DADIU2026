@@ -64,35 +64,35 @@ public class LevelManager : MonoBehaviour {
 	 */
 
 	[Header ("Wwise Music")]
-	public AK.Wwise.Event WwMusicSource;   // starts the interactive music system (MUS_PlayMainPlaylist)
-	public AK.Wwise.Event WwLevelMusic;
-	public AK.Wwise.Event WwLevelMusicHurry;
-	public AK.Wwise.Event WwStarmanMusic;
-	public AK.Wwise.Event WwStarmanMusicHurry;
-	public AK.Wwise.Event WwlevelCompleteMusic;
-	public AK.Wwise.Event WwcastleCompleteMusic;
-	public AK.Wwise.Event WwMarioAlive;    // EVT_MarioAlive
-	public AK.Wwise.Event WwMarioDead;     // EVT_MarioDead
+	public AK.Wwise.Event musicSource;   // starts the interactive music system (MUS_PlayMainPlaylist)
+	public AK.Wwise.Event levelMusic;
+	public AK.Wwise.Event levelMusicHurry;
+	public AK.Wwise.Event starmanMusic;
+	public AK.Wwise.Event starmanMusicHurry;
+	public AK.Wwise.Event levelCompleteMusic;
+	public AK.Wwise.Event castleCompleteMusic;
+	public AK.Wwise.Event marioAlive;    // EVT_MarioAlive
+	public AK.Wwise.Event marioDead;     // EVT_MarioDead
 
 	[Header ("Wwise Sound Events")]
-	public AK.Wwise.Event WwoneUpSound;
-	public AK.Wwise.Event WwbowserFallSound;
-	public AK.Wwise.Event WwbowserFireSound;
-	public AK.Wwise.Event WwbreakBlockSound;
-	public AK.Wwise.Event WwbumpSound;
-	public AK.Wwise.Event WwcoinSound;
-	public AK.Wwise.Event WwdeadSound;
-	public AK.Wwise.Event WwfireballSound;
-	public AK.Wwise.Event WwflagpoleSound;
-	public AK.Wwise.Event WwjumpSmallSound;
-	public AK.Wwise.Event WwjumpSuperSound;
-	public AK.Wwise.Event WwkickSound;
-	public AK.Wwise.Event WwpipePowerdownSound;
-	public AK.Wwise.Event WwpowerupSound;
-	public AK.Wwise.Event WwpowerupAppearSound;
-	public AK.Wwise.Event WwstompSound;
-	public AK.Wwise.Event WwwarningSound;
-	public AK.Wwise.Event WwPauseSound;    // played on both pause and unpause, as the original did
+	public AK.Wwise.Event oneUpSound;
+	public AK.Wwise.Event bowserFallSound;
+	public AK.Wwise.Event bowserFireSound;
+	public AK.Wwise.Event breakBlockSound;
+	public AK.Wwise.Event bumpSound;
+	public AK.Wwise.Event coinSound;
+	public AK.Wwise.Event deadSound;
+	public AK.Wwise.Event fireballSound;
+	public AK.Wwise.Event flagpoleSound;
+	public AK.Wwise.Event jumpSmallSound;
+	public AK.Wwise.Event jumpSuperSound;
+	public AK.Wwise.Event kickSound;
+	public AK.Wwise.Event pipePowerdownSound;
+	public AK.Wwise.Event powerupSound;
+	public AK.Wwise.Event powerupAppearSound;
+	public AK.Wwise.Event stompSound;
+	public AK.Wwise.Event warningSound;
+	public AK.Wwise.Event pauseSound;    // played on both pause and unpause, as the original did
 
 	/* Wwise Events don't expose their length to C# the way an AudioClip does, so the
 	 * few places that used clip.length to time a coroutine use these instead. Defaults
@@ -142,8 +142,16 @@ public class LevelManager : MonoBehaviour {
 		// Music: tell Wwise which level this is, start the music system, and pick the cue.
 		UpdateMarioSizeState ();
 		ST_CurrentLevel.SetValue ();
-		WwMusicSource.Post (gameObject);
-		WwMarioAlive.Post (gameObject);
+		/* Start the music system if nothing has yet. Coming from the Main Menu it is already
+		 * playing on the persistent GameStateManager, so posting again would stack a second
+		 * copy of MUS_MainSwitch on top. Posted on the GameStateManager's music object rather
+		 * than on this one so it survives the next scene load, and so PauseMusic/StopMusic can
+		 * act on it - a Wwise Event is scoped to the game object it was posted on. */
+		if (!t_GameStateManager.musicStarted) {
+			musicSource.Post (t_GameStateManager.MusicGameObject);
+			t_GameStateManager.musicStarted = true;
+		}
+		marioAlive.Post (gameObject);
 
 		// HUD
 		SetHudCoin ();
@@ -182,9 +190,9 @@ public class LevelManager : MonoBehaviour {
 
 		if (timeLeftInt < 100 && !hurryUp) {
 			hurryUp = true;
-			PauseMusicPlaySoundEvent (WwwarningSound, warningSoundDuration, true);
+			PauseMusicPlaySoundEvent (warningSound, warningSoundDuration, true);
 			if (isInvincibleStarman) {
-				ChangeMusicEvent (WwStarmanMusicHurry, warningSoundDuration);
+				ChangeMusicEvent (starmanMusicHurry, warningSoundDuration);
 			} else {
 				ChangeLevelMusicEvent (warningSoundDuration);
 			}
@@ -226,13 +234,13 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-		WwPauseSound.Post (gameObject);
+		pauseSound.Post (gameObject);
 		yield return new WaitForSecondsRealtime (pauseSoundDuration);
 		Debug.Log (this.name + " PauseGameCo stops: records prevTimeScale=" + pauseGamePrevTimeScale.ToString());
 	}
 
 	IEnumerator UnpauseGameCo() {
-		WwPauseSound.Post (gameObject);
+		pauseSound.Post (gameObject);
 		yield return new WaitForSecondsRealtime (pauseSoundDuration);
 
 		musicPaused = pausePrevMusicPaused;
@@ -268,9 +276,9 @@ public class LevelManager : MonoBehaviour {
 		mario.gameObject.layer = LayerMask.NameToLayer ("Mario After Starman");
 		ST_MarioStar.SetValue ();
 		if (hurryUp) {
-			ChangeMusicEvent (WwStarmanMusicHurry);
+			ChangeMusicEvent (starmanMusicHurry);
 		} else {
-			ChangeMusicEvent (WwStarmanMusic);
+			ChangeMusicEvent (starmanMusic);
 		}
 		yield return new WaitForSeconds (MarioInvincibleStarmanDuration);
 		isInvincibleStarman = false;
@@ -297,7 +305,7 @@ public class LevelManager : MonoBehaviour {
 
 	/****************** Powerup / Powerdown / Die */
 	public void MarioPowerUp() {
-		WwpowerupSound.Post(gameObject);
+		powerupSound.Post(gameObject);
 		if (marioSize < 2) {
 			StartCoroutine (MarioPowerUpCo ());
 		}
@@ -330,7 +338,7 @@ public class LevelManager : MonoBehaviour {
 
 			if (marioSize > 0) {
 				StartCoroutine (MarioPowerDownCo ());
-				WwpipePowerdownSound.Post(gameObject);
+				pipePowerdownSound.Post(gameObject);
 			} else {
 				MarioRespawn ();
 			}
@@ -369,8 +377,8 @@ public class LevelManager : MonoBehaviour {
 
 			StopMusic ();
 			musicPaused = true;
-			WwdeadSound.Post(gameObject);
-			WwMarioDead.Post(gameObject);
+			deadSound.Post(gameObject);
+			marioDead.Post(gameObject);
 
 			Time.timeScale = 0f;
 			mario.FreezeAndDie ();
@@ -394,21 +402,21 @@ public class LevelManager : MonoBehaviour {
 	public void MarioStompEnemy(Enemy enemy) {
 		mario_Rigidbody2D.velocity = new Vector2 (mario_Rigidbody2D.velocity.x + stompBounceVelocity.x, stompBounceVelocity.y);
 		enemy.StompedByMario ();
-		WwstompSound.Post(gameObject);
+		stompSound.Post(gameObject);
 		AddScore (enemy.stompBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " MarioStompEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void MarioStarmanTouchEnemy(Enemy enemy) {
 		enemy.TouchedByStarmanMario ();
-		WwkickSound.Post(gameObject);
+		kickSound.Post(gameObject);
 		AddScore (enemy.starmanBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " MarioStarmanTouchEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void RollingShellTouchEnemy(Enemy enemy) {
 		enemy.TouchedByRollingShell ();
-		WwkickSound.Post(gameObject);
+		kickSound.Post(gameObject);
 		AddScore (enemy.rollingShellBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " RollingShellTouchEnemy called on " + enemy.gameObject.name);
 	}
@@ -421,7 +429,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void FireballTouchEnemy(Enemy enemy) {
 		enemy.HitByMarioFireball ();
-		WwkickSound.Post(gameObject);
+		kickSound.Post(gameObject);
 		AddScore (enemy.fireballBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " FireballTouchEnemy called on " + enemy.gameObject.name);
 	}
@@ -521,8 +529,9 @@ public class LevelManager : MonoBehaviour {
 	 * playing are acted on, so this works whether cue changes are driven by separate
 	 * Events or by States inside one playlist. */
 	void MusicAction(AkActionOnEventType action) {
-		WwMusicSource.ExecuteAction (gameObject, action, 0, AkCurveInterpolation.AkCurveInterpolation_Linear);
-		if (currentMusicEvent != null && currentMusicEvent != WwMusicSource) {
+		musicSource.ExecuteAction (t_GameStateManager.MusicGameObject, action, 0,
+			AkCurveInterpolation.AkCurveInterpolation_Linear);
+		if (currentMusicEvent != null && currentMusicEvent != musicSource) {
 			currentMusicEvent.ExecuteAction (gameObject, action, 0, AkCurveInterpolation.AkCurveInterpolation_Linear);
 		}
 	}
@@ -543,11 +552,11 @@ public class LevelManager : MonoBehaviour {
 	 *
 	 * Which music a level plays is decided by the Levels State (ST_CurrentLevel, set in
 	 * Start) and played by the main playlist - MUS_Levels_Sw picks MUS_Lvl101..104 from it.
-	 * A per-level cue Event is therefore optional, and an empty WwLevelMusic slot is a
+	 * A per-level cue Event is therefore optional, and an empty levelMusic slot is a
 	 * normal setup rather than a mistake, so don't warn about it here. Pick an Event in the
 	 * Inspector if you want a level to post its own cue on top. */
 	public void ChangeLevelMusicEvent(float delay = 0) {
-		AK.Wwise.Event levelCue = hurryUp ? WwLevelMusicHurry : WwLevelMusic;
+		AK.Wwise.Event levelCue = hurryUp ? levelMusicHurry : levelMusic;
 		if (levelCue != null && levelCue.IsValid ()) {
 			ChangeMusicEvent (levelCue, delay);
 		}
@@ -615,18 +624,18 @@ public class LevelManager : MonoBehaviour {
 
 	public void AddLife() {
 		lives++;
-		WwoneUpSound.Post(gameObject);
+		oneUpSound.Post(gameObject);
 	}
 
 	public void AddLife(Vector3 spawnPos) {
 		lives++;
-		WwoneUpSound.Post(gameObject);
+		oneUpSound.Post(gameObject);
 		CreateFloatingText ("1UP", spawnPos);
 	}
 
 	public void AddCoin() {
 		coins++;
-		WwcoinSound.Post(gameObject);
+		coinSound.Post(gameObject);
 		if (coins == 100) {
 			AddLife ();
 			coins = 0;
@@ -637,7 +646,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void AddCoin(Vector3 spawnPos) {
 		coins++;
-		WwcoinSound.Post(gameObject);
+		coinSound.Post(gameObject);
 		if (coins == 100) {
 			AddLife ();
 			coins = 0;
@@ -686,18 +695,18 @@ public class LevelManager : MonoBehaviour {
 
 	public void MarioCompleteCastle() {
 		timerPaused = true;
-		ChangeMusicEvent (WwcastleCompleteMusic);
+		ChangeMusicEvent (castleCompleteMusic);
 		mario.AutomaticWalk(mario.castleWalkSpeedX);
 	}
 
 	public void MarioCompleteLevel() {
 		timerPaused = true;
-		ChangeMusicEvent (WwlevelCompleteMusic);
+		ChangeMusicEvent (levelCompleteMusic);
 	}
 
 	public void MarioReachFlagPole() {
 		timerPaused = true;
-		PauseMusicPlaySoundEvent (WwflagpoleSound, flagpoleSoundDuration, false);
+		PauseMusicPlaySoundEvent (flagpoleSound, flagpoleSoundDuration, false);
 		mario.ClimbFlagPole ();
 	}
 }

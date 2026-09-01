@@ -258,16 +258,6 @@ Prefab:
       propertyPath: m_Text
       value: 1-2
       objectReference: {fileID: 0}
-    - target: {fileID: 114750208195470174, guid: 2edb2b8e476654f0ea2807c7a8261a76,
-        type: 2}
-      propertyPath: levelMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: a396fb5db437f453d89c54963e7b9719, type: 3}
-    - target: {fileID: 114750208195470174, guid: 2edb2b8e476654f0ea2807c7a8261a76,
-        type: 2}
-      propertyPath: levelMusicHurry
-      value: 
-      objectReference: {fileID: 8300000, guid: 980db8ff7fdfd4de9b676bef749ea0a7, type: 3}
     - target: {fileID: 4032349340779134, guid: 2edb2b8e476654f0ea2807c7a8261a76, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.5

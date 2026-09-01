@@ -16,7 +16,7 @@ public class PipeWarpUp : MonoBehaviour {
 	void Start () {
 		mario = FindObjectOfType<Mario> ();
 		stop = transform.parent.transform.Find ("Platform Stop");
-		GameStateManager t_GameStateManager = FindObjectOfType<GameStateManager> ();
+		GameStateManager t_GameStateManager = GameStateManager.GetOrCreate (this);
 		t_LevelManager = FindObjectOfType<LevelManager> ();
 
 		Debug.Log (this.name + " Start: " + transform.parent.gameObject.name 
@@ -41,7 +41,7 @@ public class PipeWarpUp : MonoBehaviour {
 			if (transform.position.y < stop.position.y) {
 				transform.position = new Vector2 (transform.position.x, transform.position.y + platformVelocityY);
 			} else if (t_LevelManager.timerPaused) {
-				GameStateManager t_GameStateManager = FindObjectOfType<GameStateManager> ();
+				GameStateManager t_GameStateManager = GameStateManager.GetOrCreate (this);
 				t_GameStateManager.spawnFromPoint = true;
 				if (resetSpawnPoint) {
 					t_GameStateManager.ResetSpawnPosition ();

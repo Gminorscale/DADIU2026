@@ -14,7 +14,7 @@ public class SpawnPoint : MonoBehaviour {
 	void Update () {
 		// update spawn pos if Player passes checkpoint
 		if (mario.gameObject.transform.position.x >= transform.position.x) {
-			GameStateManager t_GameStateManager = FindObjectOfType<GameStateManager> ();
+			GameStateManager t_GameStateManager = GameStateManager.GetOrCreate (this);
 			t_GameStateManager.spawnPointIdx = Mathf.Max (t_GameStateManager.spawnPointIdx, gameObject.transform.GetSiblingIndex ());
 			gameObject.SetActive (false);
 		}

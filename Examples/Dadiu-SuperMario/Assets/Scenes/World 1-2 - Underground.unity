@@ -1706,16 +1706,6 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114750208195470174, guid: 2edb2b8e476654f0ea2807c7a8261a76,
-        type: 2}
-      propertyPath: levelMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: d8538255f671b4550bce48803d6a0053, type: 3}
-    - target: {fileID: 114750208195470174, guid: 2edb2b8e476654f0ea2807c7a8261a76,
-        type: 2}
-      propertyPath: levelMusicHurry
-      value: 
-      objectReference: {fileID: 8300000, guid: c1e811623125c4ec89bf2ee727031911, type: 3}
     - target: {fileID: 4083944694453744, guid: 2edb2b8e476654f0ea2807c7a8261a76, type: 2}
       propertyPath: m_RootOrder
       value: 6

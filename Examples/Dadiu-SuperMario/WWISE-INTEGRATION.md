@@ -61,7 +61,7 @@ window as WAG.
 | Work unit / folder | Status |
 |---|---|
 | `Interactive Music Hierarchy/Default Work Unit.wwu` | **Built out.** Per-level `MusicSwitchContainer`s driven by a `Levels` state group (`MUS_Levels_Sw` → `MUS_Level101_Sw`, `MUS_Level102_Sw_01`, ...), a playlist container for World 1-1 with intro/loop segments (`MUS_101_Intro`, `MUS_101_A`, `MUS_101_B1`, `MUS_101_C`, `MUS_101_B2`), and Mario alive/dead segment pairs per level. This is a genuine interactive-music setup, not a stub. |
-| `Events/Music.wwu` | `MUS_PlayMainPlaylist` (top-level "start the music state machine" event — posted once from `LevelManager.Start()` via `WwMusicSource`), `MUS_Level101`, `MUS_Level102`. |
+| `Events/Music.wwu` | `MUS_PlayMainPlaylist` (top-level "start the music state machine" event — posted once from `LevelManager.Start()` via `musicSource`), `MUS_Level101`, `MUS_Level102`. |
 | `Events/MarioStates.wwu` | `EVT_MarioAlive`, `EVT_MarioDead` — **authored but never posted from any script.** |
 | `Events/Debug.wwu` + `Actor-Mixer Hierarchy/Debug` | Placeholder synth test tones (`DB_Synth_*`) used to sanity-check the signal chain. Not game content. |
 | `Actor-Mixer Hierarchy` (everything else) | **Empty.** None of the 17 gameplay SFX `.wav`s in `Assets/Sounds/` have been imported as Wwise Originals or turned into Sound objects/Events. |
@@ -79,6 +79,17 @@ Wwise Picker.
 `LevelManager.cs` owns the audio surface (34 Wwise-type fields, all of them
 actually used); `Mario.cs` adds `RTPC_MarioSpeed` and `InAirSound`;
 `GameOverScreen.cs` posts `WwGameOverMusic`.
+
+`LevelManager`'s Event fields dropped their old `Ww` prefix — `WwcoinSound` is
+now `coinSound`, `WwMusicSource` is `musicSource`, and so on — so the Inspector
+reads "Coin Sound" instead of "Ww Coin Sound". The `[Header]` labels already say
+these are Wwise fields, and the type shown next to each one is `AK.Wwise.Event`.
+The pre-Wwise version of the game had `AudioClip` fields under exactly these
+names, and they were still sitting in the Level Starter prefab and in six scene
+files as stale serialized data; they had to be stripped in the same pass, or the
+renamed Event fields would have deserialized an `AudioClip` reference and come up
+empty. `RTPC_` and `ST_` keep their prefixes, since those match the Wwise object
+names. `GameOverScreen.WwGameOverMusic` was left alone.
 
 **A note on silence.** `AK.Wwise.Event.Post()` checks `IsValid()` first, so an
 unbound (None) Event is a safe no-op rather than a crash. That means the game
@@ -191,21 +202,40 @@ and `Start()` calls `SetValue()` on it before the music starts:
 `Template.unity` is deliberately left on `None` — pick a State when you copy it
 into a new level.
 
-**Why `WwLevelMusic` is empty.** `MUS_Level101` and `MUS_Level102` are *SetState*
+**Why `levelMusic` is empty.** `MUS_Level101` and `MUS_Level102` are *SetState*
 Events, not play Events — the only two that exist, which is why 1-3 and 1-4 had
 nothing to point at and every level ended up playing the 1-1 music. They were
-wired into `LevelManager.WwLevelMusic`, which posts a frame later than
-`ST_CurrentLevel.SetValue()` and so would overwrite the State. `WwLevelMusic` is
+wired into `LevelManager.levelMusic`, which posts a frame later than
+`ST_CurrentLevel.SetValue()` and so would overwrite the State. `levelMusic` is
 now empty everywhere and `ST_CurrentLevel` is the single source of truth. The
 slot is still there: pick an Event if a level should post its own cue on top,
 and `ChangeLevelMusicEvent()` will use it. An empty slot is a normal setup here,
 so it doesn't warn.
 
-The music itself is started once per session by the `AkEvent` on the
-`MusicManager` child of the `Game State Manager` prefab, which is
-`DontDestroyOnLoad`. It keeps playing across scene loads and Wwise transitions
-between levels when the State changes — which is the point of an interactive
-music setup, and why the Main Menu already has music.
+**Who starts the music.** The `Game State Manager` prefab has a `MusicManager`
+child whose `AkEvent` posts `MUS_PlayMainPlaylist` on Start. That only ever runs
+in the `Main Menu`: **every level scene ships its `Game State Manager` instance
+deactivated** (`m_IsActive: 0`), because the live one is meant to come from the
+menu via `DontDestroyOnLoad`. `Test Scene` is the odd one out — no override, so
+its copy is active.
+
+That means pressing Play on `World 1-3` had nothing posting the music at all.
+`LevelManager.Start()` now posts `musicSource` (`MUS_PlayMainPlaylist`) itself,
+but only when `GameStateManager.musicStarted` is false — the flag is set in
+`Awake()` for any GameStateManager that has a `MusicManager` child, so arriving
+from the Main Menu does not stack a second copy of `MUS_MainSwitch` on top of the
+one already playing.
+
+It is posted on `GameStateManager.MusicGameObject`, not on the Level Manager's own
+game object. A Wwise Event is scoped to the game object it was posted on: it stops
+when that object is destroyed, so posting it on a per-scene object would kill the
+music at the next scene load, and `PauseMusic()` / `StopMusic()` only reach it if
+they target the same object. `MusicGameObject` resolves to the `MusicManager`
+child when there is one (the Main Menu flow, where that child's `AkEvent` did the
+posting) and to the manager itself otherwise (direct play). Posted on the
+persistent object the music survives scene loads, keeps playing across levels, and
+Wwise transitions between them when the State changes — which is the point of an
+interactive music setup.
 
 ### Things Wwise should own, not code
 

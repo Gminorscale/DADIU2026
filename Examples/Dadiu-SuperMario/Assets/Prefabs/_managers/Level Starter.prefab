@@ -102,105 +102,106 @@ MonoBehaviour:
   gamePaused: 0
   timerPaused: 0
   musicPaused: 0
-  WwMusicSource:
+  musicSource:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f8e465558a0829d48888311bfccd1c81,
+      type: 2}
+  levelMusic:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwLevelMusic:
+  levelMusicHurry:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwLevelMusicHurry:
+  starmanMusic:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwStarmanMusic:
+  starmanMusicHurry:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwStarmanMusicHurry:
+  levelCompleteMusic:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwlevelCompleteMusic:
+  castleCompleteMusic:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwcastleCompleteMusic:
+  oneUpSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwoneUpSound:
+  bowserFallSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwbowserFallSound:
+  bowserFireSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwbowserFireSound:
+  breakBlockSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwbreakBlockSound:
+  bumpSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwbumpSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  WwcoinSound:
+  coinSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e6804f00af900f94dbccbc8cfd61c244,
       type: 2}
-  WwdeadSound:
+  deadSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 86254cf85cd3a2e45b5a481f63d98118,
       type: 2}
-  WwfireballSound:
+  fireballSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwflagpoleSound:
+  flagpoleSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwjumpSmallSound:
+  jumpSmallSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 50e4d2b3b45223442a3270b7048603c3,
       type: 2}
-  WwjumpSuperSound:
+  jumpSuperSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e6804f00af900f94dbccbc8cfd61c244,
       type: 2}
-  WwkickSound:
+  kickSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwpipePowerdownSound:
+  pipePowerdownSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwpowerupSound:
+  powerupSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwpowerupAppearSound:
+  powerupAppearSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 74dab63c860cfd24681335efed0033ec,
       type: 2}
-  WwstompSound:
+  stompSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b48e5b4c5675be3429df2a672235b4d4,
       type: 2}
-  WwwarningSound:
+  warningSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -236,32 +237,6 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  musicSource: {fileID: 82793086007151078}
-  soundSource: {fileID: 82989831986403836}
-  pauseSoundSource: {fileID: 82006143512131390}
-  levelMusic: {fileID: 8300000, guid: a396fb5db437f453d89c54963e7b9719, type: 3}
-  levelMusicHurry: {fileID: 8300000, guid: 980db8ff7fdfd4de9b676bef749ea0a7, type: 3}
-  starmanMusic: {fileID: 8300000, guid: fe80c79237cc34e99babbc6d54016d93, type: 3}
-  starmanMusicHurry: {fileID: 8300000, guid: f1d4bda1392ad4f6cb3bb8e494af8eb5, type: 3}
-  levelCompleteMusic: {fileID: 8300000, guid: 632e293310a2b4c088dd51fdeaa9d8b8, type: 3}
-  castleCompleteMusic: {fileID: 8300000, guid: 6dbea1eceaa2e48b6aa7c92fac4fbafe, type: 3}
-  oneUpSound: {fileID: 8300000, guid: cdc43de50f4574c75afcc7e74975b29a, type: 3}
-  bowserFallSound: {fileID: 8300000, guid: 04c05e6a635a94c57ba4f3a3f3aaa89f, type: 3}
-  bowserFireSound: {fileID: 8300000, guid: de02ec0c771a0476cb3609ebf94653a8, type: 3}
-  breakBlockSound: {fileID: 8300000, guid: c738f1c61166b40e19d4d970e7b9c9df, type: 3}
-  bumpSound: {fileID: 8300000, guid: 6f487163c53194893952b1f457060b86, type: 3}
-  coinSound: {fileID: 8300000, guid: d885ffc842af744d89f7d595ffcc176a, type: 3}
-  deadSound: {fileID: 8300000, guid: 90ceef20da9a84d9891da3179ede4177, type: 3}
-  fireballSound: {fileID: 8300000, guid: 7016dd03d29e64aa18bc6f1ae5bd8bec, type: 3}
-  flagpoleSound: {fileID: 8300000, guid: 45ea427b60eb04afe8cc4c33f225da7a, type: 3}
-  jumpSmallSound: {fileID: 8300000, guid: bc5ca5e0703c54692a186434e1149ccd, type: 3}
-  jumpSuperSound: {fileID: 8300000, guid: 7988561719a0c40049ae5a3c2870d1e7, type: 3}
-  kickSound: {fileID: 8300000, guid: 96f7a44168f114e6ba76d5c1bef36f86, type: 3}
-  pipePowerdownSound: {fileID: 8300000, guid: b520e6b32619c490a934225b9b162dc2, type: 3}
-  powerupSound: {fileID: 8300000, guid: 26301d2e86e99420599e315297a825df, type: 3}
-  powerupAppearSound: {fileID: 8300000, guid: 97a450c65284a4a3094ba5c2221a492b, type: 3}
-  stompSound: {fileID: 8300000, guid: d84415726495b4d46b5a557ed2a97cfa, type: 3}
-  warningSound: {fileID: 8300000, guid: c0ea6c25686884e1a9547efdebf43492, type: 3}
 --- !u!114 &1813169380907857607
 MonoBehaviour:
   m_ObjectHideFlags: 0

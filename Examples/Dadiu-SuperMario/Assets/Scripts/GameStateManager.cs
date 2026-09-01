@@ -19,12 +19,34 @@ public class GameStateManager : MonoBehaviour {
 	public string sceneToLoad; // what scene to load after level start screen finishes?
 	public bool timeup;
 
+	/* True once something has posted MUS_PlayMainPlaylist this session. Not serialised -
+	 * it is session state, not saved game state. */
+	[System.NonSerialized] public bool musicStarted;
+
 	void Awake () {
 		if (FindObjectsOfType (GetType ()).Length == 1) {
 			DontDestroyOnLoad (gameObject);
 			ConfigNewGame ();
+			/* The MusicManager child carries an AkEvent that posts MUS_PlayMainPlaylist on
+			 * Start, and it only exists on a GameStateManager that came from a scene - in
+			 * practice the Main Menu, since the level scenes ship theirs deactivated. One
+			 * created by GetOrCreate (pressing Play on a level scene) has no MusicManager,
+			 * so LevelManager has to start the music itself. */
+			musicStarted = transform.Find ("MusicManager") != null;
 		} else {
 			Destroy (gameObject);
+		}
+	}
+
+	/* The game object the music is playing on. A Wwise Event is scoped to the game object
+	 * it was posted on, so pausing, resuming or stopping the music has to target the same
+	 * one. Coming from the Main Menu that is the MusicManager child, whose AkEvent posted
+	 * it; a manager created by GetOrCreate has no such child, and LevelManager posts on
+	 * the root instead. */
+	public GameObject MusicGameObject {
+		get {
+			Transform musicManager = transform.Find ("MusicManager");
+			return musicManager != null ? musicManager.gameObject : gameObject;
 		}
 	}
 	

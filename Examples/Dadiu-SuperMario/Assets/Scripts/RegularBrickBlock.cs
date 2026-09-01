@@ -42,11 +42,11 @@ public class RegularBrickBlock : MonoBehaviour {
 			// Bounce or break depending on Mario's size
 			if (t_LevelManager.marioSize == 0) {
 				m_Animator.SetTrigger ("bounce");
-				t_LevelManager.WwbumpSound.Post (t_LevelManager.gameObject);
+				t_LevelManager.bumpSound.Post (t_LevelManager.gameObject);
 			} else {
 				BreakIntoPieces ();
 				t_LevelManager.AddScore(t_LevelManager.breakBlockBonus);
-				t_LevelManager.WwbreakBlockSound.Post (t_LevelManager.gameObject);
+				t_LevelManager.breakBlockSound.Post (t_LevelManager.gameObject);
 			}
 			time1 = Time.time;
 		}

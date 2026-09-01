@@ -83,7 +83,7 @@ public class Bowser : Enemy {
 			}
 		} else if (m_Rigidbody2D.velocity.y < 0 && !isFalling) { // fall as bridge collapses
 			isFalling = true;
-			t_LevelManager.WwbowserFallSound.Post (t_LevelManager.gameObject);
+			t_LevelManager.bowserFallSound.Post (t_LevelManager.gameObject);
 		}
 	}
 
@@ -91,7 +91,7 @@ public class Bowser : Enemy {
 		yield return new WaitForSeconds (delay);
 		GameObject fire = Instantiate(BowserFire, FirePos.position, Quaternion.identity);
 		fire.GetComponent<BowserFire> ().directionX = transform.localScale.x;
-		t_LevelManager.WwbowserFireSound.Post (t_LevelManager.gameObject);
+		t_LevelManager.bowserFireSound.Post (t_LevelManager.gameObject);
 	}
 
 	public override void TouchedByStarmanMario() {
@@ -109,7 +109,7 @@ public class Bowser : Enemy {
 			GameObject impostor = Instantiate (BowserImpostor, transform.position, Quaternion.identity);
 			impostor.GetComponent<Rigidbody2D> ().velocity = 
 				new Vector2 (impostorInitialVelocity.x * directionX, impostorInitialVelocity.y);
-			t_LevelManager.WwbowserFallSound.Post (t_LevelManager.gameObject);
+			t_LevelManager.bowserFallSound.Post (t_LevelManager.gameObject);
 
 			t_LevelManager.AddScore (defeatBonus);
 			Destroy (gameObject);

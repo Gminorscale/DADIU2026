@@ -46,7 +46,7 @@ public class BridgeAxe : MonoBehaviour {
 			Rigidbody2D rgbd = bridgePiece.gameObject.GetComponent<Rigidbody2D> ();
 			rgbd.bodyType = RigidbodyType2D.Dynamic;
 			rgbd.gravityScale = bridgePieceGravity;
-			t_LevelManager.WwbreakBlockSound.Post (t_LevelManager.gameObject);
+			t_LevelManager.breakBlockSound.Post (t_LevelManager.gameObject);
 			yield return new WaitForSeconds (waitBetweenCollapse);
 		}
 		t_LevelManager.MarioCompleteCastle ();
