@@ -70,6 +70,10 @@ public class Mario : MonoBehaviour {
 
 	public bool inputFreezed;
 
+	// Remembered between frames so the audio can react to transitions, not just to state.
+	private float lastFallSpeedY;
+	private bool wasChangingDirection;
+
 
 	// Use this for initialization
 	void Start () {
@@ -215,11 +219,7 @@ public class Mario : MonoBehaviour {
 				jumpButtonReleased = false;
 				speedXBeforeJump = currentSpeedX;
 				wasDashingBeforeJump = isDashing;
-				if (t_LevelManager.marioSize == 0) {
-					t_LevelManager.jumpSmallSound.Post(t_LevelManager.gameObject);
-				} else {
-					t_LevelManager.jumpSuperSound.Post(t_LevelManager.gameObject);
-				}
+				t_LevelManager.PostJump ();
 			}
 		} else {  // lower gravity if Jump button held; increased gravity if released
 			if (m_Rigidbody2D.linearVelocity.y > 0 && jumpButtonHeld) {
@@ -298,8 +298,30 @@ public class Mario : MonoBehaviour {
 		}
 
 		isFalling = m_Rigidbody2D.linearVelocity.y < 0 && !isGrounded;
-		isGrounded = Physics2D.OverlapPoint (m_GroundCheck1.position, GroundLayers) || Physics2D.OverlapPoint (m_GroundCheck2.position, GroundLayers); 
+
+		/* Keep the collider Mario is standing on, not just whether he is standing on
+		 * something: a SoundMaterial on it is what tells Wwise which surface he landed on. */
+		Collider2D groundHit = Physics2D.OverlapPoint (m_GroundCheck1.position, GroundLayers);
+		if (groundHit == null) {
+			groundHit = Physics2D.OverlapPoint (m_GroundCheck2.position, GroundLayers);
+		}
+		bool wasGrounded = isGrounded;
+		isGrounded = groundHit != null;
 		isChangingDirection = currentSpeedX > 0 && faceDirectionX * moveDirectionX < 0;
+
+		/* Audio one-shots that live on a state change rather than on a button press.
+		 * The fall speed has to be remembered from the last airborne frame, because by
+		 * the time the landing is detected the vertical velocity has already gone. */
+		if (!isGrounded) {
+			lastFallSpeedY = m_Rigidbody2D.linearVelocity.y;
+		} else if (!wasGrounded) {
+			t_LevelManager.NotifyMarioLanded (lastFallSpeedY, groundHit);
+			lastFallSpeedY = 0;
+		}
+		if (isChangingDirection && !wasChangingDirection && isGrounded && !inputFreezed) {
+			t_LevelManager.PostSkid ();
+		}
+		wasChangingDirection = isChangingDirection;
 
 
 		if (inputFreezed && !t_LevelManager.gamePaused) {

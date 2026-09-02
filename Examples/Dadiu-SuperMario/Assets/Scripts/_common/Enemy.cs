@@ -14,6 +14,16 @@ public class Enemy : MonoBehaviour {
 	public int stompBonus;
 
 	public bool isBeingStomped;
+
+	/* Which creature this is, for Wwise. One Enemy Switch group (Goomba / Koopa /
+	 * KoopaWinged / Shell / Piranha / Bowser) lets a single defeat Event pick a
+	 * different sound per enemy, instead of one Event per creature. Set it on the
+	 * prefab; LevelManager applies it to its own game object just before posting. */
+	public AK.Wwise.Switch enemyType;
+
+	public void ApplyTypeSwitch(GameObject audioGameObject) {
+		enemyType.SetValue (audioGameObject);
+	}
 	
 	protected virtual void FlipAndDie() {
 		Animator m_Animator = GetComponent<Animator> ();

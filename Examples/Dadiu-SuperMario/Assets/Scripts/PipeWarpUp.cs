@@ -25,6 +25,7 @@ public class PipeWarpUp : MonoBehaviour {
 
 		if (!t_GameStateManager.spawnFromPoint && t_GameStateManager.spawnPipeIdx == transform.parent.GetSiblingIndex ()) {
 			isTakingMarioUp = true;
+			t_LevelManager.PostPipeExit ();
 			mario.FreezeUserInput ();
 			t_LevelManager.timerPaused = true;
 			Debug.Log (this.name + " Start: " + transform.parent.gameObject.name + " taking Mario up");

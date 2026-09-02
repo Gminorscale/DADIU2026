@@ -279,6 +279,72 @@ persistent object the music survives scene loads, keeps playing across levels, a
 Wwise transitions between them when the State changes — which is the point of an
 interactive music setup.
 
+## Game state exposed to Wwise
+
+The code now publishes far more of what the game knows. **Every field below is a
+Wwise-Type and starts empty**, so none of it does anything until the matching
+object is authored in Wwise and picked on the Level Manager in the Inspector.
+Nothing regressed while that work is outstanding — an unpicked Wwise-Type is a
+safe no-op, and the paths that already had a sound fall back to it.
+
+All of it is published from `LevelManager`, which keeps "what does the game tell
+Wwise?" answerable from one file. `PublishAudioState()` runs each frame from
+`Update()` and only pushes values that changed.
+
+### Game Parameters (RTPC) to author
+
+| Field | Range | Driven by |
+|---|---|---|
+| `RTPC_LevelProgress` | 0–100 | Mario's x between `Level Boundary/Left` and `Right Boundary`. Build intensity toward the flagpole. |
+| `RTPC_StompChain` | 0–8+ | Consecutive airborne stomps, reset on landing. The classic Mario escalation — pitch the defeat sound up per link. |
+| `RTPC_FallSpeed` | 0–100 | Downward speed at the moment of touchdown, normalised by `maxFallSpeed`. One landing Event covers a hop and a long drop. |
+| `RTPC_Height` | 0–100 | Mario's height, normalised by `maxHeight`. |
+| `RTPC_Coins` | 0–99 | `coins`. Rising coin pitch across a level. |
+| `RTPC_DangerNearby` | 0–n | Live enemies within `dangerRadius` (default 8). Tension layer that follows the level, not the clock. |
+
+`RTPC_MarioSpeed` (on `Mario`) and `RTPC_TimeLeft` already existed and were never
+read by anything in Wwise — both are worth wiring up too.
+
+### States to author
+
+| Field(s) | Group | Notes |
+|---|---|---|
+| `ST_Environment` | e.g. `Environment` | Overworld / Underground / Castle. Picked **per level scene**, exactly like `ST_CurrentLevel`. Drive aux-send reverb from it. |
+| `ST_FlowPlaying`, `ST_FlowPaused`, `ST_FlowLevelComplete`, `ST_FlowTimeUp`, `ST_FlowGameOver` | e.g. `GameFlow` | Set on the real transitions. A pause State on the SFX and music buses is the Wwise-native replacement for the C# pause coroutine (see below). |
+| `ST_TimeNormal`, `ST_TimeHurry` | e.g. `TimePressure` | Follows `hurryUp`. Retune everything at once instead of swapping a music Event. |
+| `ST_LivesByCount[0..3]` | `MarioLives` (already exists) | Indexed by `lives`, clamped. The group is authored but has never been set from code. |
+
+### Switches to author
+
+| Field(s) | Group | Notes |
+|---|---|---|
+| `Enemy.enemyType` (on each enemy prefab) | e.g. `EnemyType` | Goomba / Koopa / KoopaWinged / Shell / Piranha / Bowser. |
+| `swDefeatStomp`, `swDefeatShell`, `swDefeatFireball`, `swDefeatBlock`, `swDefeatStarman` | e.g. `DefeatMethod` | How the enemy died. Combined with `enemyType` this is a 2D switch matrix behind **one** `enemyDefeatSound` Event. |
+| `swMarioSmall`, `swMarioSuper`, `swMarioFire` | e.g. `MarioSize` | Applied before `jumpSound`, replacing the two separate jump Events. |
+| `SoundMaterial.surface` (on ground prefabs) | e.g. `Surface` | `Assets/Scripts/SoundMaterial.cs`. Mario looks it up on the collider he actually lands on and applies it before the landing Event. **Assigning it to the ground/brick/pipe prefabs is level-design work that still has to be done.** Give the Switch group a sensible default for surfaces that have no component. |
+
+### Events to author
+
+`jumpSound`, `skidSound`, `landSound`, `enemyDefeatSound`, `checkpointSound`,
+`pipeEnterSound`, `pipeExitSound`, `emptyBlockSound`.
+
+Four of these are moments the game already knew about but never announced:
+Mario skidding (`isChangingDirection`), landing, passing a checkpoint
+(`SpawnPoint`), and bumping a block that has nothing left in it
+(`CollectibleBlock.isActive`).
+
+### Graceful fallbacks
+
+Three of the new Events replace older ones, and each keeps the old behaviour
+until the new Event is picked:
+
+- `jumpSound` + `swMario*` → falls back to `jumpSmallSound` / `jumpSuperSound`
+- `enemyDefeatSound` + `enemyType` + `swDefeat*` → falls back to `stompSound`
+  for stomps and `kickSound` for the rest
+- `emptyBlockSound` → falls back to `bumpSound`
+
+So you can author them one at a time and hear each one take over.
+
 ### Things Wwise should own, not code
 
 Two behaviours are still done in C# because that's what the original game

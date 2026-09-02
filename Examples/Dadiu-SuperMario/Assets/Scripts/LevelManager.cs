@@ -117,6 +117,67 @@ public class LevelManager : MonoBehaviour {
 	public AK.Wwise.State ST_MarioStar;
 	public AK.Wwise.State ST_CurrentLevel; // ST_Level_101..104 - set per level scene
 
+	/****************** Wwise: exposing the game to the sound designer
+	 * Everything below publishes state the game already computes. Each field is a
+	 * Wwise-Type, so an unpicked one is a safe no-op - author the Wwise side first,
+	 * then pick it here and it starts working with no code change.
+	 */
+
+	[Header ("Wwise Switches - one Event, many sounds")]
+	public AK.Wwise.Switch swMarioSmall;       // Mario size, applied before the jump Event
+	public AK.Wwise.Switch swMarioSuper;
+	public AK.Wwise.Switch swMarioFire;
+	public AK.Wwise.Switch swDefeatStomp;      // how an enemy died, applied before the defeat Event
+	public AK.Wwise.Switch swDefeatShell;
+	public AK.Wwise.Switch swDefeatFireball;
+	public AK.Wwise.Switch swDefeatBlock;
+	public AK.Wwise.Switch swDefeatStarman;
+
+	[Header ("Wwise Events - moments the game already knows about")]
+	public AK.Wwise.Event jumpSound;           // replaces jumpSmall/jumpSuper via swMario*
+	public AK.Wwise.Event skidSound;           // Mario turning at speed
+	public AK.Wwise.Event landSound;           // touchdown, with RTPC_FallSpeed + Surface switch
+	public AK.Wwise.Event enemyDefeatSound;    // replaces stomp/kick via enemyType + swDefeat*
+	public AK.Wwise.Event checkpointSound;
+	public AK.Wwise.Event pipeEnterSound;
+	public AK.Wwise.Event pipeExitSound;
+	public AK.Wwise.Event emptyBlockSound;     // bumping a block that has nothing left
+
+	[Header ("Wwise RTPC - continuous game state")]
+	public AK.Wwise.RTPC RTPC_LevelProgress;   // 0-100 across the level, left edge to right
+	public AK.Wwise.RTPC RTPC_FallSpeed;       // downward speed at the moment of landing
+	public AK.Wwise.RTPC RTPC_Height;          // Mario's height above the level floor
+	public AK.Wwise.RTPC RTPC_Coins;           // 0-99, resets on the 1-up
+	public AK.Wwise.RTPC RTPC_StompChain;      // consecutive airborne stomps, 0 on landing
+	public AK.Wwise.RTPC RTPC_DangerNearby;    // live enemies within dangerRadius
+
+	[Header ("Wwise States - global mood")]
+	public AK.Wwise.State ST_Environment;      // Overworld / Underground / Castle, per scene
+	public AK.Wwise.State ST_FlowPlaying;
+	public AK.Wwise.State ST_FlowPaused;
+	public AK.Wwise.State ST_FlowLevelComplete;
+	public AK.Wwise.State ST_FlowTimeUp;
+	public AK.Wwise.State ST_FlowGameOver;
+	public AK.Wwise.State ST_TimeNormal;
+	public AK.Wwise.State ST_TimeHurry;
+	public AK.Wwise.State[] ST_LivesByCount = new AK.Wwise.State[4]; // index = lives, clamped
+
+	[Header ("Wwise tuning")]
+	public float dangerRadius = 8f;            // how close an enemy counts as a threat
+	public float maxFallSpeed = 20f;           // fall speed that maps to RTPC_FallSpeed = 100
+	public float maxHeight = 20f;              // height that maps to RTPC_Height = 100
+
+	// Live audio state, published from PublishAudioState() each frame.
+	private int stompChain;
+	private float levelLeftEdgeX, levelRightEdgeX;
+	private bool levelBoundsKnown;
+	private int lastPublishedLives = -1;
+	private bool lastPublishedHurryUp;
+	private bool lastPublishedPaused;
+	private Enemy[] enemyScanCache = new Enemy[0];
+	private float enemyScanTimer;
+	private const float enemyScanInterval = .5f;
+
 	// Whichever music cue is currently playing, so it can be stopped/paused/resumed.
 	private AK.Wwise.Event currentMusicEvent;
 
@@ -142,6 +203,21 @@ public class LevelManager : MonoBehaviour {
 		// Music: tell Wwise which level this is, start the music system, and pick the cue.
 		UpdateMarioSizeState ();
 		ST_CurrentLevel.SetValue ();
+
+		/* Publish the rest of the game state Wwise can react to. All no-ops until the
+		 * matching States are authored and picked in the Inspector. */
+		ST_Environment.SetValue ();
+		ST_FlowPlaying.SetValue ();
+		lastPublishedPaused = false;
+		lastPublishedHurryUp = hurryUp;
+		if (hurryUp) {
+			ST_TimeHurry.SetValue ();
+		} else {
+			ST_TimeNormal.SetValue ();
+		}
+		lastPublishedLives = lives;
+		PublishLivesState ();
+		CacheLevelBounds ();
 		/* Start the music system if nothing has yet. Coming from the Main Menu it is already
 		 * playing on the persistent GameStateManager, so posting again would stack a second
 		 * copy of MUS_MainSwitch on top. Posted on the GameStateManager's music object rather
@@ -209,6 +285,8 @@ public class LevelManager : MonoBehaviour {
 				StartCoroutine (UnpauseGameCo ());
 			}
 		}
+
+		PublishAudioState ();
 	}
 
 	/****************** Game pause */
@@ -402,34 +480,36 @@ public class LevelManager : MonoBehaviour {
 	public void MarioStompEnemy(Enemy enemy) {
 		mario_Rigidbody2D.linearVelocity = new Vector2 (mario_Rigidbody2D.linearVelocity.x + stompBounceVelocity.x, stompBounceVelocity.y);
 		enemy.StompedByMario ();
-		stompSound.Post(gameObject);
+		AddStompToChain ();
+		PostEnemyDefeat (enemy, swDefeatStomp, stompSound);
 		AddScore (enemy.stompBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " MarioStompEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void MarioStarmanTouchEnemy(Enemy enemy) {
 		enemy.TouchedByStarmanMario ();
-		kickSound.Post(gameObject);
+		PostEnemyDefeat (enemy, swDefeatStarman, kickSound);
 		AddScore (enemy.starmanBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " MarioStarmanTouchEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void RollingShellTouchEnemy(Enemy enemy) {
 		enemy.TouchedByRollingShell ();
-		kickSound.Post(gameObject);
+		PostEnemyDefeat (enemy, swDefeatShell, kickSound);
 		AddScore (enemy.rollingShellBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " RollingShellTouchEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void BlockHitEnemy(Enemy enemy) {
 		enemy.HitBelowByBlock ();
+		PostEnemyDefeat (enemy, swDefeatBlock, bumpSound);
 		AddScore (enemy.hitByBlockBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " BlockHitEnemy called on " + enemy.gameObject.name);
 	}
 
 	public void FireballTouchEnemy(Enemy enemy) {
 		enemy.HitByMarioFireball ();
-		kickSound.Post(gameObject);
+		PostEnemyDefeat (enemy, swDefeatFireball, kickSound);
 		AddScore (enemy.fireballBonus, enemy.gameObject.transform.position);
 		Debug.Log (this.name + " FireballTouchEnemy called on " + enemy.gameObject.name);
 	}
@@ -460,6 +540,7 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void LoadNewLevel(string sceneName, float delay = loadSceneDelay) {
+		SetFlowLevelComplete ();
 		t_GameStateManager.SaveGameState ();
 		t_GameStateManager.ConfigNewLevel ();
 		t_GameStateManager.sceneToLoad = sceneName;
@@ -499,6 +580,11 @@ public class LevelManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("highScore", scores);
 		}
 		t_GameStateManager.timeup = timeup;
+		if (timeup) {
+			SetFlowTimeUp ();
+		} else {
+			SetFlowGameOver ();
+		}
 		LoadSceneDelay ("Game Over Screen", delay);
 	}
 
@@ -708,5 +794,197 @@ public class LevelManager : MonoBehaviour {
 		timerPaused = true;
 		PauseMusicPlaySoundEvent (flagpoleSound, flagpoleSoundDuration, false);
 		mario.ClimbFlagPole ();
+	}
+
+	/****************** Wwise: publishing game state
+	 *
+	 * One place that answers "what does the game tell Wwise?". PublishAudioState() runs
+	 * every frame from Update(); everything else is called from the moment it describes.
+	 * Values are only pushed when they change, so the sound engine isn't spammed.
+	 */
+
+	void CacheLevelBounds() {
+		GameObject boundary = GameObject.Find ("Level Boundary");
+		if (boundary == null) {
+			return; // Test Scene and the screens have no boundary - progress stays at 0
+		}
+		Transform left = boundary.transform.Find ("Left Boundary");
+		Transform right = boundary.transform.Find ("Right Boundary");
+		if (left == null || right == null) {
+			return;
+		}
+		levelLeftEdgeX = left.position.x;
+		levelRightEdgeX = right.position.x;
+		levelBoundsKnown = levelRightEdgeX > levelLeftEdgeX;
+	}
+
+	void PublishAudioState() {
+		if (mario == null) {
+			return;
+		}
+
+		// Where Mario is in the level, 0 at the left edge and 100 at the flagpole end.
+		if (levelBoundsKnown) {
+			float progress = Mathf.InverseLerp (levelLeftEdgeX, levelRightEdgeX,
+				mario.transform.position.x);
+			RTPC_LevelProgress.SetValue (gameObject, progress * 100f);
+		}
+
+		// How high up he is, normalised so a level designer can retune it in the Inspector.
+		RTPC_Height.SetValue (gameObject, Mathf.Clamp01 (mario.transform.position.y / maxHeight) * 100f);
+
+		// Coins and stomp chain are integers, but an RTPC reads them fine as floats.
+		RTPC_Coins.SetValue (gameObject, coins);
+		RTPC_StompChain.SetValue (gameObject, stompChain);
+
+		// Enemies close enough to matter. Rescanning every frame would be wasteful, so the
+		// list is refreshed a few times a second and only the distances are checked live.
+		enemyScanTimer -= Time.unscaledDeltaTime;
+		if (enemyScanTimer <= 0) {
+			enemyScanTimer = enemyScanInterval;
+			enemyScanCache = FindObjectsByType<Enemy> (FindObjectsSortMode.None);
+		}
+		int nearby = 0;
+		float sqrRadius = dangerRadius * dangerRadius;
+		for (int i = 0; i < enemyScanCache.Length; i++) {
+			Enemy enemy = enemyScanCache[i];
+			if (enemy == null || !enemy.gameObject.activeInHierarchy) {
+				continue;
+			}
+			if ((enemy.transform.position - mario.transform.position).sqrMagnitude <= sqrRadius) {
+				nearby++;
+			}
+		}
+		RTPC_DangerNearby.SetValue (gameObject, nearby);
+
+		// States only change on a transition, so only set them then.
+		if (hurryUp != lastPublishedHurryUp) {
+			lastPublishedHurryUp = hurryUp;
+			if (hurryUp) {
+				ST_TimeHurry.SetValue ();
+			} else {
+				ST_TimeNormal.SetValue ();
+			}
+		}
+
+		if (lives != lastPublishedLives) {
+			lastPublishedLives = lives;
+			PublishLivesState ();
+		}
+
+		if (gamePaused != lastPublishedPaused) {
+			lastPublishedPaused = gamePaused;
+			if (gamePaused) {
+				ST_FlowPaused.SetValue ();
+			} else {
+				ST_FlowPlaying.SetValue ();
+			}
+		}
+	}
+
+	void PublishLivesState() {
+		if (ST_LivesByCount == null || ST_LivesByCount.Length == 0) {
+			return;
+		}
+		int index = Mathf.Clamp (lives, 0, ST_LivesByCount.Length - 1);
+		if (ST_LivesByCount[index] != null) {
+			ST_LivesByCount[index].SetValue ();
+		}
+	}
+
+	/* Mario's size decides which jump sound comes out of a single jump Event. */
+	public void ApplyMarioSizeSwitch(GameObject audioGameObject) {
+		if (marioSize >= 2) {
+			swMarioFire.SetValue (audioGameObject);
+		} else if (marioSize == 1) {
+			swMarioSuper.SetValue (audioGameObject);
+		} else {
+			swMarioSmall.SetValue (audioGameObject);
+		}
+	}
+
+	/* Posted from Mario when he jumps. Falls back to the old per-size Events while the
+	 * single switched Event is still being authored. */
+	public void PostJump() {
+		if (jumpSound.IsValid ()) {
+			ApplyMarioSizeSwitch (gameObject);
+			jumpSound.Post (gameObject);
+		} else if (marioSize == 0) {
+			jumpSmallSound.Post (gameObject);
+		} else {
+			jumpSuperSound.Post (gameObject);
+		}
+	}
+
+	public void PostSkid() {
+		skidSound.Post (gameObject);
+	}
+
+	/* Called from Mario the frame he touches down. fallSpeed is how fast he was falling
+	 * just before, so one landing Event can cover a light hop and a long drop; groundHit
+	 * is whatever he landed on, so a SoundMaterial on it can pick the surface. */
+	public void NotifyMarioLanded(float fallSpeed, Component groundHit) {
+		stompChain = 0;
+		RTPC_StompChain.SetValue (gameObject, stompChain);
+		RTPC_FallSpeed.SetValue (gameObject,
+			Mathf.Clamp01 (Mathf.Abs (fallSpeed) / maxFallSpeed) * 100f);
+		SoundMaterial.ApplyFrom (groundHit, gameObject);
+		landSound.Post (gameObject);
+	}
+
+	/* Every way an enemy can die goes through here: the enemy picks the sound via its own
+	 * enemyType Switch, the caller picks it via the defeat-method Switch, and one Event
+	 * plays. While that Event is unauthored the original per-cause Event is used instead,
+	 * so nothing goes quiet in the meantime. */
+	void PostEnemyDefeat(Enemy enemy, AK.Wwise.Switch defeatMethod, AK.Wwise.Event fallback) {
+		if (enemyDefeatSound.IsValid ()) {
+			if (enemy != null) {
+				enemy.ApplyTypeSwitch (gameObject);
+			}
+			defeatMethod.SetValue (gameObject);
+			enemyDefeatSound.Post (gameObject);
+		} else {
+			fallback.Post (gameObject);
+		}
+	}
+
+	/* Consecutive stomps without touching the ground - the classic Super Mario escalation.
+	 * Reset in NotifyMarioLanded. */
+	void AddStompToChain() {
+		stompChain++;
+		RTPC_StompChain.SetValue (gameObject, stompChain);
+	}
+
+	public void PostCheckpoint() {
+		checkpointSound.Post (gameObject);
+	}
+
+	public void PostPipeEnter() {
+		pipeEnterSound.Post (gameObject);
+	}
+
+	public void PostPipeExit() {
+		pipeExitSound.Post (gameObject);
+	}
+
+	/* A block with nothing left in it sounds different from one that still has a coin. */
+	public void PostBlockBump(bool isEmpty) {
+		if (isEmpty && emptyBlockSound.IsValid ()) {
+			emptyBlockSound.Post (gameObject);
+		} else {
+			bumpSound.Post (gameObject);
+		}
+	}
+
+	public void SetFlowLevelComplete() {
+		ST_FlowLevelComplete.SetValue ();
+	}
+
+	public void SetFlowTimeUp() {
+		ST_FlowTimeUp.SetValue ();
+	}
+
+	public void SetFlowGameOver() {
+		ST_FlowGameOver.SetValue ();
 	}
 }

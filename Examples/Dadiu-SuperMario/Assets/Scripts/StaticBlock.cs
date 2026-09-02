@@ -17,7 +17,7 @@ public class StaticBlock : MonoBehaviour {
 		bool bottomHit = normal == bottomSide;
 
 		if (other.gameObject.tag == "Player" && bottomHit) {
-			t_LevelManager.bumpSound.Post (t_LevelManager.gameObject);
+			t_LevelManager.PostBlockBump (true);
 		}
 
 	}
