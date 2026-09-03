@@ -8,7 +8,7 @@
 						<Action Name="" ID="{975A41EE-1B03-422C-AC96-85CC91A30E1B}" ShortID="898960288">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MUS_MainSwitch" ID="{DCFDDEB1-6A15-46DD-A3AB-EEFAE2A3A159}" WorkUnitID="{A7692E89-6CA9-4120-A730-DAA994081A7A}"/>
+									<ObjectRef Name="MUS_MainSwitch" ID="{DCFDDEB1-6A15-46DD-A3AB-EEFAE2A3A159}" WorkUnitID="{9BDEA0A9-232E-4A08-9B93-7EF7294189F4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
