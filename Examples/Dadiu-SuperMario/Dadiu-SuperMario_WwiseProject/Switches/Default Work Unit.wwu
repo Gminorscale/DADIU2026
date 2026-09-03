@@ -9,6 +9,7 @@
 						<Switch Name="DB_Switch_Two" ID="{2571B26D-60E5-47DC-8F17-80DEC28D94BB}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<WorkUnit Name="Mads' Work Unit" ID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
