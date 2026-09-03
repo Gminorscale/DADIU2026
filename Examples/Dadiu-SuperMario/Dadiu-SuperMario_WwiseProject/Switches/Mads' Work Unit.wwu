@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}" SchemaVersion="133" RootDocumentID="{33C89470-F37D-460A-A034-32E80F44DB67}" ParentDocumentID="{33C89470-F37D-460A-A034-32E80F44DB67}">
+<WwiseDocument Type="WorkUnit" ID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}" SchemaVersion="133">
 	<Switches>
-		<WorkUnit Name="Mads' Work Unit" ID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}" OwnerID="{33C89470-F37D-460A-A034-32E80F44DB67}" PersistMode="Nested">
+		<WorkUnit Name="Mads' Work Unit" ID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="SurfaceType" ID="{064DD948-1812-4695-B795-F9A35C2199AB}">
 					<PropertyList>
