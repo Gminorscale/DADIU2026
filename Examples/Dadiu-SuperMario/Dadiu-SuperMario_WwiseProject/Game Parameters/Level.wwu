@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1A920F1C-00FC-4F27-9C74-4ED0A3AFEA4C}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Level" ID="{1A920F1C-00FC-4F27-9C74-4ED0A3AFEA4C}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="LevelCompletion" ID="{AD7A1BA4-2D69-4905-848E-ECDA4FB5EA34}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
