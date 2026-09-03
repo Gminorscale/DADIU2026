@@ -1,0 +1,3142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{00E9E24D-EC6B-48B5-A6BC-92847482142A}" SchemaVersion="133" RootDocumentID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" ParentDocumentID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}">
+	<Containers>
+		<WorkUnit Name="PlayerFootsteps" ID="{00E9E24D-EC6B-48B5-A6BC-92847482142A}" OwnerID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="PLYR_Footsteps_MaterialSwitch" ID="{0B938D68-BBAF-4390-80D7-2ADF1809F3B1}" ShortID="232983934">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F6D6DC23-93FD-4E80-90AD-6A5222296C12}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Stone" ID="{C2298416-896C-45C4-B4DC-26E94C0AE749}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="GroundMaterialSwitch" ID="{B75473CF-D7B3-46BB-AAD6-75F85441DBC3}" WorkUnitID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Dirt" ID="{7AA740A1-6FF0-4682-A225-622B2F7E7901}" ShortID="905483630">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-400</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_10" ID="{38FCCA9A-2B3A-4391-80F8-099CC20D48D5}" ShortID="161500892">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_10" ID="{C111C136-B3A0-4F70-A777-19FD582D9F7F}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="890283414"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_10" ID="{C111C136-B3A0-4F70-A777-19FD582D9F7F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_09" ID="{FEA380F6-8E79-4E25-A2D5-2D4C21E8C9E2}" ShortID="108652866">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_09" ID="{B6010038-C9B9-4B2A-8718-1F2979144DFA}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71024560"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_09" ID="{B6010038-C9B9-4B2A-8718-1F2979144DFA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_08" ID="{1B910927-5641-4E0F-8D35-3F3F063D7F91}" ShortID="465856905">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_08" ID="{95E7D5E0-48E1-4F3B-8DCB-998C35AFE6F2}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="11016053"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_08" ID="{95E7D5E0-48E1-4F3B-8DCB-998C35AFE6F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_07" ID="{EDA0591E-12E4-4D09-8DA4-26F8F2F24A49}" ShortID="402720971">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_07" ID="{EE3B8AFD-52B2-4DBA-AFA4-A87A81F88801}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="989910861"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_07" ID="{EE3B8AFD-52B2-4DBA-AFA4-A87A81F88801}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_06" ID="{0F29C865-4FB2-4B78-B900-2F1E674DD36B}" ShortID="919460568">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_06" ID="{207A4AFD-E7B4-450F-8AFC-15F6B3F0939F}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0611166666666667"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0611166666666667"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="697965240"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_06" ID="{207A4AFD-E7B4-450F-8AFC-15F6B3F0939F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_05" ID="{19D6D782-6528-4F8D-B374-089E2ABD919C}" ShortID="627397616">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_05" ID="{CE36AF1D-E4B2-43BC-A0DD-6F80639563E1}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0238233695652174"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0238233695652174"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="307280124"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_05" ID="{CE36AF1D-E4B2-43BC-A0DD-6F80639563E1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_04" ID="{96681988-70BE-41FF-95EB-12A75D2C9E2D}" ShortID="420484968">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_04" ID="{3E10D3B9-1D57-4BED-82A5-76ACD0B662F5}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="680291090"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_04" ID="{3E10D3B9-1D57-4BED-82A5-76ACD0B662F5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_03" ID="{E8428F92-B7A5-4E6A-BF38-54493EB18191}" ShortID="555622363">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_03" ID="{7F2E45DE-7927-4A27-8B09-12003C26EDAA}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0449578804347826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0449578804347826"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="708676305"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_03" ID="{7F2E45DE-7927-4A27-8B09-12003C26EDAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_02" ID="{B4AAD587-0030-4528-8498-73C2583DA404}" ShortID="913477289">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_02" ID="{E4175F6F-6606-46E2-BC29-51B7983A882D}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="921081248"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_02" ID="{E4175F6F-6606-46E2-BC29-51B7983A882D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Dirt_01" ID="{BC3B4AE9-7A83-4323-B34C-BABABCE51924}" ShortID="819402729">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Dirt_01" ID="{C0768D85-F0C4-4EA2-AA31-627122AF69B0}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Dirt_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="394414269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Dirt_01" ID="{C0768D85-F0C4-4EA2-AA31-627122AF69B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Stone" ID="{89355C4D-5289-40EA-83D8-A56879D4F20B}" ShortID="352537770">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-150</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1FFAB68E-9924-4B0A-ADCD-0DEB97E65871}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_10" ID="{93D7DC15-6361-454F-A1AA-320819DD3653}" ShortID="202644744">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_10" ID="{F4A5B9D3-2DCA-4627-8BD9-4D760076A0FB}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.110454845706398"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0590804988662131"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.259440451542936"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="991997902"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_10" ID="{F4A5B9D3-2DCA-4627-8BD9-4D760076A0FB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_09" ID="{3DA85619-2327-4302-8E15-A314D4065B23}" ShortID="426032232">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_09" ID="{1E663271-FB5D-4EA7-8DA8-B4886A1DBFAA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.100481366459627"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.132061224489796"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.333023957409051"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="293373897"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_09" ID="{1E663271-FB5D-4EA7-8DA8-B4886A1DBFAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_08" ID="{5E9675F6-3744-49EC-A889-88E85A95918C}" ShortID="558437394">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_08" ID="{CDFB1B52-1DB1-4EE5-ACFE-B52FBFCE06AD}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0889977817213842"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.129190328305235"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.324411268855368"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="319767105"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_08" ID="{CDFB1B52-1DB1-4EE5-ACFE-B52FBFCE06AD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_07" ID="{F1EAA281-1C3F-41E5-8DE4-5401CD6968B7}" ShortID="761205680">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_07" ID="{480FF3EC-5439-484D-BD29-7C6532A70446}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0321340333234743"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.166512718130731"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.385608399881692"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="711515141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_07" ID="{480FF3EC-5439-484D-BD29-7C6532A70446}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_06" ID="{B177E8B6-EEC3-45DA-A230-3D1C95D86FF5}" ShortID="678521676">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_06" ID="{D771E47B-EC5C-4A23-855B-CDAE81B3CBF1}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.129190328305235"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.157899290150843"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.419150842945874"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="340019763"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_06" ID="{D771E47B-EC5C-4A23-855B-CDAE81B3CBF1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_05" ID="{C54F49C2-23F4-4DFE-88BD-F4E28C7D2B56}" ShortID="777569921">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_05" ID="{36E4FC1C-C7E5-481D-9C7F-6A6D699E6BD5}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0886459627329192"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0886459627329192"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="352795108"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_05" ID="{36E4FC1C-C7E5-481D-9C7F-6A6D699E6BD5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_04" ID="{5AD13379-9865-45AF-A58D-34C0C712AD47}" ShortID="716146737">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_04" ID="{C5765B14-9129-4108-810D-A97D00779075}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.112016168786355"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.112016168786355"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.35005052745736"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1043625951"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_04" ID="{C5765B14-9129-4108-810D-A97D00779075}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_03" ID="{0CD0C0F2-03FB-4E2D-AEA8-21DBDE5B8480}" ShortID="914563579">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_03" ID="{31044560-7C65-4F06-9540-7B98385C9A83}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.159077984817115"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.159077984817115"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="847467061"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_03" ID="{31044560-7C65-4F06-9540-7B98385C9A83}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_02" ID="{241FD2EB-DF35-4966-8E82-BFC11E4D4205}" ShortID="217363048">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_02" ID="{A9B9F75F-96C5-42F9-892C-BF67F0A61E59}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.101510204081633"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0761326530612245"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.281972789115646"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="286815904"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_02" ID="{A9B9F75F-96C5-42F9-892C-BF67F0A61E59}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Stone_01" ID="{87B7B162-5BBF-4D09-A645-6FB716BF31E7}" ShortID="808965593">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Stone_01" ID="{F46C67BB-05A8-4E9A-A606-63048846243A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0106777087646653"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.106777087646653"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.258934437543133"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Stone_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="793366442"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Stone_01" ID="{F46C67BB-05A8-4E9A-A606-63048846243A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Metal" ID="{0FD4EE49-D250-4FE1-B727-2D23867FBB22}" ShortID="75353591">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1320</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{444EBD20-208A-4408-8452-644F56155345}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_19" ID="{8DE32CBF-3599-48AB-A0D6-249312DFB8F9}" ShortID="87334305">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_19" ID="{4D0BC620-BDE7-4078-8219-25BE721943F9}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_19.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="118742280"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_19" ID="{4D0BC620-BDE7-4078-8219-25BE721943F9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_18" ID="{B90E8604-81C6-44D3-9F97-0D1F279E687A}" ShortID="410101911">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_18" ID="{05CA11B4-8918-409E-915A-72B3621C8BE3}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="743754461"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_18" ID="{05CA11B4-8918-409E-915A-72B3621C8BE3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_17" ID="{9C5D8090-984E-4F79-8030-660F16B9D0C7}" ShortID="371594978">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_17" ID="{041714D3-53B0-4CAF-81CE-91A38339814C}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1046127737"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_17" ID="{041714D3-53B0-4CAF-81CE-91A38339814C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_16" ID="{7C4D06A4-3AB4-48C4-9289-7D7918DB9341}" ShortID="879904883">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_16" ID="{023C7846-A7D7-4A9B-89E2-24AFE77E219B}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="107646184"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_16" ID="{023C7846-A7D7-4A9B-89E2-24AFE77E219B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_15" ID="{B532377A-C045-4476-AFEA-F736DE05FA0D}" ShortID="697186722">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_15" ID="{6BD802B5-B24F-48C5-A8F5-31EC2FAC7D82}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="573216394"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_15" ID="{6BD802B5-B24F-48C5-A8F5-31EC2FAC7D82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_14" ID="{AD68487A-0BF6-4032-88C1-079A1EA48C81}" ShortID="269286720">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_14" ID="{A11F1100-1D1D-471F-B0E8-D58E22D329A8}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="232242637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_14" ID="{A11F1100-1D1D-471F-B0E8-D58E22D329A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_13" ID="{8FF6ECFA-5718-4044-902D-A60D816933B2}" ShortID="928009832">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_13" ID="{AC1F244C-2DBA-42DB-BD45-025FCE48BF33}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="531742026"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_13" ID="{AC1F244C-2DBA-42DB-BD45-025FCE48BF33}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_12" ID="{9A167D74-5F27-4223-8711-6243E0AB79C8}" ShortID="955972159">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_12" ID="{92861CF0-1303-4CC6-9FF3-0A1E4CD5B475}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="499459671"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_12" ID="{92861CF0-1303-4CC6-9FF3-0A1E4CD5B475}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_11" ID="{7DE376BD-173B-4EEB-B62D-615A95086331}" ShortID="234190737">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_11" ID="{490F7792-768C-444A-81BA-8FF423561FCA}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="94916835"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_11" ID="{490F7792-768C-444A-81BA-8FF423561FCA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_10" ID="{1DF37289-9F00-4C9F-B860-21C99ACBB456}" ShortID="563662013">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_10" ID="{06C064D5-A99F-477F-AB8E-7BA317DDAC0B}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="850667472"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_10" ID="{06C064D5-A99F-477F-AB8E-7BA317DDAC0B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_09" ID="{AEE2113E-09D9-4A8F-A919-2EC900529F4F}" ShortID="768662439">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_09" ID="{746434BD-1F5B-4D09-9238-C073181D8209}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.141207019927536"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0460621829710145"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.209922735507246"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="393687680"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_09" ID="{746434BD-1F5B-4D09-9238-C073181D8209}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_08" ID="{3406B065-5FDD-4E2E-A8FB-DAF25439C9ED}" ShortID="300697562">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_08" ID="{58F9A940-F798-47BB-8E08-C900CFB88351}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="95470192"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_08" ID="{58F9A940-F798-47BB-8E08-C900CFB88351}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_07" ID="{91486984-D17F-4A28-BBBF-551C044E5E8C}" ShortID="600006951">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_07" ID="{104ABCA5-6797-4579-A4FD-AFAD55830494}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0049585597826087"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.036913722826087"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0280985054347826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0231399456521739"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.125616847826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="322990647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_07" ID="{104ABCA5-6797-4579-A4FD-AFAD55830494}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_06" ID="{FF5DEF67-8E40-428D-BB58-DCA16989269A}" ShortID="709924398">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_06" ID="{C711BB3D-2407-414F-9A74-E0694C8B6D4F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00368695652173913"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0889478260869565"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0322608695652174"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.121208695652174"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="730410797"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_06" ID="{C711BB3D-2407-414F-9A74-E0694C8B6D4F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_05" ID="{14D0600E-A101-4810-BE87-10DA61311EF6}" ShortID="253181967">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_05" ID="{210A9101-10F5-47A9-838A-9E937675BDD7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.102054347826087"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00684510869565217"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.180461956521739"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="638060745"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_05" ID="{210A9101-10F5-47A9-838A-9E937675BDD7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_04" ID="{02BA06AC-AB20-4597-B628-8C8F40147DCB}" ShortID="829629819">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_04" ID="{F5BEF669-9D3F-48D2-8D89-FA83DC086C5A}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="65390356"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_04" ID="{F5BEF669-9D3F-48D2-8D89-FA83DC086C5A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_03" ID="{0BF46EAA-1EA9-4272-AE83-3A8CA6F279AE}" ShortID="366412783">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_03" ID="{34A6360B-43CB-4649-9EA5-CF0EFCB9866C}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.169583559782609"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.229879936594203"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1004307636"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_03" ID="{34A6360B-43CB-4649-9EA5-CF0EFCB9866C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_02" ID="{10753E25-1598-423B-9C42-D0A95915DB98}" ShortID="656824432">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_02" ID="{B977DB7C-C84E-49DE-9907-BF322EDC3E62}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.015036231884058"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0168405797101449"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0745797101449276"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="284180642"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_02" ID="{B977DB7C-C84E-49DE-9907-BF322EDC3E62}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Metal_01" ID="{5B0F7AC1-93F1-456B-B523-7ACAD6A34C50}" ShortID="205696265">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Metal_01" ID="{EEEA021F-A0E4-4894-AD64-07FE564B6EBA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0807046195652174"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.167705344202899"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Metal_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="676263739"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Metal_01" ID="{EEEA021F-A0E4-4894-AD64-07FE564B6EBA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Grass" ID="{D798518C-2321-4567-AAF5-CF947AF0A20C}" ShortID="222967354">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_06" ID="{E027821F-C66F-4B4C-9945-C6AA10DE45D9}" ShortID="676338016">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_06" ID="{CED4C5D3-DE55-4099-8FAC-E3F2A6BEFD0C}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.383640579710145"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.124730434782609"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.706805797101449"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="302503663"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_06" ID="{CED4C5D3-DE55-4099-8FAC-E3F2A6BEFD0C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_05" ID="{D57BBDDB-2848-4E3F-9EF5-686260F9FC4C}" ShortID="273749498">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_05" ID="{D0915530-5F98-464B-8BB2-8CB8D520413F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.308707971014493"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.147884057971015"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.611870289855073"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="10383952"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_05" ID="{D0915530-5F98-464B-8BB2-8CB8D520413F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_04" ID="{CFAF2F98-61FF-4064-A079-8EB9A022EB74}" ShortID="786584269">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_04" ID="{182C4735-C699-480D-81E7-17143A569186}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.318104347826087"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0856434782608696"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.552604347826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="785418217"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_04" ID="{182C4735-C699-480D-81E7-17143A569186}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_03" ID="{3FFD8C72-053F-47C3-97E8-77C7E62F3D7B}" ShortID="273274419">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_03" ID="{F55C2ACA-D666-4A63-8085-D32DD042E2DF}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="427439510"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_03" ID="{F55C2ACA-D666-4A63-8085-D32DD042E2DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_02" ID="{63F5D433-D917-4392-A746-8A30A142C6EE}" ShortID="321725650">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_02" ID="{BFEF102E-A3E7-470A-8556-E18287388FBC}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.360391304347826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.136147826086957"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.728791304347826"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="440012391"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_02" ID="{BFEF102E-A3E7-470A-8556-E18287388FBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Grass_01" ID="{A0F36E49-AC02-45FB-839A-B7041823495D}" ShortID="922433077">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Grass_01" ID="{14A4F7F0-8CDB-4A26-A23A-845B233C8CB4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.278740262681159"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.116891077898551"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.537698958333333"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Grass_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="31982574"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Grass_01" ID="{14A4F7F0-8CDB-4A26-A23A-845B233C8CB4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Sand" ID="{8BBC4F00-85A3-4A09-A105-2ECA7BDC5C0A}" ShortID="473004862">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-500</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_19" ID="{2CF42B73-DC04-4904-BD29-5447E421FDF3}" ShortID="142918142">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_19" ID="{E9454CDC-D37F-4B04-BD23-F333DD84D0F8}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.15177196557971"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.15177196557971"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_19.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="658293869"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_19" ID="{E9454CDC-D37F-4B04-BD23-F333DD84D0F8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_18" ID="{54C597D6-0F56-4D71-8DC8-7BFD9A634AA4}" ShortID="326843451">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_18" ID="{DFA6437E-9F80-4DE0-94D5-AE1813BE3C3A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.330580706521739"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.411142391304348"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1004282719"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_18" ID="{DFA6437E-9F80-4DE0-94D5-AE1813BE3C3A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_17" ID="{B90D6FF2-F1FD-4E85-B920-BE495F211989}" ShortID="359638497">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_17" ID="{8A6C9A25-4EF7-4F05-801A-9E1CC3384664}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="313470852"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_17" ID="{8A6C9A25-4EF7-4F05-801A-9E1CC3384664}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_16" ID="{18B69A79-7165-4EA7-8698-80097F8943F1}" ShortID="831936587">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_16" ID="{B0B5E1E5-59B6-4EFB-88C2-FA40C05CFEFF}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="71185551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_16" ID="{B0B5E1E5-59B6-4EFB-88C2-FA40C05CFEFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_15" ID="{9479A918-3D4F-403D-BA37-5D3F1F1B8F4A}" ShortID="475168522">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_15" ID="{60F5B2A9-73BB-4192-A96F-CA723AF8F52C}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0795211050724638"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.297273577898551"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.616373161231884"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1023070274"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_15" ID="{60F5B2A9-73BB-4192-A96F-CA723AF8F52C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_14" ID="{4573D347-83C7-43E0-B4F8-338705469FBB}" ShortID="513561899">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_14" ID="{EBD58177-A10B-4473-9955-C9D0F5528D76}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.090585597826087"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.090585597826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="387305732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_14" ID="{EBD58177-A10B-4473-9955-C9D0F5528D76}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_13" ID="{4BBA4A13-1F19-4CE1-86B0-7047365C3E86}" ShortID="754071910">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_13" ID="{D46E9273-5ACD-4CE3-9D78-F66C8FC5E276}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="406776952"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_13" ID="{D46E9273-5ACD-4CE3-9D78-F66C8FC5E276}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_12" ID="{F73F0A1A-68AA-40A0-9EB1-2DA9999ABD04}" ShortID="645206508">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_12" ID="{A1F35B17-9973-4E1E-8F48-B1C1348807EA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.103253170289855"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.172580298913043"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.488239990942029"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="751781805"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_12" ID="{A1F35B17-9973-4E1E-8F48-B1C1348807EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_11" ID="{C4636716-4906-482E-9791-C97BED5A61B8}" ShortID="42191105">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_11" ID="{D69260D2-048D-466E-B363-7E46DA4F10C6}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0801216938405797"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="973349053"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_11" ID="{D69260D2-048D-466E-B363-7E46DA4F10C6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_10" ID="{40EC8829-FC78-436E-B2F5-61BE7E4D5AB8}" ShortID="464931846">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_10" ID="{A9D9AD97-291A-4FC9-9141-689A15583CF4}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="561445330"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_10" ID="{A9D9AD97-291A-4FC9-9141-689A15583CF4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_09" ID="{CBB64EAA-FD1E-4A6F-B6ED-B8B05D2552BC}" ShortID="217008970">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_09" ID="{0E29775B-5BC6-498A-B94F-FAC6BF438D83}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.21071893115942"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0509119565217391"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0381839673913043"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.455379166666667"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="179961005"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_09" ID="{0E29775B-5BC6-498A-B94F-FAC6BF438D83}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_05" ID="{47A350FF-73C8-4A97-9733-4C2F40752083}" ShortID="218316982">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_05" ID="{FFE4740E-FFDF-41A5-9AE6-8279F24A51B2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0148988224637681"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.266824365942029"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0839751811594203"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.494370018115942"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="187591450"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_05" ID="{FFE4740E-FFDF-41A5-9AE6-8279F24A51B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_08" ID="{5EDB7DD0-EE6E-4049-A72B-14C25667A04E}" ShortID="468960774">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_08" ID="{AA943DBE-5817-43AC-9AC4-8D4D63A191DA}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0504619565217391"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0504619565217391"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="479536880"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_08" ID="{AA943DBE-5817-43AC-9AC4-8D4D63A191DA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_07" ID="{395FDD21-4DCD-49BB-9BBA-2FF1B9A8D49B}" ShortID="871447429">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_07" ID="{53FA6ECC-06D1-4D7C-B3D5-F3D415A0E224}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="769643155"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_07" ID="{53FA6ECC-06D1-4D7C-B3D5-F3D415A0E224}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_06" ID="{FB21D478-4749-4FD7-BB0E-AE1A06F17C37}" ShortID="869762165">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_06" ID="{0576003F-8E91-4994-9AD2-A2F40A93945D}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.13469347826087"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.13469347826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="718840154"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_06" ID="{0576003F-8E91-4994-9AD2-A2F40A93945D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_04" ID="{6222DEAF-EAB7-4D6A-B25F-7FE7BEA8F62C}" ShortID="801262430">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_04" ID="{4E29501D-07CF-4B8A-8A96-C65BC45D5314}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="585531798"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_04" ID="{4E29501D-07CF-4B8A-8A96-C65BC45D5314}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_03" ID="{CFC16F11-98E5-4363-A082-02F93002CA47}" ShortID="239027699">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_03" ID="{B1F96EDC-C236-4259-84B5-F55B2C520DBF}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.2358"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.531"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="895823777"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_03" ID="{B1F96EDC-C236-4259-84B5-F55B2C520DBF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_02" ID="{73DE5725-F84D-4775-8A64-CCF2A81D0E84}" ShortID="813958713">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_02" ID="{0DD0585B-FC60-463F-8A64-0DE39EF24B89}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.257037817028986"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.368953804347826"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="148067873"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_02" ID="{0DD0585B-FC60-463F-8A64-0DE39EF24B89}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Sand_01" ID="{F4ECDB59-BA80-437E-9E0E-F1FB481D8227}" ShortID="268360885">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Sand_01" ID="{F5B6CB3E-7EDB-48B6-A4C0-7CE8106884D8}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Sand_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1037459114"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Sand_01" ID="{F5B6CB3E-7EDB-48B6-A4C0-7CE8106884D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Void" ID="{626A146E-C645-4B52-B12C-F4442F408E0D}" ShortID="495866731">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Wood" ID="{A8ACFA52-83ED-44F4-AF9A-9D53121A59C7}" ShortID="51411011">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-330</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D3BEA989-6CEE-499B-A67C-95DB96B481B1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_18" ID="{AC226AA7-8631-45C5-9EDE-8118C95EE186}" ShortID="262474559">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_18" ID="{7A8AB994-D1D2-47ED-A0EB-AA49A2E68224}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="333282044"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_18" ID="{7A8AB994-D1D2-47ED-A0EB-AA49A2E68224}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_20" ID="{C4D97B2A-F6A1-492B-AA49-27C7AF819ACA}" ShortID="898467628">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_20" ID="{7132692C-4EC5-4F5A-8177-114448B09C37}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="369708565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_20" ID="{7132692C-4EC5-4F5A-8177-114448B09C37}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_21" ID="{E4EFEFD1-53DA-4D83-8A30-F27960B5BE39}" ShortID="332264389">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_21" ID="{B2DB7012-53AA-415E-80A6-56E46914D8FF}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_21.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="223351468"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_21" ID="{B2DB7012-53AA-415E-80A6-56E46914D8FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_19" ID="{61367D57-4B5B-44A1-B456-86BB5270BA28}" ShortID="175356500">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_19" ID="{57C840C7-F482-4303-BD9F-AA8EC6798A8C}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_19.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="201511681"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_19" ID="{57C840C7-F482-4303-BD9F-AA8EC6798A8C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_17" ID="{A5AB7207-FE02-4137-AD68-402F95E23F43}" ShortID="594918780">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_17" ID="{91E11CDA-1786-47C4-9A81-C51C0FDEDBD5}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_17.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="180746600"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_17" ID="{91E11CDA-1786-47C4-9A81-C51C0FDEDBD5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_16" ID="{9BAFA68A-4CE5-4A1F-9DAF-DB6E8114A11A}" ShortID="254805524">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_16" ID="{0C89938C-0F42-4252-AAC9-7ED3713C3221}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_16.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="177358673"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_16" ID="{0C89938C-0F42-4252-AAC9-7ED3713C3221}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_15" ID="{9CD3FABE-A796-43CA-882B-95F0E557EF95}" ShortID="690575255">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_15" ID="{A591A1A1-D2F1-4B2F-9CD5-7B3861FD2B77}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="156786636"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_15" ID="{A591A1A1-D2F1-4B2F-9CD5-7B3861FD2B77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_14" ID="{C1DFA9B5-432B-455C-96E9-DCDF495C132F}" ShortID="72993404">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_14" ID="{F5115300-F981-41F9-B45F-86A69E1F0EE0}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_14.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="34323073"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_14" ID="{F5115300-F981-41F9-B45F-86A69E1F0EE0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_13" ID="{7421043D-9504-4558-AE7C-BDCEB0EB67BF}" ShortID="844869022">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_13" ID="{A1E4FE90-6669-49B7-813D-2E31695D557F}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_13.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="545983286"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_13" ID="{A1E4FE90-6669-49B7-813D-2E31695D557F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_12" ID="{7A6ED33A-BC26-4FD7-A8DB-F5AC4749FB49}" ShortID="606536896">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_12" ID="{D8340CD9-9FA2-48C1-99DC-34A78C6F1CE1}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_12.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="354160339"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_12" ID="{D8340CD9-9FA2-48C1-99DC-34A78C6F1CE1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_11" ID="{38B91169-59BE-48EB-AA28-F7558D285881}" ShortID="671551342">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_11" ID="{95C00C08-3AB3-444D-B422-2CEE6620044A}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_11.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827929484"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_11" ID="{95C00C08-3AB3-444D-B422-2CEE6620044A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_10" ID="{F40F25C0-332F-4383-9283-055B4FC0ACFB}" ShortID="122775052">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_10" ID="{F196DBA7-1C52-4FA5-9717-9D181F1A2FE8}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="518224853"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_10" ID="{F196DBA7-1C52-4FA5-9717-9D181F1A2FE8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_09" ID="{DBD59674-3C05-4D47-9730-84902B005FA4}" ShortID="846001786">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_09" ID="{50133A5C-F685-4A3F-BEB5-076DCF04D9B9}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_09.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="255876330"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_09" ID="{50133A5C-F685-4A3F-BEB5-076DCF04D9B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_08" ID="{CEBECF41-0DD0-4DC3-8D1C-7A9CD9B18CE9}" ShortID="741886282">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_08" ID="{D27527D4-F63D-4EDF-AA9A-FCB20CD374DD}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_08.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="980286435"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_08" ID="{D27527D4-F63D-4EDF-AA9A-FCB20CD374DD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_07" ID="{AD16062D-176A-40A3-91C3-9DA5853C011F}" ShortID="813591283">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_07" ID="{12114910-02C6-4925-956D-4A5E9280ACA7}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="557318311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_07" ID="{12114910-02C6-4925-956D-4A5E9280ACA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_06" ID="{C61E3EF4-FACC-4FD1-BD52-BA12CAFE48B6}" ShortID="447710513">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_06" ID="{F77D7651-557C-4D6A-9E8E-A3F7DF8B0544}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="363921334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_06" ID="{F77D7651-557C-4D6A-9E8E-A3F7DF8B0544}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_05" ID="{A98A083E-C217-4B96-9B17-82E1D11E6EE1}" ShortID="627588528">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_05" ID="{FEF7854C-80ED-431B-8596-8B93B2DB9A3E}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="296386243"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_05" ID="{FEF7854C-80ED-431B-8596-8B93B2DB9A3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_04" ID="{4C34F7B9-07B1-426F-AB37-EE0440CA677C}" ShortID="333968364">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_04" ID="{6BF4B212-5220-419E-A931-A5A47E726D39}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="525334311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_04" ID="{6BF4B212-5220-419E-A931-A5A47E726D39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_03" ID="{BFEB9779-7355-4793-8A4B-B4DDB84AE393}" ShortID="353784427">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_03" ID="{024745CC-6B3C-492B-82EE-40AF3049C939}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="68524141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_03" ID="{024745CC-6B3C-492B-82EE-40AF3049C939}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_02" ID="{10834424-754F-4CDD-8C24-F5E8AF31D61C}" ShortID="570339048">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_02" ID="{DB981DB7-C2C3-471C-9882-0D7EFC3DB54B}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="605700422"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_02" ID="{DB981DB7-C2C3-471C-9882-0D7EFC3DB54B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Locomotion_Footsteps_Wood_01" ID="{708D446F-1886-49D5-BE27-300D7F83E194}" ShortID="857334521">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerFootsteps" ID="{076BBF42-A4B1-4652-98DB-4FBF82AEDED2}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Locomotion_Footsteps_Wood_01" ID="{E135187E-18C0-4983-9563-163B87433E93}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Locomotion\Player Locomotion Footsteps\SFX_Player_Locomotion_Footsteps_Wood_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="848071279"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Locomotion_Footsteps_Wood_01" ID="{E135187E-18C0-4983-9563-163B87433E93}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							
+							
+						<RTPC Name="" ID="{B71A3B79-2075-4EF0-9B54-E96DAFFFF057}" ShortID="572411263">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_PlayerSpeed" ID="{F2AB0080-A4E9-4748-BD40-F49DDE76D8E1}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{A7E20346-095D-409C-A33E-0A1AE854EDF2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>16</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC><RTPC Name="" ID="{081858AD-8CCC-414F-8B20-1752D9FDB115}" ShortID="499585958">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_PlayerSpeed" ID="{F2AB0080-A4E9-4748-BD40-F49DDE76D8E1}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{DE6B3F9F-5AA6-4470-AA1C-BA8834EB29AA}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>16</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC></ObjectList>
+					</ObjectLists>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Sand" ID="{8BBC4F00-85A3-4A09-A105-2ECA7BDC5C0A}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Metal" ID="{0FD4EE49-D250-4FE1-B727-2D23867FBB22}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Stone" ID="{89355C4D-5289-40EA-83D8-A56879D4F20B}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Wood" ID="{A8ACFA52-83ED-44F4-AF9A-9D53121A59C7}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Void" ID="{626A146E-C645-4B52-B12C-F4442F408E0D}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Grass" ID="{D798518C-2321-4567-AAF5-CF947AF0A20C}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Dirt" ID="{7AA740A1-6FF0-4682-A225-622B2F7E7901}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Dirt" ID="{366AF20B-6697-4C37-887B-FF103FA0081F}"/>
+								<ItemList>
+									<ItemRef Name="Dirt" ID="{7AA740A1-6FF0-4682-A225-622B2F7E7901}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Stone" ID="{C2298416-896C-45C4-B4DC-26E94C0AE749}"/>
+								<ItemList>
+									<ItemRef Name="Stone" ID="{89355C4D-5289-40EA-83D8-A56879D4F20B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sand" ID="{8089C522-33CA-4287-B2FF-956778BE8F4D}"/>
+								<ItemList>
+									<ItemRef Name="Sand" ID="{8BBC4F00-85A3-4A09-A105-2ECA7BDC5C0A}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Void" ID="{F3FCBF30-95DD-4948-B797-24B10731CEAE}"/>
+								<ItemList>
+									<ItemRef Name="Void" ID="{626A146E-C645-4B52-B12C-F4442F408E0D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Wood" ID="{F03F1F48-2BEA-4ACC-8B44-35BDCE04DC52}"/>
+								<ItemList>
+									<ItemRef Name="Wood" ID="{A8ACFA52-83ED-44F4-AF9A-9D53121A59C7}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Grass" ID="{F8CF8663-0095-4044-ABEC-278018A11BF2}"/>
+								<ItemList>
+									<ItemRef Name="Stone" ID="{89355C4D-5289-40EA-83D8-A56879D4F20B}"/>
+									<ItemRef Name="Grass" ID="{D798518C-2321-4567-AAF5-CF947AF0A20C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{D8B6EC67-59FA-4A42-86E5-73A1B5F39129}"/>
+								<ItemList>
+									<ItemRef Name="Metal" ID="{0FD4EE49-D250-4FE1-B727-2D23867FBB22}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Enemy" ID="{104FA5A7-0C62-4FE9-8133-BF69BFB808DB}"/>
+								<ItemList>
+									<ItemRef Name="Void" ID="{626A146E-C645-4B52-B12C-F4442F408E0D}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" SchemaVersion="123">
+	<SoundBanks>
+		<WorkUnit Name="Master" ID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="World" ID="{181C9B7F-09D8-444A-A7F2-660BE24E85B1}" PersistMode="Reference"/>
+				<WorkUnit Name="Non-World" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

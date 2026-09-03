@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}" SchemaVersion="133" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<Containers>
+		<WorkUnit Name="WorldPuzzle" ID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<BlendContainer Name="WorldPuzzleMove" ID="{5135898E-E65E-41D5-BE8E-894DFD243791}" ShortID="343543405">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+				</BlendContainer>
+				<RandomSequenceContainer Name="WorldPuzzleCorrect" ID="{38F2DF1A-246C-4213-B6FB-6B0A46C257E7}" ShortID="752985580">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

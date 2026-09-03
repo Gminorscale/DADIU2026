@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A1E97A96-F6D6-4DD8-B9F0-337FD6C77B64}" SchemaVersion="123">
+	<Modulators>
+		<WorkUnit Name="Default Work Unit" ID="{A1E97A96-F6D6-4DD8-B9F0-337FD6C77B64}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="TestBeep" ID="{66381CE4-E13D-4BD9-A126-71A254314886}" ShortID="801369939">
+					<PropertyList>
+						<Property Name="LfoSmoothing" Type="Real64" Value="11"/>
+						<Property Name="LfoWaveform" Type="int32" Value="4"/>
+					</PropertyList>
+				</ModulatorLfo>
+			</ChildrenList>
+		</WorkUnit>
+	</Modulators>
+</WwiseDocument>

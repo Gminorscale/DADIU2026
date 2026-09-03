@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{57A640C1-378F-46E5-9CBF-CF18B77BB52F}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Music" ID="{57A640C1-378F-46E5-9CBF-CF18B77BB52F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Stop_Music_LP" ID="{5DDF9500-B9FE-496D-8E37-AB80EAD8C751}">
+					<ChildrenList>
+						<Action Name="" ID="{741F9A3B-EB7D-47D3-8EA7-AA98B9D1D152}" ShortID="722582231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicSwitch" ID="{829EC930-1700-4FE8-BFF1-541B63E3FB77}" WorkUnitID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music_LP" ID="{D3E76898-14AC-4B10-8CD8-5D638CB996A4}">
+					<ChildrenList>
+						<Action Name="" ID="{E68C1F80-14C5-4631-B901-1991B4F64428}" ShortID="175744038">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicSwitch" ID="{829EC930-1700-4FE8-BFF1-541B63E3FB77}" WorkUnitID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

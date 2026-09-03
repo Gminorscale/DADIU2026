@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="NPC" ID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Enemy" ID="{238EB1DE-2450-4248-A90D-FB83B6E50CCA}" ShortID="423999150">
+					<ChildrenList>
+						<Folder Name="EnemyProjectile" ID="{CD02FEA5-7D43-4FAD-BE47-7558899B72BE}" ShortID="378137666">
+							<ChildrenList>
+								<Event Name="Play_NPC_Enemy_Action_Projectile_Shoot_OS" ID="{B278F331-2400-4062-851B-39D97F55A31D}">
+									<ChildrenList>
+										<Action Name="" ID="{A8EC7039-3391-4630-BD14-84145B286416}" ShortID="197509496">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionRanged" ID="{3F90DDA6-B7ED-4CCE-AD32-A9934FCD031D}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Projectile_Impact_OS" ID="{618B1F87-FB35-4DB2-8239-A8C90B990C81}">
+									<ChildrenList>
+										<Action Name="" ID="{3A13C776-15C0-4947-9130-63F4530BAB07}" ShortID="474352536">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionProjectileImpact" ID="{729DD913-E584-4C18-A174-A2DBF5874EC7}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{85E881A8-89D7-4C5B-A001-A33811644A9C}" ShortID="827619168">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="SFX_Enemy_Action_Projectile_LP" ID="{3ED8C8AF-2F8E-4702-9FD1-2E030787C55E}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Projectile_LP" ID="{EC7C6148-EA48-4400-85AF-B6C3765E25E8}">
+									<ChildrenList>
+										<Action Name="" ID="{2763EDCC-AD54-4EA3-A01E-CA7BE0176496}" ShortID="991272508">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="SFX_Enemy_Action_Projectile_LP" ID="{3ED8C8AF-2F8E-4702-9FD1-2E030787C55E}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Projectile_Parry_OS" ID="{ED91523A-B497-481B-8868-3B41F8FC5032}">
+									<ChildrenList>
+										<Action Name="" ID="{B44256C8-97F9-4B8A-BEF8-F3B66C3AD082}" ShortID="613922515">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionProjectileParry" ID="{7E035394-AD18-4E06-A150-64548293BFC5}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="EnemyActions" ID="{B848981B-BCFD-4E34-A03E-2507975D9DBF}" ShortID="521286837">
+							<ChildrenList>
+								<Event Name="Play_NPC_Enemy_Action_Shockwave_OS" ID="{4E94ABF5-937B-4FED-B24E-47BE95390593}">
+									<ChildrenList>
+										<Action Name="" ID="{B708AFFA-11CD-4932-AEA2-5F665F09869B}" ShortID="691919559">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionShockwave" ID="{DE39DF74-AA8D-4186-95AB-91C010867C02}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Hooked_OS" ID="{E3AA62D1-4E3A-45B3-8855-71506616703A}">
+									<ChildrenList>
+										<Action Name="" ID="{42554FE1-3CCD-4660-BCFD-1710E0F49064}" ShortID="735092509">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionHooked" ID="{1401D50C-E26E-49F4-9F1B-5CDB4965C760}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_TakeDamage_OS" ID="{4DA1D7C8-CF3A-4AA3-8203-6172E79D8AC4}">
+									<ChildrenList>
+										<Action Name="" ID="{877E5084-A9CE-45A8-94A3-E5E037C419A8}" ShortID="633897836">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionTakeDamage" ID="{9A616A24-9989-43AA-8818-11773352D826}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Melee_OS" ID="{E245B513-A4B4-42BA-8078-E9992B32FC74}">
+									<ChildrenList>
+										<Action Name="" ID="{5A8C7C24-97BA-48FC-9E97-29C209158155}" ShortID="215736585">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionMelee" ID="{A41E9F64-6DBD-40B0-BED6-8E87CD25E54C}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_NPC_Enemy_Action_Death_OS" ID="{172860E9-FF4A-426E-A286-CDE84B50F747}">
+									<ChildrenList>
+										<Action Name="" ID="{BD020A63-7FC9-4962-BC97-C984C71559AE}" ShortID="816780577">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyActionDeath" ID="{50650344-2995-441A-ADC2-DD2DF2D708A5}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{D3808674-D742-494F-B99E-7C3AECBD7BD3}" ShortID="525276634">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" WorkUnitID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="EnemyLocomotion" ID="{88D302B2-AFA7-421E-9AA1-319E19639C0A}" ShortID="83048565">
+							<ChildrenList>
+								<Event Name="Play_NPC_Enemy_Locomotion_Float_LP" ID="{4D064870-0812-4B9F-80DA-0B4174BB0A05}">
+									<ChildrenList>
+										<Action Name="" ID="{3C4A9C12-4F5B-4AD5-AB1C-3E2E41B14AB3}" ShortID="285834223">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" WorkUnitID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{9BC1AC3A-D9D7-41A2-BBC3-A84BAB2EF913}" ShortID="1011495249">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="36"/>
+												<Property Name="SeekPercent" Type="Real64" Value="50">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9A0869DD-E11B-4AC5-9162-C66A0F28210F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="50"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" WorkUnitID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_NPC_Enemy_Locomotion_Float_LP" ID="{2F9D4BAB-2F8E-49D8-AD93-7FB359810613}">
+									<ChildrenList>
+										<Action Name="" ID="{A3C10870-FA27-4B80-BC91-EA7ED2FB9782}" ShortID="752321497">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" WorkUnitID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

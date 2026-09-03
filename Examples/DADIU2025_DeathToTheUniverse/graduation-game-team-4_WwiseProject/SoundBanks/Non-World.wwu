@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" SchemaVersion="123" RootDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" ParentDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}">
+<WwiseDocument Type="WorkUnit" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" SchemaVersion="133" RootDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" ParentDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}">
 	<SoundBanks>
 		<WorkUnit Name="Non-World" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" OwnerID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" PersistMode="Nested">
 			<ChildrenList>

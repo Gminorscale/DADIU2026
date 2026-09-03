@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}" SchemaVersion="133" RootDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" ParentDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}">
+	<Containers>
+		<WorkUnit Name="PlayerActionAttack" ID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}" OwnerID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="11"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<BlendContainer Name="PlayerActionAttackMelee" ID="{4E2B1DFE-074C-4AD3-916B-5D1F9DAE4258}" ShortID="271271673">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="PlayerActionAttackMeleeFire" ID="{C4482DDC-0DEB-4876-A5A3-C354734BD4BF}" ShortID="148756579">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Action_Melee_Fire_03" ID="{789C6EA6-DEB9-4510-B1E5-C610C52D7893}" ShortID="666731742">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Melee_Fire_03" ID="{B06EBAB5-46D2-4548-98F5-6B64BCFFF8D6}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Fire_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="592834105"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Melee_Fire_03" ID="{B06EBAB5-46D2-4548-98F5-6B64BCFFF8D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Action_Melee_Fire_02" ID="{73F90F6B-EC90-4995-9104-9FC977FAF52A}" ShortID="158888872">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Melee_Fire_02" ID="{C8F02282-5AAB-408B-8E5B-C5B0A727DD6C}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Fire_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="801908189"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Melee_Fire_02" ID="{C8F02282-5AAB-408B-8E5B-C5B0A727DD6C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Action_Melee_Fire_01" ID="{D2840022-D313-4DDF-850A-25BC265F82FD}" ShortID="969702805">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Melee_Fire_01" ID="{26197179-BB0F-4BDE-9377-E166FAE8303A}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Fire_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="940001427"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Melee_Fire_01" ID="{26197179-BB0F-4BDE-9377-E166FAE8303A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<BlendContainer Name="PlayerActionAttackMeleeMonster" ID="{AAD7CDE4-340E-462B-B0DA-37A2F0678532}" ShortID="381809904">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Action_Melee_Monster_02" ID="{74A94805-BBCA-4D17-B69B-F89736072DB1}" ShortID="142981555">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Melee_Monster_02" ID="{199C8AC0-7B16-49FE-B39D-0AD794E0CC02}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Monster_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="370540803"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Melee_Monster_02" ID="{199C8AC0-7B16-49FE-B39D-0AD794E0CC02}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Action_Melee_Monster_01" ID="{6C81B8AC-3839-42FB-A23B-C303DE1A1462}" ShortID="580816780">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Melee_Monster_01" ID="{1F5D5AF9-9DB0-4369-823D-8925FC7022DD}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Monster_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="677185017"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Melee_Monster_01" ID="{1F5D5AF9-9DB0-4369-823D-8925FC7022DD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<Sound Name="SFX_Player_Action_Melee_Woosh" ID="{12AA399A-B29F-4F56-9CA3-BF1707C48996}" ShortID="320135454">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Melee_Woosh" ID="{2C474870-3A43-4AF5-8FB2-35A2F54A3070}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Woosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="745473871"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Melee_Woosh" ID="{2C474870-3A43-4AF5-8FB2-35A2F54A3070}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="SFX_Player_Action_Melee_Whisper_LP" ID="{7EC2EE42-068B-4F69-B8E8-56DDAE58F9DC}" ShortID="350076340">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Player_Action_Melee_Whisper_LP" ID="{2547613A-787C-4AC0-BA47-2EBFA4A6C2AB}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0.0628491620111732"/>
+								<Property Name="LoopEnd" Type="Real64" Value="3.67667597765363"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Player\Player Actions\Player Action Melee\SFX_Player_Action_Melee_Whisper_LP.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="632168210"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Player_Action_Melee_Whisper_LP" ID="{2547613A-787C-4AC0-BA47-2EBFA4A6C2AB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

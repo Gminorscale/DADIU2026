@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{181C9B7F-09D8-444A-A7F2-660BE24E85B1}" SchemaVersion="123" RootDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" ParentDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}">
+	<SoundBanks>
+		<WorkUnit Name="World" ID="{181C9B7F-09D8-444A-A7F2-660BE24E85B1}" OwnerID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="AmbienceBank" ID="{BCAF3CCC-DEA2-45FD-B8D0-211B30D7CA42}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ambient" ID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" WorkUnitID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="ObjectBank" ID="{600B46A3-9B71-4012-84A4-1B9B9FB00E64}">
+					<ObjectInclusionList>
+						<ObjectRef Name="World" ID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" WorkUnitID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="PlayerBank" ID="{F3B48885-6219-4E7B-B082-1D14CF673C13}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Player_Locomotion" ID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" WorkUnitID="{CDE733A1-6E1F-400F-A4E2-13B7C7AB2DE2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Action" ID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" WorkUnitID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="NPCBank" ID="{99AE6087-9876-47CC-BAE7-E4D65222373D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="NPC" ID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="NPC" ID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" WorkUnitID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="VOBank" ID="{B74713D3-259A-4B56-908B-BEEF267BFD01}">
+					<ObjectInclusionList>
+						<ObjectRef Name="VO" ID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

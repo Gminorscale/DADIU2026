@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}" SchemaVersion="133" RootDocumentID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" ParentDocumentID="{4ACDD30D-2139-4C94-934D-755FD559AC54}">
+	<Containers>
+		<WorkUnit Name="NPCEnemyAction" ID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}" OwnerID="{4ACDD30D-2139-4C94-934D-755FD559AC54}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="NPCEnemyActionShockwave" ID="{DE39DF74-AA8D-4186-95AB-91C010867C02}" ShortID="703634109">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="NPCEnemyActionHooked" ID="{1401D50C-E26E-49F4-9F1B-5CDB4965C760}" ShortID="942960487">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="NPCEnemyActionRanged" ID="{3F90DDA6-B7ED-4CCE-AD32-A9934FCD031D}" ShortID="8618818">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_150m_Enemies" ID="{935090F5-C75D-4EE9-B416-AEFBEFC56680}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Enemy_Action_Ranged_03" ID="{5021B0F0-4A8B-4812-8F6B-01C34AA37D79}" ShortID="126843325">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Action_Ranged_03" ID="{C8DC0A1D-802A-4C4E-88DB-759EAD3BE9C9}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Ranged\SFX_Enemy_Action_Ranged_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1046516807"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Action_Ranged_03" ID="{C8DC0A1D-802A-4C4E-88DB-759EAD3BE9C9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Enemy_Action_Ranged_02" ID="{9198B691-630C-4BF0-8554-90CAE5223F0C}" ShortID="612992154">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Action_Ranged_02" ID="{FE5457C8-98F7-460A-84EC-318FBE31A714}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Ranged\SFX_Enemy_Action_Ranged_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="87081443"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Action_Ranged_02" ID="{FE5457C8-98F7-460A-84EC-318FBE31A714}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Enemy_Action_Ranged_01" ID="{7AD23B07-2A4A-49E9-B6A3-82B2FEE8B0A8}" ShortID="513405083">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Action_Ranged_01" ID="{4BAAC16B-2573-497E-A1D8-940F06A5F2F9}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Ranged\SFX_Enemy_Action_Ranged_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="551501430"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Action_Ranged_01" ID="{4BAAC16B-2573-497E-A1D8-940F06A5F2F9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<PropertyContainer Name="EnemyActionProjectile" ID="{A032D8EB-F154-439C-BF9D-465EA5EF6F64}" ShortID="470853847">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Enemy_Action_Projectile_LP" ID="{3ED8C8AF-2F8E-4702-9FD1-2E030787C55E}" ShortID="410719244">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F4F00773-07D6-4E45-ABD7-8D2C9971F687}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Enemy_Action_Projectile_LP" ID="{16813FA1-4E74-495A-8396-B880106DBFC4}">
+									<Language>SFX</Language>
+									<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="568383134"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="ProjectileReflectState" ID="{B57B138A-55DD-4290-B2B8-B2528D3CE5F2}"/>
+									<StateGroupInfo Name="" ID="{93F78776-CF7D-4E8A-BCC3-04F8897B0E1E}"/></StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="NotReflected" ID="{DFEED883-93BC-4A16-9378-DC9F32E28234}"/>
+										<CustomState Name="" ID="{3DA438F8-6B9F-4C7D-BA8D-14CAEC408218}" ShortID="951842367"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="IsReflected" ID="{40B9F944-4B1A-4B49-9488-D4D5BA3461E7}"/>
+										<CustomState Name="" ID="{5A7EBB40-2C3C-455D-A630-5FFEFCC031B2}" ShortID="568894972">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32" Value="400"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="None" ID="{6510A303-1C36-4C8D-90DC-37743F6ECCC1}"/>
+										<CustomState Name="" ID="{D6498DC3-5D8E-443D-A15F-0550E260A23E}" ShortID="441989602"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Enemy_Action_Projectile_LP" ID="{16813FA1-4E74-495A-8396-B880106DBFC4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="NPCEnemyActionProjectileImpact" ID="{729DD913-E584-4C18-A174-A2DBF5874EC7}" ShortID="917456044">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>230</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Projectile_Impact_01" ID="{7D9726B3-6CFF-42E6-B277-F1CE65D4C816}" ShortID="114649548">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_03" ID="{CB0D7DBA-F94D-475E-9F20-0B17D5F7D1DE}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865601570"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_02" ID="{72534000-BFE1-421D-90E5-CBCACCD94D45}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="749779104"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_01" ID="{4C092435-333F-4602-928D-C74DA795903B}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="196146822"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Projectile_Impact_03" ID="{CB0D7DBA-F94D-475E-9F20-0B17D5F7D1DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Projectile_Impact_02" ID="{9350C4C8-39FE-427E-9E84-5684C50AA068}" ShortID="352066012">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_03" ID="{28227C0E-E829-4C2E-9B3F-DF86AB1E22D6}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865601570"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_02" ID="{1E13266C-442A-46BB-94B8-D2D1DDBA6741}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="749779104"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_01" ID="{4850A941-D044-4933-AFA7-BBD8924F1688}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="196146822"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Projectile_Impact_02" ID="{1E13266C-442A-46BB-94B8-D2D1DDBA6741}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Projectile_Impact_03" ID="{74FF6896-9D95-4883-86B5-3B23A97D0879}" ShortID="491848929">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_03" ID="{EE4943E7-8177-4F62-BDD5-03BEEDABDBEF}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865601570"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_02" ID="{6E702037-D8A7-48BC-A776-52EBA266A193}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="749779104"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="SFX_Enemy_Action_Projectile_Impact_01" ID="{B191024C-C669-46D6-AE8A-DD9992E0808B}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemy_Action_Projectile_Impact_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="196146822"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Projectile_Impact_01" ID="{B191024C-C669-46D6-AE8A-DD9992E0808B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									
+								<EffectSlot Name="" ID="{A9BCA9D1-1B64-40E4-A810-820B2FD58E77}" ShortID="732742185">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{E568687D-6C7B-42A3-BBAC-DD0418D6602B}" ShortID="629556839" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="908"/>
+																	<Property Name="GainBand3" Type="Real32" Value="10"/>
+																	<Property Name="OnOffBand1" Type="bool" Value="False"/>
+																	<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot></ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<BlendContainer Name="NPCEnemyActionProjectileParry" ID="{7E035394-AD18-4E06-A150-64548293BFC5}" ShortID="907369828">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemt_Action_Projectile_Parry" ID="{24309B07-89CF-4707-80C2-001406A89F14}" ShortID="70163578">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5CE7EFFA-A7AD-4FF4-9F45-8DEA9C300043}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemt_Action_Projectile_Parry" ID="{386D0EA8-B8AA-464A-A348-AEDD7C46B112}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Projectile\SFX_Enemt_Action_Projectile_Parry.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="919588256"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemt_Action_Projectile_Parry" ID="{386D0EA8-B8AA-464A-A348-AEDD7C46B112}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<BlendContainer Name="NPCEnemyActionDeath" ID="{50650344-2995-441A-ADC2-DD2DF2D708A5}" ShortID="782478930">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F2AFAAF6-E8E1-46F1-9940-8A87A6B3776F}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_150m" ID="{C1278114-B5D0-4750-A436-264FF71B4876}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathBoom" ID="{D17D73E3-4773-449C-BA63-D0E64822F293}" ShortID="209564542">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_01" ID="{AD789085-CFD4-4662-A346-3735E71AA374}" ShortID="479711207">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_01" ID="{EABA4650-D0D8-4469-BB99-C9AC97B952D4}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="637035397"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_01" ID="{EABA4650-D0D8-4469-BB99-C9AC97B952D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_02" ID="{A0B5F4C7-191E-4635-8AAC-8D69F3A96968}" ShortID="890367680">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_02" ID="{0AA0FFD8-FD62-4953-8A49-ACA88466CFF7}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="909026119"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_02" ID="{0AA0FFD8-FD62-4953-8A49-ACA88466CFF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_03" ID="{3CE17187-3C01-439D-9C37-CCB2E93ABC47}" ShortID="687798781">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_03" ID="{541A3CBC-8C38-43EF-BBA6-8520FF9A50AC}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="751252042"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_03" ID="{541A3CBC-8C38-43EF-BBA6-8520FF9A50AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathOther" ID="{19108389-EF66-4BDD-A815-20992A8F2A81}" ShortID="41588968">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Other_01" ID="{B13F613E-5D41-4A5D-8DF4-90B4ACA4BCF8}" ShortID="715641027">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_01" ID="{5CEB68EB-CCE4-4455-8D3E-0DB5C0FD0A76}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="678481359"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_01" ID="{5CEB68EB-CCE4-4455-8D3E-0DB5C0FD0A76}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Other_02" ID="{EA6D2C20-4CE5-4AD9-A017-687E7273A1CB}" ShortID="332509119">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_02" ID="{F1187170-A1B6-4B0C-AB85-BA421CED3B56}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827139102"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_02" ID="{F1187170-A1B6-4B0C-AB85-BA421CED3B56}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Other_03" ID="{DBF200B8-D6C8-48B6-BE1C-757D9EBFA7B1}" ShortID="122746890">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_03" ID="{F83AEF7F-8C51-4BBF-81D2-D909A791BDFE}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="343386128"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_03" ID="{F83AEF7F-8C51-4BBF-81D2-D909A791BDFE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathScream" ID="{D2D816A7-09A1-47D1-9117-F92F576A509A}" ShortID="86305588">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_01" ID="{68C5383F-7D14-4C60-8592-954D712C4A2C}" ShortID="411751402">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_01" ID="{8B941D4E-0208-4DAF-B75D-8B9E2D02FC52}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="639582979"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_01" ID="{8B941D4E-0208-4DAF-B75D-8B9E2D02FC52}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_02" ID="{14C29BF5-D7BB-4B24-8E88-1E69002F4470}" ShortID="221535399">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_02" ID="{4015941C-AC1C-4E25-B55D-0AC3E1973D10}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1056707931"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_02" ID="{4015941C-AC1C-4E25-B55D-0AC3E1973D10}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_03" ID="{7BD70DE3-37C3-479D-8A04-D02F7B5C70F2}" ShortID="86503316">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_03" ID="{5F9DC789-52D7-4411-BBCA-AE5BBB6F7AAE}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="229547411"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_03" ID="{5F9DC789-52D7-4411-BBCA-AE5BBB6F7AAE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="NPCEnemyActionMelee" ID="{A41E9F64-6DBD-40B0-BED6-8E87CD25E54C}" ShortID="875674239">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-950</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F1B38232-705E-42A4-9AAB-34C33EAD68BA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="300"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-19</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="NPCEnemyActionMeleeOther" ID="{8985A29F-3D0B-40F1-A2EA-E2F0122BE0B2}" ShortID="218094702">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Other_01" ID="{9CEDAB7F-6B97-43CF-A0B3-15836657728B}" ShortID="184172590">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Other_01" ID="{638BBA90-6C03-47E4-AA33-FACF318B8A6D}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Other_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="17178643"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Other_01" ID="{638BBA90-6C03-47E4-AA33-FACF318B8A6D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Other_02" ID="{0837B8BF-FA85-4D2E-8301-89D6868ECC31}" ShortID="241993264">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Other_02" ID="{83ED54B3-C38C-44A0-B7CB-12552F3EB021}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Other_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="274731023"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Other_02" ID="{83ED54B3-C38C-44A0-B7CB-12552F3EB021}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Other_03" ID="{577597DC-8231-4BD1-8A6B-750FA76C1C18}" ShortID="743329962">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Other_03" ID="{EE366183-EEA6-4154-B742-157DBE0786B1}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Other_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="131902613"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Other_03" ID="{EE366183-EEA6-4154-B742-157DBE0786B1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionMeleeRobot" ID="{1C521260-D6F0-4F68-835C-45BD0B2C56E3}" ShortID="137779466">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Robot_01" ID="{622D9F82-4D6A-4E59-8BB2-B9FC509403A4}" ShortID="246662823">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Robot_01" ID="{2BDD99C0-7AC5-4300-9A51-9035C67F8275}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Robot_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="851656436"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Robot_01" ID="{2BDD99C0-7AC5-4300-9A51-9035C67F8275}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Robot_02" ID="{1966C2C6-C1EA-4225-B978-670C9477E4D7}" ShortID="528808245">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Robot_02" ID="{F2D7E910-8AB4-422E-A1C0-53C88D322716}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Robot_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="724307683"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Robot_02" ID="{F2D7E910-8AB4-422E-A1C0-53C88D322716}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Robot_03" ID="{F1E77073-EAE8-410F-B36B-ABC9354357B6}" ShortID="796595928">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Robot_03" ID="{589B5C45-ED5B-480F-B028-096651502B2E}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Robot_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="200439699"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Robot_03" ID="{589B5C45-ED5B-480F-B028-096651502B2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionMeleeWobble" ID="{5DA44044-5802-4A43-829A-3A831DA09C97}" ShortID="73515702">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Wobble_01" ID="{1163AA94-64F3-4A4A-B6AD-D7ABBC2BAB13}" ShortID="955761503">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_01" ID="{F3803980-F04F-48CC-8153-B8FD5BCEC65E}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Wobble_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="953415837"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_01" ID="{F3803980-F04F-48CC-8153-B8FD5BCEC65E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Wobble_02" ID="{C85CDFD4-B827-4AD8-9E20-873FB91AA995}" ShortID="1032994731">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_02" ID="{12D648FE-F7BB-4D72-947F-D5736031B577}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Wobble_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="756348203"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_02" ID="{12D648FE-F7BB-4D72-947F-D5736031B577}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Attack_Melee_Wobble_03" ID="{89A7D745-C8F9-491D-A721-E6340EE13F75}" ShortID="68230714">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_03" ID="{930E5987-0989-4FD7-9E5F-3DCA8C13E8E8}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Melee\SFX_Enemy_Action_Attack_Melee_Wobble_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="567679376"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Attack_Melee_Wobble_03" ID="{930E5987-0989-4FD7-9E5F-3DCA8C13E8E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="NPCEnemyActionTakeDamage" ID="{9A616A24-9989-43AA-8818-11773352D826}" ShortID="529428414">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C6C709D1-65CF-4A43-8D6A-EB489F3CA289}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{8C524F93-0F59-414A-9E44-9538788F6745}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathBoom" ID="{C8B463A1-F199-4BAB-9892-94BF50411D39}" ShortID="895748702">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_01" ID="{7BC0EE44-FAFE-4154-A198-A288B216B46A}" ShortID="926637085">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_01" ID="{0B365291-DA0E-4FE6-A8DE-2FE861B9F4AE}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="637035397"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_01" ID="{0B365291-DA0E-4FE6-A8DE-2FE861B9F4AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_02" ID="{2FE8AD9B-C10F-4E65-A4CE-044114338242}" ShortID="395076657">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_02" ID="{CEBA0C90-40CA-4DA2-B594-7C0EB0D951BE}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="909026119"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_02" ID="{CEBA0C90-40CA-4DA2-B594-7C0EB0D951BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Boom_03" ID="{BD2EEB98-8FF9-47CA-906D-2486CF853785}" ShortID="843035746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Boom_03" ID="{C4BFB5FB-8896-45C9-9D30-02D4B44428F3}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Boom_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="751252042"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Boom_03" ID="{C4BFB5FB-8896-45C9-9D30-02D4B44428F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathOther" ID="{6C92DD2A-A262-450D-8CEF-8252EA8C53AB}" ShortID="53414533">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Other_01" ID="{ECF0CD8D-2163-44CF-B645-6D0A1073AE05}" ShortID="958113682">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_01" ID="{7B8F09DA-F5CA-447A-81BC-0550C8331E5F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.5"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="924132455"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_01" ID="{7B8F09DA-F5CA-447A-81BC-0550C8331E5F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Other_02" ID="{13CF4C76-8A53-4268-BA76-312D5BAF2641}" ShortID="254676344">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_02" ID="{C4750EDF-414A-4926-B8C0-0F7944CC1ED0}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.541666666666666"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.541666666666666"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="288121560"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_02" ID="{C4750EDF-414A-4926-B8C0-0F7944CC1ED0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Other_03" ID="{4B365423-B26E-4599-B978-5EC73FDF8E9A}" ShortID="993055589">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Other_03" ID="{3A15ABD9-0775-405C-A112-2AB322607197}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.625"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.625"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Other_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="31989417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Other_03" ID="{3A15ABD9-0775-405C-A112-2AB322607197}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionDeathScream" ID="{863404BA-0273-4FA1-BE7A-9173EC249FAF}" ShortID="756110723">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_01" ID="{2A19AA8E-9A34-47A4-98D9-C68F5364A221}" ShortID="259559359">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_01" ID="{89B2B442-3710-4CA4-9CA2-391B7C5A1AE5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0555555555555555"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.319444444444444"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.194444444444445"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.638888888888889"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892528469"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_01" ID="{89B2B442-3710-4CA4-9CA2-391B7C5A1AE5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_02" ID="{D685DF26-3AF0-4ACB-AD62-53781B7BFB30}" ShortID="748242624">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_02" ID="{A0039A73-4819-4260-B68E-F55ABD8FFF46}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0416666666666667"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.375"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.402777777777778"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.777777777777778"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="605962090"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_02" ID="{A0039A73-4819-4260-B68E-F55ABD8FFF46}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Death_Scream_03" ID="{7BEE5663-231C-424A-A454-CE3A354EEDCF}" ShortID="770144308">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Death_Scream_03" ID="{F617FDBB-4A3F-4D7B-AE2E-7A8B67A268B0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.111111111111111"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.38888888888889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.333333333333333"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.722222222222224"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Actions Death\SFX_Enemy_Action_Death_Scream_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="686827456"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Death_Scream_03" ID="{F617FDBB-4A3F-4D7B-AE2E-7A8B67A268B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPCEnemyActionTakeDamageImpact" ID="{906429A4-49CC-4322-9507-5F4F005B130F}" ShortID="589107829">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Enemy_Action_Damage_Impact_03" ID="{A00673C0-517C-405F-A955-F95D62C7657D}" ShortID="773598326">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Damage_Impact_03" ID="{E340C01A-E25F-4043-B55D-0A5B698E8D36}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Damage\SFX_Enemy_Action_Damage_Impact_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="585922116"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Damage_Impact_03" ID="{E340C01A-E25F-4043-B55D-0A5B698E8D36}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Damage_Impact_02" ID="{C449E9F0-B7DA-403E-8C03-E0665760433C}" ShortID="824193428">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Damage_Impact_02" ID="{2421FE28-F09E-49F1-8664-30A53B61642A}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Damage\SFX_Enemy_Action_Damage_Impact_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="211333480"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Damage_Impact_02" ID="{2421FE28-F09E-49F1-8664-30A53B61642A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Enemy_Action_Damage_Impact_01" ID="{55206E29-C54A-4C00-A559-6EF68A0ADE8C}" ShortID="82986205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Enemy_Action_Damage_Impact_01" ID="{17AE9314-E73E-43CE-885A-2C42869A5BC0}">
+											<Language>SFX</Language>
+											<AudioFile>NPC\Enemy\Enemy Actions\Enemy Action Damage\SFX_Enemy_Action_Damage_Impact_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="5400051"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Enemy_Action_Damage_Impact_01" ID="{17AE9314-E73E-43CE-885A-2C42869A5BC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

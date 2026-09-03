@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4CF56203-582D-40C5-AD54-B0C37B9D1FA0}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="VO" ID="{4CF56203-582D-40C5-AD54-B0C37B9D1FA0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Conversation" ID="{9C387277-A67B-4010-9315-949A1099971E}">
+					<ChildrenList>
+						<Action Name="" ID="{6822D3B9-5C02-4B02-AE0C-0E7786A191E1}" ShortID="595603970">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOConversationController" ID="{B4A416B5-BFCF-48F1-88A3-35D40C662B6F}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VO_Random" ID="{AFBC8B0D-C6BF-44BF-A815-E0BBEA673C2E}">
+					<ChildrenList>
+						<Action Name="" ID="{D85FB85F-07D3-4B2C-8E73-C6E7B30D5E8E}" ShortID="1071278612">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VODirrected" ID="{566955EF-3BD1-4129-9865-6FCDDBC3E806}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

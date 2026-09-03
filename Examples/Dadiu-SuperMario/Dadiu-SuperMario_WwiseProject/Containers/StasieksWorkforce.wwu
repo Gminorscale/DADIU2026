@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4A320011-7EC3-47E9-87C5-BA82D1EC8D00}" SchemaVersion="133" RootDocumentID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}" ParentDocumentID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}">
 	<Containers>
-		<WorkUnit Name="StasieksWorkforce" ID="{4A320011-7EC3-47E9-87C5-BA82D1EC8D00}" OwnerID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}" PersistMode="Nested"/>
+		<WorkUnit Name="StasieksWorkforce" ID="{4A320011-7EC3-47E9-87C5-BA82D1EC8D00}" OwnerID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="New Virtual Folder" ID="{2599D421-CA1D-4800-8C2F-59DFEA981014}" ShortID="1029034267"/>
+				<BlendContainer Name="New Blend Container" ID="{EBF061AD-8C4B-4B3C-972A-285DC3F1AB1A}" ShortID="428507744">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+						</Reference>
+					</ReferenceList>
+				</BlendContainer>
+				<WorkUnit Name="EnemyAction" ID="{F088B2D9-4A47-4DCF-AA0D-6CDFE53EAF29}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E25C1220-7975-473D-9FC7-F35A774E8107}" SchemaVersion="133" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<Containers>
+		<WorkUnit Name="WorldPressurePlate" ID="{E25C1220-7975-473D-9FC7-F35A774E8107}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="WorldPressurePlateStop" ID="{BF0F79B1-D261-4A4D-9DE5-D9CB4A668C5D}" ShortID="749274460">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_World_PressurePlate_Stop_03_LP" ID="{1A5169F1-DEE9-4E1D-BF50-EF379F2CA6BA}" ShortID="29828342">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_PressurePlate_Stop_03_LP" ID="{02D264CB-D685-458D-AB59-8DA1B1C88EF2}">
+									<Language>SFX</Language>
+									<AudioFile>World\World PressurePlate\SFX_World_PressurePlate_Stop_03_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="148867198"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_PressurePlate_Stop_03_LP" ID="{02D264CB-D685-458D-AB59-8DA1B1C88EF2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_World_PressurePlate_Stop_02_LP" ID="{687AD66A-3995-4D0E-9079-5EC896DA62EB}" ShortID="881719751">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_PressurePlate_Stop_02_LP" ID="{6195B70B-FDC4-4867-9C3C-D37CF16FCDB6}">
+									<Language>SFX</Language>
+									<AudioFile>World\World PressurePlate\SFX_World_PressurePlate_Stop_02_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="452646857"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_PressurePlate_Stop_02_LP" ID="{6195B70B-FDC4-4867-9C3C-D37CF16FCDB6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_World_PressurePlate_Stop_01_LP" ID="{DA46A9A4-8552-48EC-AFD3-2AE5B4330D62}" ShortID="226624613">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_PressurePlate_Stop_01_LP" ID="{0C7494D7-3227-43F5-9DCE-712BEBF0BF26}">
+									<Language>SFX</Language>
+									<AudioFile>World\World PressurePlate\SFX_World_PressurePlate_Stop_01_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="426242560"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_PressurePlate_Stop_01_LP" ID="{0C7494D7-3227-43F5-9DCE-712BEBF0BF26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="SFX_World_PressurePlate_Move_LP" ID="{E3C95FCA-61E5-4C0C-BF62-7487EF951D9C}" ShortID="795879951">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_World_PressurePlate_Move_LP" ID="{D0DFFA0F-CDE1-4F93-82E8-9C78F58106C8}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0.314245810055866"/>
+								<Property Name="LoopEnd" Type="Real64" Value="7.14385474860335"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>World\World PressurePlate\SFX_World_PressurePlate_Move_LP.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="976757816"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_World_PressurePlate_Move_LP" ID="{D0DFFA0F-CDE1-4F93-82E8-9C78F58106C8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

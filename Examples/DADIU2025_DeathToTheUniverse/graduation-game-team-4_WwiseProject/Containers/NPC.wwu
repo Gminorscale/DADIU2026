@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="NPC" ID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="NPCEnemy" ID="{4ACDD30D-2139-4C94-934D-755FD559AC54}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

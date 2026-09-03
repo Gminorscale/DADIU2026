@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FEBD8C42-8CC0-4D3E-9478-8C0A28D9F3A4}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{FEBD8C42-8CC0-4D3E-9478-8C0A28D9F3A4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="MX_Space2_Intro_130bpm_0_8_4" ID="{857B007B-8261-4BB4-96D4-B5E9C220063B}" ShortID="593117377">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MX_Space2_Intro_130bpm_0_8_4" ID="{B1B4BFD8-C402-445B-83AF-6A4478040623}">
+							<Language>SFX</Language>
+							<AudioFile>Music\Space\MX_Space2_Intro_130bpm_0_8_4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="620438551"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="MX_Space2_Intro_130bpm_0_8_4" ID="{B1B4BFD8-C402-445B-83AF-6A4478040623}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

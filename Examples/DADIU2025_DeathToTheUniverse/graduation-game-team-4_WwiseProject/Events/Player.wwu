@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}" SchemaVersion="133">
 	<Events>
 		<WorkUnit Name="Player" ID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}" PersistMode="Standalone">
 			<ChildrenList>

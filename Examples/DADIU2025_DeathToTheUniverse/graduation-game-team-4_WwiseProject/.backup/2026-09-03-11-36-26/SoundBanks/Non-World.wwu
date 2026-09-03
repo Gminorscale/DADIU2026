@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" SchemaVersion="123" RootDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" ParentDocumentID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}">
+	<SoundBanks>
+		<WorkUnit Name="Non-World" ID="{AA7B6815-ADAA-49CB-A1F7-BD393BCE28C3}" OwnerID="{F58BBFC1-9855-4854-A58A-5B9C215AB7E8}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="UIBank" ID="{4B47EB45-8AE2-4315-BBE5-B78CDC132C62}">
+					<ObjectInclusionList>
+						<ObjectRef Name="UI" ID="{21223861-C856-4AF6-BA58-F486C161C360}" WorkUnitID="{21223861-C856-4AF6-BA58-F486C161C360}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="DEBUG" ID="{93BD7252-92F9-44B7-B459-E6472AA6C697}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Debug" ID="{9527D1BD-E1D8-4E80-8F50-4D4CF1E76B3C}" WorkUnitID="{9527D1BD-E1D8-4E80-8F50-4D4CF1E76B3C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="CutsceneBank" ID="{50689E0F-1611-45D7-9653-CE9688FFF195}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Cutscene" ID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}" WorkUnitID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Other" ID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}" WorkUnitID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="MusicBank" ID="{45B71E40-11FF-49B0-B308-35D3C5FD8689}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Music" ID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}" WorkUnitID="{64EEB56A-C445-49C9-AB21-F18B0DBDA019}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

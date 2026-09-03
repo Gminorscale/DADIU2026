@@ -3,8 +3,9 @@
 	<Containers>
 		<WorkUnit Name="Locomotion" ID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="Mads Martinussen Personal Work Unit for him to work in personally" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" PersistMode="Reference"/>
 				<WorkUnit Name="Christoffer's Personal work unit" ID="{57C337E0-B882-4105-A1D7-CAA8AFDBAE3A}" PersistMode="Reference"/>
+				<WorkUnit Name="Mads Martinussen Personal Work Unit for him to work in personally" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" PersistMode="Reference"/>
+				<WorkUnit Name="Stasiek's movement unit" ID="{8F49F6FE-027D-411A-A089-EA438571D57E}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

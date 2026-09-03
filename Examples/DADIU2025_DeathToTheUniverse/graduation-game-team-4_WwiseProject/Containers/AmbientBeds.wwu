@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FB3988F1-1B09-43FE-99D0-FA8ADD8749A3}" SchemaVersion="133" RootDocumentID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" ParentDocumentID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}">
+	<Containers>
+		<WorkUnit Name="AmbientBeds" ID="{FB3988F1-1B09-43FE-99D0-FA8ADD8749A3}" OwnerID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="AmbientRegion" ID="{8A729C01-EEF3-478F-9B1C-47D954C4B9C9}" ShortID="587728109">
+					<PropertyList>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Outdoor" ID="{E18EBAC8-61B8-4E32-8C86-C31D7FE91388}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="RoomState" ID="{FE36192E-6330-4DFA-89FE-65FBF54D0D54}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="AmbientRegionOutside" ID="{5F700EED-4895-4496-988E-60144D206E48}" ShortID="701177478">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="AreaState" ID="{3F306294-E41F-4E90-BF5C-897E6D94294B}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="AmbientRegionOutsideWind" ID="{E1ABB11D-5C9D-4DF8-8E64-0266BB5694C2}" ShortID="830830613">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="AmbienceRegionOutsideWind" ID="{A8EC284C-E281-4F5B-B6F3-DAB2D69D602C}" ShortID="964308634">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="AMB_Region_Outside_04" ID="{7ABEE6CF-9FF2-42C6-B869-D19D857AE79D}" ShortID="464790847">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_04" ID="{D04D810E-659C-48DC-86E7-257FFCDDD86A}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.829608938547486"/>
+																<Property Name="LoopEnd" Type="Real64" Value="31.5251396648045"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="84920430"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_04" ID="{D04D810E-659C-48DC-86E7-257FFCDDD86A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_03" ID="{BE0A6934-D1E1-44D2-BA6A-85B90905B221}" ShortID="189425453">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_03" ID="{EEFE5BB5-351E-41FE-B2F9-92550C30679C}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.731292481378026"/>
+																<Property Name="LoopEnd" Type="Real64" Value="25.2295906075419"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="650974690"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_03" ID="{EEFE5BB5-351E-41FE-B2F9-92550C30679C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_02" ID="{3B51185E-7F14-4B51-B9C8-17703BC2B68B}" ShortID="30292962">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_02" ID="{5A1BAE68-34E6-4BE6-9C9F-D33940A982D9}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="1.78113634776536"/>
+																<Property Name="LoopEnd" Type="Real64" Value="69.4643175628492"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="800735149"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_02" ID="{5A1BAE68-34E6-4BE6-9C9F-D33940A982D9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_01" ID="{FE0F799A-5DB9-4E7E-B12F-37A82914F072}" ShortID="661633333">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_01" ID="{60C3C720-D708-4706-84B0-272F9A0FA705}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="4.1270863594041"/>
+																<Property Name="LoopEnd" Type="Real64" Value="84.4838854748603"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1068197238"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_01" ID="{60C3C720-D708-4706-84B0-272F9A0FA705}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="AmbientRegionVoid" ID="{4C269276-454C-45AA-A6F5-A33F5C36BEDF}" ShortID="314720655">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AMB_Region_Void_LP_02" ID="{A4CF9C1C-640A-4B39-8C81-E91D149E686A}" ShortID="419321835">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-14</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_Region_Void_LP_02" ID="{7B04C472-E492-477A-8803-55F992CC843A}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.983240223463687"/>
+														<Property Name="LoopEnd" Type="Real64" Value="31.195530726257"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Ambience\Ambient Region\Ambient Region Void\AMB_Region_Void_LP_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="561604301"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_Region_Void_LP_02" ID="{7B04C472-E492-477A-8803-55F992CC843A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AMB_Region_Void_LP_01" ID="{99FA0FC8-04DC-459A-9A14-C8E117278679}" ShortID="625677367">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AMB_Region_Void_LP_01" ID="{1FC5B0BF-9E2A-47EE-8286-04B8145DEFAA}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="150"/>
+														<Property Name="LoopBegin" Type="Real64" Value="5.72625698324022"/>
+														<Property Name="LoopEnd" Type="Real64" Value="40.5418994413408"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Ambience\Ambient Region\Ambient Region Void\AMB_Region_Void_LP_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="136732200"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AMB_Region_Void_LP_01" ID="{1FC5B0BF-9E2A-47EE-8286-04B8145DEFAA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<BlendContainer Name="AmbienceRegionOutsideWind" ID="{4EE29DFD-4F97-4476-8256-BAEB77ADBF23}" ShortID="610166648">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="AMB_Region_Outside_04" ID="{29A3F16E-B8CC-4492-B24C-A6DFD7356876}" ShortID="1045103837">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_04" ID="{46AD01DE-C32C-4310-9C93-3E79B11DE758}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.829608938547486"/>
+																<Property Name="LoopEnd" Type="Real64" Value="31.5251396648045"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="84920430"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_04" ID="{46AD01DE-C32C-4310-9C93-3E79B11DE758}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_03" ID="{09191DE2-36AF-4A9F-9501-71DEF052CE5B}" ShortID="671166004">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_03" ID="{BA9724C1-1BF8-4F45-928A-CA69FEDF871E}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.731292481378026"/>
+																<Property Name="LoopEnd" Type="Real64" Value="25.2295906075419"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="650974690"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_03" ID="{BA9724C1-1BF8-4F45-928A-CA69FEDF871E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_02" ID="{3D0ADAF4-AC19-45FE-B117-6F3945F2A60A}" ShortID="408964689">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_02" ID="{10125CA7-782A-413F-A8CC-F4A40DCFD0A1}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="1.78113634776536"/>
+																<Property Name="LoopEnd" Type="Real64" Value="69.4643175628492"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="800735149"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_02" ID="{10125CA7-782A-413F-A8CC-F4A40DCFD0A1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_01" ID="{7D22B936-9E48-40F5-9933-665023C772E7}" ShortID="717032169">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_01" ID="{2B86E385-AB93-4038-8B7F-70CB374A7CEA}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="4.1270863594041"/>
+																<Property Name="LoopEnd" Type="Real64" Value="84.4838854748603"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1068197238"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_01" ID="{2B86E385-AB93-4038-8B7F-70CB374A7CEA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="AmbientRegionOutsideWind" ID="{E1ABB11D-5C9D-4DF8-8E64-0266BB5694C2}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>5</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>5</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="AmbientRegionVoid" ID="{4C269276-454C-45AA-A6F5-A33F5C36BEDF}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>5</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>5</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}"/>
+										<ItemList>
+											<ItemRef Name="AmbientRegionOutsideWind" ID="{E1ABB11D-5C9D-4DF8-8E64-0266BB5694C2}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Void" ID="{A233A16A-E881-4DE2-A8A7-F0F8C1A1980E}"/>
+										<ItemList>
+											<ItemRef Name="AmbientRegionVoid" ID="{4C269276-454C-45AA-A6F5-A33F5C36BEDF}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="AmbientRegionInside" ID="{C0AC6358-A758-43CE-84C6-E0C7E20A2B93}" ShortID="297893823">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="AreaState" ID="{3F306294-E41F-4E90-BF5C-897E6D94294B}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="AmbientRegionInsideWind" ID="{2CC90DAF-9A0C-4907-B850-4544B79BDB1D}" ShortID="351528435">
+									<PropertyList>
+										<Property Name="BlendBehavior" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="2DAmbience" ID="{4C3C4D8A-62FF-4CCF-8E0F-5D32ACA5B05A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="AmbienceRegionOutsideWind" ID="{0231D0B4-60B5-47BC-984C-B37A52AD272C}" ShortID="731342944">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>60</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-14</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="AMB_Region_Outside_04" ID="{87F3E9DB-6D32-43D5-BBAB-50040C3201A4}" ShortID="6529351">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_04" ID="{E12E23AF-D1CC-4277-8E6B-3F46D3CC2E74}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.276536312849162"/>
+																<Property Name="LoopEnd" Type="Real64" Value="32.354748603352"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="745223333"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_04" ID="{E12E23AF-D1CC-4277-8E6B-3F46D3CC2E74}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_03" ID="{79B500E5-5101-4AFB-A88F-8623758FFDBE}" ShortID="122037246">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_03" ID="{4B03E081-C82A-49F8-A663-EF62BD88A1AA}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.585033985102421"/>
+																<Property Name="LoopEnd" Type="Real64" Value="25.5221076000931"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="877273483"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_03" ID="{4B03E081-C82A-49F8-A663-EF62BD88A1AA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_02" ID="{409FE136-BA25-43DE-A324-F5A50247E932}" ShortID="761551428">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_02" ID="{5BEF5BA9-B747-40FE-B3E0-BCADFA8BD517}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="1.38532827048417"/>
+																<Property Name="LoopEnd" Type="Real64" Value="68.2768933310056"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="118170736"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_02" ID="{5BEF5BA9-B747-40FE-B3E0-BCADFA8BD517}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Region_Outside_01" ID="{11EAF00B-DCB9-49D8-BDCE-5A0067A761F7}" ShortID="582402894">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Region_Outside_01" ID="{76B5C101-EBC7-407A-90E0-2D3FA825C029}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="50"/>
+																<Property Name="LoopBegin" Type="Real64" Value="2.427697858473"/>
+																<Property Name="LoopEnd" Type="Real64" Value="84.241115689013"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ambience\Ambient Region\Ambient Region Outside\AMB_Region_Outside_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="845373066"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Region_Outside_01" ID="{76B5C101-EBC7-407A-90E0-2D3FA825C029}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="AmbientRegionInsideWind" ID="{2CC90DAF-9A0C-4907-B850-4544B79BDB1D}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}"/>
+										<ItemList>
+											<ItemRef Name="AmbientRegionInsideWind" ID="{2CC90DAF-9A0C-4907-B850-4544B79BDB1D}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="AreaState" ID="{3F306294-E41F-4E90-BF5C-897E6D94294B}"/>
+							<StateGroupInfo Name="" ID="{DDB5EA97-B170-4719-B6EE-892DA963CE45}"/></StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="RoomState" ID="{FE36192E-6330-4DFA-89FE-65FBF54D0D54}"/>
+							<StateGroupInfo Name="" ID="{A3408A50-60A0-46C4-AEB4-5FFE4026D5EE}"/></StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="SemiIndoor" ID="{CF00A765-5492-4086-B50F-995B71BEF42B}"/>
+								<CustomState Name="" ID="{83D74A00-2A65-478A-8B15-7DA1DC001ECE}" ShortID="852983943">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="38"/>
+										<Property Name="Volume" Type="Real64" Value="-9"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}"/>
+								<CustomState Name="" ID="{A0BB2E13-7AE8-465B-B213-C8EFF225450B}" ShortID="286439556"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{BD3BF86F-D583-42F3-BD22-CEB85778E232}"/>
+								<CustomState Name="" ID="{D3736FD1-76DF-45F8-B78A-13E1843C8516}" ShortID="941006339"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="House" ID="{A364CDE8-83ED-43A6-B2C4-76075F85960A}"/>
+								<CustomState Name="" ID="{CCFA4ED3-C2FE-404C-9D96-BDFDAA90D806}" ShortID="575451932"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Indoor" ID="{1C9265E6-3F27-4639-8648-F4E7CA4C997A}"/>
+								<CustomState Name="" ID="{B9D0FEBE-2F6B-43A4-80B7-E06511DE7083}" ShortID="833655545"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Void" ID="{A233A16A-E881-4DE2-A8A7-F0F8C1A1980E}"/>
+								<CustomState Name="" ID="{3BA29EE9-5879-402A-8B63-22BF3A4FE704}" ShortID="121138186"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Outdoor" ID="{E18EBAC8-61B8-4E32-8C86-C31D7FE91388}"/>
+								<CustomState Name="" ID="{1EF7E6CD-AF16-4A61-8C78-ED904A3ED704}" ShortID="688073847"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Cave" ID="{E8C4DE23-1AA4-4E60-B294-CCE9A4243212}"/>
+								<CustomState Name="" ID="{C1479E6D-E16A-4F4B-8C55-39C861704671}" ShortID="250277600"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{BD148324-CD4B-4EBD-8406-7BE8C79ACC4F}"/>
+								<CustomState Name="" ID="{0F68E65E-7EC1-49D3-967F-A91CA938DD34}" ShortID="170183318"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="AmbientRegionInside" ID="{C0AC6358-A758-43CE-84C6-E0C7E20A2B93}"/>
+								<PropertyList>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AmbientRegionOutside" ID="{5F700EED-4895-4496-988E-60144D206E48}"/>
+								<PropertyList>
+									<Property Name="FadeInTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="FadeOutTime" Type="Real64">
+										<ValueList>
+											<Value>2.5</Value>
+										</ValueList>
+									</Property>
+								</PropertyList>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="SemiIndoor" ID="{CF00A765-5492-4086-B50F-995B71BEF42B}"/>
+								<ItemList>
+									<ItemRef Name="AmbientRegionOutside" ID="{5F700EED-4895-4496-988E-60144D206E48}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Outdoor" ID="{E18EBAC8-61B8-4E32-8C86-C31D7FE91388}"/>
+								<ItemList>
+									<ItemRef Name="AmbientRegionOutside" ID="{5F700EED-4895-4496-988E-60144D206E48}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Indoor" ID="{1C9265E6-3F27-4639-8648-F4E7CA4C997A}"/>
+								<ItemList>
+									<ItemRef Name="AmbientRegionInside" ID="{C0AC6358-A758-43CE-84C6-E0C7E20A2B93}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

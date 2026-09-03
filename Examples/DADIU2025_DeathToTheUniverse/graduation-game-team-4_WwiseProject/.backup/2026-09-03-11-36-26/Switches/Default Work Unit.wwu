@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{2DBB5C15-05A3-4F53-95D0-C53268D2D4C1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="PlayerSpeedSwitch" ID="{EDD04000-7766-4661-84C9-CFE4A4A58815}">
+					<ChildrenList>
+						<Switch Name="Walking" ID="{E907879B-B4E8-4CF5-B8A0-4E291490AC4B}"/>
+						<Switch Name="Sprinting" ID="{3F650AAB-92C2-493B-8C4A-9A8DCB987C27}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="GroundMaterialSwitch" ID="{B75473CF-D7B3-46BB-AAD6-75F85441DBC3}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Stone" ID="{C2298416-896C-45C4-B4DC-26E94C0AE749}"/>
+						<Switch Name="Dirt" ID="{366AF20B-6697-4C37-887B-FF103FA0081F}"/>
+						<Switch Name="Sand" ID="{8089C522-33CA-4287-B2FF-956778BE8F4D}"/>
+						<Switch Name="Wood" ID="{F03F1F48-2BEA-4ACC-8B44-35BDCE04DC52}"/>
+						<Switch Name="Metal" ID="{D8B6EC67-59FA-4A42-86E5-73A1B5F39129}"/>
+						<Switch Name="Grass" ID="{F8CF8663-0095-4044-ABEC-278018A11BF2}"/>
+						<Switch Name="Void" ID="{F3FCBF30-95DD-4948-B797-24B10731CEAE}"/>
+						<Switch Name="Enemy" ID="{104FA5A7-0C62-4FE9-8133-BF69BFB808DB}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_GroundMaterial" ID="{7607A3A8-11E6-4E31-9677-CD431027D73C}"/>
+						<Curve Name="" ID="{B6998484-5925-4ADF-A813-210FB83E9999}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>7</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>8</XPos>
+									<YPos>8</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerHealthSwitch" ID="{5DFEFF61-1DDF-4948-AC86-FF27E2243C3F}">
+					<ChildrenList>
+						<Switch Name="LowHealth" ID="{59251E88-8F55-48C5-9BA7-EB6C54A770A1}"/>
+						<Switch Name="MediumHealth" ID="{28E242B8-9C1A-401F-8D2E-11D654B74F87}"/>
+						<Switch Name="FullHealth" ID="{B14B88EE-66D3-4745-BD05-5BF400BF85BF}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="ObjectMaterialSwitch" ID="{802FFA17-C1DD-412B-BF1E-4731A76171AE}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{99FD3A8F-4E59-42F2-AC60-942383241078}"/>
+						<Switch Name="Enemy" ID="{4DF3A342-93F5-462F-9B73-FAC8D6B38168}"/>
+						<Switch Name="Grass" ID="{170EB0F3-0A3E-4A4B-B62A-CC67F806016E}"/>
+						<Switch Name="Metal" ID="{F0DF865B-B9F7-491E-83A5-EEA940B38C98}"/>
+						<Switch Name="Sand" ID="{853E71CB-252D-41CA-A69F-D73F2BA04FA0}"/>
+						<Switch Name="Stone" ID="{2C1B32E0-3756-43B8-9F9D-48A30E9769C4}"/>
+						<Switch Name="Void" ID="{DD1D9571-2CA7-4DA2-A316-A8CC8AD6C80C}"/>
+						<Switch Name="Wood" ID="{E0EBD36A-5913-4F3E-9A9F-75DEF70807B0}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_ObjectMaterial" ID="{23B1979B-E94A-43CF-BECF-81341952FCAC}"/>
+						<Curve Name="" ID="{1A4DABC6-551E-49D7-8AC3-FA1C77B4CD55}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>7</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>8</XPos>
+									<YPos>8</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="MusicControllerSwitch" ID="{C591782A-0968-4ADC-A0A2-ECAA8037EB6B}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="IntroNotLanded" ID="{2E645551-0F10-4FDB-8B38-094605038B94}"/>
+						<Switch Name="IntroHasLanded" ID="{76AB7A21-54FC-49B4-9067-3973E55A2E5B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

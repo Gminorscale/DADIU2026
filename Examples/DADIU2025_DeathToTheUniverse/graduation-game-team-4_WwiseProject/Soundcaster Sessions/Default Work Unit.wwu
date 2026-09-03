@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{E8FD3BA0-2773-4FD9-9922-1B818145C415}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{E8FD3BA0-2773-4FD9-9922-1B818145C415}" SchemaVersion="133">
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{E8FD3BA0-2773-4FD9-9922-1B818145C415}" PersistMode="Standalone">
 			<ChildrenList>
@@ -18,9 +18,6 @@
 							<Position X="1" Y="2"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Ambience and Music" ID="{BE924701-0E17-45BE-A74D-D76B330B60E0}">
 					<ModuleList>
@@ -41,9 +38,6 @@
 							<Position X="2" Y="3"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Levitation" ID="{DBE7DEF7-C155-4056-B532-8A314F440B72}">
 					<ModuleList>
@@ -56,9 +50,6 @@
 							<Position X="1" Y="1"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Everything" ID="{53D56BDB-E8A5-497D-9225-4E7E99ABF3C5}">
 					<ModuleList>
@@ -191,9 +182,6 @@
 							<Position X="4" Y="6"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Enemies" ID="{5BC6426C-816D-428A-9165-2484239231A8}">
 					<ModuleList>
@@ -242,9 +230,6 @@
 							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

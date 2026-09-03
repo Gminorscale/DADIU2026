@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BF534D5B-9095-48BC-9BAC-C876F75122BD}" SchemaVersion="123">
+	<MixingSessions>
+		<WorkUnit Name="Default Work Unit" ID="{BF534D5B-9095-48BC-9BAC-C876F75122BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="First Mix" ID="{B90B2947-69FD-4CAC-B8D6-95445639992F}">
+					<ObjectList>
+						<ObjectRef Name="Tension" ID="{A05A989E-F26E-47D4-9C50-3E715B8EA431}" WorkUnitID="{A25371DC-84E5-45B1-B9F8-177474AE6421}"/>
+						<ObjectRef Name="PLYR_Footsteps_MaterialSwitch" ID="{0B938D68-BBAF-4390-80D7-2ADF1809F3B1}" WorkUnitID="{00E9E24D-EC6B-48B5-A6BC-92847482142A}"/>
+						<ObjectRef Name="PlayerAcitonLevitationStart" ID="{32287263-7732-4D14-AF17-24AA3E8C365A}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+						<ObjectRef Name="PlayerActionLevitationHold" ID="{DD38837E-F798-4FFE-A7F7-12D1BC436A1E}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+						<ObjectRef Name="PlayerActionLevitationRelease" ID="{2F566BD6-F169-4DDF-9B12-3BE0B2B3DDAF}" WorkUnitID="{EEE9A422-2C95-4A4A-A0C7-5737B8AE3CE4}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
+	</MixingSessions>
+</WwiseDocument>

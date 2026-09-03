@@ -4,6 +4,8 @@
 		<WorkUnit Name="Locomotion" ID="{46D76C51-1092-4215-BD16-21404CB9997C}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="MarioFootSteps" ID="{084E24E6-93CC-4995-ABD8-B9A88CC83A7C}"/>
+				<Event Name="MarioJumps" ID="{69798F06-0E5F-47B6-B4D1-C47B55333382}"/>
+				<Event Name="MarioLands" ID="{39125EE3-2EC4-4F69-8064-FAD70E1B6329}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
