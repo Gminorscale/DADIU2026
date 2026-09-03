@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Locomotion" ID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Standalone"/>
+		<WorkUnit Name="Locomotion" ID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Mads Martinussen Personal Work Unit for him to work in personally" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>
