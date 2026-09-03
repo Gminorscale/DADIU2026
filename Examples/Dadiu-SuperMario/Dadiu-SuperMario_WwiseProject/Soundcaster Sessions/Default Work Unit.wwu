@@ -15,6 +15,14 @@
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Music" ID="{AA90B84B-3C40-4671-BD99-23B412A24307}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="MUS_LevelCompletion" ID="{3E32F475-58B3-4045-B4CA-F3377EACF6EF}" WorkUnitID="{9BDEA0A9-232E-4A08-9B93-7EF7294189F4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>
