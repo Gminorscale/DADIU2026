@@ -11,7 +11,6 @@ public class Mario : MonoBehaviour {
 
 
 	//Wwise Events
-	public AK.Wwise.RTPC MarioSpeed;
 	public AK.Wwise.Event InAirSound;
 
 	private LevelManager t_LevelManager;
@@ -131,10 +130,7 @@ public class Mario : MonoBehaviour {
 
 
 	void FixedUpdate () {
-		{
-			MarioSpeed.SetValue(LevelManager, currentSpeedX);
-			//Debug.Log(currentSpeedX);
-		}
+		// currentSpeedX is published as RTPC_MarioSpeed by LevelManager.PublishAudioState().
 		/******** Horizontal movement on ground */
 		if (isGrounded) {
 			// If holding directional button, accelerate until reach max walk speed

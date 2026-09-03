@@ -127,6 +127,7 @@ public class LevelManager : MonoBehaviour {
 	public AK.Wwise.Switch swMarioSmall;       // Mario size, applied before the jump Event
 	public AK.Wwise.Switch swMarioSuper;
 	public AK.Wwise.Switch swMarioFire;
+	public AK.Wwise.Switch swSurfaceDefault;   // surface used when the thing landed on has no SoundMaterial
 	public AK.Wwise.Switch swDefeatStomp;      // how an enemy died, applied before the defeat Event
 	public AK.Wwise.Switch swDefeatShell;
 	public AK.Wwise.Switch swDefeatFireball;
@@ -145,6 +146,7 @@ public class LevelManager : MonoBehaviour {
 
 	[Header ("Wwise RTPC - continuous game state")]
 	public AK.Wwise.RTPC RTPC_LevelProgress;   // 0-100 across the level, left edge to right
+	public AK.Wwise.RTPC RTPC_MarioSpeed;      // horizontal speed, 0 standing to 9.61 dashing
 	public AK.Wwise.RTPC RTPC_FallSpeed;       // downward speed at the moment of landing
 	public AK.Wwise.RTPC RTPC_Height;          // Mario's height above the level floor
 	public AK.Wwise.RTPC RTPC_Coins;           // 0-99, resets on the 1-up
@@ -830,6 +832,10 @@ public class LevelManager : MonoBehaviour {
 			RTPC_LevelProgress.SetValue (gameObject, progress * 100f);
 		}
 
+		// Horizontal speed, published raw so the Wwise RTPC range lines up with Mario's own
+		// numbers: 0 standing, 5.86 walking flat out, 9.61 dashing.
+		RTPC_MarioSpeed.SetValue (gameObject, mario.currentSpeedX);
+
 		// How high up he is, normalised so a level designer can retune it in the Inspector.
 		RTPC_Height.SetValue (gameObject, Mathf.Clamp01 (mario.transform.position.y / maxHeight) * 100f);
 
@@ -928,7 +934,7 @@ public class LevelManager : MonoBehaviour {
 		RTPC_StompChain.SetValue (gameObject, stompChain);
 		RTPC_FallSpeed.SetValue (gameObject,
 			Mathf.Clamp01 (Mathf.Abs (fallSpeed) / maxFallSpeed) * 100f);
-		SoundMaterial.ApplyFrom (groundHit, gameObject);
+		SoundMaterial.ApplyFrom (groundHit, gameObject, swSurfaceDefault);
 		landSound.Post (gameObject);
 	}
 

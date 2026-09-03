@@ -9,9 +9,8 @@ using UnityEngine;
  * instead of needing one Event per material.
  *
  * This is the Switch lesson in miniature: the Event stays the same, the Switch decides
- * which sound comes out. Leave it off a prefab and the Switch simply isn't changed, so
- * the surface keeps whatever value was last set - give the Switch group a sensible
- * default in Wwise.
+ * which sound comes out. Leave it off a prefab and the Level Manager's swSurfaceDefault
+ * is used instead, so an un-tagged surface still lands on a deliberate sound.
  */
 public class SoundMaterial : MonoBehaviour {
 	public AK.Wwise.Switch surface;
@@ -21,14 +20,19 @@ public class SoundMaterial : MonoBehaviour {
 	}
 
 	/* Convenience for callers that have a collider rather than the object itself - the
-	 * component is usually on the prefab root while the collider is on a child. */
-	public static void ApplyFrom(Component hit, GameObject audioGameObject) {
-		if (hit == null) {
-			return;
-		}
-		SoundMaterial material = hit.GetComponentInParent<SoundMaterial> ();
+	 * component is usually on the prefab root while the collider is on a child.
+	 *
+	 * fallback is used when the thing hit carries no SoundMaterial, so an un-tagged
+	 * prefab lands on a known surface instead of silently reusing the last one set. */
+	public static void ApplyFrom(Component hit, GameObject audioGameObject,
+		AK.Wwise.Switch fallback = null) {
+		SoundMaterial material = hit != null
+			? hit.GetComponentInParent<SoundMaterial> ()
+			: null;
 		if (material != null) {
 			material.ApplyTo (audioGameObject);
+		} else if (fallback != null && fallback.IsValid ()) {
+			fallback.SetValue (audioGameObject);
 		}
 	}
 }
