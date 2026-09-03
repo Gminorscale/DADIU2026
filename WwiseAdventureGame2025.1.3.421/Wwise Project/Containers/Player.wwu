@@ -235,6 +235,9 @@ or modified for a commercial purpose nor for public demonstration.</Comment>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1130</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{CBA76E88-301B-4886-9538-F708696DAABC}">

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="CharacterSounds" ID="{9F906DCD-CB5C-466D-99EA-3F467947C2CB}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="StasieksWorkforce" ID="{4A320011-7EC3-47E9-87C5-BA82D1EC8D00}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

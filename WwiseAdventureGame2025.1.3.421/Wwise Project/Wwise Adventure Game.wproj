@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.3" WwiseBuild="9039">
+<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.10" WwiseBuild="9233">
 	<ProjectInfo>
 		<Project Name="Wwise Adventure Game" ID="{0405FE9F-22D5-41EF-B245-E5DC92910373}">
 			<Platforms>
@@ -197,11 +197,6 @@
 						<Property Name="OverrideWavLoop" Type="bool">
 							<ValueList>
 								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:FileIDForAudioSource" Type="string">
-							<ValueList>
-								<Value></Value>
 							</ValueList>
 						</Property>
 						<Property Name="TrimBegin" Type="Real64">
@@ -698,76 +693,6 @@
 						<Property Name="ReflectionsVolume" Type="Real64">
 							<ValueList>
 								<Value>0</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:ActiveChannels" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:FileID" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:FileName" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:HandleStartTime" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:HandleStopTime" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:LibraryID" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:LibraryLocation" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:PlaybackSpeed" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:ProcessList" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:RenderedFileBitRate" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:RenderedFilePath" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:RenderedFileSampleRate" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:SelectionStartTime" Type="string">
-							<ValueList>
-								<Value></Value>
-							</ValueList>
-						</Property>
-						<Property Name="Soundly:SelectionStopTime" Type="string">
-							<ValueList>
-								<Value></Value>
 							</ValueList>
 						</Property>
 						<Property Name="SpeakerPanning" Type="int16">
@@ -15143,6 +15068,16 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableHPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="HPF" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -15163,7 +15098,7 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="SidechainScope" Type="int32">
+						<Property Name="SidechainScope" Type="int16">
 							<ValueList>
 								<Value>0</Value>
 							</ValueList>
@@ -15182,6 +15117,16 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
+						<Property Name="EnableHPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="HPF" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -15202,7 +15147,51 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="SidechainScope" Type="int32">
+						<Property Name="SidechainScope" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Ak Sidechain Source" PluginType="2" CompanyID="0" PluginID="195">
+					<PropertyList>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableHPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableLPF" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="HPF" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="LPF" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SidechainScope" Type="int16">
 							<ValueList>
 								<Value>0</Value>
 							</ValueList>
