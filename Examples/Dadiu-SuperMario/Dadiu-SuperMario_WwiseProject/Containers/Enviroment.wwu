@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EFFB5463-472F-45D9-9279-52FD64F1D15C}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Enviroment" ID="{EFFB5463-472F-45D9-9279-52FD64F1D15C}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Ambience" ID="{8AA0AA1D-2B0F-4136-B52E-021F873427B1}" PersistMode="Reference"/>
+				<WorkUnit Name="EnviromentSFX" ID="{DC307229-877C-401D-9753-FFA8BE439EF0}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

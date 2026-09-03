@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{57C337E0-B882-4105-A1D7-CAA8AFDBAE3A}" SchemaVersion="133" RootDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" ParentDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}">
+	<Containers>
+		<WorkUnit Name="Christoffer's Personal work unit" ID="{57C337E0-B882-4105-A1D7-CAA8AFDBAE3A}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="TestContainer" ID="{72707E7C-C20E-490E-B52F-E19A3CB5BC01}" ShortID="414264962">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
