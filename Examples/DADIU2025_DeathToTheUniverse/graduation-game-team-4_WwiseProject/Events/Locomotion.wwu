@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}" SchemaVersion="133">
 	<Events>
 		<WorkUnit Name="Locomotion" ID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}" PersistMode="Standalone">
 			<ChildrenList>

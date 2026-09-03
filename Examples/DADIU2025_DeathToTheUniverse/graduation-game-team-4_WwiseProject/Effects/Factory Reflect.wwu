@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}" SchemaVersion="133">
 	<Effects>
 		<WorkUnit Name="Factory Reflect" ID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}" PersistMode="Standalone">
 			<ChildrenList>
 				<Effect Name="Reflect" ID="{37779A87-4754-4420-8175-3236FA46AA12}" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
 					<PropertyList>
-						<Property Name="CurveUsageMask" Type="Uint32">
-							<ValueList>
-								<Value>127</Value>
-							</ValueList>
-						</Property>
-						<Property Name="MaterialFilteringSelect" Type="Uint32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
+						<Property Name="CurveUsageMask" Type="Uint32" Value="511"/>
+						<Property Name="MaterialFilteringSelect" Type="Uint32" Value="1"/>
 					</PropertyList>
-					<PluginData><ReflectData>
+					<PluginData>
+	<ReflectData>
 		<CurveList Version="4">
 			<CurveInfo Name="Diffraction Attenuation">
-				<Curve Name="">
+				<Curve Name="Diffraction Attenuation">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="3"/>
 					</PropertyList>
@@ -42,8 +35,27 @@
 					</PointList>
 				</Curve>
 			</CurveInfo>
+			<CurveInfo Name="Diffraction DSF">
+				<Curve Name="Diffraction DSF">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="3"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>100</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
 			<CurveInfo Name="Diffraction HPF">
-				<Curve Name="">
+				<Curve Name="Diffraction HPF">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -62,7 +74,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Diffraction LPF">
-				<Curve Name="">
+				<Curve Name="Diffraction LPF">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -87,7 +99,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Attenuation (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Attenuation (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="3"/>
 					</PropertyList>
@@ -120,8 +132,27 @@
 					</PointList>
 				</Curve>
 			</CurveInfo>
+			<CurveInfo Name="Distance DSF">
+				<Curve Name="Distance DSF">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="3"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>1000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
 			<CurveInfo Name="Distance High-pass Filter (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance High-pass Filter (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -140,7 +171,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Low-pass Filter (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Low-pass Filter (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -159,7 +190,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Spread (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Spread (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="1"/>
 					</PropertyList>
@@ -178,20 +209,19 @@
 				</Curve>
 			</CurveInfo>
 		</CurveList>
-	</ReflectData></PluginData>
+	</ReflectData>
+</PluginData>
 				</Effect>
 				<Effect Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
 					<PropertyList>
-						<Property Name="MaterialFilteringSelect" Type="Uint32">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
+						<Property Name="CurveUsageMask" Type="Uint32" Value="384"/>
+						<Property Name="MaterialFilteringSelect" Type="Uint32" Value="1"/>
 					</PropertyList>
-					<PluginData><ReflectData>
+					<PluginData>
+	<ReflectData>
 		<CurveList Version="4">
 			<CurveInfo Name="Diffraction Attenuation">
-				<Curve Name="">
+				<Curve Name="Diffraction Attenuation">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="3"/>
 					</PropertyList>
@@ -214,8 +244,27 @@
 					</PointList>
 				</Curve>
 			</CurveInfo>
+			<CurveInfo Name="Diffraction DSF">
+				<Curve Name="Diffraction DSF">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="3"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>100</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
 			<CurveInfo Name="Diffraction HPF">
-				<Curve Name="">
+				<Curve Name="Diffraction HPF">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -234,7 +283,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Diffraction LPF">
-				<Curve Name="">
+				<Curve Name="Diffraction LPF">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -259,7 +308,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Attenuation (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Attenuation (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="3"/>
 					</PropertyList>
@@ -292,8 +341,27 @@
 					</PointList>
 				</Curve>
 			</CurveInfo>
+			<CurveInfo Name="Distance DSF">
+				<Curve Name="Distance DSF">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="3"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>1000</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
 			<CurveInfo Name="Distance High-pass Filter (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance High-pass Filter (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -312,7 +380,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Low-pass Filter (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Low-pass Filter (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="5"/>
 					</PropertyList>
@@ -331,7 +399,7 @@
 				</Curve>
 			</CurveInfo>
 			<CurveInfo Name="Distance Spread (Image Source vs. Listener)">
-				<Curve Name="">
+				<Curve Name="Distance Spread (Image Source vs. Listener)">
 					<PropertyList>
 						<Property Name="Flags" Type="int32" Value="1"/>
 					</PropertyList>
@@ -350,7 +418,8 @@
 				</Curve>
 			</CurveInfo>
 		</CurveList>
-	</ReflectData></PluginData>
+	</ReflectData>
+</PluginData>
 				</Effect>
 			</ChildrenList>
 		</WorkUnit>

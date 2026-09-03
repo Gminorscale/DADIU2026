@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AA556F69-C54D-411D-92F0-2FA69489668A}" SchemaVersion="133" RootDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" ParentDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}">
+	<Containers>
+		<WorkUnit Name="PlayerActionParry" ID="{AA556F69-C54D-411D-92F0-2FA69489668A}" OwnerID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" PersistMode="Nested"/>
+	</Containers>
+</WwiseDocument>

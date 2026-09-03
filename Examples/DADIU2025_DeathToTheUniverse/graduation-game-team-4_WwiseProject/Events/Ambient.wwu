@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}" SchemaVersion="133">
 	<Events>
 		<WorkUnit Name="Ambient" ID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}" PersistMode="Standalone">
 			<ChildrenList>

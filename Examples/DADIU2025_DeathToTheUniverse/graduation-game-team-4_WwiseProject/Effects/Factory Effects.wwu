@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" SchemaVersion="133">
 	<Effects>
 		<WorkUnit Name="Factory Effects" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" PersistMode="Standalone">
 			<ChildrenList>
@@ -1994,9 +1994,11 @@
 						<Property Name="Max" Type="Real32" Value="12"/>
 						<Property Name="Min" Type="Real32" Value="-96.3"/>
 					</PropertyList>
-					<PluginData>
-	<GameParameter Name="RTPC_MusicVolume" ID="{DE422745-3396-42F5-B7C5-63827623F1FD}"/>
-</PluginData>
+					<ReferenceList>
+						<Reference Name="GameParameter">
+							<ObjectRef Name="RTPC_MusicVolume" ID="{DE422745-3396-42F5-B7C5-63827623F1FD}" WorkUnitID="{AB58C735-3B39-4395-A73A-446AB404C34E}"/>
+						</Reference>
+					</ReferenceList>
 				</Effect>
 			</ChildrenList>
 		</WorkUnit>

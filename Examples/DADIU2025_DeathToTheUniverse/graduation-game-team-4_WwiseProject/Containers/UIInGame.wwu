@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}" SchemaVersion="133" RootDocumentID="{21223861-C856-4AF6-BA58-F486C161C360}" ParentDocumentID="{21223861-C856-4AF6-BA58-F486C161C360}">
+	<Containers>
+		<WorkUnit Name="UIInGame" ID="{B92D75F0-554F-4658-BB67-9EB07CBEE42F}" OwnerID="{21223861-C856-4AF6-BA58-F486C161C360}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="UIInGameReward" ID="{38AD637C-383E-4E3E-8959-E2621B4E79E2}" PersistMode="Reference"/>
+				<PropertyContainer Name="UIInGameToolTip" ID="{CF2B6FB1-4DC3-44EB-B678-57DFDCC64A27}" ShortID="576440914">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UIMaster" ID="{EAB90A04-9175-409C-BC3B-F9D9EF0429FB}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_UI_InGame_Tooltip_Stop" ID="{C899FCB1-A5A8-45F4-A765-8D838CC3B69F}" ShortID="416597132">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A7D79637-67CB-4408-88B7-0615EC24CCA7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_UI_InGame_Tooltip_Stop" ID="{97A0D4CE-320B-4F2C-9633-7B8014BB23BB}">
+									<Language>SFX</Language>
+									<AudioFile>UI\UIIngame\UITooltip\SFX_UI_InGame_Tooltip_Stop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="380724202"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_UI_InGame_Tooltip_Stop" ID="{97A0D4CE-320B-4F2C-9633-7B8014BB23BB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_UI_InGame_Tooltip_Start" ID="{20129249-3AB0-4F27-9459-35D8DA719600}" ShortID="211398847">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_UI_InGame_Tooltip_Start" ID="{7B8BE466-4197-4385-8891-2D92179747A6}">
+									<Language>SFX</Language>
+									<AudioFile>UI\UIIngame\UITooltip\SFX_UI_InGame_Tooltip_Start.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="865332334"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_UI_InGame_Tooltip_Start" ID="{7B8BE466-4197-4385-8891-2D92179747A6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</PropertyContainer>
+				<Sound Name="SFX_UI_InGame_Checkpoint" ID="{B1420A17-8652-4F34-9356-BEABF84E68FB}" ShortID="887869440">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UIMaster" ID="{EAB90A04-9175-409C-BC3B-F9D9EF0429FB}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_UI_InGame_Checkpoint" ID="{809B502A-3ADF-4258-AD9C-B882631169BC}">
+							<Language>SFX</Language>
+							<AudioFile>UI\UIIngame\SFX_UI_InGame_Checkpoint.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="37502879"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_UI_InGame_Checkpoint" ID="{809B502A-3ADF-4258-AD9C-B882631169BC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

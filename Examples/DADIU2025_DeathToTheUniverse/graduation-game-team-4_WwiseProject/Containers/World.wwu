@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="World" ID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="WorldStoneDoor" ID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}" PersistMode="Reference"/>
+				<WorkUnit Name="WorldPuzzle" ID="{E233E3D8-6935-4F3F-89F7-F9F9DCA0B032}" PersistMode="Reference"/>
+				<Sound Name="World_BlackHole_LP" ID="{67EDB29E-2BA0-49FE-9896-55C2BF5097FD}" ShortID="441038601">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+				</Sound>
+				<WorkUnit Name="WorldObjects" ID="{E2572C7E-4E1C-46A9-84D8-4F7B38E16E81}" PersistMode="Reference"/>
+				<WorkUnit Name="WorldPressurePlate" ID="{E25C1220-7975-473D-9FC7-F35A774E8107}" PersistMode="Reference"/>
+				<WorkUnit Name="WorldPlatforms" ID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}" PersistMode="Reference"/>
+				<WorkUnit Name="WorldCollectable" ID="{5F98495F-18BD-45BB-85B5-87FE1D77CCB5}" PersistMode="Reference"/>
+				<WorkUnit Name="WorldUniverse" ID="{657DCCCA-C8C2-4218-A54F-EBCCFC2B8B63}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

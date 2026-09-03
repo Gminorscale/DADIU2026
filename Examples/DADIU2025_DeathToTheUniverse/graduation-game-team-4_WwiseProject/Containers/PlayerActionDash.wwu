@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{94B7DA0B-B6E8-4726-8F11-201045C4976F}" SchemaVersion="133" RootDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" ParentDocumentID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}">
+	<Containers>
+		<WorkUnit Name="PlayerActionDash" ID="{94B7DA0B-B6E8-4726-8F11-201045C4976F}" OwnerID="{C1E6B938-6F44-432B-B6B1-F7592401F9D6}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="PlayerActionDash" ID="{658743FA-5525-4260-9617-D0DA935CF0B2}" ShortID="968154746">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-150</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6905CA32-A4B5-495F-8CFF-7C6584B792B6}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_50m" ID="{E2D9CFB1-5874-4D2D-B8E2-C754672B3758}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Player_Action_Dash_03" ID="{FEA4EC43-FAED-4E2B-8FDA-833E239F6D6B}" ShortID="178194538">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Dash_03" ID="{AFBEC250-A98F-4989-B863-251F54F978A2}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Dash\SFX_Player_Action_Dash_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="171350279"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Dash_03" ID="{AFBEC250-A98F-4989-B863-251F54F978A2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Action_Dash_02" ID="{3E18115C-0D92-42AC-B8C1-E2717717AB72}" ShortID="715749506">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Dash_02" ID="{A68AD7ED-5C77-4364-B5C0-0D0C4173BF55}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Dash\SFX_Player_Action_Dash_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="256114922"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Dash_02" ID="{A68AD7ED-5C77-4364-B5C0-0D0C4173BF55}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Action_Dash_01" ID="{A2FD2F8D-9BE2-4B07-9E12-2A35BD0E4ADD}" ShortID="9310847">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Dash_01" ID="{ACE45400-5E2A-40B6-8961-414415A5370E}">
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Action Dash\SFX_Player_Action_Dash_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="210505967"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Dash_01" ID="{ACE45400-5E2A-40B6-8961-414415A5370E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

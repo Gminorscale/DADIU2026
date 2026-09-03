@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2113FCFA-F47C-4F8A-AD38-9D7A4997D55C}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Other" ID="{2113FCFA-F47C-4F8A-AD38-9D7A4997D55C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Logo" ID="{0B7A672C-2640-4F43-8DCE-713694750440}">
+					<ChildrenList>
+						<Action Name="" ID="{DBE1B5C7-2358-4182-9E2D-0FE6C0415E1E}" ShortID="72143077">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Logo" ID="{DCC2BEFA-679C-4C2C-B3CD-5DFD1048FAFE}" WorkUnitID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Logo" ID="{D8B3F3D8-5F59-431F-BF2E-E2FDD2AA49BF}">
+					<ChildrenList>
+						<Action Name="" ID="{16488424-30B1-4149-94F1-D1A5BEA0785A}" ShortID="612408919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Logo" ID="{DCC2BEFA-679C-4C2C-B3CD-5DFD1048FAFE}" WorkUnitID="{5B849840-2CA0-4EF3-81B0-33F9915511B1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

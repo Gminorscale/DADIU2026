@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Ambient" ID="{4EDCD8A9-200D-4BCD-AAA0-EE97582FA614}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="20"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="AmbientBeds" ID="{FB3988F1-1B09-43FE-99D0-FA8ADD8749A3}" PersistMode="Reference"/>
+				<WorkUnit Name="AmbientObjects" ID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

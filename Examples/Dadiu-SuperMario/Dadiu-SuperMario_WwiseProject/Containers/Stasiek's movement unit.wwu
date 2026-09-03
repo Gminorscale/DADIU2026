@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8F49F6FE-027D-411A-A089-EA438571D57E}" SchemaVersion="133" RootDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" ParentDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}">
+	<Containers>
+		<WorkUnit Name="Stasiek's movement unit" ID="{8F49F6FE-027D-411A-A089-EA438571D57E}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="Jump" ID="{E933F7A5-B8C1-4699-8D7E-61BD63A107E8}" ShortID="781716553">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="jump_start" ID="{8AA60AA9-D97E-4EF5-9129-4B36C821EA15}">
+							<Language>SFX</Language>
+							<AudioFile>jump_start.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="838428224"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="jump_start" ID="{8AA60AA9-D97E-4EF5-9129-4B36C821EA15}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

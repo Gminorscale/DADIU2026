@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4ACDD30D-2139-4C94-934D-755FD559AC54}" SchemaVersion="133" RootDocumentID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" ParentDocumentID="{6DC1985D-CD36-4DCE-9454-86AB78438472}">
+	<Containers>
+		<WorkUnit Name="NPCEnemy" ID="{4ACDD30D-2139-4C94-934D-755FD559AC54}" OwnerID="{6DC1985D-CD36-4DCE-9454-86AB78438472}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="NPCEnemyLocomotion" ID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}" PersistMode="Reference"/>
+				<WorkUnit Name="NPCEnemyAction" ID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

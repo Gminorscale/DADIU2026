@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E8FD3BA0-2773-4FD9-9922-1B818145C415}" SchemaVersion="123">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{E8FD3BA0-2773-4FD9-9922-1B818145C415}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Grapple" ID="{A4BEBD17-4AC2-4791-9947-3327E3373BC9}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Grapple_Send_OS" ID="{C7C303D8-9293-4739-8125-2BC443A0441D}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_GrappleOut_Loop_LP" ID="{A2CD665F-844B-47A7-952C-F1E30AC374D8}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Player_Action_GrappleOut_Loop_LP" ID="{915D6093-FF4C-475E-AD3A-4CB41113720B}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Ambience and Music" ID="{BE924701-0E17-45BE-A74D-D76B330B60E0}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Ambience_LP" ID="{8412517F-ECB3-4603-B325-9DFBE63C9574}" WorkUnitID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_LP" ID="{D3E76898-14AC-4B10-8CD8-5D638CB996A4}" WorkUnitID="{57A640C1-378F-46E5-9CBF-CF18B77BB52F}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PLYR_Footsteps_OS" ID="{75945630-5754-4D8E-9C06-481E1B2F5BF9}" WorkUnitID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_GrappleOut_Loop_LP" ID="{A2CD665F-844B-47A7-952C-F1E30AC374D8}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Levitation" ID="{DBE7DEF7-C155-4056-B532-8A314F440B72}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Levitation_Hold_LP" ID="{AF016D34-7FC7-4088-9FBC-6FEA07B12BC4}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Levitation_Release_OS" ID="{ACB2511B-874C-4B0C-BF8B-B4380564C031}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Everything" ID="{53D56BDB-E8A5-497D-9225-4E7E99ABF3C5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Music_LP" ID="{D3E76898-14AC-4B10-8CD8-5D638CB996A4}" WorkUnitID="{57A640C1-378F-46E5-9CBF-CF18B77BB52F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience_LP" ID="{8412517F-ECB3-4603-B325-9DFBE63C9574}" WorkUnitID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="VOConversationController" ID="{B4A416B5-BFCF-48F1-88A3-35D40C662B6F}" WorkUnitID="{7296C338-0346-4613-B0BA-6D5C26F3DB86}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="PlayerActionAttackMelee" ID="{4E2B1DFE-074C-4AD3-916B-5D1F9DAE4258}" WorkUnitID="{B387EC0A-B438-4548-AE8F-E91B027E28AA}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UIInGameReward" ID="{4CA0A650-3935-4B43-884F-C9F4832DAEA5}" WorkUnitID="{38AD637C-383E-4E3E-8959-E2621B4E79E2}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Grapple_Send_OS" ID="{C7C303D8-9293-4739-8125-2BC443A0441D}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_GrappleOut_Loop_LP" ID="{A2CD665F-844B-47A7-952C-F1E30AC374D8}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Player_Action_GrappleOut_Loop_LP" ID="{915D6093-FF4C-475E-AD3A-4CB41113720B}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Grapple_Catch_OS" ID="{E405D6D1-849C-4841-932C-7CF92EE5B856}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyLocomotion" ID="{F6EED6C6-4C4C-4859-8B8C-847417237558}" WorkUnitID="{5B941474-AFE5-4EE6-ABC6-DE93F00FD5F2}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="WorldPressurePlateStop" ID="{BF0F79B1-D261-4A4D-9DE5-D9CB4A668C5D}" WorkUnitID="{E25C1220-7975-473D-9FC7-F35A774E8107}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="WorldStoneDoorStop" ID="{DD27C94C-30DB-4482-B086-8020F6D029CE}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Levitation_Start_OS" ID="{5AB22063-C09F-4FE0-9623-3F5B2C75BEB7}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Levitation_Hold_LP" ID="{AF016D34-7FC7-4088-9FBC-6FEA07B12BC4}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Action_Levitation_Release_OS" ID="{ACB2511B-874C-4B0C-BF8B-B4380564C031}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Player_Action_Levitation_Hold_LP" ID="{3BD20783-4A4F-4F55-80C2-F1FD64406B52}" WorkUnitID="{9B6D1782-AAFD-4B59-A3E3-4636DD578E89}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Enemy_Action_Projectile_LP" ID="{3ED8C8AF-2F8E-4702-9FD1-2E030787C55E}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Collectable_Pickup" ID="{BE5CC7BA-F135-40AA-BE9D-0304B34C5918}" WorkUnitID="{93374DA1-7B00-4AFC-A889-BD4EE5BFB7DD}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="WorldStoneDoorMove" ID="{78C9B53B-257D-41E5-BAC0-496627873A78}" WorkUnitID="{746839D2-39BE-4EF3-9BCD-A12EA0DBF5C2}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PLYR_Footsteps_OS" ID="{75945630-5754-4D8E-9C06-481E1B2F5BF9}" WorkUnitID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_World_Object_LP" ID="{4C2F46DC-5C0A-4656-A022-B0F19285D970}" WorkUnitID="{6D169070-1E7F-485B-A0D4-38795503D8EF}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_World_Object_LP" ID="{C631666D-6DFF-43AA-851E-420B65235A01}" WorkUnitID="{6D169070-1E7F-485B-A0D4-38795503D8EF}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionTakeDamage" ID="{9A616A24-9989-43AA-8818-11773352D826}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AmbientObjectBranch" ID="{8D6B043E-64BF-43D7-940B-D3C09976A19D}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AmbientObjectsVoid" ID="{5F206E4F-30DB-48DC-B57A-0622C9D52B8B}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionProjectileImpact" ID="{729DD913-E584-4C18-A174-A2DBF5874EC7}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionProjectileParry" ID="{7E035394-AD18-4E06-A150-64548293BFC5}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionRanged" ID="{3F90DDA6-B7ED-4CCE-AD32-A9934FCD031D}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionDeath" ID="{50650344-2995-441A-ADC2-DD2DF2D708A5}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPCEnemyActionMelee" ID="{A41E9F64-6DBD-40B0-BED6-8E87CD25E54C}" WorkUnitID="{0BCC024F-10C3-4095-A7A3-612EC8EE3C29}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AmbientObjectStone" ID="{41EDD5F0-2283-4F05-A696-BD8DB44FECDE}" WorkUnitID="{6475AAC3-022E-42CB-B150-6D0E1CEB82DC}"/>
+							<Position X="4" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Collectable_Loop" ID="{A842A484-B8F2-4E8D-8EDF-0CD7BC5D6FE3}" WorkUnitID="{93374DA1-7B00-4AFC-A889-BD4EE5BFB7DD}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Enemies" ID="{5BC6426C-816D-428A-9165-2484239231A8}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Action_Melee_OS" ID="{E245B513-A4B4-42BA-8078-E9992B32FC74}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Locomotion_Float_LP" ID="{4D064870-0812-4B9F-80DA-0B4174BB0A05}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Action_Death_OS" ID="{172860E9-FF4A-426E-A286-CDE84B50F747}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Action_Projectile_Shoot_OS" ID="{B278F331-2400-4062-851B-39D97F55A31D}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Action_Projectile_LP" ID="{EC7C6148-EA48-4400-85AF-B6C3765E25E8}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_Enemy_Action_Projectile_Impact_OS" ID="{618B1F87-FB35-4DB2-8239-A8C90B990C81}" WorkUnitID="{40AFD8C5-1E04-4C7C-9EF1-1C198432E7B6}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Conversation" ID="{9C387277-A67B-4010-9315-949A1099971E}" WorkUnitID="{4CF56203-582D-40C5-AD54-B0C37B9D1FA0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience_LP" ID="{8412517F-ECB3-4603-B325-9DFBE63C9574}" WorkUnitID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_LP" ID="{D3E76898-14AC-4B10-8CD8-5D638CB996A4}" WorkUnitID="{57A640C1-378F-46E5-9CBF-CF18B77BB52F}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PLYR_Jump_OS" ID="{A69CD7C8-EE23-48E3-BC5A-14D55698295E}" WorkUnitID="{47C928D9-2A1A-41A1-B891-717D52AFC3B3}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambient_Objects_Void_OS" ID="{F8BFD591-13D2-47C8-80AC-BEFCC3EEBDBF}" WorkUnitID="{5874BA62-3B11-46D7-AFC9-C5AA2FBDD8FD}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

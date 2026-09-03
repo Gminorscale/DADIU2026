@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}" SchemaVersion="133" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<Containers>
+		<WorkUnit Name="WorldPlatforms" ID="{F18E5CFB-8E2F-4990-B2C2-564542716A42}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<ChildrenList>
+				<BlendContainer Name="WorldPlatforms" ID="{315A6A74-388C-4B4C-8473-5143BC63CFFA}" ShortID="225177675">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_150m" ID="{C1278114-B5D0-4750-A436-264FF71B4876}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerActions" ID="{ABC84409-481B-485C-B9C3-FC2D449E616A}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="PlayerActionLevitationHoldStart" ID="{BB30DE06-923C-42D4-B45B-12077C24DD00}" ShortID="765925851">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1380</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6AD00134-C41B-4165-B323-90991E404157}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Player_Action_Levitation_Hold_Start_01" ID="{81BB19E0-8172-4041-828B-444A0F2FDADB}" ShortID="125756141">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Levitation_Hold_Start_01" ID="{8E84126A-9820-4153-8606-6497B64B7F1A}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Aciton Levitation\SFX_Player_Action_Levitation_Hold_Start_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="915354586"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Levitation_Hold_Start_01" ID="{8E84126A-9820-4153-8606-6497B64B7F1A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Action_Levitation_Hold_Start_03" ID="{838FBAF5-93C0-4171-B6E0-1024D32BC691}" ShortID="966967451">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Levitation_Hold_Start_03" ID="{CDCDA922-61A8-460B-BFEA-CB583490FD72}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Aciton Levitation\SFX_Player_Action_Levitation_Hold_Start_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="580610886"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Levitation_Hold_Start_03" ID="{CDCDA922-61A8-460B-BFEA-CB583490FD72}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Player_Action_Levitation_Hold_Start_02" ID="{CBB23DA3-2684-47A7-94EE-4998A5468731}" ShortID="487026929">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Player_Action_Levitation_Hold_Start_02" ID="{8754A68F-4AD5-4A0E-86A9-78BDD44A25A7}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Actions\Player Aciton Levitation\SFX_Player_Action_Levitation_Hold_Start_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="405439795"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Player_Action_Levitation_Hold_Start_02" ID="{8754A68F-4AD5-4A0E-86A9-78BDD44A25A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{0CDFFB03-6BB6-46FB-975F-7384645D7698}" ShortID="430373843">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C48A2A81-2CA8-42E4-AEE5-FC3C564BEF91}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{6BA2DC74-FCD1-4F70-922F-6365C4ABADBC}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.949720670391061"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Aciton Levitation\SFX_Player_Action_Levitation_Hold_Whisper_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="173580542"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Levitation_Hold_Whisper_LP" ID="{6BA2DC74-FCD1-4F70-922F-6365C4ABADBC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{477D837D-67E0-43C6-AF8B-5A4D87C320B1}" ShortID="432143843">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6BAE9FD3-3DD4-4EAE-995F-8D19477E68D4}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{65437DB8-1946-4F4A-A2BD-C3970E0AB141}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.189944134078212"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.75977653631285"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.99441340782123"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.75418994413408"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Player\Player Actions\Player Aciton Levitation\SFX_Player_Action_Levitation_Hold_Bass_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="236221663"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Player_Action_Levitation_Hold_Bass_LP" ID="{65437DB8-1946-4F4A-A2BD-C3970E0AB141}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

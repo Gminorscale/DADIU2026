@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{657DCCCA-C8C2-4218-A54F-EBCCFC2B8B63}" SchemaVersion="133" RootDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" ParentDocumentID="{FAFAC333-5C49-402F-AB4A-66DC48236239}">
+	<Containers>
+		<WorkUnit Name="WorldUniverse" ID="{657DCCCA-C8C2-4218-A54F-EBCCFC2B8B63}" OwnerID="{FAFAC333-5C49-402F-AB4A-66DC48236239}" PersistMode="Nested">
+			<ChildrenList>
+				<BlendContainer Name="WorldUniverseClap" ID="{58D88EB4-3735-4C53-B872-725927FFC503}" ShortID="246064223">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>53</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-380</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{75A9AA12-5001-46BF-AA55-F81A49D254AD}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Att_Generic_150m" ID="{C1278114-B5D0-4750-A436-264FF71B4876}" WorkUnitID="{1E3CB351-D458-4165-B15C-24A0D607875B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="ObjectMaster" ID="{DD28C79F-D8B6-40BC-8BFE-B47DED509B02}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="LargeRoom" ID="{72772FDA-BD47-4986-922D-6284C4F31B60}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="WorldUniverseClapImpact" ID="{90488ABE-E608-4FAF-AABD-C1B78A05B9FD}" ShortID="1046295303">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{02370B52-2C9F-4674-9EBD-F77EFED2A089}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Universe_Clap_Impact_01" ID="{9914C607-E2E7-49F2-898F-ADAA32A30CC4}" ShortID="897323795">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Impact" ID="{9BFAE25A-EFE0-4C4E-95A7-43210207C279}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.606521739130435"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.68478260869565"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="679476263"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Impact" ID="{9BFAE25A-EFE0-4C4E-95A7-43210207C279}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Impact_02" ID="{32DD777B-D6A8-4ABF-81E7-69C79789A417}" ShortID="382102863">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Impact" ID="{5E17A6C6-8BBF-4D22-9998-904DDE94DFA5}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.876086956521739"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.93674713901007"/>
+												<Property Name="TrimEnd" Type="Real64" Value="9.80987766165375"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="743283848"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Impact" ID="{5E17A6C6-8BBF-4D22-9998-904DDE94DFA5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Impact_03" ID="{65CF7B14-501B-433A-9AD6-846CE7487BE6}" ShortID="581011569">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Impact" ID="{B83761A8-E9F1-456D-B629-8EF959B6B2F3}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.242418369008071"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="15.9814809434986"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.81188905873"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="511896934"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Impact" ID="{B83761A8-E9F1-456D-B629-8EF959B6B2F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Impact_04" ID="{78E2079A-ABC7-48F5-9ADB-A826F04F01C4}" ShortID="81423788">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Impact" ID="{656C1AEB-B706-4AC3-B736-67AB75CD95B8}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.456487613000014"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="23.9257764573975"/>
+												<Property Name="TrimEnd" Type="Real64" Value="25.4460673751665"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="270078231"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Impact" ID="{656C1AEB-B706-4AC3-B736-67AB75CD95B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="WorldUniverseClapTextureBright" ID="{50A7B211-F1D4-4F8E-8089-083013685F5B}" ShortID="472167640">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{16DF0FAE-B641-41EC-9B41-E6558E7DC206}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Bright_01" ID="{3082E1D1-0B6F-4428-A561-18E4E2C86E31}" ShortID="671380172">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{E788DABC-6ECB-4A10-A398-1EED23C24581}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.391304347826087"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.54347826086956"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Bright.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="598352632"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{E788DABC-6ECB-4A10-A398-1EED23C24581}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Bright_02" ID="{5B737A54-970C-4657-9CF7-6667FE112453}" ShortID="681438494">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{3B8CF319-C1BD-4274-81D6-2D3F0B9B0C1B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.32238086401531"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.98872262901817"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.3695652173913"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Bright.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="13778823"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{3B8CF319-C1BD-4274-81D6-2D3F0B9B0C1B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Bright_03" ID="{ADAF6C26-E930-4C08-B102-EABAF74FBDC6}" ShortID="680258920">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{E5BE0EF8-19B5-43D4-81C8-699D4E09BE4A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.77415056350664"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="16.0576714653776"/>
+												<Property Name="TrimEnd" Type="Real64" Value="19.7626533010348"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Bright.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="619406362"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{E5BE0EF8-19B5-43D4-81C8-699D4E09BE4A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Bright_04" ID="{AE9F34FC-04D5-4075-867B-6E6DFFC08DF7}" ShortID="33646411">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{4B97E992-F218-42A2-B083-A58C1E04864D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.32578127195136"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="23.9381401107681"/>
+												<Property Name="TrimEnd" Type="Real64" Value="26.469046738412"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Bright.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="685115182"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Bright" ID="{4B97E992-F218-42A2-B083-A58C1E04864D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="WorldUniverseClapTextureDark" ID="{02D5E7E4-9B8F-4FD0-BE87-620360DED310}" ShortID="941247211">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9600814F-DDE6-4C20-A919-50C30D74B659}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Dark_01" ID="{6DB11D0D-169F-4D61-88AF-516E73EEE310}" ShortID="355183495">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{5C323B2C-048F-4FC9-A5DC-7C2517212F20}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.567391304347826"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.08913043478261"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Dark.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="589318197"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{5C323B2C-048F-4FC9-A5DC-7C2517212F20}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Dark_02" ID="{FF61522E-EB87-4892-BA25-FDDA9D0D7228}" ShortID="946462537">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{4765C2B9-ECB8-447B-B108-3B158680480B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.883854181300901"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.96882020073878"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.2130434782609"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Dark.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="790710361"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{4765C2B9-ECB8-447B-B108-3B158680480B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Dark_03" ID="{829D434B-453A-42B8-8A76-47BAEC0FA35B}" ShortID="613260688">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{E7D8AF69-342A-499B-9536-A4D445918019}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.850646056849321"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="15.9856032828786"/>
+												<Property Name="TrimEnd" Type="Real64" Value="18.2826086956522"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Dark.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="600810827"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{E7D8AF69-342A-499B-9536-A4D445918019}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Dark_04" ID="{70FA8A92-72B2-47EC-8491-EE0B66B61DE7}" ShortID="280840721">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{384DF37C-1AA0-4E05-8FC9-4E03EA1779B0}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.795468763170817"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="23.9376709699346"/>
+												<Property Name="TrimEnd" Type="Real64" Value="26.2600520379672"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Dark.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="424154357"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Dark" ID="{384DF37C-1AA0-4E05-8FC9-4E03EA1779B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="WorldUniverseClapTextureDeep" ID="{51B9FCCF-8591-42F3-B488-295C83ECF76A}" ShortID="230155445">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F00E94B2-646D-42BA-835E-4B4912ACFC46}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Deep_01" ID="{920BB5E6-020D-4E2F-A882-4CAC4244E698}" ShortID="330760458">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{DB1141B2-DEC8-4BE3-9BF7-09CF3844B57D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.471739130434783"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.1"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Deep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="736937056"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{DB1141B2-DEC8-4BE3-9BF7-09CF3844B57D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Deep_02" ID="{C9B6BC06-AB52-449B-AE31-5E2B333668D6}" ShortID="619148946">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{276056D3-3753-46B4-8A17-91449B13D150}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.943478260869566"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.93151320759783"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.5804347826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Deep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="443964656"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{276056D3-3753-46B4-8A17-91449B13D150}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Deep_03" ID="{ACF0F9B2-779F-4A6D-8ABB-8FF1EE6FB15F}" ShortID="92831627">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{076A2DE2-D8C3-4DE5-AFA0-5C871DBF76E3}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.794499017203865"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="16.0117125581415"/>
+												<Property Name="TrimEnd" Type="Real64" Value="18.8695652173913"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Deep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="932535250"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{076A2DE2-D8C3-4DE5-AFA0-5C871DBF76E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_World_Universe_Clap_Texture_Deep_04" ID="{E4DE4989-0C0B-4BFA-B6E6-0DA0016A1DA4}" ShortID="484712357">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{7F383EC6-151E-4811-A4AF-04E3D5DFF424}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.545627568301356"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="23.9864330649165"/>
+												<Property Name="TrimEnd" Type="Real64" Value="26.0804347826087"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>World\World Universe\SFX_World_Universe_Clap_Texture_Deep.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="454249813"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_World_Universe_Clap_Texture_Deep" ID="{7F383EC6-151E-4811-A4AF-04E3D5DFF424}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFX_World_Universe_Clap_Boom" ID="{4FE51D1B-238A-4E6E-8C16-1C3DC280D2E0}" ShortID="644761560">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_World_Universe_Clap_Boom" ID="{A7F9F394-18B4-4B82-BB33-D866C0EAFFEC}">
+									<Language>SFX</Language>
+									<AudioFile>World\World Universe\SFX_World_Universe_Clap_Boom.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="845464496"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_World_Universe_Clap_Boom" ID="{A7F9F394-18B4-4B82-BB33-D866C0EAFFEC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Cutscene" ID="{FC6E0C22-8F50-4094-A196-C6F19F3A5538}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="15"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="CutsceneController" ID="{6DEDF8AC-3FB3-4F32-9ACB-99A55A45AF8B}" ShortID="775436909">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Cutscene1" ID="{E915B1EF-D479-4F8F-B8FC-538A1497E03A}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="CutsceneMaster" ID="{9BA61671-336F-43E8-A30B-CDC8487EA8C3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="CutsceneState" ID="{172F2C86-D712-4939-B19F-1EB3FFD702F6}" WorkUnitID="{5A1985CC-71F9-4C21-9D17-6261622C2855}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cutscene_Intro" ID="{59E125A0-30A4-479E-AB9D-EA3A549F6C17}" ShortID="51882097">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cutscene_Intro_Audio" ID="{D1186F74-9D63-4FC2-945B-0D04141D49E5}">
+									<Language>English(US)</Language>
+									<AudioFile>Cutscene_Intro_Audio.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="923993861"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cutscene_Intro_Audio" ID="{D1186F74-9D63-4FC2-945B-0D04141D49E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cutscene_Prophecy_2" ID="{42E2A3DC-2501-46BC-9D0C-0CEACEB682AE}" ShortID="575709377">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cutscene_Prophecy_2_Audio" ID="{C984A80C-5DE7-49FB-9617-C4E78494FF34}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.26842083333333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="41.2527291666667"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Cutscene_Prophecy_2_Audio.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="180165548"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cutscene_Prophecy_2_Audio" ID="{C984A80C-5DE7-49FB-9617-C4E78494FF34}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cutscene_Prophecy_1" ID="{9DF84EDA-3CDE-4567-AB6A-F8020B870521}" ShortID="76944641">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cutscene_Prophecy_1_Audio" ID="{95FC62F4-255E-45AC-9696-728F01FABFD8}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="8.25054583333333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="42.346175"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Cutscene_Prophecy_1_Audio.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="946246928"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cutscene_Prophecy_1_Audio" ID="{95FC62F4-255E-45AC-9696-728F01FABFD8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cutscene_End" ID="{BA4D51CB-256A-4166-ACCA-88518DBF5EA2}" ShortID="467022153">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E96BAEAA-5F8E-43B2-8CC3-7ADC946011E7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{409F7817-492E-491C-9239-945387236CBA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cutscene_End" ID="{E52F4DC6-A7DB-4147-8FB4-A9183C724477}">
+									<Language>English(US)</Language>
+									<AudioFile>Cutscene_End .wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="777868308"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cutscene_End" ID="{E52F4DC6-A7DB-4147-8FB4-A9183C724477}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Cutscene_Intro" ID="{59E125A0-30A4-479E-AB9D-EA3A549F6C17}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Cutscene_End" ID="{BA4D51CB-256A-4166-ACCA-88518DBF5EA2}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Cutscene_Prophecy_1" ID="{9DF84EDA-3CDE-4567-AB6A-F8020B870521}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Cutscene_Prophecy_2" ID="{42E2A3DC-2501-46BC-9D0C-0CEACEB682AE}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Cutscene4" ID="{5D059C2B-28D1-4C90-BE2F-CA8131E6382D}"/>
+								<ItemList>
+									<ItemRef Name="Cutscene_End" ID="{BA4D51CB-256A-4166-ACCA-88518DBF5EA2}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Cutscene2" ID="{BB07016E-9B14-4CDE-A9F1-6DD72DF7FC87}"/>
+								<ItemList>
+									<ItemRef Name="Cutscene_Prophecy_1" ID="{9DF84EDA-3CDE-4567-AB6A-F8020B870521}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Cutscene3" ID="{4A2FC3A3-4EE7-4CA3-A602-0E5B3E892B9D}"/>
+								<ItemList>
+									<ItemRef Name="Cutscene_Prophecy_2" ID="{42E2A3DC-2501-46BC-9D0C-0CEACEB682AE}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Cutscene1" ID="{E915B1EF-D479-4F8F-B8FC-538A1497E03A}"/>
+								<ItemList>
+									<ItemRef Name="Cutscene_Intro" ID="{59E125A0-30A4-479E-AB9D-EA3A549F6C17}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

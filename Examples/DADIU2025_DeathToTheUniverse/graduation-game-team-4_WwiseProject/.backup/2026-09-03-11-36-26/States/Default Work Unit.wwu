@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A1985CC-71F9-4C21-9D17-6261622C2855}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{5A1985CC-71F9-4C21-9D17-6261622C2855}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="AreaState" ID="{3F306294-E41F-4E90-BF5C-897E6D94294B}">
+					<ChildrenList>
+						<State Name="None" ID="{BD3BF86F-D583-42F3-BD22-CEB85778E232}"/>
+						<State Name="Void" ID="{A233A16A-E881-4DE2-A8A7-F0F8C1A1980E}"/>
+						<State Name="Cave" ID="{E8C4DE23-1AA4-4E60-B294-CCE9A4243212}"/>
+						<State Name="House" ID="{A364CDE8-83ED-43A6-B2C4-76075F85960A}"/>
+						<State Name="Outside" ID="{4D67354E-DD07-42F2-84F2-EC836AED931D}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="GameState" ID="{DFE8BF36-A139-4972-A8F7-E0E856A94DA3}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{88972298-BFE6-405E-A22F-49645D292E9D}"/>
+						<State Name="Menu" ID="{E2FEAC19-A420-4694-BE34-EAB4586BF6FA}"/>
+						<State Name="InGame" ID="{ECEBE20B-1B3A-4654-9226-A39DB6A7C543}"/>
+						<State Name="GameOver" ID="{D3C6B5E2-C2F3-4F90-9E73-0BF38CFB4B96}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="RoomState" ID="{FE36192E-6330-4DFA-89FE-65FBF54D0D54}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{BD148324-CD4B-4EBD-8406-7BE8C79ACC4F}"/>
+						<State Name="Indoor" ID="{1C9265E6-3F27-4639-8648-F4E7CA4C997A}"/>
+						<State Name="Outdoor" ID="{E18EBAC8-61B8-4E32-8C86-C31D7FE91388}"/>
+						<State Name="SemiIndoor" ID="{CF00A765-5492-4086-B50F-995B71BEF42B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="AimState" ID="{1848DBF5-63CD-47DD-AC57-C29A8BEC8DF7}">
+					<ChildrenList>
+						<State Name="None" ID="{8BD58F0C-5E6F-4462-A589-20A87568D720}"/>
+						<State Name="IsAiming" ID="{64408E09-3BAA-48DC-9C05-E507B2423D56}"/>
+						<State Name="NotAiming" ID="{7B81944F-6C11-4BA8-AE39-416A8ED6E3F4}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MusicState" ID="{FAD61FE7-1FFE-48C3-A644-67FA5BE9DC7C}">
+					<ChildrenList>
+						<State Name="None" ID="{AE29D9C7-E336-4250-AFCB-E057A62BEF64}"/>
+						<State Name="Exploration" ID="{27203AF7-3015-4CDA-88F3-6615AF7739AB}"/>
+						<State Name="Combat" ID="{AAF17B6E-CDDA-40BC-A338-40C1B0A7C8EF}"/>
+						<State Name="ExplorationTension" ID="{A79C1C72-4EA5-41E6-B6CA-59A18E726EB3}"/>
+						<State Name="Menu" ID="{DA8055F4-CBA7-450E-B9A8-12BFF246AD98}"/>
+						<State Name="Banger" ID="{90EF9121-EBC1-4B8D-BE71-463DDB838923}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="ConversationState" ID="{35093198-D3F5-4DD9-87F2-380A2735B048}">
+					<ChildrenList>
+						<State Name="None" ID="{648E6969-2500-44A2-9A0C-AA9B4BB91BDD}"/>
+						<State Name="Level1Conversation1" ID="{4F647304-F375-41DE-98FC-92DC806AA8CB}"/>
+						<State Name="Level1Conversation2" ID="{CB3ABD52-00DF-4E88-AED4-865152EFF8B2}"/>
+						<State Name="Level1Conversation3" ID="{AC966C63-09DC-4380-B4BF-906C3057014D}"/>
+						<State Name="Level1Conversation4" ID="{95EFF637-2D18-44EA-A0F3-5316D462E018}"/>
+						<State Name="Level1Conversation5" ID="{91AD98E5-E5C4-462B-B366-B5508D46C83C}"/>
+						<State Name="Level2Conversation1" ID="{D66D399C-5449-4EE6-8E8A-AD8ECC04F77D}"/>
+						<State Name="Level2Conversation2" ID="{420EB386-E18C-456D-AA12-FEF542EE2703}"/>
+						<State Name="Level1Conversation6" ID="{81295FF1-6453-4A04-8AD8-0CBE65CCF17B}"/>
+						<State Name="Level1Conversation1_5" ID="{66FB464D-A5CE-435E-94BF-6AFCC6D031B6}"/>
+						<State Name="Level1Conversation7" ID="{A23FC4E5-CB70-4571-BD64-F9ADD56A27E1}"/>
+						<State Name="Level1BetterWithThisOne" ID="{2F5C697A-8D64-47AF-989F-DF8FCADF6565}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="CutsceneState" ID="{172F2C86-D712-4939-B19F-1EB3FFD702F6}">
+					<ChildrenList>
+						<State Name="None" ID="{141E1A56-2BA4-44BC-BE16-32D7ABE6CBD3}"/>
+						<State Name="Cutscene1" ID="{E915B1EF-D479-4F8F-B8FC-538A1497E03A}"/>
+						<State Name="Cutscene2" ID="{BB07016E-9B14-4CDE-A9F1-6DD72DF7FC87}"/>
+						<State Name="Cutscene3" ID="{4A2FC3A3-4EE7-4CA3-A602-0E5B3E892B9D}"/>
+						<State Name="Cutscene4" ID="{5D059C2B-28D1-4C90-BE2F-CA8131E6382D}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="ProjectileReflectState" ID="{B57B138A-55DD-4290-B2B8-B2528D3CE5F2}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{6510A303-1C36-4C8D-90DC-37743F6ECCC1}"/>
+						<State Name="NotReflected" ID="{DFEED883-93BC-4A16-9378-DC9F32E28234}"/>
+						<State Name="IsReflected" ID="{40B9F944-4B1A-4B49-9488-D4D5BA3461E7}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="ToolTipState" ID="{26A93DFF-1DCD-4877-A54D-90FD37977AB5}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.1"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{0D414D3B-306C-434A-91CD-BAEFA7C3DAD0}"/>
+						<State Name="IsToolTip" ID="{6DE4262A-DEC7-4668-96A3-B8EC91BD9F88}"/>
+						<State Name="NoToolTip" ID="{AF880C45-611E-4387-B501-F8D5D46FDFFD}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
