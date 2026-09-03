@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4B994539-A914-47F9-BB1F-D842E3D1A7D7}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Music" ID="{4B994539-A914-47F9-BB1F-D842E3D1A7D7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="SW_LevelSectionsFromDistance" ID="{8050D3BD-115A-4C64-94D5-ECE885B9C913}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Section_01" ID="{94EFE366-FD09-4C90-8847-18BD99CA678B}"/>
+						<Switch Name="Section_02" ID="{272CB94E-8819-4061-9D83-9551A9FE9CD9}"/>
+						<Switch Name="Section_03" ID="{9C024D1E-C32A-465A-BE13-FB96FAAE3AF2}"/>
+						<Switch Name="Section_04" ID="{FC4DBEF3-5104-4336-B7D2-6912C3E17A8E}"/>
+						<Switch Name="Section_05" ID="{18BC294B-2057-4F7C-893D-935798E62557}"/>
+						<Switch Name="Section_06" ID="{D3BEFDEC-D729-4919-BC5D-BCE5B9D0FC4E}"/>
+						<Switch Name="Section_07" ID="{D58747BF-D15F-4B9F-9041-AE1DB553735E}"/>
+						<Switch Name="Section_08" ID="{C05C7F72-5566-425A-9DBD-50E354BE90B1}"/>
+						<Switch Name="Section_09" ID="{66F3699A-1F3B-4A67-9A34-BDFC0B01F0EE}"/>
+						<Switch Name="Section_10" ID="{5A658119-7C54-4D7A-AF5B-540712B25BC7}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="LevelCompletion" ID="{AD7A1BA4-2D69-4905-848E-ECDA4FB5EA34}"/>
+						<Curve Name="" ID="{685AAC61-02D1-4F48-ADF8-2E03EBBD6368}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>10</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>20</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>30</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>40</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>50</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>60</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>70</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>80</XPos>
+									<YPos>8</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>90</XPos>
+									<YPos>9</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>100</XPos>
+									<YPos>10</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
