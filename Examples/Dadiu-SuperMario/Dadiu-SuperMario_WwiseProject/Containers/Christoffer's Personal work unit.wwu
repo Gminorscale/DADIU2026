@@ -4,6 +4,21 @@
 		<WorkUnit Name="Christoffer's Personal work unit" ID="{57C337E0-B882-4105-A1D7-CAA8AFDBAE3A}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested">
 			<ChildrenList>
 				<SwitchContainer Name="Surface Impacts SFX" ID="{027B72DC-F4A2-4ADA-9582-1F447FDE4E24}" ShortID="792255667">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{99190C4C-325A-4AE8-ABE4-E912D98B01B2}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -11,9 +26,19 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="SurfaceType" ID="{064DD948-1812-4695-B795-F9A35C2199AB}" WorkUnitID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<SwitchContainer Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}" ShortID="439956207">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -21,9 +46,32 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}" ShortID="556231707">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{23D5AA2C-6FDD-4C78-B167-86F1BD401C4E}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -46,13 +94,13 @@
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{B5D842E7-F568-4845-A3B0-94060652E7BE}">
 													<PropertyList>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.7754"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.705"/>
+														<Property Name="TrimBegin" Type="Real64" Value="12.52247"/>
+														<Property Name="TrimEnd" Type="Real64" Value="15.67366"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="897912061"/>
+														<MediaID ID="30796429"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -73,11 +121,14 @@
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{31501353-5071-47E6-88A9-2520A8F357E0}">
 													<PropertyList>
 														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.03089"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.18015"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="506822660"/>
+														<MediaID ID="272548941"/>
 													</MediaIDList>
 													<ObjectLists>
 														<ObjectList Name="Markers">
@@ -184,10 +235,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{DCD8FEBF-AC91-4F07-8CC9-F310541076DF}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="15.99454"/>
+														<Property Name="TrimEnd" Type="Real64" Value="18.63676"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="588782583"/>
+														<MediaID ID="187767532"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -206,10 +262,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{0489578A-5BB9-4EE9-9934-A10A718D3E46}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="25.96185"/>
+														<Property Name="TrimEnd" Type="Real64" Value="26.86515"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="588782583"/>
+														<MediaID ID="878844812"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -255,6 +316,20 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}" ShortID="894186863">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{951DFDDB-7B6D-4D71-B8CE-67B94B7AE752}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -277,13 +352,12 @@
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{61160188-EA18-4192-BFC7-527DB96BE21E}">
 													<PropertyList>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.7754"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.705"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.3803"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="897912061"/>
+														<MediaID ID="831751975"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -304,11 +378,14 @@
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{2442C2A7-CF0A-489E-908C-B2BF7EBCE9BE}">
 													<PropertyList>
 														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.2185"/>
+														<Property Name="TrimEnd" Type="Real64" Value="12.37424"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="506822660"/>
+														<MediaID ID="973851987"/>
 													</MediaIDList>
 													<ObjectLists>
 														<ObjectList Name="Markers">
@@ -415,10 +492,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{70CB8159-3F55-4B11-B106-14B711035986}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="18.66977"/>
+														<Property Name="TrimEnd" Type="Real64" Value="20.77193"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="588782583"/>
+														<MediaID ID="793604776"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -437,10 +519,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{F25D1A33-1A34-4056-A4D3-91711019B6CB}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="20.82849"/>
+														<Property Name="TrimEnd" Type="Real64" Value="23.23738"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="588782583"/>
+														<MediaID ID="318991568"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -486,6 +573,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}" ShortID="759817670">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -535,6 +629,9 @@
 												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}">
 													<PropertyList>
 														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="20.70704"/>
+														<Property Name="TrimEnd" Type="Real64" Value="23.10341"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
@@ -635,50 +732,6 @@
 												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Metal_03" ID="{B56BAB54-D6E8-4545-A723-87D7FC7B4EA6}" ShortID="787879219">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{3B0D8F6A-54A4-41A0-B8F3-DE96CD707A75}">
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="588782583"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{3B0D8F6A-54A4-41A0-B8F3-DE96CD707A75}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_04" ID="{5AE2F0BD-67C8-490B-BCFD-144F1366EC59}" ShortID="434147928">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{44E991C5-73DE-4C08-8DB6-1317CE70EEBE}">
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="588782583"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{44E991C5-73DE-4C08-8DB6-1317CE70EEBE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
@@ -729,6 +782,26 @@
 										<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+										<ItemList>
+											<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+										<ItemList>
+											<ItemRef Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+										<ItemList>
+											<ItemRef Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}" ShortID="228562726">
@@ -739,9 +812,19 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}" ShortID="789544764">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -760,6 +843,50 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.74655"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="939009968"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bricks_02" ID="{7F3C468E-DC98-4420-A4A0-194CFE59EFB3}" ShortID="974331901">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.81427"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.29741"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="928166021"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -799,6 +926,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}" ShortID="225908491">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -808,7 +942,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Bricks_01" ID="{A8E805AA-CDB8-45AF-8F81-EEA8E9EDC705}" ShortID="474189763">
+										<Sound Name="Bricks_01" ID="{0A96B9EA-8D8D-4A81-9F1D-6420A5219250}" ShortID="846481436">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -817,6 +951,49 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.72067"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="678065125"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bricks_02" ID="{88DCEF11-0296-41FA-991F-3DE7B11C05EF}" ShortID="507353732">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.02112"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.67721"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="472948251"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -856,6 +1033,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}" ShortID="656273644">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -865,7 +1049,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Bricks_01" ID="{4637EF1E-27A4-4DE2-86ED-BD58B693865C}" ShortID="103601384">
+										<Sound Name="Bricks_01" ID="{5A793104-A70F-4BE0-9414-77C7465BFC1F}" ShortID="1053147120">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -874,6 +1065,57 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.55801"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.97333"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="176586243"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Bricks_02" ID="{89D5BDC7-4B8C-4318-9F60-96477478730F}" ShortID="453310352">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.2399"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.76349"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="102655755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -925,6 +1167,26 @@
 										<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+										<ItemList>
+											<ItemRef Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+										<ItemList>
+											<ItemRef Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+										<ItemList>
+											<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}" ShortID="796756267">
@@ -935,9 +1197,19 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}" ShortID="715740195">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>19</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -947,7 +1219,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Grass_01" ID="{D2EE54F7-1709-4059-93F2-364C2DAFA821}" ShortID="7113396">
+										<Sound Name="Grass_01" ID="{CD66A1FB-A6DA-4C45-B910-33FCC3D68B14}" ShortID="832705738">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -956,6 +1228,52 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0498"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.08201"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.77713"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="975502234"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grass_02" ID="{D3BADFCD-C026-453A-B32B-A69D60054F33}" ShortID="861497225">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.01861"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.95801"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.67955"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="424744156"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -995,6 +1313,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}" ShortID="813974112">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -1004,7 +1329,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Grass_01" ID="{30E2540E-7082-4388-A293-3D7AD2547FED}" ShortID="950646622">
+										<Sound Name="Grass_01" ID="{9064FBA8-96AC-4EEE-8CE1-26BA6D3CCCC9}" ShortID="917828892">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -1013,6 +1338,50 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.14293"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.08412"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="771621619"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grass_02" ID="{2136BD2C-A13E-4F27-A8C0-46838AA90954}" ShortID="76042742">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.10171"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.07856"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1051883838"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -1052,6 +1421,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}" ShortID="981234192">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -1070,6 +1446,49 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.13934"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="612158729"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grass_02" ID="{6C7BCC2D-A470-43D3-B22C-D43D1A073E78}" ShortID="590285931">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.13696"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.11271"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="604277614"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<ObjectLists>
@@ -1121,6 +1540,26 @@
 										<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+										<ItemList>
+											<ItemRef Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+										<ItemList>
+											<ItemRef Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+										<ItemList>
+											<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
@@ -1136,6 +1575,26 @@
 								<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="SurfaceTypeGrass" ID="{CE3E0405-4682-48D5-BD37-6200DB4FE532}"/>
+								<ItemList>
+									<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="SurfaceTypeMetal" ID="{36BA94B2-20FD-454D-B62E-168F3BB63453}"/>
+								<ItemList>
+									<ItemRef Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="SurfaceTypeBrick" ID="{5077C1E3-831A-4586-AD75-7EA61AB7925B}"/>
+								<ItemList>
+									<ItemRef Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 			</ChildrenList>

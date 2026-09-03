@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="PlayerMovementSwitches" ID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+						<Switch Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+						<Switch Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}"/>
+						<Curve Name="" ID="{271F09C0-CCC3-481B-A375-64A6C414541E}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.001</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2.01207</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4.23541</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
