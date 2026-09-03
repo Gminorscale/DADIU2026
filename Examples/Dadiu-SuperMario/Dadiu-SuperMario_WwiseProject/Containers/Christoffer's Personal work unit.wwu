@@ -3,22 +3,7 @@
 	<Containers>
 		<WorkUnit Name="Christoffer's Personal work unit" ID="{57C337E0-B882-4105-A1D7-CAA8AFDBAE3A}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested">
 			<ChildrenList>
-				<SwitchContainer Name="Surface Impacts SFX" ID="{027B72DC-F4A2-4ADA-9582-1F447FDE4E24}" ShortID="792255667">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{99190C4C-325A-4AE8-ABE4-E912D98B01B2}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
+				<BlendContainer Name="Surface_Impact" ID="{B90BB6A8-E027-4CD4-A378-E5DFDA2EE609}" ShortID="393588545">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -26,17 +11,22 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 						</Reference>
-						<Reference Name="SwitchGroupOrStateGroup">
-							<ObjectRef Name="SurfaceType" ID="{064DD948-1812-4695-B795-F9A35C2199AB}" WorkUnitID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}" ShortID="439956207">
+						<SwitchContainer Name="Surface Impacts SFX" ID="{027B72DC-F4A2-4ADA-9582-1F447FDE4E24}" ShortID="792255667">
 							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{99190C4C-325A-4AE8-ABE4-E912D98B01B2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -47,41 +37,309 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+									<ObjectRef Name="SurfaceType" ID="{064DD948-1812-4695-B795-F9A35C2199AB}" WorkUnitID="{A7F83EAB-FDB4-4AC9-835D-D0EF3D3F0419}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}" ShortID="556231707">
+								<SwitchContainer Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}" ShortID="439956207">
 									<PropertyList>
-										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{23D5AA2C-6FDD-4C78-B167-86F1BD401C4E}">
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}" ShortID="556231707">
+											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{23D5AA2C-6FDD-4C78-B167-86F1BD401C4E}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Metal_01" ID="{C32EC79E-728A-449D-8DF6-08C66A697CCB}" ShortID="687410878">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{B5D842E7-F568-4845-A3B0-94060652E7BE}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="12.52247"/>
+																<Property Name="TrimEnd" Type="Real64" Value="15.67366"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="30796429"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{B5D842E7-F568-4845-A3B0-94060652E7BE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_02" ID="{319FFC88-DA4C-4A6A-9AAD-A0A695AB0B34}" ShortID="27694376">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{31501353-5071-47E6-88A9-2520A8F357E0}">
+															<PropertyList>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="8.03089"/>
+																<Property Name="TrimEnd" Type="Real64" Value="10.18015"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="272548941"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{D6404BA6-1B64-4343-9F5F-267F4705632A}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="0.01272"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{242C5AF1-7B53-4626-9154-423DDDFA21BF}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="4.78377"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6BC7480B-0DE6-43AC-8694-665D8B47632C}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="8.03855"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{F843906E-6199-4FF3-B058-BA9663573EB5}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="10.22141"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{0CAC42FD-8DC1-462F-8985-8B950F193330}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="12.52258"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E322A269-B9FB-4464-81B8-0F2F518AFDF4}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="16.00005"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{3C48FB75-4DB3-4222-BF76-58B4F387397A}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="18.67367"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{45B5F29C-26B2-4A7B-9940-3F3F590633A9}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="20.83294"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{C28415DC-46DB-46C2-9B7C-5DBF0D6F2FB7}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="23.28852"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{4CA78C5C-F6A7-4641-B925-5BC1430F1386}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="25.96782"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{72CCE992-4868-4DD7-B971-CF0EE039B7AC}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="26.86654"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{5EBAA216-579E-4856-B8BA-E57BCC3F0020}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="28.69823"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{A5094F2D-8E31-4DE8-B8A7-7AB7A3C7B951}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="31.92707"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{BABA9EB0-516D-42CB-B572-DC6ADCD2D7F3}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="34.1445"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{31501353-5071-47E6-88A9-2520A8F357E0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_03" ID="{7F68E430-806C-4550-8177-BC6C5BAFDCD7}" ShortID="243675730">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{DCD8FEBF-AC91-4F07-8CC9-F310541076DF}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="15.99454"/>
+																<Property Name="TrimEnd" Type="Real64" Value="18.63676"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="187767532"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{DCD8FEBF-AC91-4F07-8CC9-F310541076DF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_04" ID="{CD53D489-9C6B-470B-8233-80FFB7FAABAC}" ShortID="816851911">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{0489578A-5BB9-4EE9-9934-A10A718D3E46}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="25.96185"/>
+																<Property Name="TrimEnd" Type="Real64" Value="26.86515"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="878844812"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{0489578A-5BB9-4EE9-9934-A10A718D3E46}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{DBFCD0E8-ECA2-4665-B049-B5A2098DDBD3}" ShortID="289356930">
 														<PropertyList>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>12</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Metal_01" ID="{C32EC79E-728A-449D-8DF6-08C66A697CCB}" ShortID="687410878">
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{2F16204E-0321-4F71-B8B1-6A7C0194B8A9}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}" ShortID="894186863">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{951DFDDB-7B6D-4D71-B8CE-67B94B7AE752}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -91,24 +349,247 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{B5D842E7-F568-4845-A3B0-94060652E7BE}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="12.52247"/>
-														<Property Name="TrimEnd" Type="Real64" Value="15.67366"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="30796429"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Metal_01" ID="{58696015-F05E-466F-8394-C231F95722BE}" ShortID="282798095">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{61160188-EA18-4192-BFC7-527DB96BE21E}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.3803"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="831751975"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{61160188-EA18-4192-BFC7-527DB96BE21E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_02" ID="{4B8BA2F4-78A1-4534-B8BC-3DAA6E4BAD46}" ShortID="747701497">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{2442C2A7-CF0A-489E-908C-B2BF7EBCE9BE}">
+															<PropertyList>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="10.2185"/>
+																<Property Name="TrimEnd" Type="Real64" Value="12.37424"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="973851987"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{BF2B38AB-E0AD-4D8B-A9F9-CCA18D9711FC}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="0.01272"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{34DB24AA-1DAE-4753-93C4-784E510797E6}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="4.78377"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{AB13C582-333F-40D2-8FAE-B8F00F903F6E}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="8.03855"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{A2FF8050-2B98-4CED-A3F2-9A0D8F1BB1F9}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="10.22141"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{DF389BD0-6DDE-4073-AC63-AFF272B5C84F}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="12.52258"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B353B531-7671-4F44-918A-49CA3C22980B}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="16.00005"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{2D589B05-8A79-4550-8DF1-A042D822EE78}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="18.67367"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{72F90278-6F54-435B-912A-012B3FAB447D}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="20.83294"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{D6A397DC-224F-4286-98BC-171C0E7A242E}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="23.28852"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{433F3899-705E-4597-83AD-245644F21D62}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="25.96782"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B5A21B6C-9318-49AD-90D4-E8776088087A}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="26.86654"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{6BAEA1FF-4D19-4C5C-A229-B62B26D7989E}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="28.69823"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{BD7662FD-E3A2-42DF-AC1B-C70E0DFCE7B5}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="31.92707"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{3811FB48-FECE-4894-B6F3-3C7D3C657399}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="34.1445"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{2442C2A7-CF0A-489E-908C-B2BF7EBCE9BE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_03" ID="{F072DB19-6E56-4FD9-A710-90EDFDF840F5}" ShortID="21791531">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{70CB8159-3F55-4B11-B106-14B711035986}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="18.66977"/>
+																<Property Name="TrimEnd" Type="Real64" Value="20.77193"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="793604776"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{70CB8159-3F55-4B11-B106-14B711035986}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_04" ID="{78287EB1-ED3A-45EE-A25B-03F57755F7D3}" ShortID="592315000">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{F25D1A33-1A34-4056-A4D3-91711019B6CB}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="20.82849"/>
+																<Property Name="TrimEnd" Type="Real64" Value="23.23738"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="318991568"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{F25D1A33-1A34-4056-A4D3-91711019B6CB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{B5D842E7-F568-4845-A3B0-94060652E7BE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_02" ID="{319FFC88-DA4C-4A6A-9AAD-A0A695AB0B34}" ShortID="27694376">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{B0A671E4-C1E4-45DC-AEA4-A241DA20D531}" ShortID="897814284">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{CE6146D8-7E77-4129-8D16-3C848EA35895}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}" ShortID="759817670">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-11</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -118,218 +599,222 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{31501353-5071-47E6-88A9-2520A8F357E0}">
-													<PropertyList>
-														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="8.03089"/>
-														<Property Name="TrimEnd" Type="Real64" Value="10.18015"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="272548941"/>
-													</MediaIDList>
-													<ObjectLists>
-														<ObjectList Name="Markers">
-															<Marker Name="" ID="{D6404BA6-1B64-4343-9F5F-267F4705632A}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="0.01272"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{242C5AF1-7B53-4626-9154-423DDDFA21BF}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="4.78377"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{6BC7480B-0DE6-43AC-8694-665D8B47632C}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="8.03855"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{F843906E-6199-4FF3-B058-BA9663573EB5}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="10.22141"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{0CAC42FD-8DC1-462F-8985-8B950F193330}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="12.52258"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{E322A269-B9FB-4464-81B8-0F2F518AFDF4}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="16.00005"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{3C48FB75-4DB3-4222-BF76-58B4F387397A}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="18.67367"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{45B5F29C-26B2-4A7B-9940-3F3F590633A9}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="20.83294"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{C28415DC-46DB-46C2-9B7C-5DBF0D6F2FB7}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="23.28852"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{4CA78C5C-F6A7-4641-B925-5BC1430F1386}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="25.96782"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{72CCE992-4868-4DD7-B971-CF0EE039B7AC}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="26.86654"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{5EBAA216-579E-4856-B8BA-E57BCC3F0020}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="28.69823"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{A5094F2D-8E31-4DE8-B8A7-7AB7A3C7B951}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="31.92707"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{BABA9EB0-516D-42CB-B572-DC6ADCD2D7F3}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="34.1445"/>
-																</PropertyList>
-															</Marker>
-														</ObjectList>
-													</ObjectLists>
-												</AudioFileSource>
+												<Sound Name="Metal_01" ID="{2D740349-25EB-479B-BD5C-5B0FF226816D}" ShortID="568585491">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{1C92FCC6-A8EF-4E91-912D-A6708AC49941}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.7754"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.705"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="897912061"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{1C92FCC6-A8EF-4E91-912D-A6708AC49941}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Metal_02" ID="{7B9B7893-001A-4401-AD9B-D05F04715FB1}" ShortID="526202631">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}">
+															<PropertyList>
+																<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="20.70704"/>
+																<Property Name="TrimEnd" Type="Real64" Value="23.10341"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="506822660"/>
+															</MediaIDList>
+															<ObjectLists>
+																<ObjectList Name="Markers">
+																	<Marker Name="" ID="{17CA3C33-B166-40B0-9A7C-40E01737982F}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="0.01272"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E12B243D-DD72-41B6-B4FC-4DC6D1EFE841}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="4.78377"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{F4B21406-DE69-4013-BC06-00A4B21B466F}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="8.03855"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{28FFCD6F-A7EC-4D90-8CF3-A59F5F67DF06}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="10.22141"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{DBCEDAAF-1B2E-4BDE-A861-7DE0A1E7010F}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="12.52258"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{44EC9078-3DF2-485C-BC74-75251F00F534}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="16.00005"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{148DE33D-AC81-45FF-8275-91F873FE0273}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="18.67367"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{E2F97DB8-4E85-4819-B245-1859C4499D76}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="20.83294"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{785B318A-B5C8-4F80-B56D-8DEC2B204E10}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="23.28852"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{C97FB096-3D40-4CC7-A628-D9689945B4CC}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="25.96782"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{9B89E91C-3C61-480E-B04E-44D2779C5FB3}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="26.86654"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{4D58FE24-927B-4A85-86F1-EA8D3E9368DA}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="28.69823"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{55CB4FCE-7E33-4AA3-A0EB-BF3EECF09113}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="31.92707"/>
+																		</PropertyList>
+																	</Marker>
+																	<Marker Name="" ID="{B4597D89-CBFE-4CB7-ABDD-59076F955E52}">
+																		<PropertyList>
+																			<Property Name="Label" Type="string" Value="base64:AA=="/>
+																			<Property Name="Time" Type="Real64" Value="34.1445"/>
+																		</PropertyList>
+																	</Marker>
+																</ObjectList>
+															</ObjectLists>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{31501353-5071-47E6-88A9-2520A8F357E0}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_03" ID="{7F68E430-806C-4550-8177-BC6C5BAFDCD7}" ShortID="243675730">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{DCD8FEBF-AC91-4F07-8CC9-F310541076DF}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="15.99454"/>
-														<Property Name="TrimEnd" Type="Real64" Value="18.63676"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="187767532"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{DCD8FEBF-AC91-4F07-8CC9-F310541076DF}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_04" ID="{CD53D489-9C6B-470B-8233-80FFB7FAABAC}" ShortID="816851911">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{0489578A-5BB9-4EE9-9934-A10A718D3E46}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="25.96185"/>
-														<Property Name="TrimEnd" Type="Real64" Value="26.86515"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="878844812"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{0489578A-5BB9-4EE9-9934-A10A718D3E46}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{761D58B9-3FB3-4491-8055-B7F96E6ACFCC}" ShortID="392410339">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{5FF16D89-3F1C-49CD-9EC6-79EE36E2E9D1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{DBFCD0E8-ECA2-4665-B049-B5A2098DDBD3}" ShortID="289356930">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{2F16204E-0321-4F71-B8B1-6A7C0194B8A9}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}" ShortID="894186863">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{951DFDDB-7B6D-4D71-B8CE-67B94B7AE752}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+												<ItemList>
+													<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+												<ItemList>
+													<ItemRef Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+												<ItemList>
+													<ItemRef Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}" ShortID="228562726">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -337,9 +822,19 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Metal_01" ID="{58696015-F05E-466F-8394-C231F95722BE}" ShortID="282798095">
+										<RandomSequenceContainer Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}" ShortID="789544764">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -349,23 +844,105 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{61160188-EA18-4192-BFC7-527DB96BE21E}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.3803"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="831751975"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Bricks_01" ID="{B29E23AD-040C-4DBA-8F97-7ECDC4DBD828}" ShortID="227402816">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.74655"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="939009968"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bricks_02" ID="{7F3C468E-DC98-4420-A4A0-194CFE59EFB3}" ShortID="974331901">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.81427"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.29741"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="928166021"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{61160188-EA18-4192-BFC7-527DB96BE21E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_02" ID="{4B8BA2F4-78A1-4534-B8BC-3DAA6E4BAD46}" ShortID="747701497">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{1BD85B14-1F3B-42E5-9B9A-2CDC6996C68E}" ShortID="1034097426">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{AA2B3B86-7000-418F-AB4A-C621734748CD}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}" ShortID="225908491">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -375,113 +952,104 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{2442C2A7-CF0A-489E-908C-B2BF7EBCE9BE}">
-													<PropertyList>
-														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="10.2185"/>
-														<Property Name="TrimEnd" Type="Real64" Value="12.37424"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="973851987"/>
-													</MediaIDList>
-													<ObjectLists>
-														<ObjectList Name="Markers">
-															<Marker Name="" ID="{BF2B38AB-E0AD-4D8B-A9F9-CCA18D9711FC}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="0.01272"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{34DB24AA-1DAE-4753-93C4-784E510797E6}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="4.78377"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{AB13C582-333F-40D2-8FAE-B8F00F903F6E}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="8.03855"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{A2FF8050-2B98-4CED-A3F2-9A0D8F1BB1F9}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="10.22141"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{DF389BD0-6DDE-4073-AC63-AFF272B5C84F}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="12.52258"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{B353B531-7671-4F44-918A-49CA3C22980B}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="16.00005"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{2D589B05-8A79-4550-8DF1-A042D822EE78}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="18.67367"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{72F90278-6F54-435B-912A-012B3FAB447D}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="20.83294"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{D6A397DC-224F-4286-98BC-171C0E7A242E}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="23.28852"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{433F3899-705E-4597-83AD-245644F21D62}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="25.96782"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{B5A21B6C-9318-49AD-90D4-E8776088087A}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="26.86654"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{6BAEA1FF-4D19-4C5C-A229-B62B26D7989E}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="28.69823"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{BD7662FD-E3A2-42DF-AC1B-C70E0DFCE7B5}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="31.92707"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{3811FB48-FECE-4894-B6F3-3C7D3C657399}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="34.1445"/>
-																</PropertyList>
-															</Marker>
-														</ObjectList>
-													</ObjectLists>
-												</AudioFileSource>
+												<Sound Name="Bricks_01" ID="{0A96B9EA-8D8D-4A81-9F1D-6420A5219250}" ShortID="846481436">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.72067"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="678065125"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bricks_02" ID="{88DCEF11-0296-41FA-991F-3DE7B11C05EF}" ShortID="507353732">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.02112"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.67721"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="472948251"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{2442C2A7-CF0A-489E-908C-B2BF7EBCE9BE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_03" ID="{F072DB19-6E56-4FD9-A710-90EDFDF840F5}" ShortID="21791531">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{EE272660-D8AA-424E-B45D-02C777526DE8}" ShortID="629141925">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{6F1EC665-81AE-4F4E-977B-D97353230103}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}" ShortID="656273644">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -491,95 +1059,147 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{70CB8159-3F55-4B11-B106-14B711035986}">
+												<Sound Name="Bricks_01" ID="{5A793104-A70F-4BE0-9414-77C7465BFC1F}" ShortID="1053147120">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="18.66977"/>
-														<Property Name="TrimEnd" Type="Real64" Value="20.77193"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="793604776"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{70CB8159-3F55-4B11-B106-14B711035986}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_04" ID="{78287EB1-ED3A-45EE-A25B-03F57755F7D3}" ShortID="592315000">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{F25D1A33-1A34-4056-A4D3-91711019B6CB}">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.55801"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.97333"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="176586243"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Bricks_02" ID="{89D5BDC7-4B8C-4318-9F60-96477478730F}" ShortID="453310352">
 													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="20.82849"/>
-														<Property Name="TrimEnd" Type="Real64" Value="23.23738"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="318991568"/>
-													</MediaIDList>
-												</AudioFileSource>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.2399"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.76349"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="102655755"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{F25D1A33-1A34-4056-A4D3-91711019B6CB}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{76C2E3CD-AB8A-4BF3-84FD-BF04FCAAAA53}" ShortID="586788774">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{EF73EA53-22EC-43A7-B52F-9D57B46EF79F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{B0A671E4-C1E4-45DC-AEA4-A241DA20D531}" ShortID="897814284">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{CE6146D8-7E77-4129-8D16-3C848EA35895}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}" ShortID="759817670">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-11</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+												<ItemList>
+													<ItemRef Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+												<ItemList>
+													<ItemRef Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+												<ItemList>
+													<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}" ShortID="796756267">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -587,254 +1207,19 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
 										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Metal_01" ID="{2D740349-25EB-479B-BD5C-5B0FF226816D}" ShortID="568585491">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{1C92FCC6-A8EF-4E91-912D-A6708AC49941}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.7754"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.705"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="897912061"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{1C92FCC6-A8EF-4E91-912D-A6708AC49941}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Metal_02" ID="{7B9B7893-001A-4401-AD9B-D05F04715FB1}" ShortID="526202631">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}">
-													<PropertyList>
-														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="20.70704"/>
-														<Property Name="TrimEnd" Type="Real64" Value="23.10341"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="506822660"/>
-													</MediaIDList>
-													<ObjectLists>
-														<ObjectList Name="Markers">
-															<Marker Name="" ID="{17CA3C33-B166-40B0-9A7C-40E01737982F}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="0.01272"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{E12B243D-DD72-41B6-B4FC-4DC6D1EFE841}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="4.78377"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{F4B21406-DE69-4013-BC06-00A4B21B466F}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="8.03855"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{28FFCD6F-A7EC-4D90-8CF3-A59F5F67DF06}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="10.22141"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{DBCEDAAF-1B2E-4BDE-A861-7DE0A1E7010F}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="12.52258"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{44EC9078-3DF2-485C-BC74-75251F00F534}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="16.00005"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{148DE33D-AC81-45FF-8275-91F873FE0273}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="18.67367"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{E2F97DB8-4E85-4819-B245-1859C4499D76}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="20.83294"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{785B318A-B5C8-4F80-B56D-8DEC2B204E10}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="23.28852"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{C97FB096-3D40-4CC7-A628-D9689945B4CC}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="25.96782"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{9B89E91C-3C61-480E-B04E-44D2779C5FB3}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="26.86654"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{4D58FE24-927B-4A85-86F1-EA8D3E9368DA}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="28.69823"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{55CB4FCE-7E33-4AA3-A0EB-BF3EECF09113}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="31.92707"/>
-																</PropertyList>
-															</Marker>
-															<Marker Name="" ID="{B4597D89-CBFE-4CB7-ABDD-59076F955E52}">
-																<PropertyList>
-																	<Property Name="Label" Type="string" Value="base64:AA=="/>
-																	<Property Name="Time" Type="Real64" Value="34.1445"/>
-																</PropertyList>
-															</Marker>
-														</ObjectList>
-													</ObjectLists>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Metal, Impact, Sheet Metal Impact, Washing Machine Interior, Metal Resonates Birdsong Hum, Distant Camp SND80807" ID="{5F17C148-7A41-49DF-9B93-903D10D71942}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{761D58B9-3FB3-4491-8055-B7F96E6ACFCC}" ShortID="392410339">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{5FF16D89-3F1C-49CD-9EC6-79EE36E2E9D1}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
-										<ItemList>
-											<ItemRef Name="Metal_Soft_Impact" ID="{120270D5-BA17-48CB-BD15-E1ACA34076A1}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
-										<ItemList>
-											<ItemRef Name="Metal_Hard_Impact" ID="{F2F2C21F-703F-4CD1-9AB7-3D5957CC5216}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
-										<ItemList>
-											<ItemRef Name="Metal_Mid_Impact" ID="{9AFDFC3C-B2D3-454A-9089-334B6AB65829}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}" ShortID="228562726">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}" ShortID="789544764">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Bricks_01" ID="{B29E23AD-040C-4DBA-8F97-7ECDC4DBD828}" ShortID="227402816">
+										<RandomSequenceContainer Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}" ShortID="715740195">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -844,24 +1229,107 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}">
-													<PropertyList>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.74655"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="939009968"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Grass_01" ID="{CD66A1FB-A6DA-4C45-B910-33FCC3D68B14}" ShortID="832705738">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0498"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.08201"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.77713"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="975502234"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Grass_02" ID="{D3BADFCD-C026-453A-B32B-A69D60054F33}" ShortID="861497225">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.01861"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.95801"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.67955"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="424744156"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{C55D37E9-B796-4415-BB88-F3B8934CCE75}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Bricks_02" ID="{7F3C468E-DC98-4420-A4A0-194CFE59EFB3}" ShortID="974331901">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{3C1EDA2D-78F8-4486-9D6E-6828BF9C125B}" ShortID="813726810">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A60D8495-96B8-416D-A699-CE8369663B9A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}" ShortID="813974112">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
@@ -871,185 +1339,98 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.81427"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.29741"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="928166021"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Grass_01" ID="{9064FBA8-96AC-4EEE-8CE1-26BA6D3CCCC9}" ShortID="917828892">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.14293"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.08412"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="771621619"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Grass_02" ID="{2136BD2C-A13E-4F27-A8C0-46838AA90954}" ShortID="76042742">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="2.10171"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.07856"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1051883838"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{074FC277-CE84-4C27-8A40-BD3DFF755A3B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{1BD85B14-1F3B-42E5-9B9A-2CDC6996C68E}" ShortID="1034097426">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{AA2B3B86-7000-418F-AB4A-C621734748CD}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}" ShortID="225908491">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Bricks_01" ID="{0A96B9EA-8D8D-4A81-9F1D-6420A5219250}" ShortID="846481436">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.72067"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="678065125"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{84E24729-FEFF-44E8-820E-6E4DD46950B2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Bricks_02" ID="{88DCEF11-0296-41FA-991F-3DE7B11C05EF}" ShortID="507353732">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.02112"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.67721"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="472948251"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{B7725579-0FD4-450B-B01A-99AA351B1DE4}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{EE272660-D8AA-424E-B45D-02C777526DE8}" ShortID="629141925">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{6F1EC665-81AE-4F4E-977B-D97353230103}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}" ShortID="656273644">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Bricks_01" ID="{5A793104-A70F-4BE0-9414-77C7465BFC1F}" ShortID="1053147120">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{D94D463A-82DE-467A-BB5D-530FEC2FF893}" ShortID="69356115">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{B3A02D26-76F7-4E4D-B97D-4628DB5E1FB7}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}" ShortID="981234192">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1066,537 +1447,168 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.55801"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.97333"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="176586243"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Grass_01" ID="{2C6E0F63-4D14-46FC-9657-AEF551EDA0ED}" ShortID="1005158812">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="4.13934"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="612158729"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Grass_02" ID="{6C7BCC2D-A470-43D3-B22C-D43D1A073E78}" ShortID="590285931">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="3.13696"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.11271"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="604277614"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{98B61996-8C19-4CEB-81DF-FD45AE661011}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Bricks_02" ID="{89D5BDC7-4B8C-4318-9F60-96477478730F}" ShortID="453310352">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.2399"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.76349"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Rock, Surface, Jump On SND62097.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="102655755"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Rock, Surface, Jump On SND62097" ID="{2462D2C9-3D9D-4B1F-A9B6-897B52D439D2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<RTPC Name="" ID="{4B4BEF05-A194-4915-917C-309AEE2D0D44}" ShortID="671037150">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{ADCB243B-88BC-4180-ADDF-FAE8FA2CA436}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{76C2E3CD-AB8A-4BF3-84FD-BF04FCAAAA53}" ShortID="586788774">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{EF73EA53-22EC-43A7-B52F-9D57B46EF79F}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+												<ItemList>
+													<ItemRef Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+												<ItemList>
+													<ItemRef Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+												<ItemList>
+													<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}"/>
+										<ItemRef Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}"/>
+										<ItemRef Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
+										<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
+										<SwitchRef Name="SurfaceTypeGrass" ID="{CE3E0405-4682-48D5-BD37-6200DB4FE532}"/>
 										<ItemList>
-											<ItemRef Name="Bricks_Soft_Impact" ID="{6ED46570-2A04-492D-9C89-69B8C2DCC7B3}"/>
+											<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
+										<SwitchRef Name="SurfaceTypeMetal" ID="{36BA94B2-20FD-454D-B62E-168F3BB63453}"/>
 										<ItemList>
-											<ItemRef Name="Bricks_Hard_Impact" ID="{A0C18D07-3A93-48D7-8392-FA4E77CF6A8F}"/>
+											<ItemRef Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
+										<SwitchRef Name="SurfaceTypeBrick" ID="{5077C1E3-831A-4586-AD75-7EA61AB7925B}"/>
 										<ItemList>
-											<ItemRef Name="Bricks_Mid_Impact" ID="{F9E72FE0-CEC2-404F-B592-BDDB0E10EB2E}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}" ShortID="796756267">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="MarioSpeedSwitch" ID="{FD290742-10C1-4655-B7F0-6D6257C6E207}" WorkUnitID="{5FAB2DD8-2619-462F-BC7D-9E29621D48A5}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}" ShortID="715740195">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>19</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Grass_01" ID="{CD66A1FB-A6DA-4C45-B910-33FCC3D68B14}" ShortID="832705738">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0498"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.08201"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.77713"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="975502234"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{A732AD78-43B5-4BD7-9F57-932E9FF84568}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grass_02" ID="{D3BADFCD-C026-453A-B32B-A69D60054F33}" ShortID="861497225">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.01861"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.95801"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.67955"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Start SND62075.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="424744156"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Start SND62075" ID="{F70087A5-1E95-4145-BB1B-090185BC4635}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{3C1EDA2D-78F8-4486-9D6E-6828BF9C125B}" ShortID="813726810">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{A60D8495-96B8-416D-A699-CE8369663B9A}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}" ShortID="813974112">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Grass_01" ID="{9064FBA8-96AC-4EEE-8CE1-26BA6D3CCCC9}" ShortID="917828892">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.14293"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.08412"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="771621619"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{117C4625-AE65-4B1A-BFB7-F538E557090B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grass_02" ID="{2136BD2C-A13E-4F27-A8C0-46838AA90954}" ShortID="76042742">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.10171"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.07856"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1051883838"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{DC8F2787-F6AB-4DDD-9961-AD5BFB5215E2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{D94D463A-82DE-467A-BB5D-530FEC2FF893}" ShortID="69356115">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{B3A02D26-76F7-4E4D-B97D-4628DB5E1FB7}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}" ShortID="981234192">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Grass_01" ID="{2C6E0F63-4D14-46FC-9657-AEF551EDA0ED}" ShortID="1005158812">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.13934"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="612158729"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{8874EA5D-F3AB-4945-B167-C3CB84EF5D95}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grass_02" ID="{6C7BCC2D-A470-43D3-B22C-D43D1A073E78}" ShortID="590285931">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.13696"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.11271"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Footsteps, Human, Grass, Jump, Land 02 SND62076.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="604277614"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Footsteps, Human, Grass, Jump, Land 02 SND62076" ID="{0235B924-3B71-4FD4-A0ED-A0B35DAC1093}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{4B4BEF05-A194-4915-917C-309AEE2D0D44}" ShortID="671037150">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_MarioSpeed" ID="{966CA1C4-99E1-47D1-875D-46278331CCA5}" WorkUnitID="{4C6CF63E-8105-470C-A820-EC50E4FE9245}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{ADCB243B-88BC-4180-ADDF-FAE8FA2CA436}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>5</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="Slow" ID="{47E53FAA-DC08-430A-A233-B4A3343DA911}"/>
-										<ItemList>
-											<ItemRef Name="Grass_Soft_Impact" ID="{12ACE1E0-8814-45FB-AF18-0FA55F7A6EDB}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Fast" ID="{1DFDF8AC-B807-44C5-AAA0-AAEF000B8B58}"/>
-										<ItemList>
-											<ItemRef Name="Grass_Hard_Impact" ID="{FBD04C6D-5EB5-4534-A343-A1D6BC7507AA}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Normal" ID="{8F792EF4-CF2F-43F6-A47C-E3B7F3A77E7B}"/>
-										<ItemList>
-											<ItemRef Name="Grass_Mid_Impact" ID="{21135CE8-6A00-4087-A602-45EBB8998DBC}"/>
+											<ItemRef Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
-					<GroupingInfo>
-						<GroupingBehaviorList>
-							<GroupingBehavior>
-								<ItemRef Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}"/>
-							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}"/>
-							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
-							</GroupingBehavior>
-						</GroupingBehaviorList>
-						<GroupingList>
-							<Grouping>
-								<SwitchRef Name="SurfaceTypeGrass" ID="{CE3E0405-4682-48D5-BD37-6200DB4FE532}"/>
-								<ItemList>
-									<ItemRef Name="Grass_Impacts" ID="{4E6074EE-DCA2-41A1-803D-88ECD4E2F000}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="SurfaceTypeMetal" ID="{36BA94B2-20FD-454D-B62E-168F3BB63453}"/>
-								<ItemList>
-									<ItemRef Name="Metal_Impacts" ID="{1823E828-997F-4211-893D-F402B7C5577F}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="SurfaceTypeBrick" ID="{5077C1E3-831A-4586-AD75-7EA61AB7925B}"/>
-								<ItemList>
-									<ItemRef Name="Brick_Impacts" ID="{9B74261A-0266-40CA-9D90-4F073CFA99DA}"/>
-								</ItemList>
-							</Grouping>
-						</GroupingList>
-					</GroupingInfo>
-				</SwitchContainer>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
