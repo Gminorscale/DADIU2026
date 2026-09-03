@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" SchemaVersion="133" RootDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" ParentDocumentID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}">
 	<Containers>
-		<WorkUnit Name="Mads Martinussen Personal Work Unit for him to work in personally" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested"/>
+		<WorkUnit Name="Mads Martinussen Personal Work Unit for him to work in personally" ID="{C187DA57-6B2F-4AA7-A860-5A97DB7AB21E}" OwnerID="{F0DA6C28-993A-47C7-91B6-E8C70AD81C21}" PersistMode="Nested">
+			<ChildrenList>
+				<PropertyContainer Name="TestSwitch(Personal)" ID="{7E82F6BB-3067-4966-B19C-8BBC5EE7612A}" ShortID="842477207">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C0D42A50-A450-4C6F-A4DF-8B68E5570593}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1EBFBC3E-C68C-44D6-80E6-21B11FC75DF9}"/>
+						</Reference>
+					</ReferenceList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>
