@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B0D39AD4-4A2F-48CD-AAF9-5B34265117D7}" SchemaVersion="133" RootDocumentID="{EFFB5463-472F-45D9-9279-52FD64F1D15C}" ParentDocumentID="{8AA0AA1D-2B0F-4136-B52E-021F873427B1}">
+	<Containers>
+		<WorkUnit Name="DungeonDefault" ID="{B0D39AD4-4A2F-48CD-AAF9-5B34265117D7}" OwnerID="{8AA0AA1D-2B0F-4136-B52E-021F873427B1}" PersistMode="Nested"/>
+	</Containers>
+</WwiseDocument>
